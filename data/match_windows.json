@@ -1,15 +1,85 @@
 {
-  "_comment": "FIFA International Match Calendar windows for men's senior football. Friendlies (and non-confederation tournaments) played outside these dates count I=5 instead of 10. 2026 dates from the AFCON 2027 qualifying schedule; the June 2026 window was verified against the official June ranking. Extend when FIFA confirms later windows — dates after the last window are treated as in-window.",
+  "_comment": "FIFA International Match Calendar windows for men's senior football. Friendlies (and non-confederation tournaments) played outside these dates count I=5 instead of 10. 2026 dates from the AFCON 2027 qualifying schedule; the June 2026 window was verified against the official June ranking. Extend when FIFA confirms later windows \u2014 dates after the last window are treated as in-window.",
   "windows": [
-    ["2025-03-17", "2025-03-25"],
-    ["2025-06-02", "2025-06-10"],
-    ["2025-09-01", "2025-09-09"],
-    ["2025-10-06", "2025-10-14"],
-    ["2025-11-10", "2025-11-18"],
-    ["2026-03-23", "2026-03-31"],
-    ["2026-06-01", "2026-06-09"],
-    ["2026-09-21", "2026-10-06"],
-    ["2026-11-09", "2026-11-17"],
-    ["2027-03-22", "2027-03-30"]
+    [
+      "2023-03-20",
+      "2023-03-28"
+    ],
+    [
+      "2023-06-12",
+      "2023-06-20"
+    ],
+    [
+      "2023-09-04",
+      "2023-09-12"
+    ],
+    [
+      "2023-10-09",
+      "2023-10-17"
+    ],
+    [
+      "2023-11-13",
+      "2023-11-21"
+    ],
+    [
+      "2024-03-18",
+      "2024-03-26"
+    ],
+    [
+      "2024-06-03",
+      "2024-06-11"
+    ],
+    [
+      "2024-09-02",
+      "2024-09-10"
+    ],
+    [
+      "2024-10-07",
+      "2024-10-15"
+    ],
+    [
+      "2024-11-11",
+      "2024-11-19"
+    ],
+    [
+      "2025-03-17",
+      "2025-03-25"
+    ],
+    [
+      "2025-06-02",
+      "2025-06-10"
+    ],
+    [
+      "2025-09-01",
+      "2025-09-09"
+    ],
+    [
+      "2025-10-06",
+      "2025-10-14"
+    ],
+    [
+      "2025-11-10",
+      "2025-11-18"
+    ],
+    [
+      "2026-03-23",
+      "2026-03-31"
+    ],
+    [
+      "2026-06-01",
+      "2026-06-09"
+    ],
+    [
+      "2026-09-21",
+      "2026-10-06"
+    ],
+    [
+      "2026-11-09",
+      "2026-11-17"
+    ],
+    [
+      "2027-03-22",
+      "2027-03-30"
+    ]
   ]
 }

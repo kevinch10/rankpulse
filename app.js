@@ -2,7 +2,9 @@ const FLAG = code => `https://api.fifa.com/api/v3/picture/flags-sq-2/${code}`;
 const CONFEDS = ['All', 'FAV', 'UEFA', 'CONMEBOL', 'CONCACAF', 'CAF', 'AFC', 'OFC'];
 const LIVE = 3;
 
-const state = { data: null, view: 'rankings', confed: 'All', competition: '', compQuery: '', compActiveOnly: false, date: '', query: '', open: null, favs: loadFavs() };
+const PAGE = 150;  // matches rendered before "Show more"
+const state = { data: null, history: null, historyFrom: '', view: 'rankings', period: 7, limit: PAGE,
+  confed: 'All', competition: '', compQuery: '', compActiveOnly: false, date: '', query: '', open: null, favs: loadFavs() };
 const $ = id => document.getElementById(id);
 
 // ---------- favourites (kept in this browser only) ----------
@@ -67,6 +69,44 @@ function renderMovers(teams) {
     </div>`).join('');
 }
 
+// ---------- results history ----------
+
+const ymd = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+// The live file has results since the last official ranking; history.json
+// has the year before that. It's fetched in the background after first paint.
+async function loadHistory() {
+  try {
+    const res = await fetch('data/history.json', { cache: 'no-cache' });
+    const h = await res.json();
+    const seen = new Set(state.data.results.map(m => `${m.date}|${m.home}|${m.away}`));
+    state.history = h.results.filter(m => !seen.has(`${m.date}|${m.home}|${m.away}`));
+    state.historyFrom = h.from;
+  } catch {
+    state.history = [];
+  }
+  if (state.view === 'results') render();
+}
+
+function allResults() {
+  return state.history ? state.data.results.concat(state.history) : state.data.results;
+}
+
+function periodStart() {
+  const d = new Date();
+  d.setDate(d.getDate() - state.period);
+  return ymd(d);
+}
+
+// Results default to the past week; a chosen calendar day overrides the period.
+function inPeriod(m) {
+  return state.view !== 'results' || !!state.date || m.date >= periodStart();
+}
+
+function currentList() {
+  return state.view === 'results' ? allResults() : state.data.fixtures;
+}
+
 // ---------- filters ----------
 
 function teamMatchesFilter(code, name) {
@@ -84,6 +124,7 @@ function matchVisible(m) {
   return (confedOK(m.home) || confedOK(m.away)) &&
     (!state.competition || m.competition === state.competition) &&
     (!state.date || m.date === state.date) &&
+    inPeriod(m) &&
     (teamMatchesFilter(m.home, m.homeName) || teamMatchesFilter(m.away, m.awayName));
 }
 
@@ -94,12 +135,15 @@ function renderControls() {
   const sel = $('competition');
   sel.hidden = state.view === 'rankings';
   $('date-filter').hidden = sel.hidden;
+  $('period').hidden = state.view !== 'results';
+  $('period').value = String(state.period);
+  $('period').disabled = !!state.date;
   $('search').placeholder = state.competition && !sel.hidden ? `Search teams in ${state.competition}…` : 'Search team…';
   if (!sel.hidden) {
     // Limit the calendar to the days that actually have matches in this tab.
-    const days = (state.view === 'results' ? state.data.results : state.data.fixtures).map(m => m.date).sort();
+    const days = currentList().map(m => m.date).sort();
     const input = $('date');
-    input.min = days[0] || '';
+    input.min = (state.view === 'results' && state.historyFrom) || days[0] || '';
     input.max = days.at(-1) || '';
     if (state.date && (state.date < input.min || state.date > input.max)) state.date = '';
     input.value = state.date;
@@ -116,8 +160,19 @@ function renderControls() {
 
 // ---------- competition picker ----------
 
+let countsCache = { key: '', counts: new Map() };
+
+// Matches per competition in the current tab and period (other filters ignored).
 function competitionCount(c) {
-  return state.view === 'results' ? c.results : c.fixtures;
+  const key = `${state.view}|${state.period}|${state.date}|${state.history ? state.history.length : 0}`;
+  if (countsCache.key !== key) {
+    const counts = new Map();
+    for (const m of currentList()) {
+      if ((!state.date || m.date === state.date) && inPeriod(m)) counts.set(m.competition, (counts.get(m.competition) || 0) + 1);
+    }
+    countsCache = { key, counts };
+  }
+  return countsCache.counts.get(c.name) || 0;
 }
 
 function renderCompetitionList() {
@@ -158,6 +213,7 @@ function openCompetitionPicker(open) {
 
 function chooseCompetition(name) {
   state.competition = name;
+  state.limit = PAGE;
   openCompetitionPicker(false);
   render();
 }
@@ -239,7 +295,8 @@ function matchRow(m, fixture) {
 }
 
 function renderMatchList(el, list, fixture) {
-  const shown = list.filter(matchVisible);
+  const all = list.filter(matchVisible);
+  const shown = all.slice(0, state.limit);
   const days = new Map();
   for (const m of shown) {
     if (!days.has(m.date)) days.set(m.date, []);
@@ -249,8 +306,12 @@ function renderMatchList(el, list, fixture) {
     <section class="day">
       <h3>${fmtDay(day)} <span>${ms.length} match${ms.length === 1 ? '' : 'es'}</span></h3>
       <ol class="matches">${ms.map(m => matchRow(m, fixture)).join('')}</ol>
-    </section>`).join('');
-  return shown.length;
+    </section>`).join('') +
+    (all.length > shown.length
+      ? `<button class="more" id="show-more">Show more <span>${all.length - shown.length} older</span></button>` : '') +
+    (!fixture && !state.date && state.period > 7 && !state.history
+      ? `<p class="loading">Loading older results…</p>` : '');
+  return all.length;
 }
 
 // ---------- render ----------
@@ -259,13 +320,15 @@ function render() {
   renderControls();
   for (const v of ['rankings', 'results', 'fixtures']) $(`view-${v}`).hidden = v !== state.view;
   const n = state.view === 'rankings' ? renderRankings()
-    : state.view === 'results' ? renderMatchList($('view-results'), state.data.results, false)
+    : state.view === 'results' ? renderMatchList($('view-results'), allResults(), false)
     : renderMatchList($('view-fixtures'), state.data.fixtures, true);
   $('empty').hidden = n > 0;
   $('empty').textContent = state.confed === 'FAV' && !state.favs.size
     ? 'No favourites yet — tap ☆ next to a team in Rankings.'
+    : state.view === 'results' && !state.date
+      ? `No ${state.competition ? `${state.competition} ` : ''}matches in the ${$('period').selectedOptions[0].text.toLowerCase()}${state.period < 365 ? ' — try a longer period.' : '.'}`
     : state.competition && !state.date && !state.query
-      ? `No ${state.competition} matches ${state.view === 'results' ? 'in the last few weeks' : 'scheduled in the next three weeks'}.`
+      ? `No ${state.competition} matches scheduled yet.`
     : state.date ? `No matches on ${fmtDay(state.date)}.` : 'Nothing matches these filters.';
 }
 
@@ -275,13 +338,16 @@ async function init() {
   state.confedOf = Object.fromEntries(state.data.teams.map(t => [t.code, t.confed]));
   renderMeta(state.data);
   renderMovers(state.data.teams);
-  $('results-count').textContent = state.data.results.length;
+  const weekAgo = new Date(); weekAgo.setDate(weekAgo.getDate() - 7);
+  $('results-count').textContent = state.data.results.filter(m => m.date >= ymd(weekAgo)).length;
+  $('results-count').title = 'Results in the past week';
   $('fixtures-count').textContent = state.data.fixtures.length;
   render();
+  loadHistory();
 
   document.querySelector('.views').addEventListener('click', e => {
     const b = e.target.closest('button[data-view]');
-    if (b) { state.view = b.dataset.view; render(); }
+    if (b) { state.view = b.dataset.view; state.limit = PAGE; render(); }
   });
   $('search').addEventListener('input', e => { state.query = e.target.value; render(); });
   $('comp-btn').addEventListener('click', () => openCompetitionPicker($('comp-pop').hidden));
@@ -307,7 +373,11 @@ async function init() {
   });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') openCompetitionPicker(false); });
   document.addEventListener('click', e => { if (!e.target.closest('#competition')) openCompetitionPicker(false); });
-  $('date').addEventListener('change', e => { state.date = e.target.value; render(); });
+  $('date').addEventListener('change', e => { state.date = e.target.value; state.limit = PAGE; render(); });
+  $('period').addEventListener('change', e => { state.period = Number(e.target.value); state.limit = PAGE; render(); });
+  document.querySelector('main').addEventListener('click', e => {
+    if (e.target.closest('#show-more')) { state.limit += PAGE; render(); }
+  });
   $('date-clear').addEventListener('click', () => { state.date = ''; render(); });
   $('confeds').addEventListener('click', e => {
     const c = e.target.dataset.confed;

@@ -19,8 +19,11 @@ GitHub Actions (scheduled)
   │    • AFCON qualifiers                ← Wikipedia results (data/extra_sources.json)
   │    • invitational cups, stragglers   ← martj42/international_results
   ├─ manual corrections                  ← data/manual_results.csv
-  └─ scripts/update.py → data/rankings.json → committed
+  ├─ scripts/update.py → data/rankings.json (live period + every scheduled fixture)
+  └─ scripts/history.py → data/history.json (the year before, rebuilt daily)
 ```
+
+The Results tab opens on the past week, with Past month / 3 months / year a tap away. History is replayed period by period from FIFA's official releases (`data/releases.json`, which picks up new releases automatically), so every match shows the points it was worth at the time. Fixtures cover everything FIFA has already scheduled, currently about six months ahead.
 
 ### Competitions covered
 

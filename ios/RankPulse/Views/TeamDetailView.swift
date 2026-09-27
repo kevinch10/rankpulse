@@ -5,7 +5,7 @@ struct TeamDetailView: View {
     let team: Team
 
     var body: some View {
-        let results = store.data?.results.filter { $0.involves(team.code) } ?? []
+        let results = store.allResults.filter { $0.involves(team.code) }
         let fixtures = store.data?.fixtures.filter { $0.involves(team.code) } ?? []
         List {
             Section {

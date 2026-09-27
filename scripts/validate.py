@@ -25,11 +25,7 @@ from datetime import date, timedelta
 import update
 
 # (dateId, publication date) of official releases, oldest first
-RELEASES = [
-    ("id14870", "2025-09-18"), ("id14898", "2025-10-17"), ("id14933", "2025-11-19"),
-    ("id14962", "2025-12-22"), ("id14993", "2026-01-19"), ("id15065", "2026-04-01"),
-    ("id15136", "2026-06-11"), ("id15175", "2026-07-20"),
-]
+RELEASES = [tuple(r) for r in json.loads((update.ROOT / "data" / "releases.json").read_text(encoding="utf-8"))["releases"]]
 TOLERANCE = 0.02
 
 
@@ -53,6 +49,7 @@ def main():
     matches = update.add_backup_sources(matches, teams, first, last)
     matches = update.apply_manual(matches, teams)
     matches = update.normalize_competitions(matches, teams, update.load_catalog())
+    matches = [m for m in matches if m["date"] >= first]
     matches.sort(key=lambda m: m["kickoff"])
 
     total_bad = 0

@@ -65,7 +65,11 @@ class ImportanceTests(unittest.TestCase):
         self.check("CAF Africa Cup of Nations", "Quarter-finals", (40, True))
         self.check("Concacaf Gold Cup", "Final", (40, True))
         self.check("UEFA Nations League", "League A", (15, False))
-        self.check("UEFA Nations League", "Play-offs C/D", (25, False))
+        self.check("UEFA Nations League", "Play-offs C/D", (15, False))
+        self.check("UEFA Nations League", "Relegation Play-out", (15, False))
+        self.check("UEFA Nations League", "Quarter-finals", (25, False))
+        self.check("UEFA European Championship", "Group Stage", (10, False))  # raw name: normalise first
+        self.check("EAFF Championship qualification", "", (10, False))
         self.check("UEFA Nations League", "Final", (25, False))
         self.check("UEFA Nations League", "", (15, False))
         self.check("Concacaf Nations League", "League C", (15, False))

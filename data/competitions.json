@@ -1,52 +1,266 @@
 {
   "_comment": "Every competition that counts towards the men's world ranking, grouped for the Competition filter. 'aliases' are other names the data sources use for the same competition. Tournaments not listed here still appear (under Other) if a match turns up.",
   "groups": [
-    {"group": "Global", "competitions": [
-      {"name": "FIFA World Cup™", "weight": "I=50 · 60 from quarter-finals", "aliases": ["FIFA World Cup"]},
-      {"name": "FIFA World Cup™ Qualifiers", "weight": "I=25", "aliases": ["FIFA World Cup qualification"]},
-      {"name": "Friendlies", "weight": "I=10 · 5 outside windows", "aliases": ["Friendly"]},
-      {"name": "FIFA Series™", "weight": "I=10 · 5 outside windows", "aliases": ["FIFA Series"]},
-      {"name": "FIFA Arab Cup™", "weight": "I=10 · 5 outside windows", "aliases": ["Arab Cup", "FIFA Arab Cup"]},
-      {"name": "FIFA ASEAN Cup™", "weight": "I=10 · 5 outside windows", "aliases": ["FIFA ASEAN Cup"]},
-      {"name": "CONMEBOL/UEFA Finalissima", "weight": "I=10 · 5 outside windows", "aliases": ["Finalissima"]}
-    ]},
-    {"group": "UEFA", "competitions": [
-      {"name": "UEFA EURO", "weight": "I=35 · 40 from quarter-finals", "aliases": ["UEFA Euro"]},
-      {"name": "UEFA EURO Qualifiers", "weight": "I=25", "aliases": ["UEFA Euro qualification"]},
-      {"name": "UEFA Nations League", "weight": "I=15 · 25 play-offs & finals"},
-      {"name": "Baltic Cup", "weight": "I=10 · 5 outside windows"}
-    ]},
-    {"group": "CONMEBOL", "competitions": [
-      {"name": "Copa América", "weight": "I=35 · 40 from quarter-finals"}
-    ]},
-    {"group": "CONCACAF", "competitions": [
-      {"name": "Concacaf Gold Cup", "weight": "I=35 · 40 from quarter-finals", "aliases": ["Gold Cup"]},
-      {"name": "Concacaf Gold Cup Qualifiers", "weight": "I=25", "aliases": ["Gold Cup qualification"]},
-      {"name": "Concacaf Nations League", "weight": "I=15 · 25 finals", "aliases": ["CONCACAF Nations League"]},
-      {"name": "Concacaf Series", "weight": "I=10 · 5 outside windows", "aliases": ["CONCACAF Series"]}
-    ]},
-    {"group": "CAF", "competitions": [
-      {"name": "CAF Africa Cup of Nations", "weight": "I=35 · 40 from quarter-finals", "aliases": ["African Cup of Nations"]},
-      {"name": "CAF Africa Cup of Nations Qualifiers", "weight": "I=25", "aliases": ["African Cup of Nations qualification"]},
-      {"name": "COSAFA Cup", "weight": "I=10 · 5 outside windows"},
-      {"name": "CECAFA Cup", "weight": "I=10 · 5 outside windows"},
-      {"name": "WAFU Cup of Nations", "weight": "I=10 · 5 outside windows", "aliases": ["WAFU Cup"]}
-    ]},
-    {"group": "AFC", "competitions": [
-      {"name": "AFC Asian Cup", "weight": "I=35 · 40 from quarter-finals"},
-      {"name": "AFC Asian Cup Qualifiers", "weight": "I=25", "aliases": ["AFC Asian Cup qualification"]},
-      {"name": "ASEAN Championship", "weight": "I=10 · 5 outside windows", "aliases": ["AFF Championship"]},
-      {"name": "Gulf Cup of Nations", "weight": "I=10 · 5 outside windows", "aliases": ["Gulf Cup"]},
-      {"name": "SAFF Championship", "weight": "I=10 · 5 outside windows", "aliases": ["SAFF Cup"]},
-      {"name": "EAFF E-1 Championship", "weight": "I=10 · 5 outside windows", "aliases": ["EAFF Championship"]},
-      {"name": "CAFA Nations Cup", "weight": "I=10 · 5 outside windows"},
-      {"name": "WAFF Championship", "weight": "I=10 · 5 outside windows"},
-      {"name": "King's Cup", "weight": "I=10 · 5 outside windows"}
-    ]},
-    {"group": "OFC", "competitions": [
-      {"name": "OFC Nations Cup", "weight": "I=35 · 40 from quarter-finals", "aliases": ["Oceania Nations Cup"]},
-      {"name": "OFC Nations Cup Qualifiers", "weight": "I=25", "aliases": ["Oceania Nations Cup qualification"]},
-      {"name": "MSG Prime Minister's Cup", "weight": "I=10 · 5 outside windows"}
-    ]}
+    {
+      "group": "Global",
+      "competitions": [
+        {
+          "name": "FIFA World Cup™",
+          "weight": "I=50 · 60 from quarter-finals",
+          "aliases": [
+            "FIFA World Cup"
+          ]
+        },
+        {
+          "name": "FIFA World Cup™ Qualifiers",
+          "weight": "I=25",
+          "aliases": [
+            "FIFA World Cup qualification"
+          ]
+        },
+        {
+          "name": "Friendlies",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "Friendly"
+          ]
+        },
+        {
+          "name": "FIFA Series™",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "FIFA Series"
+          ]
+        },
+        {
+          "name": "FIFA Arab Cup™",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "Arab Cup",
+            "FIFA Arab Cup"
+          ]
+        },
+        {
+          "name": "FIFA ASEAN Cup™",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "FIFA ASEAN Cup"
+          ]
+        },
+        {
+          "name": "CONMEBOL/UEFA Finalissima",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "Finalissima"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "UEFA",
+      "competitions": [
+        {
+          "name": "UEFA EURO",
+          "weight": "I=35 · 40 from quarter-finals",
+          "aliases": [
+            "UEFA Euro",
+            "UEFA European Championship"
+          ]
+        },
+        {
+          "name": "UEFA EURO Qualifiers",
+          "weight": "I=25",
+          "aliases": [
+            "UEFA Euro qualification",
+            "UEFA European Championship Qualifiers"
+          ]
+        },
+        {
+          "name": "UEFA Nations League",
+          "weight": "I=15 · 25 play-offs & finals"
+        },
+        {
+          "name": "Baltic Cup",
+          "weight": "I=10 · 5 outside windows"
+        }
+      ]
+    },
+    {
+      "group": "CONMEBOL",
+      "competitions": [
+        {
+          "name": "Copa América",
+          "weight": "I=35 · 40 from quarter-finals",
+          "aliases": [
+            "CONMEBOL Copa America",
+            "CONMEBOL Copa América",
+            "Copa America"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "CONCACAF",
+      "competitions": [
+        {
+          "name": "Concacaf Gold Cup",
+          "weight": "I=35 · 40 from quarter-finals",
+          "aliases": [
+            "Gold Cup"
+          ]
+        },
+        {
+          "name": "Concacaf Gold Cup Qualifiers",
+          "weight": "I=25",
+          "aliases": [
+            "Gold Cup qualification"
+          ]
+        },
+        {
+          "name": "Concacaf Nations League",
+          "weight": "I=15 · 25 finals",
+          "aliases": [
+            "CONCACAF Nations League"
+          ]
+        },
+        {
+          "name": "Concacaf Series",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "CONCACAF Series"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "CAF",
+      "competitions": [
+        {
+          "name": "CAF Africa Cup of Nations",
+          "weight": "I=35 · 40 from quarter-finals",
+          "aliases": [
+            "African Cup of Nations"
+          ]
+        },
+        {
+          "name": "CAF Africa Cup of Nations Qualifiers",
+          "weight": "I=25",
+          "aliases": [
+            "African Cup of Nations qualification"
+          ]
+        },
+        {
+          "name": "COSAFA Cup",
+          "weight": "I=10 · 5 outside windows"
+        },
+        {
+          "name": "CECAFA Cup",
+          "weight": "I=10 · 5 outside windows"
+        },
+        {
+          "name": "WAFU Cup of Nations",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "WAFU Cup"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "AFC",
+      "competitions": [
+        {
+          "name": "AFC Asian Cup",
+          "weight": "I=35 · 40 from quarter-finals"
+        },
+        {
+          "name": "AFC Asian Cup Qualifiers",
+          "weight": "I=25",
+          "aliases": [
+            "AFC Asian Cup qualification"
+          ]
+        },
+        {
+          "name": "ASEAN Championship",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "AFF Championship"
+          ]
+        },
+        {
+          "name": "Gulf Cup of Nations",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "Gulf Cup"
+          ]
+        },
+        {
+          "name": "SAFF Championship",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "SAFF Cup"
+          ]
+        },
+        {
+          "name": "EAFF E-1 Championship",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "EAFF Championship",
+            "EAFF Championship qualification",
+            "EAFF E-1 Championship qualification"
+          ]
+        },
+        {
+          "name": "CAFA Nations Cup",
+          "weight": "I=10 · 5 outside windows"
+        },
+        {
+          "name": "WAFF Championship",
+          "weight": "I=10 · 5 outside windows"
+        },
+        {
+          "name": "King's Cup",
+          "weight": "I=10 · 5 outside windows"
+        },
+        {
+          "name": "Intercontinental Cup",
+          "weight": "I=10 · 5 outside windows",
+          "aliases": [
+            "Hero Intercontinental Cup"
+          ]
+        },
+        {
+          "name": "Tri-Nations Series",
+          "weight": "I=10 · 5 outside windows"
+        }
+      ]
+    },
+    {
+      "group": "OFC",
+      "competitions": [
+        {
+          "name": "OFC Nations Cup",
+          "weight": "I=35 · 40 from quarter-finals",
+          "aliases": [
+            "Oceania Nations Cup"
+          ]
+        },
+        {
+          "name": "OFC Nations Cup Qualifiers",
+          "weight": "I=25",
+          "aliases": [
+            "Oceania Nations Cup qualification"
+          ]
+        },
+        {
+          "name": "MSG Prime Minister's Cup",
+          "weight": "I=10 · 5 outside windows"
+        },
+        {
+          "name": "Pacific Games",
+          "weight": "I=10 · 5 outside windows"
+        }
+      ]
+    }
   ]
 }

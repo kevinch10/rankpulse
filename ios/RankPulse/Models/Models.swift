@@ -15,6 +15,11 @@ struct RankingData: Codable, Sendable {
     }
 }
 
+struct HistoryData: Codable, Sendable {
+    let from: String
+    let results: [Match]
+}
+
 /// One entry in the Competition filter: every competition that counts
 /// towards the ranking, with how many results and fixtures it has now.
 struct CompetitionInfo: Codable, Sendable, Identifiable, Hashable {

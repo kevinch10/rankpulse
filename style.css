@@ -178,6 +178,21 @@ li:not(.empty-comp) > .comp-count { background: var(--magenta); color: #fff; }
 }
 .comp-group[data-confed="Global"] { color: var(--violet); }
 .comp-none { padding: 14px 10px; color: var(--muted); font-size: 13px; }
+.period {
+  padding: 9px 30px 9px 14px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--night); color: #fff; font: 600 14px Inter, sans-serif; cursor: pointer;
+  appearance: none; -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #fff 50%), linear-gradient(135deg, #fff 50%, transparent 50%);
+  background-position: calc(100% - 16px) 55%, calc(100% - 11px) 55%; background-size: 5px 5px; background-repeat: no-repeat;
+}
+.period[hidden] { display: none; }
+.period:disabled { opacity: .45; cursor: default; }
+.more {
+  display: block; margin: 16px auto 4px; padding: 10px 18px; border-radius: 999px; border: 0; cursor: pointer;
+  background: var(--night); color: #fff; font: 700 13px Inter, sans-serif;
+}
+.more span { opacity: .7; font-weight: 500; margin-left: 4px; }
+.loading { text-align: center; color: var(--muted); font-size: 13px; }
 .date-filter {
   display: inline-flex; align-items: center; gap: 6px; padding: 0 6px 0 12px;
   border-radius: 999px; border: 1px solid var(--line); background: var(--bg);

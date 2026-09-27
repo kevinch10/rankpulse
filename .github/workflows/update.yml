@@ -29,14 +29,16 @@ jobs:
       - name: Unit tests
         run: python -m unittest discover -s tests
       - run: python scripts/update.py
+      - name: History (rebuilt about once a day)
+        run: python scripts/history.py
       - name: Commit if changed
         run: |
           # generatedAt always changes, so only commit when the rankings themselves move
-          if git diff --quiet -I '"generatedAt"' -- data/rankings.json; then
+          if git diff --quiet -I '"generatedAt"' -- data/rankings.json data/releases.json && git diff --quiet -- data/history.json; then
             echo "No ranking changes"; exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/rankings.json
+          git add data/rankings.json data/history.json data/releases.json
           git commit -m "Update live rankings"
           git push

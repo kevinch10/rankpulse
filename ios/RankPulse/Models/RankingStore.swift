@@ -8,6 +8,10 @@ final class RankingStore {
     private(set) var error: String?
     private(set) var isLoading = false
     private(set) var isSnapshot = false
+    /// Results from the year before the latest official ranking.
+    private(set) var history: [Match] = []
+    private(set) var historyFrom: String?
+    private var historyLoadedAt: Date?
 
     private var confedByCode: [String: String] = [:]
     let favourites = Favourites()
@@ -37,6 +41,38 @@ final class RankingStore {
             await favourites.notifyChanges(in: fresh)
         } catch {
             self.error = data == nil ? error.localizedDescription : "Offline — showing saved data"
+        }
+    }
+
+    /// Live-period results followed by the older history, newest first.
+    var allResults: [Match] {
+        guard let data else { return [] }
+        guard !history.isEmpty else { return data.results }
+        let recent = Set(data.results.map(\.id))
+        return data.results + history.filter { !recent.contains($0.id) }
+    }
+
+    /// Fetches history.json at most every few hours (it changes about daily).
+    func loadHistory() async {
+        if let loaded = historyLoadedAt, Date().timeIntervalSince(loaded) < 6 * 3600 { return }
+        let cache = URL.cachesDirectory.appending(path: "history.json")
+        if history.isEmpty, let bytes = try? Data(contentsOf: cache),
+           let cached = try? JSONDecoder().decode(HistoryData.self, from: bytes) {
+            history = cached.results
+            historyFrom = cached.from
+        }
+        guard let url = Config.historyURL else { return }
+        do {
+            var request = URLRequest(url: url)
+            request.cachePolicy = .reloadIgnoringLocalCacheData
+            let (bytes, _) = try await URLSession.shared.data(for: request)
+            let fresh = try JSONDecoder().decode(HistoryData.self, from: bytes)
+            try? bytes.write(to: cache)
+            history = fresh.results
+            historyFrom = fresh.from
+            historyLoadedAt = Date()
+        } catch {
+            // keep whatever we had; the recent results still work
         }
     }
 

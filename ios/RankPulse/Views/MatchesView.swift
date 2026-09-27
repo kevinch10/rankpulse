@@ -3,6 +3,19 @@ import SwiftUI
 struct MatchesView: View {
     enum Kind { case results, fixtures }
 
+    enum Period: Int, CaseIterable, Identifiable {
+        case week = 7, month = 30, quarter = 90, year = 365
+        var id: Int { rawValue }
+        var title: String {
+            switch self {
+            case .week: "Past week"
+            case .month: "Past month"
+            case .quarter: "Past 3 months"
+            case .year: "Past year"
+            }
+        }
+    }
+
     @Environment(RankingStore.self) private var store
     let kind: Kind
     @State private var search = ""
@@ -11,18 +24,33 @@ struct MatchesView: View {
     @State private var day: Date?
     @State private var showCalendar = false
     @State private var showCompetitions = false
+    @State private var period = Period.week
 
     var body: some View {
         NavigationStack {
             Group {
-                if let data = store.data {
-                    list(kind == .results ? data.results : data.fixtures)
+                if store.data != nil {
+                    list(allMatches)
                 } else {
                     ProgressView()
                 }
             }
             .navigationTitle(kind == .results ? "Results" : "Fixtures")
+            .task { if kind == .results { await store.loadHistory() } }
             .toolbar {
+                if kind == .results {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Menu {
+                            Picker("Period", selection: $period) {
+                                ForEach(Period.allCases) { Text($0.title).tag($0) }
+                            }
+                        } label: {
+                            Label(period.title, systemImage: "clock.arrow.circlepath")
+                                .labelStyle(.titleAndIcon)
+                        }
+                        .disabled(day != nil)
+                    }
+                }
                 ToolbarItemGroup {
                     Button { showCalendar = true } label: {
                         Image(systemName: day == nil ? "calendar" : "calendar.badge.checkmark")
@@ -62,7 +90,16 @@ struct MatchesView: View {
 
     private var allMatches: [Match] {
         guard let data = store.data else { return [] }
-        return kind == .results ? data.results : data.fixtures
+        return kind == .results ? store.allResults : data.fixtures
+    }
+
+    private var periodStart: String {
+        Self.ymd(Calendar.current.date(byAdding: .day, value: -period.rawValue, to: Date()) ?? Date())
+    }
+
+    /// Results default to the past week; a chosen day overrides the period.
+    private func inPeriod(_ m: Match) -> Bool {
+        kind == .fixtures || day != nil || m.date >= periodStart
     }
 
     /// The match days in this tab, as local dates, for the calendar.
@@ -83,13 +120,19 @@ struct MatchesView: View {
 
     /// The full catalogue from the data, falling back to whatever the
     /// matches mention if the data predates the catalogue.
+    /// The full catalogue with counts for the current tab and period.
     private var competitions: [CompetitionInfo] {
-        if let list = store.data?.competitions, !list.isEmpty { return list }
-        guard let data = store.data else { return [] }
-        return Set((data.results + data.fixtures).map(\.competition)).sorted().map { name in
-            CompetitionInfo(name: name, group: "Competitions", weight: "",
-                            results: data.results.filter { $0.competition == name }.count,
-                            fixtures: data.fixtures.filter { $0.competition == name }.count)
+        let dayString = day.map(Self.ymd)
+        let inScope = allMatches.filter { m in (dayString.map { $0 == m.date } ?? true) && inPeriod(m) }
+        var counts: [String: Int] = [:]
+        for m in inScope { counts[m.competition, default: 0] += 1 }
+        let catalogue = store.data?.competitions ?? []
+        let known = Set(catalogue.map(\.name))
+        let extra = counts.keys.filter { !known.contains($0) }.sorted()
+            .map { CompetitionInfo(name: $0, group: "Other", weight: "", results: 0, fixtures: 0) }
+        return (catalogue + extra).map { c in
+            let n = counts[c.name] ?? 0
+            return CompetitionInfo(name: c.name, group: c.group, weight: c.weight, results: n, fixtures: n)
         }
     }
 
@@ -105,7 +148,7 @@ struct MatchesView: View {
         let confedOK = confed.includes(m.home, confed: store.confed(of: m.home), favourites: favs)
             || confed.includes(m.away, confed: store.confed(of: m.away), favourites: favs)
         let compOK = competition.isEmpty || m.competition == competition
-        let dayOK = day.map { Self.ymd($0) == m.date } ?? true
+        let dayOK = (day.map { Self.ymd($0) == m.date } ?? true) && inPeriod(m)
         let searchOK = search.isEmpty || [m.homeName, m.awayName, m.home, m.away]
             .contains { $0.localizedCaseInsensitiveContains(search) }
         return confedOK && compOK && dayOK && searchOK
@@ -144,8 +187,8 @@ struct MatchesView: View {
         .overlay {
             if shown.isEmpty {
                 ContentUnavailableView(emptyTitle, systemImage: day == nil ? "sportscourt" : "calendar",
-                                       description: competition.isEmpty || !search.isEmpty ? nil
-                                           : Text(kind == .results ? "Nothing played in the last few weeks." : "Nothing scheduled in the next three weeks."))
+                                       description: kind == .results && day == nil && period != .year && search.isEmpty
+                                           ? Text("Try a longer period.") : nil)
             }
         }
     }
@@ -153,6 +196,7 @@ struct MatchesView: View {
     private var emptyTitle: String {
         if !search.isEmpty { return "No results for “\(search)”" }
         if day != nil { return "No matches on this day" }
+        if kind == .results { return "No \(competition.isEmpty ? "" : "\(competition) ")matches in the \(period.title.lowercased())" }
         if !competition.isEmpty { return "No \(competition) matches" }
         return "No matches"
     }

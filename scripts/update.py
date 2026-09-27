@@ -32,7 +32,7 @@ COMPETITIONS = ROOT / "data" / "competitions.json"
 
 API = "https://api.fifa.com/api/v3"
 RESULT_DAYS = 45    # show at least this many days of results
-FIXTURE_DAYS = 21   # and this many days of upcoming fixtures
+FIXTURE_DAYS = 550  # every fixture FIFA has scheduled (they publish up to ~18 months ahead)
 
 FINISHED, LIVE = 0, 3  # MatchStatus values
 
@@ -43,6 +43,7 @@ CONFED_FINALS = {
 }
 NATIONS_LEAGUES = {"UEFA Nations League", "Concacaf Nations League"}
 LATE_STAGE = re.compile(r"quarter|semi|^final$|3rd|third|bronze", re.I)
+MAJOR_FINALS = re.compile(r"world cup|euro|africa cup|african cup|asian cup|gold cup|copa am|nations cup", re.I)
 
 
 def text(localized):
@@ -60,9 +61,9 @@ MATCH_WINDOWS = load_windows()
 
 
 def in_match_window(day):
-    """Whether a date falls in a FIFA international window. Dates beyond the
-    last known window are given the benefit of the doubt."""
-    if not day or not MATCH_WINDOWS or day > MATCH_WINDOWS[-1][1]:
+    """Whether a date falls in a FIFA international window. Dates outside the
+    range of known windows are given the benefit of the doubt."""
+    if not day or not MATCH_WINDOWS or not (MATCH_WINDOWS[0][0] <= day <= MATCH_WINDOWS[-1][1]):
         return True
     return any(start <= day <= end for start, end in MATCH_WINDOWS)
 
@@ -75,10 +76,15 @@ def importance(competition, stage, day=None):
         return (60 if LATE_STAGE.search(stage) else 50), not group
     if competition in CONFED_FINALS:
         return (40 if LATE_STAGE.search(stage) else 35), not group
-    if competition in NATIONS_LEAGUES:  # league phase 15, play-offs and finals 25
-        return (25 if re.search(r"final|semi|quarter|play-?off|3rd|third", stage, re.I) else 15), False
-    if "qualif" in competition.lower() or competition == "Continental Qualifier":
-        return 25, False
+    if competition in NATIONS_LEAGUES:
+        # league phase and promotion/relegation play-offs 15; finals (and their
+        # quarter-finals) 25 — play-offs at 15 is what reproduces FIFA's numbers
+        if re.search(r"play-?off|play-?out|play-?in", stage, re.I):
+            return 15, False
+        return (25 if re.search(r"final|semi|quarter|3rd|third", stage, re.I) else 15), False
+    if competition == "Continental Qualifier" or (
+            "qualif" in competition.lower() and MAJOR_FINALS.search(competition)):
+        return 25, False  # qualifiers for the World Cup or a continental championship
     # friendlies and non-confederation tournaments: 10 in a window, 5 outside
     return (10 if in_match_window(day) else 5), False
 
@@ -102,15 +108,38 @@ def load_official():
             "officialPoints": r["DecimalTotalPoints"],
             "previousRank": r["PrevRank"],
         }
-    meta = {"pubDate": rows[0]["PubDate"], "nextPubDate": rows[0].get("NextPubDate")}
+    meta = {"pubDate": rows[0]["PubDate"], "nextPubDate": rows[0].get("NextPubDate"),
+            "releaseId": rows[0].get("IdSchedule")}
     return teams, meta
 
 
+def record_release(meta):
+    """Append a newly published official release to data/releases.json so
+    history.py and validate.py pick it up."""
+    path = ROOT / "data" / "releases.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    day = meta["pubDate"][:10]
+    if meta.get("releaseId") and all(r[1] != day for r in data["releases"]):
+        data["releases"].append([meta["releaseId"], day])
+        path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+        print(f"new official release {day} ({meta['releaseId']}) recorded", file=sys.stderr)
+
+
 def load_matches(teams, since, until):
+    # The API returns null for ranges much over a year, so ask in chunks.
+    chunks, lo = [], since
+    while lo <= until:
+        hi = min(lo + timedelta(days=364), until)
+        chunks.append((lo, hi))
+        lo = hi + timedelta(days=1)
+
     def team_calendar(team_id):
-        url = (f"{API}/calendar/matches?language=en&count=500&idTeam={team_id}"
-               f"&from={since}T00:00:00Z&to={until}T23:59:59Z")
-        return get(url)["Results"]
+        out = []
+        for lo, hi in chunks:
+            url = (f"{API}/calendar/matches?language=en&count=500&idTeam={team_id}"
+                   f"&from={lo}T00:00:00Z&to={hi}T23:59:59Z")
+            out += (get(url) or {}).get("Results") or []
+        return out
 
     with ThreadPoolExecutor(12) as pool:
         calendars = list(pool.map(team_calendar, teams))
@@ -286,6 +315,7 @@ def predict(fixtures, points):
 
 def main():
     teams, meta = load_official()
+    record_release(meta)
     since = meta["pubDate"][:10]  # a ranking published on day D includes matches up to D-1
     today = date.today()
     fetch_from = min(date.fromisoformat(since), today - timedelta(days=RESULT_DAYS))
