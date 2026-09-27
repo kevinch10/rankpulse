@@ -17,6 +17,8 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: app.rankpulse.RankPulse
+        DEVELOPMENT_TEAM: 723AZ4HL5N
+        CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_CFBundleDisplayName: RankPulse
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
