@@ -7,7 +7,9 @@ on:
   push:
     paths:
       - data/manual_results.csv
-      - scripts/update.py
+      - data/extra_sources.json
+      - data/match_windows.json
+      - scripts/**
 
 permissions:
   contents: write
@@ -24,6 +26,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest discover -s tests
       - run: python scripts/update.py
       - name: Commit if changed
         run: |

@@ -3,9 +3,10 @@
 projection that applies every international result played since, recent
 results and upcoming fixtures.
 
-All data comes from FIFA's public API: the ranking, plus each ranked team's
-match calendar (friendlies, Nations Leagues, qualifiers, continental and
-world finals, in every confederation).
+The ranking and most matches come from FIFA's public API (each ranked team's
+match calendar). Competitions that feed doesn't carry — AFCON qualifiers and
+a few invitational tournaments — are filled in from backup sources; see
+sources.py.
 
 Live points use FIFA's SUM formula (in use since 2018):
     P = P_before + I * (W - W_e)
@@ -21,9 +22,12 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+import sources
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "rankings.json"
 MANUAL = ROOT / "data" / "manual_results.csv"
+WINDOWS = ROOT / "data" / "match_windows.json"
 
 API = "https://api.fifa.com/api/v3"
 RESULT_DAYS = 45    # show at least this many days of results
@@ -44,21 +48,38 @@ def text(localized):
     return (localized or [{}])[0].get("Description", "").strip()
 
 
-def importance(competition, stage):
+def load_windows():
+    try:
+        return [tuple(w) for w in json.loads(WINDOWS.read_text(encoding="utf-8"))["windows"]]
+    except FileNotFoundError:
+        return []
+
+
+MATCH_WINDOWS = load_windows()
+
+
+def in_match_window(day):
+    """Whether a date falls in a FIFA international window. Dates beyond the
+    last known window are given the benefit of the doubt."""
+    if not day or not MATCH_WINDOWS or day > MATCH_WINDOWS[-1][1]:
+        return True
+    return any(start <= day <= end for start, end in MATCH_WINDOWS)
+
+
+def importance(competition, stage, day=None):
     """Match importance (I) and whether it's a knockout tie of a final
-    competition (where losers don't drop points). Friendlies are all I=10:
-    FIFA gives I=5 to friendlies outside international windows, but its API
-    doesn't say which those are."""
+    competition (where losers don't drop points)."""
     group = stage.startswith(("First Stage", "Group"))
     if competition == WORLD_CUP:
         return (60 if LATE_STAGE.search(stage) else 50), not group
     if competition in CONFED_FINALS:
         return (40 if LATE_STAGE.search(stage) else 35), not group
-    if competition in NATIONS_LEAGUES:
-        return (15 if stage.startswith("League") else 25), False
-    if "Qualif" in competition or competition == "Continental Qualifier":
+    if competition in NATIONS_LEAGUES:  # league phase 15, play-offs and finals 25
+        return (25 if re.search(r"final|semi|quarter|play-?off|3rd|third", stage, re.I) else 15), False
+    if "qualif" in competition.lower() or competition == "Continental Qualifier":
         return 25, False
-    return 10, False
+    # friendlies and non-confederation tournaments: 10 in a window, 5 outside
+    return (10 if in_match_window(day) else 5), False
 
 
 def get(url):
@@ -113,32 +134,50 @@ def load_matches(teams, since, until):
             "competition": competition,
             "stage": stage,
             "city": text((m.get("Stadium") or {}).get("CityName")),
+            "source": "FIFA",
         }
-    apply_manual(matches, teams)
-    return sorted(matches.values(), key=lambda m: m["kickoff"])
+    return list(matches.values())
+
+
+def add_backup_sources(matches, teams, since, until):
+    """Fill in matches FIFA's feed lacks (see sources.py)."""
+    by_code = {t["code"]: tid for tid, t in teams.items()}
+    by_name = {t["name"]: tid for tid, t in teams.items()}
+    wiki = sources.load_wikipedia(by_code, since, until)
+    community = sources.load_community(by_name, since, until)
+    merged, added = sources.merge(matches, wiki, community)
+    for m in merged:
+        m.setdefault("id", f"{m['source']}-{m['date']}-{m['home']}-{m['away']}")
+    by_source = {}
+    for m in merged[len(matches):]:
+        by_source[m["source"]] = by_source.get(m["source"], 0) + 1
+    print(f"backup sources added {added} matches: {by_source or 'none'}", file=sys.stderr)
+    return merged
 
 
 def apply_manual(matches, teams):
     """data/manual_results.csv corrects or adds results (e.g. forfeits
     awarded after the match). Team names must match FIFA's."""
     if not MANUAL.exists():
-        return
+        return matches
     by_name = {t["name"]: t["id"] for t in teams.values()}
-    by_key = {(m["date"], m["home"], m["away"]): m for m in matches.values()}
+    by_key = {sources.pair_key(m): m for m in matches}
     for r in csv.DictReader(MANUAL.open(encoding="utf-8")):
         home, away = by_name.get(r["home_team"]), by_name.get(r["away_team"])
         if not (home and away):
             print(f"manual_results.csv: unknown team in {r}", file=sys.stderr)
             continue
-        m = by_key.get((r["date"], home, away))
+        m = by_key.get((r["date"], frozenset((home, away))))
         if m is None:
-            m = matches[f"manual-{r['date']}-{home}-{away}"] = {
-                "id": f"manual-{r['date']}-{home}-{away}", "kickoff": f"{r['date']}T12:00:00Z",
-                "date": r["date"], "home": home, "away": away, "homePens": None, "awayPens": None,
-                "competition": r["competition"] or "Friendlies", "stage": r.get("stage", ""), "city": "",
-            }
+            m = {"id": f"manual-{r['date']}-{home}-{away}", "kickoff": f"{r['date']}T12:00:00Z",
+                 "date": r["date"], "home": home, "away": away, "homePens": None, "awayPens": None,
+                 "competition": r["competition"] or "Friendlies", "stage": r.get("stage", ""), "city": ""}
+            matches.append(m)
+        if m["home"] != home:  # the correction lists the teams the other way round
+            m["home"], m["away"] = home, away
         m.update(homeScore=int(r["home_score"]), awayScore=int(r["away_score"]),
-                 status=FINISHED, note=r.get("note") or "Manual correction")
+                 status=FINISHED, source="Manual", note=r.get("note") or "Manual correction")
+    return matches
 
 
 def expected(p_team, p_opp):
@@ -153,24 +192,26 @@ def points_change(p_home, p_away, w_home, w_away, i, knockout):
     return dh, da
 
 
-def project(teams, matches, since):
-    """Apply finished matches on or after `since` to the official points.
-    Annotates each match in place with I and each side's points change."""
-    points = {tid: t["officialPoints"] for tid, t in teams.items()}
-    for m in matches:
-        if m["status"] != FINISHED or m["date"] < since:
-            continue
-        h, a = m["home"], m["away"]
-        hs, as_ = m["homeScore"], m["awayScore"]
-        if hs != as_:
-            w_home = 1.0 if hs > as_ else 0.0
-            w_away = 1.0 - w_home
-        elif m["homePens"] is not None:
-            w_home, w_away = (0.75, 0.5) if m["homePens"] > m["awayPens"] else (0.5, 0.75)
-        else:
-            w_home = w_away = 0.5
+def result_weights(m):
+    """W for each side: win 1, draw 0.5, loss 0; shootout winner 0.75, loser 0.5."""
+    hs, as_ = m["homeScore"], m["awayScore"]
+    if hs != as_:
+        w_home = 1.0 if hs > as_ else 0.0
+        return w_home, 1.0 - w_home
+    if m["homePens"] is not None:
+        return (0.75, 0.5) if m["homePens"] > m["awayPens"] else (0.5, 0.75)
+    return 0.5, 0.5
 
-        i, knockout = importance(m["competition"], m["stage"])
+
+def replay(points, matches):
+    """Apply finished matches in order to `points` (team id -> points), and
+    annotate each match with I and each side's points change."""
+    for m in matches:
+        h, a = m["home"], m["away"]
+        if m["status"] != FINISHED or h not in points or a not in points:
+            continue
+        w_home, w_away = result_weights(m)
+        i, knockout = importance(m["competition"], m["stage"], m["date"])
         dh, da = points_change(points[h], points[a], w_home, w_away, i, knockout)
         points[h] += dh
         points[a] += da
@@ -178,12 +219,18 @@ def project(teams, matches, since):
     return points
 
 
+def project(teams, matches, since):
+    """Live points: the official points plus every finished match since."""
+    points = {tid: t["officialPoints"] for tid, t in teams.items()}
+    return replay(points, [m for m in matches if m["date"] >= since])
+
+
 def predict(fixtures, points):
     """Annotate each fixture with the points each side would gain or lose for
     every possible result, from both teams' current live points."""
     for m in fixtures:
         h, a = m["home"], m["away"]
-        i, knockout = importance(m["competition"], m["stage"])
+        i, knockout = importance(m["competition"], m["stage"], m["date"])
         outcomes = {"win": (1.0, 0.0), "draw": (0.5, 0.5), "loss": (0.0, 1.0)}
         if knockout:  # a level knockout tie is settled on penalties
             del outcomes["draw"]
@@ -206,8 +253,11 @@ def main():
     today = date.today()
     fetch_from = min(date.fromisoformat(since), today - timedelta(days=RESULT_DAYS))
     # One day of slack either side: FIFA filters by UTC kickoff, we filter by local date.
-    matches = load_matches(teams, fetch_from - timedelta(days=1), today + timedelta(days=FIXTURE_DAYS))
-    matches = [m for m in matches if m["date"] >= fetch_from.isoformat()]
+    until = today + timedelta(days=FIXTURE_DAYS)
+    matches = load_matches(teams, fetch_from - timedelta(days=1), until)
+    matches = add_backup_sources(matches, teams, fetch_from.isoformat(), until.isoformat())
+    matches = apply_manual(matches, teams)
+    matches = sorted((m for m in matches if m["date"] >= fetch_from.isoformat()), key=lambda m: m["kickoff"])
     points = project(teams, matches, since)
     predict([m for m in matches if m["status"] not in (FINISHED, LIVE)], points)
 

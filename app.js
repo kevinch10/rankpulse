@@ -180,6 +180,8 @@ function matchRow(m, fixture) {
     m.counted ? `<span class="tag">I=${m.importance}</span>` : '',
     !fixture && !m.counted && m.status !== LIVE ? '<span class="tag muted" title="Already included in the official ranking">In official</span>' : '',
     m.note ? `<span class="tag" title="${esc(m.note)}">Corrected</span>` : '',
+    m.source && m.source !== 'FIFA' && m.source !== 'Manual'
+      ? `<span class="tag muted" title="FIFA's feed doesn't carry this match yet; result from ${esc(m.source)}">via ${m.source === 'Wikipedia' ? 'Wikipedia' : 'community data'}</span>` : '',
   ].join('');
   return `
     <li class="match${state.favs.has(m.home) || state.favs.has(m.away) ? ' is-fav' : ''}" data-confed="${state.confedOf[m.home] || ''}">

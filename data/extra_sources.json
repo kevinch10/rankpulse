@@ -1,0 +1,28 @@
+{
+  "_comment": "Competitions FIFA's calendar API doesn't carry, read from Wikipedia 'Football box' results. Add a block when a new one starts (e.g. the next AFCON qualifying cycle).",
+  "wikipedia": [
+    {
+      "competition": "CAF Africa Cup of Nations Qualifiers",
+      "stage": "Preliminary round",
+      "pages": ["2027 Africa Cup of Nations qualification preliminary round"]
+    },
+    {
+      "competition": "CAF Africa Cup of Nations Qualifiers",
+      "stage": "Group stage",
+      "pages": [
+        "2027 Africa Cup of Nations qualification Group A",
+        "2027 Africa Cup of Nations qualification Group B",
+        "2027 Africa Cup of Nations qualification Group C",
+        "2027 Africa Cup of Nations qualification Group D",
+        "2027 Africa Cup of Nations qualification Group E",
+        "2027 Africa Cup of Nations qualification Group F",
+        "2027 Africa Cup of Nations qualification Group G",
+        "2027 Africa Cup of Nations qualification Group H",
+        "2027 Africa Cup of Nations qualification Group I",
+        "2027 Africa Cup of Nations qualification Group J",
+        "2027 Africa Cup of Nations qualification Group K",
+        "2027 Africa Cup of Nations qualification Group L"
+      ]
+    }
+  ]
+}
