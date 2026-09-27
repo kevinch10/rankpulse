@@ -21,6 +21,7 @@ final class RankingStore {
             Task { @MainActor in
                 guard let self, let data = self.data else { return }
                 await self.favourites.scheduleMatchReminders(data)
+                await self.favourites.scheduleWeeklyDigest(data)
             }
         }
     }
@@ -49,6 +50,7 @@ final class RankingStore {
             error = nil
             await favourites.notifyChanges(in: fresh)
             await favourites.scheduleMatchReminders(fresh)
+            await favourites.scheduleWeeklyDigest(fresh)
         } catch {
             self.error = data == nil ? error.localizedDescription : "Offline — showing saved data"
         }

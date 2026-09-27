@@ -113,7 +113,7 @@ Unofficial. Not affiliated with or endorsed by FIFA.
 
 - **Rankings / Results / Fixtures** tabs, favourites, calendar, period and competition filters.
 - **Home-screen widget** (small and medium, plus lock-screen styles): favourites' live rank, points change and next match. It falls back to the top of the table. The app and widget share favourites through the App Group `group.app.rankpulse`.
-- **Notifications** (on/off switches under the bell button): points and places changes, match reminders an hour before kick-off with the points at stake, milestones (#1, top 10/20/50/100), and official ranking release day. They run on-device using background refresh and scheduled local notifications, so no push server is needed.
+- **Notifications** (on/off switches under the bell button): points and places changes, **rival watch** (who a favourite overtook or was overtaken by), match reminders an hour before kick-off with the points at stake, milestones (#1, top 10/20/50/100), a **weekly digest** every Monday at 9:00 (places, points, results and next match for each favourite; you can send a preview from settings), and official ranking release day. They run on-device using background refresh and scheduled local notifications, so no push server is needed.
 - **Ads (free version):** a Google AdMob bottom banner, plus a 320×100 ad after every 12 rows in Results and Fixtures (every 30 in Rankings). Google's consent form (EU/UK) and Apple's App Tracking Transparency prompt run before any ad loads.
 
 ### Before publishing with real ads

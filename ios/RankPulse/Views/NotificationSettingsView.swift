@@ -28,6 +28,16 @@ struct NotificationSettingsView: View {
                         Text("Swipe left on a team in Rankings, or tap ★ on its page, to follow it.")
                     }
                 }
+                if store.favourites.isEnabled(.weeklyDigest) && !store.favourites.codes.isEmpty {
+                    Section {
+                        Button {
+                            guard let data = store.data else { return }
+                            Task { await store.favourites.sendDigestPreview(data) }
+                        } label: {
+                            Label("Send a preview of this week's digest", systemImage: "paperplane")
+                        }
+                    }
+                }
                 if store.favourites.notificationsAllowed == false {
                     Section {
                         Button("Turn on notifications in Settings") {
