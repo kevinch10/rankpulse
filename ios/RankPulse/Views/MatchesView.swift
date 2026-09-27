@@ -38,19 +38,6 @@ struct MatchesView: View {
             .navigationTitle(kind == .results ? "Results" : "Fixtures")
             .task { if kind == .results { await store.loadHistory() } }
             .toolbar {
-                if kind == .results {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Menu {
-                            Picker("Period", selection: $period) {
-                                ForEach(Period.allCases) { Text($0.title).tag($0) }
-                            }
-                        } label: {
-                            Label(period.title, systemImage: "clock.arrow.circlepath")
-                                .labelStyle(.titleAndIcon)
-                        }
-                        .disabled(day != nil)
-                    }
-                }
                 ToolbarItemGroup {
                     Button { showCalendar = true } label: {
                         Image(systemName: day == nil ? "calendar" : "calendar.badge.checkmark")
@@ -69,6 +56,27 @@ struct MatchesView: View {
             }
             .safeAreaInset(edge: .top) {
                 VStack(spacing: 6) {
+                    if kind == .results && day == nil {
+                        HStack {
+                            Menu {
+                                Picker("Period", selection: $period) {
+                                    ForEach(Period.allCases) { Text($0.title).tag($0) }
+                                }
+                            } label: {
+                                HStack(spacing: 6) {
+                                    Image(systemName: "clock.arrow.circlepath")
+                                    Text(period.title).fontWeight(.semibold)
+                                    Image(systemName: "chevron.down").font(.caption.weight(.bold))
+                                }
+                                .font(.subheadline)
+                                .foregroundStyle(.white)
+                                .padding(.horizontal, 14).padding(.vertical, 8)
+                                .background(Theme.night, in: .capsule)
+                            }
+                            .accessibilityLabel("Period: \(period.title)")
+                            Spacer()
+                        }
+                    }
                     if !competition.isEmpty {
                         FilterChip(icon: "trophy.fill", text: competition, clear: "All competitions", color: Theme.night) {
                             competition = ""
@@ -80,7 +88,7 @@ struct MatchesView: View {
                     }
                 }
                 .padding(.horizontal)
-                .padding(.bottom, competition.isEmpty && day == nil ? 0 : 4)
+                .padding(.bottom, 4)
             }
             .searchable(text: $search, prompt: competition.isEmpty ? "Search team" : "Search teams in \(competition)")
             .refreshable { await store.refresh() }
