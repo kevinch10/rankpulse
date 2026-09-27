@@ -38,6 +38,7 @@ struct Team: Codable, Sendable, Identifiable, Hashable {
     let confed: String
     let officialRank: Int
     let officialPoints: Double
+    let previousRank: Int
     let liveRank: Int
     let livePoints: Double
     let pointsChange: Double

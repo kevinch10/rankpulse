@@ -107,15 +107,24 @@ Unofficial. Not affiliated with or endorsed by FIFA.
 
 ## iPhone
 
-**Web app (no App Store needed):** open the site in Safari → Share → **Add to Home Screen**. It runs full-screen with its own icon and works offline.
+**Web app (no App Store needed):** open the site in Safari → Share → **Add to Home Screen**.
 
-**Native iOS app** (SwiftUI, iOS 18+) lives in [`ios/`](ios). It reads the same `data/rankings.json` the website publishes, caches it for offline use, and ships a bundled snapshot so it works on first launch.
+**Native iOS app** (SwiftUI, iOS 18+) lives in [`ios/`](ios):
+
+- **Rankings / Results / Fixtures** tabs, favourites, calendar, period and competition filters.
+- **Home-screen widget** (small and medium, plus lock-screen styles): favourites' live rank, points change and next match. It falls back to the top of the table. The app and widget share favourites through the App Group `group.app.rankpulse`.
+- **Notifications** (on/off switches under the bell button): points and places changes, match reminders an hour before kick-off with the points at stake, milestones (#1, top 10/20/50/100), and official ranking release day. They run on-device using background refresh and scheduled local notifications, so no push server is needed.
+- **Ads (free version):** a Google AdMob bottom banner, plus a 320×100 ad after every 12 rows in Results and Fixtures (every 30 in Rankings). Google's consent form (EU/UK) and Apple's App Tracking Transparency prompt run before any ad loads.
+
+### Before publishing with real ads
+The project uses Google's **test** ad IDs. Replace them with your own from [admob.google.com](https://admob.google.com):
+1. `ios/RankPulse/Info.plist` → `GADApplicationIdentifier` (your AdMob app ID).
+2. `ios/Shared/Config.swift` → `bannerAdUnitID` and `inlineAdUnitID` (your ad unit IDs).
+3. In AdMob → Privacy & messaging, create the GDPR consent message and the IDFA explainer.
+4. App Store Connect → App Privacy: declare the data used by the Google Mobile Ads SDK (identifiers, usage data, diagnostics) for advertising.
 
 ```bash
-open ios/RankPulse.xcodeproj    # then pick a simulator or your iPhone and press Run
+open ios/RankPulse.xcodeproj    # pick your iPhone and press Run
 ```
 
-- Set `Config.dataURL` in `ios/RankPulse/Config.swift` to your published `https://<user>.github.io/rankpulse/data/rankings.json`.
-- The project is generated from `ios/project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen) (`cd ios && xcodegen`) if you change the file layout.
-- To run on your own iPhone: Xcode → target → Signing & Capabilities → choose your Apple ID team (free).
-- To publish on the App Store you need an Apple Developer Program membership ($99/year), then Product → Archive → Distribute.
+The project is generated from `ios/project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen) (`cd ios && xcodegen`). Publishing to the App Store needs an Apple Developer Program membership ($99/year).

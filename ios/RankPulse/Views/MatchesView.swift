@@ -94,6 +94,7 @@ struct MatchesView: View {
             .refreshable { await store.refresh() }
             .navigationDestination(for: Team.self) { TeamDetailView(team: $0) }
         }
+        .safeAreaInset(edge: .bottom) { BottomBannerAd() }
     }
 
     private var allMatches: [Match] {
@@ -166,10 +167,14 @@ struct MatchesView: View {
         let shown = matches.filter(visible)
         let days = Dictionary(grouping: shown, by: \.date)
         let order = days.keys.sorted(by: kind == .results ? (>) : (<))
+        // Running position of each match across all days, for placing ads.
+        var position: [String: Int] = [:]
+        for (i, m) in order.flatMap({ days[$0] ?? [] }).enumerated() { position[m.id] = i + 1 }
         return List {
             ForEach(order, id: \.self) { day in
                 Section {
                     ForEach(days[day] ?? []) { m in
+                        let n = position[m.id] ?? 0
                         let row = VStack(spacing: 8) {
                             MatchRow(match: m, fixture: kind == .fixtures)
                             if kind == .fixtures { PredictionView(match: m) }
@@ -178,6 +183,9 @@ struct MatchesView: View {
                             NavigationLink(value: team) { row }
                         } else {
                             row
+                        }
+                        if n % Config.inlineAdEvery == 0 && n < shown.count {
+                            InlineAdRow()
                         }
                     }
                 } header: {

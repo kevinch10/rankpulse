@@ -7,35 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07B036CA9B6705E385E2465C /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE8E1C45A6B7B4F8467009 /* NotificationSettingsView.swift */; };
+		0E368150311C34C76855B4A5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1530799C2FE2E31BC47B20 /* Theme.swift */; };
+		11918554AEF755D5CFD90F9A /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 1326509C043769A7A5043E7F /* GoogleMobileAds */; };
 		11A7EB911C52A9A9AA903E67 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF710368159CE700B73F2C88 /* Components.swift */; };
-		185F8B84C840213A476175DD /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE4191E3DB3E2E02037377 /* Models.swift */; };
-		209B60908964E400C1A87B88 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1ADC6576922A6DB1772E42 /* Config.swift */; };
+		254DC6C2B9B4B9EB88DDF748 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1530799C2FE2E31BC47B20 /* Theme.swift */; };
 		36F250173FA302BED0592F8B /* RankingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF071C92D06E36A7F738C795 /* RankingStore.swift */; };
 		375A3C5554C039705437B725 /* RankPulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487C5049A792124DA00058 /* RankPulseApp.swift */; };
 		381FC7975528FA0E1BDB0A66 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4058DB0AB446C40006957 /* Favourites.swift */; };
+		5A0349400AE7BD5F09ACB1F4 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356952FEC2A433C430F44104 /* SharedStore.swift */; };
+		6304B4E220AED458C2E68C6B /* RankingsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F22D605107A78210D0F1A /* RankingsWidget.swift */; };
+		70EC6FE734E0AB9CA1E11CEA /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356952FEC2A433C430F44104 /* SharedStore.swift */; };
 		7A9180F4062D2A930C510A59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A2461C462100B291671E54 /* Assets.xcassets */; };
 		7F6E6DCD3AC260EF50B01379 /* RankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9BA5A408D5AF4EEFF2AAA7 /* RankingsView.swift */; };
+		82C53ECDEE0123250A9B6D69 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F67283C3AFE45A74BF61 /* Config.swift */; };
+		8FD78BFA2ECFAB82A4F99789 /* RankingsWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 14241207118E20153F373825 /* RankingsWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		90D9F52DDA8C5AEED971E984 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD962C6C1E8BEAEC17ACA6B /* TeamDetailView.swift */; };
-		AC6FC1464841746F5EDDF105 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F05723C0D0FEE18FF17C6 /* Theme.swift */; };
+		9511284D27F2DB5125579D22 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA4B1A33B74C515208BF29 /* Models.swift */; };
+		9E360968366A46F17452117F /* GoogleUserMessagingPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = C189C86CEF15C3F8D402EC38 /* GoogleUserMessagingPlatform */; };
+		9ED78932FED6E4433A5F7355 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DBE05DE3446D0F7516D61C /* Formatting.swift */; };
+		9F3501EBDDB0170A0A3150E2 /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2202C25CB70F899F75D62EC2 /* Ads.swift */; };
+		B47D06BCC19A9B9A1F60A829 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DBE05DE3446D0F7516D61C /* Formatting.swift */; };
+		BE34736BB9EC35169244363A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA4B1A33B74C515208BF29 /* Models.swift */; };
 		BF7B4D0A273BE3AD8E1756D9 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249FE5F05EBD3E467FDC2A /* MatchesView.swift */; };
 		D26B9BA14B42F7491A575532 /* rankings.json in Resources */ = {isa = PBXBuildFile; fileRef = DE498D50DD52E5A1B65924A6 /* rankings.json */; };
+		F4058C7A6C5802302A0B72FD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F67283C3AFE45A74BF61 /* Config.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BA4BFB5916B59F7D4DB0AEB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 919B986A90E783A0E171AB0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64B796CA850A7C40032CC6C9;
+			remoteInfo = RankingsWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D246CB4B09AE8EE7F24926F6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8FD78BFA2ECFAB82A4F99789 /* RankingsWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		13EA4B1A33B74C515208BF29 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		14241207118E20153F373825 /* RankingsWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = RankingsWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2202C25CB70F899F75D62EC2 /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
+		356952FEC2A433C430F44104 /* SharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
+		38BE8E1C45A6B7B4F8467009 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
 		4CD962C6C1E8BEAEC17ACA6B /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
-		569F05723C0D0FEE18FF17C6 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		63A2461C462100B291671E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		66CE4191E3DB3E2E02037377 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		66F0F67283C3AFE45A74BF61 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		85C4058DB0AB446C40006957 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 		AF071C92D06E36A7F738C795 /* RankingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStore.swift; sourceTree = "<group>"; };
+		BF4F22D605107A78210D0F1A /* RankingsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsWidget.swift; sourceTree = "<group>"; };
+		C5DBE05DE3446D0F7516D61C /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		D115D71B9CC0208B8AA214BD /* RankPulse.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RankPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7487C5049A792124DA00058 /* RankPulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPulseApp.swift; sourceTree = "<group>"; };
-		DE1ADC6576922A6DB1772E42 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		DE498D50DD52E5A1B65924A6 /* rankings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rankings.json; sourceTree = "<group>"; };
+		DF1530799C2FE2E31BC47B20 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		F3249FE5F05EBD3E467FDC2A /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		FB9BA5A408D5AF4EEFF2AAA7 /* RankingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsView.swift; sourceTree = "<group>"; };
 		FF710368159CE700B73F2C88 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		741093E40EAA6D7FE887F8CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11918554AEF755D5CFD90F9A /* GoogleMobileAds in Frameworks */,
+				9E360968366A46F17452117F /* GoogleUserMessagingPlatform in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1BC4F6EFA3BF807B0B43F694 /* Resources */ = {
@@ -51,17 +106,36 @@
 			isa = PBXGroup;
 			children = (
 				85C4058DB0AB446C40006957 /* Favourites.swift */,
-				66CE4191E3DB3E2E02037377 /* Models.swift */,
 				AF071C92D06E36A7F738C795 /* RankingStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
+		3744F97ED15F98A8F3F8FBB8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				66F0F67283C3AFE45A74BF61 /* Config.swift */,
+				C5DBE05DE3446D0F7516D61C /* Formatting.swift */,
+				13EA4B1A33B74C515208BF29 /* Models.swift */,
+				356952FEC2A433C430F44104 /* SharedStore.swift */,
+				DF1530799C2FE2E31BC47B20 /* Theme.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AD6ACA9F711E89635E1D347B /* RankingsWidget */ = {
+			isa = PBXGroup;
+			children = (
+				BF4F22D605107A78210D0F1A /* RankingsWidget.swift */,
+			);
+			path = RankingsWidget;
+			sourceTree = "<group>";
+		};
 		AEE20D4C58CA4EA541A3E772 /* RankPulse */ = {
 			isa = PBXGroup;
 			children = (
-				DE1ADC6576922A6DB1772E42 /* Config.swift */,
 				D7487C5049A792124DA00058 /* RankPulseApp.swift */,
+				CF60C050BC8AAA4E9118E894 /* Ads */,
 				29340EDD2C5D5F5537FBC609 /* Models */,
 				1BC4F6EFA3BF807B0B43F694 /* Resources */,
 				B8434C7D4E64DB55DEEEB2F0 /* Views */,
@@ -72,7 +146,9 @@
 		B7E633CFD3ADE65D454D30D1 = {
 			isa = PBXGroup;
 			children = (
+				AD6ACA9F711E89635E1D347B /* RankingsWidget */,
 				AEE20D4C58CA4EA541A3E772 /* RankPulse */,
+				3744F97ED15F98A8F3F8FBB8 /* Shared */,
 				C3A4208DAF5DF469E569C6B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,9 +158,9 @@
 			children = (
 				FF710368159CE700B73F2C88 /* Components.swift */,
 				F3249FE5F05EBD3E467FDC2A /* MatchesView.swift */,
+				38BE8E1C45A6B7B4F8467009 /* NotificationSettingsView.swift */,
 				FB9BA5A408D5AF4EEFF2AAA7 /* RankingsView.swift */,
 				4CD962C6C1E8BEAEC17ACA6B /* TeamDetailView.swift */,
-				569F05723C0D0FEE18FF17C6 /* Theme.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,27 +168,58 @@
 		C3A4208DAF5DF469E569C6B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				14241207118E20153F373825 /* RankingsWidget.appex */,
 				D115D71B9CC0208B8AA214BD /* RankPulse.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CF60C050BC8AAA4E9118E894 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				2202C25CB70F899F75D62EC2 /* Ads.swift */,
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		64B796CA850A7C40032CC6C9 /* RankingsWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8AC37A8F53DC39121E520B8 /* Build configuration list for PBXNativeTarget "RankingsWidget" */;
+			buildPhases = (
+				01ECA921FA26933066AE95F5 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RankingsWidget;
+			packageProductDependencies = (
+			);
+			productName = RankingsWidget;
+			productReference = 14241207118E20153F373825 /* RankingsWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FE4B42FF8418F571D9F0E850 /* RankPulse */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52459D8105530D6145C5C7EE /* Build configuration list for PBXNativeTarget "RankPulse" */;
 			buildPhases = (
 				3D554D029DE83597DF1F6764 /* Sources */,
 				F134D07BF7BFDBCF9481559C /* Resources */,
+				741093E40EAA6D7FE887F8CA /* Frameworks */,
+				D246CB4B09AE8EE7F24926F6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3C32989892F9F5A66DC15AFB /* PBXTargetDependency */,
 			);
 			name = RankPulse;
 			packageProductDependencies = (
+				1326509C043769A7A5043E7F /* GoogleMobileAds */,
+				C189C86CEF15C3F8D402EC38 /* GoogleUserMessagingPlatform */,
 			);
 			productName = RankPulse;
 			productReference = D115D71B9CC0208B8AA214BD /* RankPulse.app */;
@@ -127,6 +234,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					64B796CA850A7C40032CC6C9 = {
+						DevelopmentTeam = 723AZ4HL5N;
+						ProvisioningStyle = Automatic;
+					};
 					FE4B42FF8418F571D9F0E850 = {
 						DevelopmentTeam = 723AZ4HL5N;
 						ProvisioningStyle = Automatic;
@@ -142,12 +253,17 @@
 			);
 			mainGroup = B7E633CFD3ADE65D454D30D1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9B5D1BE3C3A5553CD7916FA1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				74178F3F2F91D5E2668A65D2 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C3A4208DAF5DF469E569C6B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				FE4B42FF8418F571D9F0E850 /* RankPulse */,
+				64B796CA850A7C40032CC6C9 /* RankingsWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -165,26 +281,89 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		01ECA921FA26933066AE95F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82C53ECDEE0123250A9B6D69 /* Config.swift in Sources */,
+				9ED78932FED6E4433A5F7355 /* Formatting.swift in Sources */,
+				BE34736BB9EC35169244363A /* Models.swift in Sources */,
+				6304B4E220AED458C2E68C6B /* RankingsWidget.swift in Sources */,
+				70EC6FE734E0AB9CA1E11CEA /* SharedStore.swift in Sources */,
+				254DC6C2B9B4B9EB88DDF748 /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3D554D029DE83597DF1F6764 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F3501EBDDB0170A0A3150E2 /* Ads.swift in Sources */,
 				11A7EB911C52A9A9AA903E67 /* Components.swift in Sources */,
-				209B60908964E400C1A87B88 /* Config.swift in Sources */,
+				F4058C7A6C5802302A0B72FD /* Config.swift in Sources */,
 				381FC7975528FA0E1BDB0A66 /* Favourites.swift in Sources */,
+				B47D06BCC19A9B9A1F60A829 /* Formatting.swift in Sources */,
 				BF7B4D0A273BE3AD8E1756D9 /* MatchesView.swift in Sources */,
-				185F8B84C840213A476175DD /* Models.swift in Sources */,
+				9511284D27F2DB5125579D22 /* Models.swift in Sources */,
+				07B036CA9B6705E385E2465C /* NotificationSettingsView.swift in Sources */,
 				375A3C5554C039705437B725 /* RankPulseApp.swift in Sources */,
 				36F250173FA302BED0592F8B /* RankingStore.swift in Sources */,
 				7F6E6DCD3AC260EF50B01379 /* RankingsView.swift in Sources */,
+				5A0349400AE7BD5F09ACB1F4 /* SharedStore.swift in Sources */,
 				90D9F52DDA8C5AEED971E984 /* TeamDetailView.swift in Sources */,
-				AC6FC1464841746F5EDDF105 /* Theme.swift in Sources */,
+				0E368150311C34C76855B4A5 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3C32989892F9F5A66DC15AFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64B796CA850A7C40032CC6C9 /* RankingsWidget */;
+			targetProxy = BA4BFB5916B59F7D4DB0AEB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1006C387E6E13B18E8158EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RankingsWidget/RankingsWidget.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RankingsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Football Rankings";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.rankpulse.RankPulse.Widget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1B4AC2BAC492FF1C469AA386 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RankingsWidget/RankingsWidget.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RankingsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Football Rankings";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.rankpulse.RankPulse.Widget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
 		36A89A4EC54713974371D8CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -218,9 +397,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 723AZ4HL5N;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -248,12 +429,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RankPulse/RankPulse.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 723AZ4HL5N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RankPulse/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Football Rankings";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Allows ads that are more relevant to you. The app works the same either way.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -300,9 +481,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 723AZ4HL5N;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -337,12 +520,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RankPulse/RankPulse.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 723AZ4HL5N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RankPulse/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Football Rankings";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Allows ads that are more relevant to you. The app works the same either way.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -377,7 +560,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
+		A8AC37A8F53DC39121E520B8 /* Build configuration list for PBXNativeTarget "RankingsWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B4AC2BAC492FF1C469AA386 /* Debug */,
+				1006C387E6E13B18E8158EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74178F3F2F91D5E2668A65D2 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+		9B5D1BE3C3A5553CD7916FA1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1326509C043769A7A5043E7F /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B5D1BE3C3A5553CD7916FA1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+		C189C86CEF15C3F8D402EC38 /* GoogleUserMessagingPlatform */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74178F3F2F91D5E2668A65D2 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */;
+			productName = GoogleUserMessagingPlatform;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 919B986A90E783A0E171AB0D /* Project object */;
 }

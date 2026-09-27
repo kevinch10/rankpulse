@@ -1,6 +1,7 @@
+
+*.xcuserstate
 .DS_Store
-__pycache__/
 .claude/
+__pycache__/
 ios/build/
 xcuserdata/
-*.xcuserstate

@@ -8,6 +8,15 @@ settings:
     SWIFT_VERSION: "6.0"
     MARKETING_VERSION: "1.0"
     CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: 723AZ4HL5N
+    CODE_SIGN_STYLE: Automatic
+packages:
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads.git
+    from: 13.10.0
+  GoogleUserMessagingPlatform:
+    url: https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git
+    from: 3.1.0
 targets:
   RankPulse:
     type: application
@@ -16,17 +25,47 @@ targets:
       - path: RankPulse
         excludes:
           - Info.plist
+          - RankPulse.entitlements
+      - path: Shared
+    dependencies:
+      - target: RankingsWidget
+      - package: GoogleMobileAds
+      - package: GoogleUserMessagingPlatform
+    entitlements:
+      path: RankPulse/RankPulse.entitlements
+      properties:
+        com.apple.security.application-groups: [group.app.rankpulse]
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: app.rankpulse.RankPulse
-        DEVELOPMENT_TEAM: 723AZ4HL5N
-        CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_FILE: RankPulse/Info.plist
         INFOPLIST_KEY_CFBundleDisplayName: "Football Rankings"
+        INFOPLIST_KEY_NSUserTrackingUsageDescription: "Allows ads that are more relevant to you. The app works the same either way."
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         TARGETED_DEVICE_FAMILY: "1"
+  RankingsWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: RankingsWidget
+        excludes:
+          - Info.plist
+          - RankingsWidget.entitlements
+      - path: Shared
+    entitlements:
+      path: RankingsWidget/RankingsWidget.entitlements
+      properties:
+        com.apple.security.application-groups: [group.app.rankpulse]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.rankpulse.RankPulse.Widget
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: RankingsWidget/Info.plist
+        INFOPLIST_KEY_CFBundleDisplayName: "Football Rankings"
+        TARGETED_DEVICE_FAMILY: "1"
+        SKIP_INSTALL: YES

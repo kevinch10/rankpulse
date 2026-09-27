@@ -15,6 +15,15 @@ final class RankingStore {
 
     private var confedByCode: [String: String] = [:]
     let favourites = Favourites()
+
+    init() {
+        favourites.onChange = { [weak self] in
+            Task { @MainActor in
+                guard let self, let data = self.data else { return }
+                await self.favourites.scheduleMatchReminders(data)
+            }
+        }
+    }
     private static let cacheURL = URL.cachesDirectory.appending(path: "rankings.json")
 
     /// Shows cached or bundled data immediately, then fetches the latest.
@@ -39,6 +48,7 @@ final class RankingStore {
             apply(fresh, snapshot: false)
             error = nil
             await favourites.notifyChanges(in: fresh)
+            await favourites.scheduleMatchReminders(fresh)
         } catch {
             self.error = data == nil ? error.localizedDescription : "Offline — showing saved data"
         }

@@ -4,6 +4,7 @@ struct RankingsView: View {
     @Environment(RankingStore.self) private var store
     @State private var search = ""
     @State private var confed = Confederation.all
+    @State private var showSettings = false
 
     var body: some View {
         NavigationStack {
@@ -18,11 +19,19 @@ struct RankingsView: View {
             }
             .navigationTitle("Rankings")
             .toolbarTitleDisplayMode(.inline)
-            .toolbar { ConfedMenu(selection: $confed) }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button { showSettings = true } label: { Image(systemName: "bell.badge") }
+                        .accessibilityLabel("Notification settings")
+                }
+                ToolbarItem { ConfedMenu(selection: $confed) }
+            }
+            .sheet(isPresented: $showSettings) { NotificationSettingsView() }
             .searchable(text: $search, prompt: "Search team")
             .refreshable { await store.refresh() }
             .navigationDestination(for: Team.self) { TeamDetailView(team: $0) }
         }
+        .safeAreaInset(edge: .bottom) { BottomBannerAd() }
     }
 
     private func list(_ data: RankingData) -> some View {
@@ -59,9 +68,12 @@ struct RankingsView: View {
                 }
             }
             Section {
-                ForEach(teams) { team in
+                ForEach(Array(teams.enumerated()), id: \.element.id) { index, team in
                     NavigationLink(value: team) { TeamRow(team: team, isFavourite: favs.contains(team.code)) }
                         .swipeActions { favouriteButton(team) }
+                    if (index + 1) % 30 == 0 && index + 1 < teams.count {
+                        InlineAdRow()
+                    }
                 }
             } header: {
                 HStack {

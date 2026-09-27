@@ -27,13 +27,18 @@ final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCent
 struct RankPulseApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @State private var store = RankingStore()
+    @State private var ads = AdsManager()
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(store)
-                .task { await store.load() }
+                .environment(ads)
+                .task {
+                    await store.load()
+                    await ads.start()
+                }
                 .onChange(of: scenePhase) { _, phase in
                     // Pick up the latest hourly update whenever the app comes back to the foreground.
                     if phase == .active { Task { await store.refresh() } }
