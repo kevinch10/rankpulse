@@ -189,9 +189,6 @@ struct PredictionView: View {
     private var caption: String {
         var parts = match.importance.map { ["I=\($0)"] } ?? []
         if match.knockout == true { parts.append("knockout") }
-        if let e = match.expectedHome {
-            parts.append("exp. \(e.formatted(.number.precision(.fractionLength(2))))–\((1 - e).formatted(.number.precision(.fractionLength(2))))")
-        }
         return parts.joined(separator: " · ")
     }
 }
@@ -203,7 +200,7 @@ struct NotificationStatus: View {
     var body: some View {
         switch store.favourites.notificationsAllowed {
         case true?:
-            Label("You'll be notified when these teams gain or lose points.", systemImage: "bell.badge.fill")
+            Label("You'll be notified when these teams gain or lose points or places.", systemImage: "bell.badge.fill")
         case false?:
             Button {
                 if let url = URL(string: UIApplication.openNotificationSettingsURLString) { openURL(url) }

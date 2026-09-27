@@ -56,7 +56,6 @@ function renderMovers(teams) {
   const byPts = [...teams].sort((a, b) => b.pointsChange - a.pointsChange);
   const byRank = [...teams].sort((a, b) => b.rankChange - a.rankChange);
   const cards = [
-    ['No. 1', teams[0], teams[0].livePoints.toFixed(2)],
     ['Biggest gain', byPts[0], signed(byPts[0].pointsChange)],
     ['Biggest drop', byPts.at(-1), signed(byPts.at(-1).pointsChange)],
     ['Most places up', byRank[0], `▲${byRank[0].rankChange}`],
@@ -64,7 +63,7 @@ function renderMovers(teams) {
   $('movers').innerHTML = cards.map(([label, t, value]) => `
     <div class="mover">
       <div class="label">${label}</div>
-      <div class="team">${flag(t.code)}${esc(t.name)}</div>
+      <div class="team">${flag(t.code)}<span>${esc(t.name)}</span></div>
       <div class="value">${esc(value)}</div>
     </div>`).join('');
 }
@@ -266,7 +265,7 @@ function predictionBlock(m) {
     </div>`;
   return `
     <div class="prediction">
-      <div class="pred-head">Points at stake <span>I=${m.importance}${m.knockout ? ' · knockout' : ''} · expected result ${m.expectedHome.toFixed(2)}–${(1 - m.expectedHome).toFixed(2)}</span></div>
+      <div class="pred-head">Points at stake <span>I=${m.importance}${m.knockout ? ' · knockout' : ''}</span></div>
       <div class="pred-grid">${col('home', m.homeName)}${col('away', m.awayName)}</div>
     </div>`;
 }

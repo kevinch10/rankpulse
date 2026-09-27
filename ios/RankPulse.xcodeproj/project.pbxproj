@@ -253,7 +253,7 @@
 				DEVELOPMENT_TEAM = 723AZ4HL5N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RankPulse/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Rankings;
+				INFOPLIST_KEY_CFBundleDisplayName = "World Football Rankings";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -342,7 +342,7 @@
 				DEVELOPMENT_TEAM = 723AZ4HL5N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RankPulse/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Rankings;
+				INFOPLIST_KEY_CFBundleDisplayName = "World Football Rankings";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

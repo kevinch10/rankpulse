@@ -1,7 +1,7 @@
 {
   "name": "World Football Rankings",
-  "short_name": "Rankings",
-  "description": "Live FIFA men's world ranking projection with daily results and fixtures.",
+  "short_name": "World Football Rankings",
+  "description": "Updated rankings after every international match",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

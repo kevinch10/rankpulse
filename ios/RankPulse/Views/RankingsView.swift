@@ -34,7 +34,7 @@ struct RankingsView: View {
         return List {
             if search.isEmpty && confed == .all {
                 Section {
-                    HeroHeader(subtitle: "Live projection from the official ranking of \(Self.dateText(data.official.pubDate)), updated after every international match.")
+                    HeroHeader(subtitle: "Updated rankings after every international match")
                         .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 12, trailing: 16))
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
@@ -69,6 +69,11 @@ struct RankingsView: View {
                     Text("Team")
                     Spacer()
                     Text("Points")
+                }
+            } footer: {
+                if !teams.isEmpty {
+                    Text("Based on the official FIFA men's world ranking and FIFA's published formula. Not affiliated with FIFA.")
+                        .padding(.top, 8)
                 }
             }
         }
@@ -152,34 +157,41 @@ struct MoversView: View {
     var body: some View {
         let byPoints = teams.sorted { $0.pointsChange > $1.pointsChange }
         let byRank = teams.max { $0.rankChange < $1.rankChange }
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 10) {
-                if let top = teams.first { card("No. 1", top, top.livePoints.formatted(.number.precision(.fractionLength(2))), 0) }
-                if let up = byPoints.first { card("Biggest gain", up, up.pointsChange.signed, 1) }
-                if let down = byPoints.last { card("Biggest drop", down, down.pointsChange.signed, 2) }
-                if let mover = byRank, mover.rankChange > 0 { card("Most places up", mover, "▲\(mover.rankChange)", 3) }
-            }
-            .padding(.horizontal, 20)
+        // Three equal cards that fit the screen width — no sideways scrolling.
+        HStack(spacing: 8) {
+            if let up = byPoints.first { card("Biggest gain", up, up.pointsChange.signedShort, 1) }
+            if let down = byPoints.last { card("Biggest drop", down, down.pointsChange.signedShort, 2) }
+            if let mover = byRank, mover.rankChange > 0 { card("Places up", mover, "▲\(mover.rankChange)", 3) }
         }
-        .scrollClipDisabled()
+        .padding(.horizontal, 16)
     }
 
     private func card(_ label: String, _ team: Team, _ value: String, _ style: Int) -> some View {
-        NavigationLink(value: team) {
-            VStack(alignment: .leading, spacing: 6) {
-                Text(label.uppercased()).font(.caption2.weight(.heavy)).tracking(0.8).opacity(0.9)
-                HStack(spacing: 6) {
-                    FlagView(code: team.code, width: 20)
-                    Text(team.name).font(.subheadline.weight(.bold)).lineLimit(1)
+        // An invisible link keeps the card tappable without List's disclosure arrow.
+        cardBody(label, team, value, style)
+            .overlay { NavigationLink(value: team) { EmptyView() }.opacity(0) }
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isButton)
+    }
+
+    private func cardBody(_ label: String, _ team: Team, _ value: String, _ style: Int) -> some View {
+        Group {
+            VStack(alignment: .leading, spacing: 5) {
+                Text(label.uppercased()).font(.system(size: 9, weight: .heavy)).tracking(0.5).opacity(0.9)
+                    .lineLimit(1).minimumScaleFactor(0.8)
+                HStack(alignment: .top, spacing: 4) {
+                    FlagView(code: team.code, width: 16).padding(.top, 2)
+                    Text(team.name).font(.caption.weight(.bold)).lineLimit(2).minimumScaleFactor(0.85)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
-                Text(value).font(Theme.display(22).monospacedDigit())
+                Spacer(minLength: 0)
+                Text(value).font(Theme.display(19).monospacedDigit()).lineLimit(1).minimumScaleFactor(0.7)
             }
             .foregroundStyle(.white)
-            .frame(width: 150, alignment: .leading)
-            .padding(14)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            .padding(.horizontal, 10).padding(.vertical, 12)
             .background(Theme.cardGradients[style], in: .rect(cornerRadius: 18))
             .shadow(color: .black.opacity(0.18), radius: 10, y: 6)
         }
-        .buttonStyle(.plain)
     }
 }

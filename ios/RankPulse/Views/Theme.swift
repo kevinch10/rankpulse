@@ -66,20 +66,6 @@ struct HeroHeader: View {
                 .lineLimit(2)
             .accessibilityElement(children: .combine)
             .accessibilityLabel("World Football Rankings")
-            HStack(spacing: 8) {
-                HStack(spacing: 5) {
-                    PulseDot()
-                    Text("LIVE").font(Theme.display(13))
-                }
-                .foregroundStyle(Theme.night)
-                .padding(.horizontal, 10).padding(.vertical, 4)
-                .background(.white, in: .capsule)
-                Text("UNOFFICIAL")
-                    .font(.caption2.weight(.bold)).tracking(1)
-                    .foregroundStyle(.white.opacity(0.85))
-                    .padding(.horizontal, 7).padding(.vertical, 3)
-                    .overlay(RoundedRectangle(cornerRadius: 5).stroke(.white.opacity(0.4)))
-            }
             Text(subtitle)
                 .font(.footnote)
                 .foregroundStyle(.white.opacity(0.8))
@@ -98,21 +84,6 @@ struct HeroHeader: View {
         }
         .overlay(alignment: .bottom) { Theme.spectrum.frame(height: 5) }
         .clipShape(RoundedRectangle(cornerRadius: 22))
-    }
-}
-
-struct PulseDot: View {
-    @State private var on = false
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
-
-    var body: some View {
-        Circle().fill(Theme.magenta)
-            .frame(width: 8, height: 8)
-            .overlay(Circle().stroke(Theme.magenta, lineWidth: 2).scaleEffect(on ? 2.4 : 1).opacity(on ? 0 : 0.8))
-            .onAppear {
-                guard !reduceMotion else { return }
-                withAnimation(.easeOut(duration: 1.4).repeatForever(autoreverses: false)) { on = true }
-            }
     }
 }
 
