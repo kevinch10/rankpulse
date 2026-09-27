@@ -219,7 +219,10 @@ struct FilterChip: View {
             Image(systemName: icon)
             Text(text).font(.subheadline.weight(.semibold)).lineLimit(1)
             Spacer(minLength: 8)
-            Button(clear, action: action).font(.subheadline.weight(.semibold)).fixedSize()
+            Button(action: action) {
+                Image(systemName: "xmark.circle.fill").font(.title3).symbolRenderingMode(.hierarchical)
+            }
+            .accessibilityLabel(clear)
         }
         .foregroundStyle(.white)
         .padding(.horizontal, 14).padding(.vertical, 8)
