@@ -63,3 +63,18 @@ python3 -m http.server 8000    # open http://localhost:8000
 ---
 
 Unofficial. Not affiliated with or endorsed by FIFA.
+
+## iPhone
+
+**Web app (no App Store needed):** open the site in Safari → Share → **Add to Home Screen**. It runs full-screen with its own icon and works offline.
+
+**Native iOS app** (SwiftUI, iOS 18+) lives in [`ios/`](ios). It reads the same `data/rankings.json` the website publishes, caches it for offline use, and ships a bundled snapshot so it works on first launch.
+
+```bash
+open ios/RankPulse.xcodeproj    # then pick a simulator or your iPhone and press Run
+```
+
+- Set `Config.dataURL` in `ios/RankPulse/Config.swift` to your published `https://<user>.github.io/rankpulse/data/rankings.json`.
+- The project is generated from `ios/project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen) (`cd ios && xcodegen`) if you change the file layout.
+- To run on your own iPhone: Xcode → target → Signing & Capabilities → choose your Apple ID team (free).
+- To publish on the App Store you need an Apple Developer Program membership ($99/year), then Product → Archive → Distribute.

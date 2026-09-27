@@ -194,3 +194,7 @@ async function init() {
 init().catch(err => {
   $('rows').innerHTML = `<tr><td colspan="5">Could not load rankings: ${esc(err.message)}</td></tr>`;
 });
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}

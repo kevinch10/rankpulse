@@ -33,7 +33,7 @@ body {
   font: 15px/1.5 Inter, system-ui, sans-serif;
 }
 a { color: var(--accent); }
-.wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-right)) 0 max(16px, env(safe-area-inset-left)); }
 
 header { padding-top: 40px; padding-bottom: 8px; }
 .brand { display: flex; align-items: center; gap: 12px; }
