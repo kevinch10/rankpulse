@@ -23,7 +23,7 @@ targets:
         CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_FILE: RankPulse/Info.plist
-        INFOPLIST_KEY_CFBundleDisplayName: "World Football Rankings"
+        INFOPLIST_KEY_CFBundleDisplayName: "Football Rankings"
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES

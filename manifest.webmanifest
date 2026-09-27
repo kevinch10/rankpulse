@@ -1,6 +1,6 @@
 {
   "name": "World Football Rankings",
-  "short_name": "World Football Rankings",
+  "short_name": "Football Rankings",
   "description": "Updated rankings after every international match",
   "start_url": "./",
   "scope": "./",
