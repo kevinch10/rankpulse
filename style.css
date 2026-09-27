@@ -56,14 +56,12 @@ h1 { margin: 0; font-size: 32px; letter-spacing: -0.02em; }
 .meta dt { color: var(--muted); }
 .meta dd { margin: 0; font-weight: 600; }
 
-.movers { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 24px 0; }
+.movers { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 24px 0; }
 .mover { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
 .mover .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
 .mover .team { display: flex; align-items: center; gap: 8px; font-weight: 600; margin-top: 6px; }
 .mover .value { font: 500 20px 'JetBrains Mono', monospace; margin-top: 2px; }
 
-.layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 16px; align-items: start; }
-@media (max-width: 860px) { .layout { grid-template-columns: minmax(0, 1fr); } }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
 h2 { font-size: 15px; margin: 0 0 12px; }
 
@@ -78,7 +76,7 @@ h2 { font-size: 15px; margin: 0 0 12px; }
   border: 0; background: var(--chip); color: var(--muted);
   padding: 6px 10px; border-radius: 999px; font: 500 12px Inter, sans-serif; cursor: pointer;
 }
-.tabs button[aria-selected="true"] { background: var(--ink); color: var(--card); }
+.tabs button[aria-pressed="true"] { background: var(--ink); color: var(--card); }
 
 .ranking { width: 100%; border-collapse: collapse; }
 .ranking th {
@@ -105,10 +103,40 @@ h2 { font-size: 15px; margin: 0 0 12px; }
 .empty { color: var(--muted); text-align: center; }
 @media (max-width: 560px) { .hide-sm { display: none; } }
 
-.matches { list-style: none; margin: 0; padding: 0 8px 0 0; max-height: 720px; overflow: auto; }
-.matches li { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
-.matches li:last-child { border-bottom: 0; }
-.matches .line { display: flex; justify-content: space-between; gap: 8px; font-weight: 600; }
-.matches .sub { color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; gap: 8px; }
+.views { display: flex; gap: 4px; margin-bottom: 12px; border-bottom: 1px solid var(--line); }
+.views button {
+  border: 0; background: none; color: var(--muted); font: 600 14px Inter, sans-serif;
+  padding: 10px 14px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.views button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.views .count { font: 500 11px 'JetBrains Mono', monospace; background: var(--chip); padding: 1px 6px; border-radius: 999px; margin-left: 4px; }
+#competition {
+  padding: 7px 10px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--bg); color: var(--ink); font: inherit; font-size: 13px; max-width: 100%;
+}
+
+.day + .day { margin-top: 20px; }
+.day h3 { font-size: 13px; margin: 0 0 4px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.day h3 span { color: var(--muted); font-weight: 500; margin-left: 6px; }
+.matches { list-style: none; margin: 0; padding: 0; }
+.match { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.match:last-child { border-bottom: 0; }
+.teams { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 12px; font-weight: 600; }
+.side { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.side.r { justify-content: flex-end; text-align: right; }
+.side.r .delta { order: -1; }
+.nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.delta { font: 500 11px 'JetBrains Mono', monospace; }
+.score { font: 500 15px 'JetBrains Mono', monospace; text-align: center; min-width: 56px; white-space: nowrap; }
+.score.time { color: var(--muted); font-size: 13px; }
+.match .sub { color: var(--muted); font-size: 12px; text-align: center; margin-top: 4px; }
+.tag { display: inline-block; font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 4px; background: var(--chip); color: var(--ink); margin-left: 4px; }
+.tag.muted { color: var(--muted); }
+.tag.live { background: var(--down); color: #fff; }
+@media (max-width: 560px) {
+  .teams { gap: 6px; font-size: 13px; }
+  .side .flag { display: none; }
+  .score { min-width: 44px; font-size: 14px; }
+}
 
 footer { color: var(--muted); font-size: 12px; padding-top: 24px; padding-bottom: 40px; }

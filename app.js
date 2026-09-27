@@ -1,11 +1,14 @@
 const FLAG = code => `https://api.fifa.com/api/v3/picture/flags-sq-2/${code}`;
 const CONFEDS = ['All', 'UEFA', 'CONMEBOL', 'CONCACAF', 'CAF', 'AFC', 'OFC'];
+const LIVE = 3;
 
-const state = { data: null, confed: 'All', query: '', open: null };
+const state = { data: null, view: 'rankings', confed: 'All', competition: '', query: '', open: null };
 const $ = id => document.getElementById(id);
 
-const esc = s => String(s).replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
 const fmtDate = iso => new Date(iso).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+const fmtDay = ymd => new Date(`${ymd}T12:00:00`).toLocaleDateString(undefined, { weekday: 'long', day: 'numeric', month: 'long' });
+const fmtTime = iso => new Date(iso).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
 const signed = (n, digits = 2) => (n > 0 ? '+' : '') + n.toFixed(digits);
 const tone = n => (n > 0 ? 'up' : n < 0 ? 'down' : 'flat');
 
@@ -18,10 +21,13 @@ function moveBadge(n) {
   return `<span class="move ${tone(n)}">${n > 0 ? '▲' : '▼'}${Math.abs(n)}</span>`;
 }
 
-function renderMeta({ official, generatedAt, matches, matchesSince }) {
+// ---------- header ----------
+
+function renderMeta({ official, generatedAt, results, matchesSince }) {
+  const counted = results.filter(m => m.counted).length;
   const items = [
     ['Official ranking', fmtDate(official.pubDate)],
-    ['Matches applied', `${matches.length} since ${fmtDate(matchesSince)}`],
+    ['Matches applied', `${counted} since then`],
     ['Last refreshed', new Date(generatedAt).toLocaleString()],
   ];
   if (official.nextPubDate) items.push(['Next official release', fmtDate(official.nextPubDate)]);
@@ -32,7 +38,7 @@ function renderMovers(teams) {
   const byPts = [...teams].sort((a, b) => b.pointsChange - a.pointsChange);
   const byRank = [...teams].sort((a, b) => b.rankChange - a.rankChange);
   const cards = [
-    ['No. 1', teams[0], `${teams[0].livePoints.toFixed(2)}`],
+    ['No. 1', teams[0], teams[0].livePoints.toFixed(2)],
     ['Biggest gain', byPts[0], signed(byPts[0].pointsChange)],
     ['Biggest drop', byPts.at(-1), signed(byPts.at(-1).pointsChange)],
     ['Most places up', byRank[0], `▲${byRank[0].rankChange}`],
@@ -45,32 +51,53 @@ function renderMovers(teams) {
     </div>`).join('');
 }
 
-function renderTabs() {
-  $('confeds').innerHTML = CONFEDS.map(c =>
-    `<button role="tab" aria-selected="${c === state.confed}" data-confed="${c}">${c}</button>`).join('');
+// ---------- filters ----------
+
+function teamMatchesFilter(code, name) {
+  const q = state.query.trim().toLowerCase();
+  return !q || name.toLowerCase().includes(q) || code.toLowerCase().includes(q);
 }
 
-function teamMatches(code) {
-  return state.data.matches.filter(m => m.home === code || m.away === code);
+function matchVisible(m) {
+  const confed = state.confedOf;
+  return (state.confed === 'All' || confed[m.home] === state.confed || confed[m.away] === state.confed) &&
+    (!state.competition || m.competition === state.competition) &&
+    (teamMatchesFilter(m.home, m.homeName) || teamMatchesFilter(m.away, m.awayName));
 }
+
+function renderControls() {
+  $('confeds').innerHTML = CONFEDS.map(c =>
+    `<button aria-pressed="${c === state.confed}" data-confed="${c}">${c}</button>`).join('');
+
+  const sel = $('competition');
+  sel.hidden = state.view === 'rankings';
+  if (!sel.hidden) {
+    const list = state.view === 'results' ? state.data.results : state.data.fixtures;
+    const comps = [...new Set(list.map(m => m.competition))].sort();
+    if (state.competition && !comps.includes(state.competition)) state.competition = '';
+    sel.innerHTML = `<option value="">All competitions</option>` +
+      comps.map(c => `<option ${c === state.competition ? 'selected' : ''}>${esc(c)}</option>`).join('');
+  }
+  document.querySelectorAll('.views button').forEach(b =>
+    b.setAttribute('aria-selected', b.dataset.view === state.view));
+}
+
+// ---------- rankings ----------
 
 function detailRow(t) {
-  const ms = teamMatches(t.code);
+  const ms = state.data.results.filter(m => m.counted && (m.home === t.code || m.away === t.code));
   const body = ms.length
     ? `<ul>${ms.map(m => {
         const d = m.home === t.code ? m.homeDelta : m.awayDelta;
-        return `<li>${esc(m.date)} · ${esc(m.home)} ${esc(m.score)} ${esc(m.away)} · ${esc(m.tournament)} (I=${m.importance}) · <span class="${tone(d)}">${signed(d)}</span></li>`;
+        return `<li>${esc(m.date)} · ${esc(m.homeName)} ${scoreText(m)} ${esc(m.awayName)} · ${esc(m.competition)} (I=${m.importance}) · <span class="${tone(d)}">${signed(d)}</span></li>`;
       }).join('')}</ul>`
     : 'No matches since the last official ranking.';
   return `<tr class="detail"><td colspan="5">${body}</td></tr>`;
 }
 
-function renderTable() {
-  const q = state.query.trim().toLowerCase();
+function renderRankings() {
   const teams = state.data.teams.filter(t =>
-    (state.confed === 'All' || t.confed === state.confed) &&
-    (!q || t.name.toLowerCase().includes(q) || t.code.toLowerCase().includes(q)));
-
+    (state.confed === 'All' || t.confed === state.confed) && teamMatchesFilter(t.code, t.name));
   $('rows').innerHTML = teams.map(t => `
     <tr data-code="${t.code}" aria-expanded="${state.open === t.code}">
       <td class="num rank">${t.liveRank}${moveBadge(t.rankChange)}</td>
@@ -79,40 +106,88 @@ function renderTable() {
       <td class="num">${t.livePoints.toFixed(2)}</td>
       <td class="num ${tone(t.pointsChange)}">${t.pointsChange ? signed(t.pointsChange) : '–'}</td>
     </tr>${state.open === t.code ? detailRow(t) : ''}`).join('');
-  $('empty').hidden = teams.length > 0;
+  return teams.length;
 }
 
-function renderMatches(matches) {
-  $('matches').innerHTML = matches.slice(0, 60).map(m => `
-    <li>
-      <div class="line"><span>${flag(m.home)} ${esc(m.home)} ${esc(m.score)} ${esc(m.away)} ${flag(m.away)}</span></div>
-      <div class="sub"><span>${esc(m.date)} · ${esc(m.tournament)}</span>
-        <span><span class="${tone(m.homeDelta)}">${signed(m.homeDelta, 1)}</span> / <span class="${tone(m.awayDelta)}">${signed(m.awayDelta, 1)}</span></span></div>
-    </li>`).join('') || '<li>No matches since the last official ranking.</li>';
+// ---------- results & fixtures ----------
+
+function scoreText(m) {
+  if (m.homeScore == null) return 'v';
+  const pens = m.homePens != null ? ` (${m.homePens}–${m.awayPens} p)` : '';
+  return `${m.homeScore}–${m.awayScore}${pens}`;
+}
+
+function matchRow(m, fixture) {
+  const side = (code, name, delta, align) => `
+    <span class="side ${align}">${align === 'r' ? '' : flag(code)}<span class="nm">${esc(name)}</span>${align === 'r' ? flag(code) : ''}
+      ${m.counted ? `<span class="delta ${tone(delta)}">${signed(delta, 1)}</span>` : ''}</span>`;
+  const middle = fixture
+    ? `<span class="score time">${fmtTime(m.kickoff)}</span>`
+    : `<span class="score">${scoreText(m)}</span>`;
+  const tags = [
+    m.status === LIVE ? '<span class="tag live">Live</span>' : '',
+    m.counted ? `<span class="tag">I=${m.importance}</span>` : '',
+    !fixture && !m.counted && m.status !== LIVE ? '<span class="tag muted" title="Already included in the official ranking">In official</span>' : '',
+    m.note ? `<span class="tag" title="${esc(m.note)}">Corrected</span>` : '',
+  ].join('');
+  return `
+    <li class="match">
+      <div class="teams">${side(m.home, m.homeName, m.homeDelta, 'l')}${middle}${side(m.away, m.awayName, m.awayDelta, 'r')}</div>
+      <div class="sub">${esc(m.competition)}${m.stage && !m.stage.startsWith('Friendlies') ? ` · ${esc(m.stage)}` : ''}${m.city ? ` · ${esc(m.city)}` : ''} ${tags}</div>
+    </li>`;
+}
+
+function renderMatchList(el, list, fixture) {
+  const shown = list.filter(matchVisible);
+  const days = new Map();
+  for (const m of shown) {
+    if (!days.has(m.date)) days.set(m.date, []);
+    days.get(m.date).push(m);
+  }
+  el.innerHTML = [...days].map(([day, ms]) => `
+    <section class="day">
+      <h3>${fmtDay(day)} <span>${ms.length} match${ms.length === 1 ? '' : 'es'}</span></h3>
+      <ol class="matches">${ms.map(m => matchRow(m, fixture)).join('')}</ol>
+    </section>`).join('');
+  return shown.length;
+}
+
+// ---------- render ----------
+
+function render() {
+  renderControls();
+  for (const v of ['rankings', 'results', 'fixtures']) $(`view-${v}`).hidden = v !== state.view;
+  const n = state.view === 'rankings' ? renderRankings()
+    : state.view === 'results' ? renderMatchList($('view-results'), state.data.results, false)
+    : renderMatchList($('view-fixtures'), state.data.fixtures, true);
+  $('empty').hidden = n > 0;
 }
 
 async function init() {
   const res = await fetch('data/rankings.json', { cache: 'no-cache' });
   state.data = await res.json();
+  state.confedOf = Object.fromEntries(state.data.teams.map(t => [t.code, t.confed]));
   renderMeta(state.data);
   renderMovers(state.data.teams);
-  renderTabs();
-  renderTable();
-  renderMatches(state.data.matches);
+  $('results-count').textContent = state.data.results.length;
+  $('fixtures-count').textContent = state.data.fixtures.length;
+  render();
 
-  $('search').addEventListener('input', e => { state.query = e.target.value; renderTable(); });
+  document.querySelector('.views').addEventListener('click', e => {
+    const b = e.target.closest('button[data-view]');
+    if (b) { state.view = b.dataset.view; render(); }
+  });
+  $('search').addEventListener('input', e => { state.query = e.target.value; render(); });
+  $('competition').addEventListener('change', e => { state.competition = e.target.value; render(); });
   $('confeds').addEventListener('click', e => {
     const c = e.target.dataset.confed;
-    if (!c) return;
-    state.confed = c;
-    renderTabs();
-    renderTable();
+    if (c) { state.confed = c; render(); }
   });
   $('rows').addEventListener('click', e => {
     const row = e.target.closest('tr[data-code]');
     if (!row) return;
     state.open = state.open === row.dataset.code ? null : row.dataset.code;
-    renderTable();
+    render();
   });
 }
 

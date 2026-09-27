@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-"""Build data/rankings.json: the latest official FIFA men's ranking plus a
-live projection that applies every international result played since.
+"""Build data/rankings.json: the latest official FIFA men's ranking, a live
+projection that applies every international result played since, recent
+results and upcoming fixtures.
+
+All data comes from FIFA's public API: the ranking, plus each ranked team's
+match calendar (friendlies, Nations Leagues, qualifiers, continental and
+world finals, in every confederation).
 
 Live points use FIFA's SUM formula (in use since 2018):
     P = P_before + I * (W - W_e)
@@ -8,188 +13,205 @@ Live points use FIFA's SUM formula (in use since 2018):
 """
 
 import csv
-import io
 import json
+import re
 import sys
 import urllib.request
-from datetime import datetime, timezone
+from concurrent.futures import ThreadPoolExecutor
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "rankings.json"
 MANUAL = ROOT / "data" / "manual_results.csv"
 
-FIFA_API = "https://api.fifa.com/api/v3/rankings/?gender=1&count=300"
-RESULTS_CSV = "https://raw.githubusercontent.com/martj42/international_results/master/results.csv"
-SHOOTOUTS_CSV = "https://raw.githubusercontent.com/martj42/international_results/master/shootouts.csv"
+API = "https://api.fifa.com/api/v3"
+RESULT_DAYS = 45    # show at least this many days of results
+FIXTURE_DAYS = 21   # and this many days of upcoming fixtures
 
-# Results dataset name -> FIFA name
-NAME_MAP = {
-    "Brunei": "Brunei Darussalam",
-    "Cape Verde": "Cabo Verde",
-    "China": "China PR",
-    "Taiwan": "Chinese Taipei",
-    "DR Congo": "Congo DR",
-    "Czech Republic": "Czechia",
-    "Ivory Coast": "Côte d'Ivoire",
-    "North Korea": "DPR Korea",
-    "Hong Kong": "Hong Kong, China",
-    "Iran": "IR Iran",
-    "South Korea": "Korea Republic",
-    "Kyrgyzstan": "Kyrgyz Republic",
-    "Saint Kitts and Nevis": "St Kitts and Nevis",
-    "Saint Lucia": "St Lucia",
-    "Saint Vincent and the Grenadines": "St Vincent and the Grenadines",
-    "Gambia": "The Gambia",
-    "Turkey": "Türkiye",
-    "United States Virgin Islands": "US Virgin Islands",
-    "United States": "USA",
-}
+FINISHED, LIVE = 0, 3  # MatchStatus values
 
-WORLD_CUP = {"FIFA World Cup"}
+WORLD_CUP = "FIFA World Cup™"
 CONFED_FINALS = {
-    "UEFA Euro", "African Cup of Nations", "AFC Asian Cup",
-    "Gold Cup", "Copa América", "Oceania Nations Cup",
+    "UEFA EURO", "CAF Africa Cup of Nations", "AFC Asian Cup",
+    "Concacaf Gold Cup", "Copa América", "OFC Nations Cup",
 }
-NATIONS_LEAGUE = {"UEFA Nations League", "CONCACAF Nations League"}
+NATIONS_LEAGUES = {"UEFA Nations League", "Concacaf Nations League"}
+LATE_STAGE = re.compile(r"quarter|semi|^final$|3rd|third|bronze", re.I)
 
 
-def importance(tournament, knockout):
-    """Match importance (I) per FIFA's table. The results feed has no stage
-    info, so a penalty shootout is our only signal that a match was a
-    knockout tie; everything else in a final tournament counts as group stage."""
-    if tournament in WORLD_CUP:
-        return 60 if knockout else 50
-    if tournament in CONFED_FINALS:
-        return 40 if knockout else 35
-    if "qualification" in tournament:
-        return 25
-    if tournament in NATIONS_LEAGUE:
-        return 15
-    return 10  # friendlies and non-confederation tournaments
+def text(localized):
+    return (localized or [{}])[0].get("Description", "").strip()
 
 
-def fetch(url):
+def importance(competition, stage):
+    """Match importance (I) and whether it's a knockout tie of a final
+    competition (where losers don't drop points). Friendlies are all I=10:
+    FIFA gives I=5 to friendlies outside international windows, but its API
+    doesn't say which those are."""
+    group = stage.startswith(("First Stage", "Group"))
+    if competition == WORLD_CUP:
+        return (60 if LATE_STAGE.search(stage) else 50), not group
+    if competition in CONFED_FINALS:
+        return (40 if LATE_STAGE.search(stage) else 35), not group
+    if competition in NATIONS_LEAGUES:
+        return (15 if stage.startswith("League") else 25), False
+    if "Qualif" in competition or competition == "Continental Qualifier":
+        return 25, False
+    return 10, False
+
+
+def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "rankpulse/1.0"})
     with urllib.request.urlopen(req, timeout=60) as r:
-        return r.read().decode("utf-8")
+        return json.load(r)
 
 
 def load_official():
-    rows = json.loads(fetch(FIFA_API))["Results"]
+    rows = get(f"{API}/rankings/?gender=1&count=300")["Results"]
     teams = {}
     for r in rows:
-        name = r["TeamName"][0]["Description"]
-        teams[name] = {
+        teams[r["IdTeam"]] = {
+            "id": r["IdTeam"],
             "code": r["IdCountry"],
-            "name": name,
+            "name": text(r["TeamName"]),
             "confed": r["ConfederationName"],
             "officialRank": r["Rank"],
             "officialPoints": r["DecimalTotalPoints"],
             "previousRank": r["PrevRank"],
         }
-    meta = {
-        "pubDate": rows[0]["PubDate"],
-        "nextPubDate": rows[0].get("NextPubDate"),
-    }
+    meta = {"pubDate": rows[0]["PubDate"], "nextPubDate": rows[0].get("NextPubDate")}
     return teams, meta
 
 
-def load_results(since):
-    shootouts = {}
-    for r in csv.DictReader(io.StringIO(fetch(SHOOTOUTS_CSV))):
-        if r["date"] >= since:
-            shootouts[(r["date"], r["home_team"], r["away_team"])] = r["winner"]
+def load_matches(teams, since, until):
+    def team_calendar(team_id):
+        url = (f"{API}/calendar/matches?language=en&count=500&idTeam={team_id}"
+               f"&from={since}T00:00:00Z&to={until}T23:59:59Z")
+        return get(url)["Results"]
+
+    with ThreadPoolExecutor(12) as pool:
+        calendars = list(pool.map(team_calendar, teams))
 
     matches = {}
-    sources = [fetch(RESULTS_CSV)]
-    if MANUAL.exists():
-        sources.append(MANUAL.read_text(encoding="utf-8"))
-    for text in sources:
-        for r in csv.DictReader(io.StringIO(text)):
-            if r["date"] < since or r["home_score"] in ("", "NA"):
-                continue
-            key = (r["date"], r["home_team"], r["away_team"])
-            if r.get("shootout_winner"):
-                shootouts[key] = r["shootout_winner"]
-            matches[key] = r  # manual rows override the feed
-    return [dict(m, shootout=shootouts.get(k)) for k, m in sorted(matches.items())]
+    for m in (m for cal in calendars for m in cal):
+        home, away = m["Home"], m["Away"]
+        if not (home and away and home["IdTeam"] in teams and away["IdTeam"] in teams):
+            continue  # TBD slots, or a guest side that isn't FIFA-ranked
+        competition, stage = text(m["CompetitionName"]), text(m["StageName"])
+        matches[m["IdMatch"]] = {
+            "id": m["IdMatch"],
+            "kickoff": m["Date"],
+            "date": m["LocalDate"][:10],  # FIFA cuts rankings by local match date
+            "home": home["IdTeam"],
+            "away": away["IdTeam"],
+            "homeScore": m["HomeTeamScore"],
+            "awayScore": m["AwayTeamScore"],
+            "homePens": m["HomeTeamPenaltyScore"],
+            "awayPens": m["AwayTeamPenaltyScore"],
+            "status": m["MatchStatus"],
+            "competition": competition,
+            "stage": stage,
+            "city": text((m.get("Stadium") or {}).get("CityName")),
+        }
+    apply_manual(matches, teams)
+    return sorted(matches.values(), key=lambda m: m["kickoff"])
+
+
+def apply_manual(matches, teams):
+    """data/manual_results.csv corrects or adds results (e.g. forfeits
+    awarded after the match). Team names must match FIFA's."""
+    if not MANUAL.exists():
+        return
+    by_name = {t["name"]: t["id"] for t in teams.values()}
+    by_key = {(m["date"], m["home"], m["away"]): m for m in matches.values()}
+    for r in csv.DictReader(MANUAL.open(encoding="utf-8")):
+        home, away = by_name.get(r["home_team"]), by_name.get(r["away_team"])
+        if not (home and away):
+            print(f"manual_results.csv: unknown team in {r}", file=sys.stderr)
+            continue
+        m = by_key.get((r["date"], home, away))
+        if m is None:
+            m = matches[f"manual-{r['date']}-{home}-{away}"] = {
+                "id": f"manual-{r['date']}-{home}-{away}", "kickoff": f"{r['date']}T12:00:00Z",
+                "date": r["date"], "home": home, "away": away, "homePens": None, "awayPens": None,
+                "competition": r["competition"] or "Friendlies", "stage": r.get("stage", ""), "city": "",
+            }
+        m.update(homeScore=int(r["home_score"]), awayScore=int(r["away_score"]),
+                 status=FINISHED, note=r.get("note") or "Manual correction")
 
 
 def expected(p_team, p_opp):
     return 1 / (10 ** (-(p_team - p_opp) / 600) + 1)
 
 
-def project(teams, results):
-    points = {n: t["officialPoints"] for n, t in teams.items()}
-    applied = []
-    for m in results:
-        home = NAME_MAP.get(m["home_team"], m["home_team"])
-        away = NAME_MAP.get(m["away_team"], m["away_team"])
-        if home not in teams or away not in teams:
-            continue  # non-FIFA sides (CONIFA, island games, ...)
-
-        hs, as_ = int(m["home_score"]), int(m["away_score"])
-        so = m["shootout"]
-        so = NAME_MAP.get(so, so) if so else None
-        knockout = so is not None
-        if hs > as_:
-            w_home = 1.0
-        elif hs < as_:
-            w_home = 0.0
-        elif so:
-            w_home = 0.75 if so == home else 0.5
+def project(teams, matches, since):
+    """Apply finished matches on or after `since` to the official points.
+    Annotates each match in place with I and each side's points change."""
+    points = {tid: t["officialPoints"] for tid, t in teams.items()}
+    for m in matches:
+        if m["status"] != FINISHED or m["date"] < since:
+            continue
+        h, a = m["home"], m["away"]
+        hs, as_ = m["homeScore"], m["awayScore"]
+        if hs != as_:
+            w_home = 1.0 if hs > as_ else 0.0
+            w_away = 1.0 - w_home
+        elif m["homePens"] is not None:
+            w_home, w_away = (0.75, 0.5) if m["homePens"] > m["awayPens"] else (0.5, 0.75)
         else:
-            w_home = 0.5
-        w_away = {1.0: 0.0, 0.0: 1.0, 0.75: 0.5, 0.5: 0.75 if so else 0.5}[w_home]
+            w_home = w_away = 0.5
 
-        i = importance(m["tournament"], knockout)
-        ph, pa = points[home], points[away]
-        dh = i * (w_home - expected(ph, pa))
-        da = i * (w_away - expected(pa, ph))
-        # Losers in a knockout tie of a final tournament keep their points.
-        if knockout and i >= 40:
+        i, knockout = importance(m["competition"], m["stage"])
+        dh = i * (w_home - expected(points[h], points[a]))
+        da = i * (w_away - expected(points[a], points[h]))
+        if knockout:
             dh, da = max(dh, 0), max(da, 0)
-        points[home] += dh
-        points[away] += da
-
-        applied.append({
-            "date": m["date"],
-            "home": teams[home]["code"],
-            "away": teams[away]["code"],
-            "score": f"{hs}-{as_}" + (f" (pens: {teams[so]['code']})" if so in teams else ""),
-            "tournament": m["tournament"],
-            "importance": i,
-            "homeDelta": round(dh, 2),
-            "awayDelta": round(da, 2),
-        })
-    return points, applied
+        points[h] += dh
+        points[a] += da
+        m.update(counted=True, importance=i, homeDelta=round(dh, 2), awayDelta=round(da, 2))
+    return points
 
 
 def main():
     teams, meta = load_official()
-    # A ranking published on day D includes matches up to D-1.
-    since = meta["pubDate"][:10]
-    results = load_results(since)
-    points, applied = project(teams, results)
+    since = meta["pubDate"][:10]  # a ranking published on day D includes matches up to D-1
+    today = date.today()
+    fetch_from = min(date.fromisoformat(since), today - timedelta(days=RESULT_DAYS))
+    # One day of slack either side: FIFA filters by UTC kickoff, we filter by local date.
+    matches = load_matches(teams, fetch_from - timedelta(days=1), today + timedelta(days=FIXTURE_DAYS))
+    matches = [m for m in matches if m["date"] >= fetch_from.isoformat()]
+    points = project(teams, matches, since)
 
-    live = sorted(teams.values(), key=lambda t: (-points[t["name"]], t["officialRank"]))
+    live = sorted(teams.values(), key=lambda t: (-points[t["id"]], t["officialRank"]))
     for rank, t in enumerate(live, 1):
         t["liveRank"] = rank
-        t["livePoints"] = round(points[t["name"]], 2)
+        t["livePoints"] = round(points[t["id"]], 2)
         t["pointsChange"] = round(t["livePoints"] - t["officialPoints"], 2)
         t["rankChange"] = t["officialRank"] - rank
 
+    code = {tid: t["code"] for tid, t in teams.items()}
+    name = {tid: t["name"] for tid, t in teams.items()}
+    for m in matches:
+        m["homeName"], m["awayName"] = name[m["home"]], name[m["away"]]
+        m["home"], m["away"] = code[m["home"]], code[m["away"]]
+        m.pop("id")
+
+    played = [m for m in matches if m["status"] in (FINISHED, LIVE)]
+    fixtures = [m for m in matches if m["status"] not in (FINISHED, LIVE) and m["date"] >= today.isoformat()]
     out = {
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "official": meta,
         "matchesSince": since,
         "teams": live,
-        "matches": list(reversed(applied)),
+        "results": list(reversed(played)),
+        "fixtures": fixtures,
     }
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{len(live)} teams, {len(applied)} matches since {since}", file=sys.stderr)
+    counted = sum(1 for m in matches if m.get("counted"))
+    print(f"{len(live)} teams · {counted} matches counted since {since} · "
+          f"{len(played)} results · {len(fixtures)} fixtures", file=sys.stderr)
 
 
 if __name__ == "__main__":

@@ -23,12 +23,20 @@
   <main class="wrap">
     <section class="movers" id="movers" aria-label="Biggest movers"></section>
 
-    <div class="layout">
-      <section class="card">
-        <div class="controls">
-          <input id="search" type="search" placeholder="Search team…" aria-label="Search team">
-          <div class="tabs" id="confeds" role="tablist"></div>
-        </div>
+    <nav class="views" role="tablist" aria-label="Views">
+      <button role="tab" data-view="rankings" aria-selected="true">Rankings</button>
+      <button role="tab" data-view="results" aria-selected="false">Results <span class="count" id="results-count"></span></button>
+      <button role="tab" data-view="fixtures" aria-selected="false">Fixtures <span class="count" id="fixtures-count"></span></button>
+    </nav>
+
+    <section class="card">
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search team…" aria-label="Search team">
+        <div class="tabs" id="confeds" aria-label="Confederation"></div>
+        <select id="competition" aria-label="Competition" hidden></select>
+      </div>
+
+      <div id="view-rankings">
         <table class="ranking">
           <thead>
             <tr>
@@ -41,19 +49,15 @@
           </thead>
           <tbody id="rows"></tbody>
         </table>
-        <p class="empty" id="empty" hidden>No teams match.</p>
-      </section>
-
-      <aside class="card">
-        <h2>Recent results</h2>
-        <ol class="matches" id="matches"></ol>
-      </aside>
-    </div>
+      </div>
+      <div id="view-results" hidden></div>
+      <div id="view-fixtures" hidden></div>
+      <p class="empty" id="empty" hidden>Nothing matches these filters.</p>
+    </section>
   </main>
 
   <footer class="wrap">
-    <p>Unofficial projection using FIFA's published SUM formula. Official ranking from FIFA; results from
-      <a href="https://github.com/martj42/international_results">martj42/international_results</a>.
+    <p>Unofficial projection using FIFA's published SUM formula. Rankings, results and fixtures from FIFA's public API.
       Not affiliated with FIFA.</p>
   </footer>
 
