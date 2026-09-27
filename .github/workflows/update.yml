@@ -2,7 +2,7 @@ name: Update rankings
 
 on:
   schedule:
-    - cron: "15 */2 * * *"   # every 2 hours, so each day's results land the same day
+    - cron: "5 * * * *"   # every hour, at :05
   workflow_dispatch:
   push:
     paths:

@@ -7,7 +7,7 @@ It covers everything FIFA counts: friendlies, UEFA and Concacaf Nations League, 
 ## How it works
 
 ```
-GitHub Actions (every 2h)
+GitHub Actions (every hour)
   ├─ official ranking                 ← api.fifa.com/api/v3/rankings
   ├─ each ranked team's match calendar ← api.fifa.com/api/v3/calendar/matches?idTeam=…
   │    (211 teams, fetched in parallel, ~6s; + data/manual_results.csv corrections)
