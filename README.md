@@ -33,7 +33,7 @@ W_e = 1 / (10^(−dr/600) + 1)        dr = team points − opponent points
 W = 1 win, 0.5 draw, 0 loss. Shootout winner 0.75, loser 0.5. Losers in a finals knockout tie keep their points. The stage (group, Round of 16, quarter-final…) comes straight from FIFA's data.
 
 **Accuracy.** Replaying the 2026 World Cup from FIFA's June ranking reproduces FIFA's official July points for all 211 teams, to within 0.01. Replaying earlier periods back to September 2025 matches almost every team. The exceptions:
-- **Forfeits and sanctions** that FIFA applies after a match (e.g. South Africa v Lesotho, Oct 2025). Add these to `data/manual_results.csv`.
+- **Forfeits and sanctions** that FIFA applies after a match (e.g. the South Africa v Lesotho forfeit, applied in the October 2025 ranking). Add these to `data/manual_results.csv`.
 - **Friendlies outside FIFA's international windows** count I=5 officially. FIFA's API doesn't mark them, so all friendlies use I=10 here.
 
 ## Correcting a result
@@ -42,7 +42,7 @@ To fix a result (e.g. a forfeit) or add a missing one, append a row to `data/man
 
 ```csv
 date,home_team,away_team,home_score,away_score,competition,stage,note
-2025-10-10,South Africa,Lesotho,0,3,FIFA World Cup™ Qualifiers,Round One,Forfeit awarded by FIFA
+2026-09-24,Wales,Iceland,3,0,UEFA Nations League,League B,Example: forfeit awarded by FIFA
 ```
 
 Pushing that file triggers a rebuild.
