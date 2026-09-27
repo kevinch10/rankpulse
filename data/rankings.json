@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-27T07:27:50+00:00",
+ "generatedAt": "2026-09-27T09:14:54+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null
@@ -2004,8 +2004,8 @@
    "officialPoints": 1024.16,
    "previousRank": 156,
    "liveRank": 154,
-   "livePoints": 1024.16,
-   "pointsChange": 0.0,
+   "livePoints": 1027.79,
+   "pointsChange": 3.63,
    "rankChange": 2
   },
   {
@@ -2412,19 +2412,6 @@
    "rankChange": 4
   },
   {
-   "id": "43824",
-   "code": "LAO",
-   "name": "Laos",
-   "confed": "AFC",
-   "officialRank": 185,
-   "officialPoints": 885.03,
-   "previousRank": 185,
-   "liveRank": 186,
-   "livePoints": 878.01,
-   "pointsChange": -7.02,
-   "rankChange": -1
-  },
-  {
    "id": "44007",
    "code": "COK",
    "name": "Cook Islands",
@@ -2432,10 +2419,10 @@
    "officialRank": 186,
    "officialPoints": 877.53,
    "previousRank": 186,
-   "liveRank": 187,
+   "liveRank": 186,
    "livePoints": 877.53,
    "pointsChange": 0.0,
-   "rankChange": -1
+   "rankChange": 0
   },
   {
    "id": "43837",
@@ -2445,10 +2432,10 @@
    "officialRank": 187,
    "officialPoints": 876.86,
    "previousRank": 187,
-   "liveRank": 188,
+   "liveRank": 187,
    "livePoints": 876.86,
    "pointsChange": 0.0,
-   "rankChange": -1
+   "rankChange": 0
   },
   {
    "id": "1882637",
@@ -2458,10 +2445,10 @@
    "officialRank": 188,
    "officialPoints": 876.41,
    "previousRank": 188,
-   "liveRank": 189,
+   "liveRank": 188,
    "livePoints": 876.41,
    "pointsChange": 0.0,
-   "rankChange": -1
+   "rankChange": 0
   },
   {
    "id": "20008",
@@ -2471,10 +2458,23 @@
    "officialRank": 190,
    "officialPoints": 874.47,
    "previousRank": 190,
-   "liveRank": 190,
+   "liveRank": 189,
    "livePoints": 874.47,
    "pointsChange": 0.0,
-   "rankChange": 0
+   "rankChange": 1
+  },
+  {
+   "id": "43824",
+   "code": "LAO",
+   "name": "Laos",
+   "confed": "AFC",
+   "officialRank": 185,
+   "officialPoints": 885.03,
+   "previousRank": 185,
+   "liveRank": 190,
+   "livePoints": 874.38,
+   "pointsChange": -10.65,
+   "rankChange": -5
   },
   {
    "id": "20012",
@@ -2756,14 +2756,18 @@
    "date": "2026-09-27",
    "home": "HKG",
    "away": "LAO",
-   "homeScore": 1,
+   "homeScore": 4,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 2",
    "city": "Hong Kong",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": 3.63,
+   "awayDelta": -3.63,
    "homeName": "Hong Kong, China",
    "awayName": "Laos"
   },
