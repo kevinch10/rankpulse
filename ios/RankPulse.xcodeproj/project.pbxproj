@@ -15,12 +15,14 @@
 		7A9180F4062D2A930C510A59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A2461C462100B291671E54 /* Assets.xcassets */; };
 		7F6E6DCD3AC260EF50B01379 /* RankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9BA5A408D5AF4EEFF2AAA7 /* RankingsView.swift */; };
 		90D9F52DDA8C5AEED971E984 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD962C6C1E8BEAEC17ACA6B /* TeamDetailView.swift */; };
+		AC6FC1464841746F5EDDF105 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F05723C0D0FEE18FF17C6 /* Theme.swift */; };
 		BF7B4D0A273BE3AD8E1756D9 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249FE5F05EBD3E467FDC2A /* MatchesView.swift */; };
 		D26B9BA14B42F7491A575532 /* rankings.json in Resources */ = {isa = PBXBuildFile; fileRef = DE498D50DD52E5A1B65924A6 /* rankings.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4CD962C6C1E8BEAEC17ACA6B /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
+		569F05723C0D0FEE18FF17C6 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		63A2461C462100B291671E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66CE4191E3DB3E2E02037377 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		AF071C92D06E36A7F738C795 /* RankingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStore.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				F3249FE5F05EBD3E467FDC2A /* MatchesView.swift */,
 				FB9BA5A408D5AF4EEFF2AAA7 /* RankingsView.swift */,
 				4CD962C6C1E8BEAEC17ACA6B /* TeamDetailView.swift */,
+				569F05723C0D0FEE18FF17C6 /* Theme.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				36F250173FA302BED0592F8B /* RankingStore.swift in Sources */,
 				7F6E6DCD3AC260EF50B01379 /* RankingsView.swift in Sources */,
 				90D9F52DDA8C5AEED971E984 /* TeamDetailView.swift in Sources */,
+				AC6FC1464841746F5EDDF105 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +248,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 723AZ4HL5N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = RankPulse;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rankings NOW";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -332,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 723AZ4HL5N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = RankPulse;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rankings NOW";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

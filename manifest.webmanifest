@@ -1,12 +1,12 @@
 {
-  "name": "RankPulse",
-  "short_name": "RankPulse",
+  "name": "FIFA Rankings NOW (unofficial)",
+  "short_name": "Rankings NOW",
   "description": "Live FIFA men's world ranking projection with daily results and fixtures.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0d1210",
-  "theme_color": "#0f8a4a",
+  "background_color": "#0b0b1f",
+  "theme_color": "#0b0b1f",
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }

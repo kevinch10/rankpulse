@@ -11,11 +11,26 @@ struct TeamDetailView: View {
             Section {
                 HStack(spacing: 14) {
                     FlagView(code: team.code, width: 60)
-                    VStack(alignment: .leading) {
-                        Text(team.name).font(.title2.bold())
-                        Text(team.confed).foregroundStyle(.secondary)
+                        .overlay(RoundedRectangle(cornerRadius: 3).stroke(.white.opacity(0.7), lineWidth: 2))
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(team.name.uppercased()).font(Theme.display(22)).lineLimit(2).minimumScaleFactor(0.7)
+                        HStack(spacing: 6) {
+                            Text("#\(team.liveRank)").font(Theme.display(15))
+                            RankMove(change: team.rankChange).font(.caption.bold())
+                            Text(team.confed).font(.caption.weight(.heavy))
+                                .padding(.horizontal, 7).padding(.vertical, 2)
+                                .background(.white.opacity(0.25), in: .capsule)
+                        }
                     }
                 }
+                .foregroundStyle(.white)
+                .padding(16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(LinearGradient(colors: [Theme.confedColor(team.confed), Theme.night],
+                                           startPoint: .topLeading, endPoint: .bottomTrailing),
+                            in: .rect(cornerRadius: 20))
+                .overlay(alignment: .bottom) { Theme.spectrum.frame(height: 4).clipShape(.rect(bottomLeadingRadius: 20, bottomTrailingRadius: 20)) }
+                .listRowInsets(EdgeInsets())
                 .listRowBackground(Color.clear)
             }
             Section("Ranking") {

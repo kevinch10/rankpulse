@@ -25,5 +25,6 @@ struct ContentView: View {
             Tab("Results", systemImage: "sportscourt") { MatchesView(kind: .results) }
             Tab("Fixtures", systemImage: "calendar") { MatchesView(kind: .fixtures) }
         }
+        .tint(Theme.magenta)
     }
 }

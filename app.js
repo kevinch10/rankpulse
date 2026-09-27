@@ -99,10 +99,10 @@ function renderRankings() {
   const teams = state.data.teams.filter(t =>
     (state.confed === 'All' || t.confed === state.confed) && teamMatchesFilter(t.code, t.name));
   $('rows').innerHTML = teams.map(t => `
-    <tr data-code="${t.code}" aria-expanded="${state.open === t.code}">
-      <td class="num rank">${t.liveRank}${moveBadge(t.rankChange)}</td>
+    <tr data-code="${t.code}" data-confed="${t.confed}" data-top="${t.liveRank <= 3 ? t.liveRank : ''}" aria-expanded="${state.open === t.code}">
+      <td class="rank"><b>${t.liveRank}</b>${moveBadge(t.rankChange)}</td>
       <td class="num official hide-sm">${t.officialRank}</td>
-      <td><div class="team-cell">${flag(t.code)}<span>${esc(t.name)} <small>${t.confed}</small></span></div></td>
+      <td><div class="team-cell">${flag(t.code)}<span>${esc(t.name)} <span class="pill">${t.confed}</span></span></div></td>
       <td class="num">${t.livePoints.toFixed(2)}</td>
       <td class="num ${tone(t.pointsChange)}">${t.pointsChange ? signed(t.pointsChange) : '–'}</td>
     </tr>${state.open === t.code ? detailRow(t) : ''}`).join('');
@@ -131,7 +131,7 @@ function matchRow(m, fixture) {
     m.note ? `<span class="tag" title="${esc(m.note)}">Corrected</span>` : '',
   ].join('');
   return `
-    <li class="match">
+    <li class="match" data-confed="${state.confedOf[m.home] || ''}">
       <div class="teams">${side(m.home, m.homeName, m.homeDelta, 'l')}${middle}${side(m.away, m.awayName, m.awayDelta, 'r')}</div>
       <div class="sub">${esc(m.competition)}${m.stage && !m.stage.startsWith('Friendlies') ? ` · ${esc(m.stage)}` : ''}${m.city ? ` · ${esc(m.city)}` : ''} ${tags}</div>
     </li>`;

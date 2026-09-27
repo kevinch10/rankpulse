@@ -1,6 +1,6 @@
-// Offline support: the app shell is cached; rankings data is network-first
-// so it's always fresh when online and still readable offline.
-const CACHE = 'rankpulse-v1';
+// Offline support: every request goes to the network first, so visitors always
+// get the latest page and data; the cached copy is only used when offline.
+const CACHE = 'rankings-now-v3';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icons/icon-192.png'];
 
 self.addEventListener('install', e => {
@@ -16,12 +16,9 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
-  const networkFirst = url.pathname.endsWith('/rankings.json') || e.request.mode === 'navigate';
-  e.respondWith(networkFirst
-    ? fetch(e.request).then(res => {
-        const copy = res.clone();
-        caches.open(CACHE).then(c => c.put(e.request, copy));
-        return res;
-      }).catch(() => caches.match(e.request))
-    : caches.match(e.request).then(hit => hit || fetch(e.request)));
+  e.respondWith(fetch(e.request, { cache: 'no-cache' }).then(res => {
+    const copy = res.clone();
+    caches.open(CACHE).then(c => c.put(e.request, copy));
+    return res;
+  }).catch(() => caches.match(e.request, { ignoreSearch: true })));
 });

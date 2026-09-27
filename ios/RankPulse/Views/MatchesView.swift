@@ -73,10 +73,13 @@ struct MatchesView: View {
                         }
                     }
                 } header: {
-                    HStack {
-                        Text(dayTitle(days[day]?.first))
+                    HStack(spacing: 8) {
+                        Capsule().fill(Theme.spectrum).frame(width: 18, height: 6)
+                        Text(dayTitle(days[day]?.first).uppercased())
+                            .font(Theme.display(15))
+                            .foregroundStyle(.primary)
                         Spacer()
-                        Text("\(days[day]?.count ?? 0)").monospacedDigit()
+                        Text((days[day]?.count ?? 0) == 1 ? "1 match" : "\(days[day]?.count ?? 0) matches").font(.caption).monospacedDigit()
                     }
                 }
             }

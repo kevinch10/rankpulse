@@ -20,7 +20,7 @@ targets:
         DEVELOPMENT_TEAM: 723AZ4HL5N
         CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: RankPulse
+        INFOPLIST_KEY_CFBundleDisplayName: "Rankings NOW"
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES

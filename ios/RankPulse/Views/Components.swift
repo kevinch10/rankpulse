@@ -19,7 +19,7 @@ struct FlagView: View {
 extension Double {
     var signed: String { (self > 0 ? "+" : "") + formatted(.number.precision(.fractionLength(2))) }
     var signedShort: String { (self > 0 ? "+" : "") + formatted(.number.precision(.fractionLength(1))) }
-    var tone: Color { self > 0 ? .green : self < 0 ? .red : .secondary }
+    var tone: Color { self > 0 ? Color(hex: 0x0FAE5C) : self < 0 ? Color(hex: 0xE5283F) : .secondary }
 }
 
 struct RankMove: View {
@@ -68,29 +68,42 @@ struct MatchRow: View {
                         Text(date, format: .dateTime.hour().minute())
                             .foregroundStyle(.secondary)
                     } else {
-                        Text(match.scoreText)
+                        Text(match.scoreText).foregroundStyle(.white)
                     }
                 }
-                .font(.system(.body, design: .monospaced).weight(.semibold))
-                .frame(minWidth: 52)
+                .font(.system(.callout, design: .monospaced).weight(.bold))
+                .lineLimit(1)
+                .padding(.horizontal, 9).padding(.vertical, 5)
+                .background(fixture ? AnyShapeStyle(.quaternary) : AnyShapeStyle(Theme.night), in: .rect(cornerRadius: 9))
                 side(match.away, match.awayName, match.awayDelta, leading: false)
             }
             HStack(spacing: 6) {
                 if match.isLive {
-                    Text("LIVE").font(.caption2.bold()).foregroundStyle(.white)
-                        .padding(.horizontal, 5).padding(.vertical, 1)
-                        .background(.red, in: .rect(cornerRadius: 4))
+                    Text("LIVE").font(.caption2.weight(.heavy)).foregroundStyle(.white)
+                        .padding(.horizontal, 6).padding(.vertical, 1)
+                        .background(Theme.magenta, in: .capsule)
                 }
                 Text([match.competition, match.stageText].compactMap { $0 }.joined(separator: " · "))
-                if let i = match.importance { Text("I=\(i)").monospaced() }
+                if let i = match.importance {
+                    Text("I=\(i)").font(.caption2.weight(.heavy)).foregroundStyle(.white)
+                        .padding(.horizontal, 6).padding(.vertical, 1)
+                        .background(accent, in: .capsule)
+                }
             }
             .font(.caption)
             .foregroundStyle(.secondary)
             .lineLimit(1)
         }
-        .padding(.vertical, 2)
+        .padding(.vertical, 4)
+        .padding(.leading, 8)
+        .overlay(alignment: .leading) {
+            RoundedRectangle(cornerRadius: 2).fill(accent).frame(width: 4).padding(.vertical, 2)
+        }
         .accessibilityElement(children: .combine)
     }
+
+    @Environment(RankingStore.self) private var store
+    private var accent: Color { Theme.confedColor(store.confed(of: match.home)) }
 
     private func side(_ code: String, _ name: String, _ delta: Double?, leading: Bool) -> some View {
         HStack(spacing: 6) {
