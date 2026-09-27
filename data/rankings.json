@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-27T10:06:16+00:00",
+ "generatedAt": "2026-09-27T12:24:45+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2057,8 +2057,8 @@
    "officialPoints": 1009.39,
    "previousRank": 158,
    "liveRank": 158,
-   "livePoints": 1013.98,
-   "pointsChange": 4.59,
+   "livePoints": 1008.08,
+   "pointsChange": -1.31,
    "rankChange": 0
   },
   {
@@ -2270,19 +2270,6 @@
    "rankChange": 2
   },
   {
-   "id": "43813",
-   "code": "TPE",
-   "name": "Chinese Taipei",
-   "confed": "AFC",
-   "officialRank": 174,
-   "officialPoints": 923.78,
-   "previousRank": 174,
-   "liveRank": 175,
-   "livePoints": 923.78,
-   "pointsChange": 0.0,
-   "rankChange": -1
-  },
-  {
    "id": "44009",
    "code": "CAM",
    "name": "Cambodia",
@@ -2290,10 +2277,23 @@
    "officialRank": 175,
    "officialPoints": 922.32,
    "previousRank": 175,
+   "liveRank": 175,
+   "livePoints": 925.81,
+   "pointsChange": 3.49,
+   "rankChange": 0
+  },
+  {
+   "id": "43813",
+   "code": "TPE",
+   "name": "Chinese Taipei",
+   "confed": "AFC",
+   "officialRank": 174,
+   "officialPoints": 923.78,
+   "previousRank": 174,
    "liveRank": 176,
-   "livePoints": 919.91,
-   "pointsChange": -2.41,
-   "rankChange": -1
+   "livePoints": 923.78,
+   "pointsChange": 0.0,
+   "rankChange": -2
   },
   {
    "id": "43896",
@@ -2753,19 +2753,40 @@
  ],
  "results": [
   {
+   "kickoff": "2026-09-27T11:35:00Z",
+   "date": "2026-09-27",
+   "home": "CHN",
+   "away": "NZL",
+   "homeScore": 0,
+   "awayScore": 2,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Chongqing",
+   "source": "FIFA",
+   "homeName": "China PR",
+   "awayName": "New Zealand"
+  },
+  {
    "kickoff": "2026-09-27T10:00:00Z",
    "date": "2026-09-27",
    "home": "CAM",
    "away": "MYA",
-   "homeScore": 0,
+   "homeScore": 1,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 2",
    "city": "Hong Kong",
    "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": 5.89,
+   "awayDelta": -5.89,
    "homeName": "Cambodia",
    "awayName": "Myanmar"
   },
@@ -5249,38 +5270,6 @@
    },
    "homeName": "Fiji",
    "awayName": "Papua New Guinea"
-  },
-  {
-   "kickoff": "2026-09-27T11:35:00Z",
-   "date": "2026-09-27",
-   "home": "CHN",
-   "away": "NZL",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Chongqing",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.488,
-   "prediction": {
-    "home": {
-     "win": 5.12,
-     "draw": 0.12,
-     "loss": -4.88
-    },
-    "away": {
-     "loss": -5.12,
-     "draw": -0.12,
-     "win": 4.88
-    }
-   },
-   "homeName": "China PR",
-   "awayName": "New Zealand"
   },
   {
    "kickoff": "2026-09-27T12:00:00Z",
@@ -8050,17 +8039,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.407,
+   "expectedHome": 0.402,
    "prediction": {
     "home": {
-     "win": 5.93,
-     "draw": 0.93,
-     "loss": -4.07
+     "win": 5.98,
+     "draw": 0.98,
+     "loss": -4.02
     },
     "away": {
-     "loss": -5.93,
-     "draw": -0.93,
-     "win": 4.07
+     "loss": -5.98,
+     "draw": -0.98,
+     "win": 4.02
     }
    },
    "homeName": "Timor-Leste",
@@ -18486,8 +18475,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 19,
-   "fixtures": 69
+   "results": 20,
+   "fixtures": 68
   },
   {
    "name": "FIFA Series™",
