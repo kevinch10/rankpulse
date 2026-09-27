@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-27T16:21:03+00:00",
+ "generatedAt": "2026-09-27T17:18:46+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2753,6 +2753,23 @@
  ],
  "results": [
   {
+   "kickoff": "2026-09-27T16:30:00Z",
+   "date": "2026-09-27",
+   "home": "MLT",
+   "away": "LIE",
+   "homeScore": 1,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Friendlies",
+   "stage": "Friendlies 2",
+   "city": "Ta' Qali",
+   "source": "FIFA",
+   "homeName": "Malta",
+   "awayName": "Liechtenstein"
+  },
+  {
    "kickoff": "2026-09-27T16:00:00Z",
    "date": "2026-09-27",
    "home": "GIB",
@@ -2774,7 +2791,7 @@
    "date": "2026-09-27",
    "home": "AUT",
    "away": "KOS",
-   "homeScore": 0,
+   "homeScore": 2,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
@@ -2791,7 +2808,7 @@
    "date": "2026-09-27",
    "home": "DEN",
    "away": "WAL",
-   "homeScore": 0,
+   "homeScore": 1,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
@@ -2808,8 +2825,8 @@
    "date": "2026-09-27",
    "home": "SRB",
    "away": "NED",
-   "homeScore": 0,
-   "awayScore": 0,
+   "homeScore": 1,
+   "awayScore": 1,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -5415,38 +5432,6 @@
    },
    "homeName": "Yemen",
    "awayName": "Qatar"
-  },
-  {
-   "kickoff": "2026-09-27T16:30:00Z",
-   "date": "2026-09-27",
-   "home": "MLT",
-   "away": "LIE",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 2",
-   "city": "Ta' Qali",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.688,
-   "prediction": {
-    "home": {
-     "win": 3.12,
-     "draw": -1.88,
-     "loss": -6.88
-    },
-    "away": {
-     "loss": -3.12,
-     "draw": 1.88,
-     "win": 6.88
-    }
-   },
-   "homeName": "Malta",
-   "awayName": "Liechtenstein"
   },
   {
    "kickoff": "2026-09-27T17:00:00Z",
@@ -18428,8 +18413,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 24,
-   "fixtures": 66
+   "results": 25,
+   "fixtures": 65
   },
   {
    "name": "FIFA Series™",
