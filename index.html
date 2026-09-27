@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RankPulse · Live Football Rankings</title>
+  <meta name="description" content="Live projection of the FIFA men's world ranking, updated after every international match.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">
+      <span class="pulse" aria-hidden="true"></span>
+      <h1>RankPulse</h1>
+    </div>
+    <p class="tagline">The FIFA men's world ranking, projected live after every international result.</p>
+    <dl class="meta" id="meta"></dl>
+  </header>
+
+  <main class="wrap">
+    <section class="movers" id="movers" aria-label="Biggest movers"></section>
+
+    <div class="layout">
+      <section class="card">
+        <div class="controls">
+          <input id="search" type="search" placeholder="Search team…" aria-label="Search team">
+          <div class="tabs" id="confeds" role="tablist"></div>
+        </div>
+        <table class="ranking">
+          <thead>
+            <tr>
+              <th class="num">Live</th>
+              <th class="num hide-sm">Official</th>
+              <th>Team</th>
+              <th class="num">Points</th>
+              <th class="num">+/-</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p class="empty" id="empty" hidden>No teams match.</p>
+      </section>
+
+      <aside class="card">
+        <h2>Recent results</h2>
+        <ol class="matches" id="matches"></ol>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="wrap">
+    <p>Unofficial projection using FIFA's published SUM formula. Official ranking from FIFA; results from
+      <a href="https://github.com/martj42/international_results">martj42/international_results</a>.
+      Not affiliated with FIFA.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
