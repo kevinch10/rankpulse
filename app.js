@@ -1,9 +1,25 @@
 const FLAG = code => `https://api.fifa.com/api/v3/picture/flags-sq-2/${code}`;
-const CONFEDS = ['All', 'UEFA', 'CONMEBOL', 'CONCACAF', 'CAF', 'AFC', 'OFC'];
+const CONFEDS = ['All', 'FAV', 'UEFA', 'CONMEBOL', 'CONCACAF', 'CAF', 'AFC', 'OFC'];
 const LIVE = 3;
 
-const state = { data: null, view: 'rankings', confed: 'All', competition: '', query: '', open: null };
+const state = { data: null, view: 'rankings', confed: 'All', competition: '', query: '', open: null, favs: loadFavs() };
 const $ = id => document.getElementById(id);
+
+// ---------- favourites (kept in this browser only) ----------
+
+function loadFavs() {
+  try { return new Set(JSON.parse(localStorage.getItem('favs') || '[]')); } catch { return new Set(); }
+}
+
+function toggleFav(code) {
+  state.favs.has(code) ? state.favs.delete(code) : state.favs.add(code);
+  try { localStorage.setItem('favs', JSON.stringify([...state.favs])); } catch {}
+}
+
+function starButton(code) {
+  const on = state.favs.has(code);
+  return `<button class="star" data-fav="${code}" aria-pressed="${on}" aria-label="${on ? 'Remove from' : 'Add to'} favourites">${on ? '★' : '☆'}</button>`;
+}
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
 const fmtDate = iso => new Date(iso).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
@@ -58,16 +74,21 @@ function teamMatchesFilter(code, name) {
   return !q || name.toLowerCase().includes(q) || code.toLowerCase().includes(q);
 }
 
+function confedOK(code) {
+  if (state.confed === 'All') return true;
+  if (state.confed === 'FAV') return state.favs.has(code);
+  return state.confedOf[code] === state.confed;
+}
+
 function matchVisible(m) {
-  const confed = state.confedOf;
-  return (state.confed === 'All' || confed[m.home] === state.confed || confed[m.away] === state.confed) &&
+  return (confedOK(m.home) || confedOK(m.away)) &&
     (!state.competition || m.competition === state.competition) &&
     (teamMatchesFilter(m.home, m.homeName) || teamMatchesFilter(m.away, m.awayName));
 }
 
 function renderControls() {
   $('confeds').innerHTML = CONFEDS.map(c =>
-    `<button aria-pressed="${c === state.confed}" data-confed="${c}">${c}</button>`).join('');
+    `<button aria-pressed="${c === state.confed}" data-confed="${c}">${c === 'FAV' ? `★ Favourites${state.favs.size ? ` (${state.favs.size})` : ''}` : c}</button>`).join('');
 
   const sel = $('competition');
   sel.hidden = state.view === 'rankings';
@@ -96,13 +117,12 @@ function detailRow(t) {
 }
 
 function renderRankings() {
-  const teams = state.data.teams.filter(t =>
-    (state.confed === 'All' || t.confed === state.confed) && teamMatchesFilter(t.code, t.name));
+  const teams = state.data.teams.filter(t => confedOK(t.code) && teamMatchesFilter(t.code, t.name));
   $('rows').innerHTML = teams.map(t => `
     <tr data-code="${t.code}" data-confed="${t.confed}" data-top="${t.liveRank <= 3 ? t.liveRank : ''}" aria-expanded="${state.open === t.code}">
       <td class="rank"><b>${t.liveRank}</b>${moveBadge(t.rankChange)}</td>
       <td class="num official hide-sm">${t.officialRank}</td>
-      <td><div class="team-cell">${flag(t.code)}<span>${esc(t.name)} <span class="pill">${t.confed}</span></span></div></td>
+      <td><div class="team-cell">${starButton(t.code)}${flag(t.code)}<span>${esc(t.name)} <span class="pill">${t.confed}</span></span></div></td>
       <td class="num">${t.livePoints.toFixed(2)}</td>
       <td class="num ${tone(t.pointsChange)}">${t.pointsChange ? signed(t.pointsChange) : '–'}</td>
     </tr>${state.open === t.code ? detailRow(t) : ''}`).join('');
@@ -115,6 +135,25 @@ function scoreText(m) {
   if (m.homeScore == null) return 'v';
   const pens = m.homePens != null ? ` (${m.homePens}–${m.awayPens} p)` : '';
   return `${m.homeScore}–${m.awayScore}${pens}`;
+}
+
+const OUTCOMES = [['win', 'W'], ['draw', 'D'], ['loss', 'L'], ['pensWin', 'W pens'], ['pensLoss', 'L pens']];
+
+function predictionBlock(m) {
+  if (!m.prediction) return '';
+  const col = (side, name) => `
+    <div class="pred-side">
+      <div class="pred-name">${esc(name)}</div>
+      <div class="pred-chips">${OUTCOMES.filter(([k]) => k in m.prediction[side]).map(([k, label]) => {
+        const v = m.prediction[side][k];
+        return `<span class="pred ${tone(v)}"><b>${label}</b>${signed(v, 1)}</span>`;
+      }).join('')}</div>
+    </div>`;
+  return `
+    <div class="prediction">
+      <div class="pred-head">Points at stake <span>I=${m.importance}${m.knockout ? ' · knockout' : ''} · expected result ${m.expectedHome.toFixed(2)}–${(1 - m.expectedHome).toFixed(2)}</span></div>
+      <div class="pred-grid">${col('home', m.homeName)}${col('away', m.awayName)}</div>
+    </div>`;
 }
 
 function matchRow(m, fixture) {
@@ -131,9 +170,10 @@ function matchRow(m, fixture) {
     m.note ? `<span class="tag" title="${esc(m.note)}">Corrected</span>` : '',
   ].join('');
   return `
-    <li class="match" data-confed="${state.confedOf[m.home] || ''}">
+    <li class="match${state.favs.has(m.home) || state.favs.has(m.away) ? ' is-fav' : ''}" data-confed="${state.confedOf[m.home] || ''}">
       <div class="teams">${side(m.home, m.homeName, m.homeDelta, 'l')}${middle}${side(m.away, m.awayName, m.awayDelta, 'r')}</div>
       <div class="sub">${esc(m.competition)}${m.stage && !m.stage.startsWith('Friendlies') ? ` · ${esc(m.stage)}` : ''}${m.city ? ` · ${esc(m.city)}` : ''} ${tags}</div>
+      ${fixture ? predictionBlock(m) : ''}
     </li>`;
 }
 
@@ -161,6 +201,9 @@ function render() {
     : state.view === 'results' ? renderMatchList($('view-results'), state.data.results, false)
     : renderMatchList($('view-fixtures'), state.data.fixtures, true);
   $('empty').hidden = n > 0;
+  $('empty').textContent = state.confed === 'FAV' && !state.favs.size
+    ? 'No favourites yet — tap ☆ next to a team in Rankings.'
+    : 'Nothing matches these filters.';
 }
 
 async function init() {
@@ -184,6 +227,8 @@ async function init() {
     if (c) { state.confed = c; render(); }
   });
   $('rows').addEventListener('click', e => {
+    const star = e.target.closest('button[data-fav]');
+    if (star) { toggleFav(star.dataset.fav); render(); return; }
     const row = e.target.closest('tr[data-code]');
     if (!row) return;
     state.open = state.open === row.dataset.code ? null : row.dataset.code;

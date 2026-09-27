@@ -50,8 +50,9 @@ struct MatchesView: View {
     }
 
     private func visible(_ m: Match) -> Bool {
-        let c = confed.rawValue
-        let confedOK = confed == .all || store.confed(of: m.home) == c || store.confed(of: m.away) == c
+        let favs = store.favourites.codes
+        let confedOK = confed.includes(m.home, confed: store.confed(of: m.home), favourites: favs)
+            || confed.includes(m.away, confed: store.confed(of: m.away), favourites: favs)
         let compOK = competition.isEmpty || m.competition == competition
         let searchOK = search.isEmpty || [m.homeName, m.awayName, m.home, m.away]
             .contains { $0.localizedCaseInsensitiveContains(search) }
@@ -66,10 +67,14 @@ struct MatchesView: View {
             ForEach(order, id: \.self) { day in
                 Section {
                     ForEach(days[day] ?? []) { m in
-                        if let team = store.team(code: m.home) {
-                            NavigationLink(value: team) { MatchRow(match: m, fixture: kind == .fixtures) }
-                        } else {
+                        let row = VStack(spacing: 8) {
                             MatchRow(match: m, fixture: kind == .fixtures)
+                            if kind == .fixtures { PredictionView(match: m) }
+                        }
+                        if let team = store.team(code: m.home) {
+                            NavigationLink(value: team) { row }
+                        } else {
+                            row
                         }
                     }
                 } header: {

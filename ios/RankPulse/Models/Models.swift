@@ -47,6 +47,16 @@ struct Match: Codable, Sendable, Identifiable, Hashable {
     let homeDelta: Double?
     let awayDelta: Double?
     let note: String?
+    let knockout: Bool?
+    let expectedHome: Double?
+    let prediction: Prediction?
+
+    /// Points each side would gain or lose for each result ("win", "draw",
+    /// "loss", and "pensWin"/"pensLoss" for knockout ties).
+    struct Prediction: Codable, Sendable, Hashable {
+        let home: [String: Double]
+        let away: [String: Double]
+    }
 
     var id: String { "\(kickoff)-\(home)-\(away)" }
     var isLive: Bool { status == 3 }
@@ -69,7 +79,17 @@ struct Match: Codable, Sendable, Identifiable, Hashable {
 }
 
 enum Confederation: String, CaseIterable, Identifiable {
-    case all = "All", uefa = "UEFA", conmebol = "CONMEBOL", concacaf = "CONCACAF",
+    case all = "All", favourites = "★ Favourites", uefa = "UEFA", conmebol = "CONMEBOL", concacaf = "CONCACAF",
          caf = "CAF", afc = "AFC", ofc = "OFC"
     var id: String { rawValue }
+}
+
+extension Confederation {
+    func includes(_ code: String, confed: String?, favourites: Set<String>) -> Bool {
+        switch self {
+        case .all: true
+        case .favourites: favourites.contains(code)
+        default: confed == rawValue
+        }
+    }
 }

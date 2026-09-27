@@ -10,6 +10,7 @@ final class RankingStore {
     private(set) var isSnapshot = false
 
     private var confedByCode: [String: String] = [:]
+    let favourites = Favourites()
     private static let cacheURL = URL.cachesDirectory.appending(path: "rankings.json")
 
     /// Shows cached or bundled data immediately, then fetches the latest.
@@ -17,6 +18,7 @@ final class RankingStore {
         if data == nil, let local = Self.readLocal() {
             apply(local.data, snapshot: local.bundled)
         }
+        await favourites.refreshPermissionStatus()
         await refresh()
     }
 
@@ -32,6 +34,7 @@ final class RankingStore {
             try? bytes.write(to: Self.cacheURL)
             apply(fresh, snapshot: false)
             error = nil
+            await favourites.notifyChanges(in: fresh)
         } catch {
             self.error = data == nil ? error.localizedDescription : "Offline — showing saved data"
         }

@@ -26,8 +26,9 @@ struct RankingsView: View {
     }
 
     private func list(_ data: RankingData) -> some View {
+        let favs = store.favourites.codes
         let teams = data.teams.filter { t in
-            (confed == .all || t.confed == confed.rawValue) &&
+            confed.includes(t.code, confed: t.confed, favourites: favs) &&
             (search.isEmpty || t.name.localizedCaseInsensitiveContains(search) || t.code.localizedCaseInsensitiveContains(search))
         }
         return List {
@@ -45,9 +46,22 @@ struct RankingsView: View {
                     StatusBanner()
                 }
             }
+            if search.isEmpty && confed == .all && !favs.isEmpty {
+                Section {
+                    ForEach(data.teams.filter { favs.contains($0.code) }) { team in
+                        NavigationLink(value: team) { TeamRow(team: team, isFavourite: true) }
+                            .swipeActions { favouriteButton(team) }
+                    }
+                } header: {
+                    Label("Favourites", systemImage: "star.fill").foregroundStyle(Theme.orange)
+                } footer: {
+                    NotificationStatus()
+                }
+            }
             Section {
                 ForEach(teams) { team in
-                    NavigationLink(value: team) { TeamRow(team: team) }
+                    NavigationLink(value: team) { TeamRow(team: team, isFavourite: favs.contains(team.code)) }
+                        .swipeActions { favouriteButton(team) }
                 }
             } header: {
                 HStack {
@@ -59,8 +73,23 @@ struct RankingsView: View {
             }
         }
         .overlay {
-            if teams.isEmpty { ContentUnavailableView.search(text: search) }
+            if teams.isEmpty {
+                if confed == .favourites && favs.isEmpty {
+                    ContentUnavailableView("No favourites yet", systemImage: "star",
+                                           description: Text("Swipe left on a team, or tap the star on its page, to follow it and get notified when its points change."))
+                } else {
+                    ContentUnavailableView.search(text: search)
+                }
+            }
         }
+    }
+
+    private func favouriteButton(_ team: Team) -> some View {
+        let on = store.favourites.contains(team.code)
+        return Button { store.favourites.toggle(team) } label: {
+            Label(on ? "Unfavourite" : "Favourite", systemImage: on ? "star.slash" : "star.fill")
+        }
+        .tint(on ? .gray : Theme.orange)
     }
 
     static func dateText(_ iso: String) -> String {
@@ -70,6 +99,7 @@ struct RankingsView: View {
 
 struct TeamRow: View {
     let team: Team
+    var isFavourite = false
 
     var body: some View {
         HStack(spacing: 10) {
@@ -91,7 +121,13 @@ struct TeamRow: View {
             .frame(width: 44)
             FlagView(code: team.code)
             VStack(alignment: .leading, spacing: 1) {
-                Text(team.name).font(.body.weight(.semibold)).lineLimit(1)
+                HStack(spacing: 4) {
+                    Text(team.name).font(.body.weight(.semibold)).lineLimit(1)
+                    if isFavourite {
+                        Image(systemName: "star.fill").font(.caption2).foregroundStyle(Theme.orange)
+                            .accessibilityLabel("Favourite")
+                    }
+                }
                 HStack(spacing: 5) {
                     ConfedPill(confed: team.confed)
                     Text("Official #\(team.officialRank)").font(.caption).foregroundStyle(.secondary).lineLimit(1)

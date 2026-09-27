@@ -12,6 +12,7 @@
 		209B60908964E400C1A87B88 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1ADC6576922A6DB1772E42 /* Config.swift */; };
 		36F250173FA302BED0592F8B /* RankingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF071C92D06E36A7F738C795 /* RankingStore.swift */; };
 		375A3C5554C039705437B725 /* RankPulseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7487C5049A792124DA00058 /* RankPulseApp.swift */; };
+		381FC7975528FA0E1BDB0A66 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4058DB0AB446C40006957 /* Favourites.swift */; };
 		7A9180F4062D2A930C510A59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A2461C462100B291671E54 /* Assets.xcassets */; };
 		7F6E6DCD3AC260EF50B01379 /* RankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9BA5A408D5AF4EEFF2AAA7 /* RankingsView.swift */; };
 		90D9F52DDA8C5AEED971E984 /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD962C6C1E8BEAEC17ACA6B /* TeamDetailView.swift */; };
@@ -25,6 +26,7 @@
 		569F05723C0D0FEE18FF17C6 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		63A2461C462100B291671E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66CE4191E3DB3E2E02037377 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		85C4058DB0AB446C40006957 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 		AF071C92D06E36A7F738C795 /* RankingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStore.swift; sourceTree = "<group>"; };
 		D115D71B9CC0208B8AA214BD /* RankPulse.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RankPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7487C5049A792124DA00058 /* RankPulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPulseApp.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		29340EDD2C5D5F5537FBC609 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				85C4058DB0AB446C40006957 /* Favourites.swift */,
 				66CE4191E3DB3E2E02037377 /* Models.swift */,
 				AF071C92D06E36A7F738C795 /* RankingStore.swift */,
 			);
@@ -168,6 +171,7 @@
 			files = (
 				11A7EB911C52A9A9AA903E67 /* Components.swift in Sources */,
 				209B60908964E400C1A87B88 /* Config.swift in Sources */,
+				381FC7975528FA0E1BDB0A66 /* Favourites.swift in Sources */,
 				BF7B4D0A273BE3AD8E1756D9 /* MatchesView.swift in Sources */,
 				185F8B84C840213A476175DD /* Models.swift in Sources */,
 				375A3C5554C039705437B725 /* RankPulseApp.swift in Sources */,
@@ -248,6 +252,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 723AZ4HL5N;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RankPulse/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Rankings NOW";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -336,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 723AZ4HL5N;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RankPulse/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Rankings NOW";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

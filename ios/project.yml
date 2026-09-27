@@ -13,13 +13,16 @@ targets:
     type: application
     platform: iOS
     sources:
-      - RankPulse
+      - path: RankPulse
+        excludes:
+          - Info.plist
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: app.rankpulse.RankPulse
         DEVELOPMENT_TEAM: 723AZ4HL5N
         CODE_SIGN_STYLE: Automatic
         GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: RankPulse/Info.plist
         INFOPLIST_KEY_CFBundleDisplayName: "Rankings NOW"
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait

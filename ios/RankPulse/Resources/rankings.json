@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-27T07:27:50+00:00",
+ "generatedAt": "2026-09-27T09:22:48+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null
@@ -2004,8 +2004,8 @@
    "officialPoints": 1024.16,
    "previousRank": 156,
    "liveRank": 154,
-   "livePoints": 1024.16,
-   "pointsChange": 0.0,
+   "livePoints": 1027.79,
+   "pointsChange": 3.63,
    "rankChange": 2
   },
   {
@@ -2412,19 +2412,6 @@
    "rankChange": 4
   },
   {
-   "id": "43824",
-   "code": "LAO",
-   "name": "Laos",
-   "confed": "AFC",
-   "officialRank": 185,
-   "officialPoints": 885.03,
-   "previousRank": 185,
-   "liveRank": 186,
-   "livePoints": 878.01,
-   "pointsChange": -7.02,
-   "rankChange": -1
-  },
-  {
    "id": "44007",
    "code": "COK",
    "name": "Cook Islands",
@@ -2432,10 +2419,10 @@
    "officialRank": 186,
    "officialPoints": 877.53,
    "previousRank": 186,
-   "liveRank": 187,
+   "liveRank": 186,
    "livePoints": 877.53,
    "pointsChange": 0.0,
-   "rankChange": -1
+   "rankChange": 0
   },
   {
    "id": "43837",
@@ -2445,10 +2432,10 @@
    "officialRank": 187,
    "officialPoints": 876.86,
    "previousRank": 187,
-   "liveRank": 188,
+   "liveRank": 187,
    "livePoints": 876.86,
    "pointsChange": 0.0,
-   "rankChange": -1
+   "rankChange": 0
   },
   {
    "id": "1882637",
@@ -2458,10 +2445,10 @@
    "officialRank": 188,
    "officialPoints": 876.41,
    "previousRank": 188,
-   "liveRank": 189,
+   "liveRank": 188,
    "livePoints": 876.41,
    "pointsChange": 0.0,
-   "rankChange": -1
+   "rankChange": 0
   },
   {
    "id": "20008",
@@ -2471,10 +2458,23 @@
    "officialRank": 190,
    "officialPoints": 874.47,
    "previousRank": 190,
-   "liveRank": 190,
+   "liveRank": 189,
    "livePoints": 874.47,
    "pointsChange": 0.0,
-   "rankChange": 0
+   "rankChange": 1
+  },
+  {
+   "id": "43824",
+   "code": "LAO",
+   "name": "Laos",
+   "confed": "AFC",
+   "officialRank": 185,
+   "officialPoints": 885.03,
+   "previousRank": 185,
+   "liveRank": 190,
+   "livePoints": 874.38,
+   "pointsChange": -10.65,
+   "rankChange": -5
   },
   {
    "id": "20012",
@@ -2756,14 +2756,18 @@
    "date": "2026-09-27",
    "home": "HKG",
    "away": "LAO",
-   "homeScore": 1,
+   "homeScore": 4,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 2",
    "city": "Hong Kong",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": 3.63,
+   "awayDelta": -3.63,
    "homeName": "Hong Kong, China",
    "awayName": "Laos"
   },
@@ -4582,6 +4586,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "Suva",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.468,
+   "prediction": {
+    "home": {
+     "win": 5.32,
+     "draw": 0.32,
+     "loss": -4.68
+    },
+    "away": {
+     "loss": -5.32,
+     "draw": -0.32,
+     "win": 4.68
+    }
+   },
    "homeName": "Vanuatu",
    "awayName": "New Caledonia"
   },
@@ -4598,6 +4617,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "Suva",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.541,
+   "prediction": {
+    "home": {
+     "win": 4.59,
+     "draw": -0.41,
+     "loss": -5.41
+    },
+    "away": {
+     "loss": -4.59,
+     "draw": 0.41,
+     "win": 5.41
+    }
+   },
    "homeName": "Fiji",
    "awayName": "Papua New Guinea"
   },
@@ -4614,6 +4648,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 2",
    "city": "Hong Kong",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.407,
+   "prediction": {
+    "home": {
+     "win": 5.93,
+     "draw": 0.93,
+     "loss": -4.07
+    },
+    "away": {
+     "loss": -5.93,
+     "draw": -0.93,
+     "win": 4.07
+    }
+   },
    "homeName": "Cambodia",
    "awayName": "Myanmar"
   },
@@ -4630,6 +4679,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Chongqing",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.488,
+   "prediction": {
+    "home": {
+     "win": 5.12,
+     "draw": 0.12,
+     "loss": -4.88
+    },
+    "away": {
+     "loss": -5.12,
+     "draw": -0.12,
+     "win": 4.88
+    }
+   },
    "homeName": "China PR",
    "awayName": "New Zealand"
   },
@@ -4646,6 +4710,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "VICTORIA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.431,
+   "prediction": {
+    "home": {
+     "win": 5.69,
+     "draw": 0.69,
+     "loss": -4.31
+    },
+    "away": {
+     "loss": -5.69,
+     "draw": -0.69,
+     "win": 4.31
+    }
+   },
    "homeName": "Seychelles",
    "awayName": "Sri Lanka"
   },
@@ -4662,6 +4741,21 @@
    "competition": "UEFA Nations League",
    "stage": "League D",
    "city": "Kaunas",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.427,
+   "prediction": {
+    "home": {
+     "win": 8.6,
+     "draw": 1.1,
+     "loss": -6.4
+    },
+    "away": {
+     "loss": -8.6,
+     "draw": -1.1,
+     "win": 6.4
+    }
+   },
    "homeName": "Lithuania",
    "awayName": "Azerbaijan"
   },
@@ -4678,6 +4772,21 @@
    "competition": "Gulf Cup of Nations",
    "stage": "Group Stage",
    "city": "Jeddah",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.21,
+   "prediction": {
+    "home": {
+     "win": 7.9,
+     "draw": 2.9,
+     "loss": -2.1
+    },
+    "away": {
+     "loss": -7.9,
+     "draw": -2.9,
+     "win": 2.1
+    }
+   },
    "homeName": "Yemen",
    "awayName": "Qatar"
   },
@@ -4694,6 +4803,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "BELGRADE",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.254,
+   "prediction": {
+    "home": {
+     "win": 11.19,
+     "draw": 3.69,
+     "loss": -3.81
+    },
+    "away": {
+     "loss": -11.19,
+     "draw": -3.69,
+     "win": 3.81
+    }
+   },
    "homeName": "Serbia",
    "awayName": "Netherlands"
   },
@@ -4710,6 +4834,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Copenhagen",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.594,
+   "prediction": {
+    "home": {
+     "win": 6.09,
+     "draw": -1.41,
+     "loss": -8.91
+    },
+    "away": {
+     "loss": -6.09,
+     "draw": 1.41,
+     "win": 8.91
+    }
+   },
    "homeName": "Denmark",
    "awayName": "Wales"
   },
@@ -4726,6 +4865,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Vienna",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.741,
+   "prediction": {
+    "home": {
+     "win": 3.88,
+     "draw": -3.62,
+     "loss": -11.12
+    },
+    "away": {
+     "loss": -3.88,
+     "draw": 3.62,
+     "win": 11.12
+    }
+   },
    "homeName": "Austria",
    "awayName": "Kosovo"
   },
@@ -4742,6 +4896,21 @@
    "competition": "UEFA Nations League",
    "stage": "League D",
    "city": "Gibraltar International Airport",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.388,
+   "prediction": {
+    "home": {
+     "win": 9.18,
+     "draw": 1.68,
+     "loss": -5.82
+    },
+    "away": {
+     "loss": -9.18,
+     "draw": -1.68,
+     "win": 5.82
+    }
+   },
    "homeName": "Gibraltar",
    "awayName": "Andorra"
   },
@@ -4758,6 +4927,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 2",
    "city": "Ta' Qali",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.688,
+   "prediction": {
+    "home": {
+     "win": 3.12,
+     "draw": -1.88,
+     "loss": -6.88
+    },
+    "away": {
+     "loss": -3.12,
+     "draw": 1.88,
+     "win": 6.88
+    }
+   },
    "homeName": "Malta",
    "awayName": "Liechtenstein"
   },
@@ -4774,6 +4958,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "Amman",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.564,
+   "prediction": {
+    "home": {
+     "win": 4.36,
+     "draw": -0.64,
+     "loss": -5.64
+    },
+    "away": {
+     "loss": -4.36,
+     "draw": 0.64,
+     "win": 5.64
+    }
+   },
    "homeName": "Jordan",
    "awayName": "Syria"
   },
@@ -4790,6 +4989,21 @@
    "competition": "Gulf Cup of Nations",
    "stage": "Group Stage",
    "city": "Jeddah",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.39,
+   "prediction": {
+    "home": {
+     "win": 6.1,
+     "draw": 1.1,
+     "loss": -3.9
+    },
+    "away": {
+     "loss": -6.1,
+     "draw": -1.1,
+     "win": 3.9
+    }
+   },
    "homeName": "Bahrain",
    "awayName": "United Arab Emirates"
   },
@@ -4806,6 +5020,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Oslo",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.375,
+   "prediction": {
+    "home": {
+     "win": 9.38,
+     "draw": 1.88,
+     "loss": -5.62
+    },
+    "away": {
+     "loss": -9.38,
+     "draw": -1.88,
+     "win": 5.62
+    }
+   },
    "homeName": "Norway",
    "awayName": "Portugal"
   },
@@ -4822,6 +5051,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Augsburg",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.72,
+   "prediction": {
+    "home": {
+     "win": 4.2,
+     "draw": -3.3,
+     "loss": -10.8
+    },
+    "away": {
+     "loss": -4.2,
+     "draw": 3.3,
+     "win": 10.8
+    }
+   },
    "homeName": "Germany",
    "awayName": "Greece"
   },
@@ -4838,6 +5082,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Debrecen",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.403,
+   "prediction": {
+    "home": {
+     "win": 8.95,
+     "draw": 1.45,
+     "loss": -6.05
+    },
+    "away": {
+     "loss": -8.95,
+     "draw": -1.45,
+     "win": 6.05
+    }
+   },
    "homeName": "Israel",
    "awayName": "Republic of Ireland"
   },
@@ -4854,6 +5113,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Roseau",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.688,
+   "prediction": {
+    "home": {
+     "win": 4.68,
+     "draw": -2.82,
+     "loss": -10.32
+    },
+    "away": {
+     "loss": -4.68,
+     "draw": 2.82,
+     "win": 10.32
+    }
+   },
    "homeName": "Guyana",
    "awayName": "Cayman Islands"
   },
@@ -4870,6 +5144,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Washington, District of Columbia",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.303,
+   "prediction": {
+    "home": {
+     "win": 6.97,
+     "draw": 1.97,
+     "loss": -3.03
+    },
+    "away": {
+     "loss": -6.97,
+     "draw": -1.97,
+     "win": 3.03
+    }
+   },
    "homeName": "Bolivia",
    "awayName": "Paraguay"
   },
@@ -4886,6 +5175,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "Bishkek",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.723,
+   "prediction": {
+    "home": {
+     "win": 2.77,
+     "draw": -2.23,
+     "loss": -7.23
+    },
+    "away": {
+     "loss": -2.77,
+     "draw": 2.23,
+     "win": 7.23
+    }
+   },
    "homeName": "Kyrgyz Republic",
    "awayName": "Maldives"
   },
@@ -4902,6 +5206,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Kingston",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.338,
+   "prediction": {
+    "home": {
+     "win": 9.92,
+     "draw": 2.42,
+     "loss": -5.08
+    },
+    "away": {
+     "loss": -9.92,
+     "draw": -2.42,
+     "win": 5.08
+    }
+   },
    "homeName": "Haiti",
    "awayName": "Costa Rica"
   },
@@ -4918,6 +5237,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Willemstad",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.674,
+   "prediction": {
+    "home": {
+     "win": 4.89,
+     "draw": -2.61,
+     "loss": -10.11
+    },
+    "away": {
+     "loss": -4.89,
+     "draw": 2.61,
+     "win": 10.11
+    }
+   },
    "homeName": "Curaçao",
    "awayName": "Nicaragua"
   },
@@ -4934,6 +5268,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Roseau",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.39,
+   "prediction": {
+    "home": {
+     "win": 9.15,
+     "draw": 1.65,
+     "loss": -5.85
+    },
+    "away": {
+     "loss": -9.15,
+     "draw": -1.65,
+     "win": 5.85
+    }
+   },
    "homeName": "Dominica",
    "awayName": "Puerto Rico"
   },
@@ -4950,6 +5299,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Port of Spain",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.621,
+   "prediction": {
+    "home": {
+     "win": 5.69,
+     "draw": -1.81,
+     "loss": -9.31
+    },
+    "away": {
+     "loss": -5.69,
+     "draw": 1.81,
+     "win": 9.31
+    }
+   },
    "homeName": "Trinidad and Tobago",
    "awayName": "Dominican Republic"
   },
@@ -4966,6 +5330,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 1",
    "city": "Jakarta",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.655,
+   "prediction": {
+    "home": {
+     "win": 3.45,
+     "draw": -1.55,
+     "loss": -6.55
+    },
+    "away": {
+     "loss": -3.45,
+     "draw": 1.55,
+     "win": 6.55
+    }
+   },
    "homeName": "Singapore",
    "awayName": "Bangladesh"
   },
@@ -4982,6 +5361,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "TBC",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.347,
+   "prediction": {
+    "home": {
+     "win": 6.53,
+     "draw": 1.53,
+     "loss": -3.47
+    },
+    "away": {
+     "loss": -6.53,
+     "draw": -1.53,
+     "win": 3.47
+    }
+   },
    "homeName": "Turkmenistan",
    "awayName": "Palestine"
   },
@@ -4998,6 +5392,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Hiroshima",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.691,
+   "prediction": {
+    "home": {
+     "win": 3.09,
+     "draw": -1.91,
+     "loss": -6.91
+    },
+    "away": {
+     "loss": -3.09,
+     "draw": 1.91,
+     "win": 6.91
+    }
+   },
    "homeName": "Japan",
    "awayName": "Venezuela"
   },
@@ -5014,6 +5423,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Seoul",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.437,
+   "prediction": {
+    "home": {
+     "win": 5.63,
+     "draw": 0.63,
+     "loss": -4.37
+    },
+    "away": {
+     "loss": -5.63,
+     "draw": -0.63,
+     "win": 4.37
+    }
+   },
    "homeName": "Korea Republic",
    "awayName": "Uruguay"
   },
@@ -5030,6 +5454,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "Chongqing",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.475,
+   "prediction": {
+    "home": {
+     "win": 5.25,
+     "draw": 0.25,
+     "loss": -4.75
+    },
+    "away": {
+     "loss": -5.25,
+     "draw": -0.25,
+     "win": 4.75
+    }
+   },
    "homeName": "Tajikistan",
    "awayName": "Palestine"
   },
@@ -5046,6 +5485,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 1",
    "city": "Jakarta",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.433,
+   "prediction": {
+    "home": {
+     "win": 5.67,
+     "draw": 0.67,
+     "loss": -4.33
+    },
+    "away": {
+     "loss": -5.67,
+     "draw": -0.67,
+     "win": 4.33
+    }
+   },
    "homeName": "Malaysia",
    "awayName": "Indonesia"
   },
@@ -5062,6 +5516,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Tbilisi",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.31,
+   "prediction": {
+    "home": {
+     "win": 10.35,
+     "draw": 2.85,
+     "loss": -4.65
+    },
+    "away": {
+     "loss": -10.35,
+     "draw": -2.85,
+     "win": 4.65
+    }
+   },
    "homeName": "Georgia",
    "awayName": "Ukraine"
   },
@@ -5078,6 +5547,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Yerevan",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.395,
+   "prediction": {
+    "home": {
+     "win": 9.08,
+     "draw": 1.58,
+     "loss": -5.92
+    },
+    "away": {
+     "loss": -9.08,
+     "draw": -1.58,
+     "win": 5.92
+    }
+   },
    "homeName": "Armenia",
    "awayName": "Montenegro"
   },
@@ -5094,6 +5578,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Rīga",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.454,
+   "prediction": {
+    "home": {
+     "win": 8.2,
+     "draw": 0.7,
+     "loss": -6.8
+    },
+    "away": {
+     "loss": -8.2,
+     "draw": -0.7,
+     "win": 6.8
+    }
+   },
    "homeName": "Latvia",
    "awayName": "Cyprus"
   },
@@ -5110,6 +5609,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Brussels",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.345,
+   "prediction": {
+    "home": {
+     "win": 9.83,
+     "draw": 2.33,
+     "loss": -5.17
+    },
+    "away": {
+     "loss": -9.83,
+     "draw": -2.33,
+     "win": 5.17
+    }
+   },
    "homeName": "Belgium",
    "awayName": "France"
   },
@@ -5126,6 +5640,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Bursa",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.388,
+   "prediction": {
+    "home": {
+     "win": 9.18,
+     "draw": 1.68,
+     "loss": -5.82
+    },
+    "away": {
+     "loss": -9.18,
+     "draw": -1.68,
+     "win": 5.82
+    }
+   },
    "homeName": "Türkiye",
    "awayName": "Italy"
   },
@@ -5142,6 +5671,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Solna",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.507,
+   "prediction": {
+    "home": {
+     "win": 7.39,
+     "draw": -0.11,
+     "loss": -7.61
+    },
+    "away": {
+     "loss": -7.39,
+     "draw": 0.11,
+     "win": 7.61
+    }
+   },
    "homeName": "Sweden",
    "awayName": "Poland"
   },
@@ -5158,6 +5702,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Belfast",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.381,
+   "prediction": {
+    "home": {
+     "win": 9.29,
+     "draw": 1.79,
+     "loss": -5.71
+    },
+    "away": {
+     "loss": -9.29,
+     "draw": -1.79,
+     "win": 5.71
+    }
+   },
    "homeName": "Northern Ireland",
    "awayName": "Hungary"
   },
@@ -5174,6 +5733,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Bucharest",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.537,
+   "prediction": {
+    "home": {
+     "win": 6.94,
+     "draw": -0.56,
+     "loss": -8.06
+    },
+    "away": {
+     "loss": -6.94,
+     "draw": 0.56,
+     "win": 8.06
+    }
+   },
    "homeName": "Romania",
    "awayName": "Bosnia and Herzegovina"
   },
@@ -5190,6 +5764,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Kingston",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.496,
+   "prediction": {
+    "home": {
+     "win": 7.56,
+     "draw": 0.06,
+     "loss": -7.44
+    },
+    "away": {
+     "loss": -7.56,
+     "draw": -0.06,
+     "win": 7.44
+    }
+   },
    "homeName": "Jamaica",
    "awayName": "Honduras"
   },
@@ -5206,6 +5795,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Monkey Hill",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.559,
+   "prediction": {
+    "home": {
+     "win": 6.61,
+     "draw": -0.89,
+     "loss": -8.39
+    },
+    "away": {
+     "loss": -6.61,
+     "draw": 0.89,
+     "win": 8.39
+    }
+   },
    "homeName": "St Kitts and Nevis",
    "awayName": "Grenada"
   },
@@ -5222,6 +5826,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Gros Islet",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.493,
+   "prediction": {
+    "home": {
+     "win": 7.6,
+     "draw": 0.1,
+     "loss": -7.4
+    },
+    "away": {
+     "loss": -7.6,
+     "draw": -0.1,
+     "win": 7.4
+    }
+   },
    "homeName": "St Lucia",
    "awayName": "Bermuda"
   },
@@ -5238,6 +5857,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Guatemala City",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.507,
+   "prediction": {
+    "home": {
+     "win": 7.39,
+     "draw": -0.11,
+     "loss": -7.61
+    },
+    "away": {
+     "loss": -7.39,
+     "draw": 0.11,
+     "win": 7.61
+    }
+   },
    "homeName": "Guatemala",
    "awayName": "El Salvador"
   },
@@ -5254,6 +5888,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 1",
    "city": "Bandung",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.721,
+   "prediction": {
+    "home": {
+     "win": 2.79,
+     "draw": -2.21,
+     "loss": -7.21
+    },
+    "away": {
+     "loss": -2.79,
+     "draw": 2.21,
+     "win": 7.21
+    }
+   },
    "homeName": "Philippines",
    "awayName": "Pakistan"
   },
@@ -5270,6 +5919,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Brisbane",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.301,
+   "prediction": {
+    "home": {
+     "win": 6.99,
+     "draw": 1.99,
+     "loss": -3.01
+    },
+    "away": {
+     "loss": -6.99,
+     "draw": -1.99,
+     "win": 3.01
+    }
+   },
    "homeName": "Australia",
    "awayName": "Brazil"
   },
@@ -5286,6 +5950,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 1",
    "city": "Bandung",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.505,
+   "prediction": {
+    "home": {
+     "win": 4.95,
+     "draw": -0.05,
+     "loss": -5.05
+    },
+    "away": {
+     "loss": -4.95,
+     "draw": 0.05,
+     "win": 5.05
+    }
+   },
    "homeName": "Thailand",
    "awayName": "Vietnam"
   },
@@ -5302,6 +5981,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Helsinki (Helsingfors)",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.6,
+   "prediction": {
+    "home": {
+     "win": 6.0,
+     "draw": -1.5,
+     "loss": -9.0
+    },
+    "away": {
+     "loss": -6.0,
+     "draw": 1.5,
+     "win": 9.0
+    }
+   },
    "homeName": "Finland",
    "awayName": "Belarus"
   },
@@ -5318,6 +6012,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Chișinău",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.377,
+   "prediction": {
+    "home": {
+     "win": 9.35,
+     "draw": 1.85,
+     "loss": -5.65
+    },
+    "away": {
+     "loss": -9.35,
+     "draw": -1.85,
+     "win": 5.65
+    }
+   },
    "homeName": "Moldova",
    "awayName": "Faroe Islands"
   },
@@ -5334,6 +6043,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Kazan",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.43,
+   "prediction": {
+    "home": {
+     "win": 5.7,
+     "draw": 0.7,
+     "loss": -4.3
+    },
+    "away": {
+     "loss": -5.7,
+     "draw": -0.7,
+     "win": 4.3
+    }
+   },
    "homeName": "Russia",
    "awayName": "IR Iran"
   },
@@ -5350,6 +6074,21 @@
    "competition": "Gulf Cup of Nations",
    "stage": "Group Stage",
    "city": "Jeddah",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.52,
+   "prediction": {
+    "home": {
+     "win": 4.8,
+     "draw": -0.2,
+     "loss": -5.2
+    },
+    "away": {
+     "loss": -4.8,
+     "draw": 0.2,
+     "win": 5.2
+    }
+   },
    "homeName": "Saudi Arabia",
    "awayName": "Iraq"
   },
@@ -5366,6 +6105,21 @@
    "competition": "Gulf Cup of Nations",
    "stage": "Group Stage",
    "city": "Jeddah",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.683,
+   "prediction": {
+    "home": {
+     "win": 3.17,
+     "draw": -1.83,
+     "loss": -6.83
+    },
+    "away": {
+     "loss": -3.17,
+     "draw": 1.83,
+     "win": 6.83
+    }
+   },
    "homeName": "Oman",
    "awayName": "Kuwait"
   },
@@ -5382,6 +6136,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Seville",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.742,
+   "prediction": {
+    "home": {
+     "win": 3.87,
+     "draw": -3.63,
+     "loss": -11.13
+    },
+    "away": {
+     "loss": -3.87,
+     "draw": 3.63,
+     "win": 11.13
+    }
+   },
    "homeName": "Spain",
    "awayName": "Croatia"
   },
@@ -5398,6 +6167,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Prague",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.149,
+   "prediction": {
+    "home": {
+     "win": 12.76,
+     "draw": 5.26,
+     "loss": -2.24
+    },
+    "away": {
+     "loss": -12.76,
+     "draw": -5.26,
+     "win": 2.24
+    }
+   },
    "homeName": "Czechia",
    "awayName": "England"
   },
@@ -5414,6 +6198,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Glasgow",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.298,
+   "prediction": {
+    "home": {
+     "win": 10.53,
+     "draw": 3.03,
+     "loss": -4.47
+    },
+    "away": {
+     "loss": -10.53,
+     "draw": -3.03,
+     "win": 4.47
+    }
+   },
    "homeName": "Scotland",
    "awayName": "Switzerland"
   },
@@ -5430,6 +6229,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Košice",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.757,
+   "prediction": {
+    "home": {
+     "win": 3.65,
+     "draw": -3.85,
+     "loss": -11.35
+    },
+    "away": {
+     "loss": -3.65,
+     "draw": 3.85,
+     "win": 11.35
+    }
+   },
    "homeName": "Slovakia",
    "awayName": "Kazakhstan"
   },
@@ -5446,6 +6260,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Ljubljana",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.572,
+   "prediction": {
+    "home": {
+     "win": 6.42,
+     "draw": -1.08,
+     "loss": -8.58
+    },
+    "away": {
+     "loss": -6.42,
+     "draw": 1.08,
+     "win": 8.58
+    }
+   },
    "homeName": "Slovenia",
    "awayName": "North Macedonia"
   },
@@ -5462,6 +6291,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Serravalle",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.073,
+   "prediction": {
+    "home": {
+     "win": 13.9,
+     "draw": 6.4,
+     "loss": -1.1
+    },
+    "away": {
+     "loss": -13.9,
+     "draw": -6.4,
+     "win": 1.1
+    }
+   },
    "homeName": "San Marino",
    "awayName": "Albania"
   },
@@ -5478,6 +6322,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Luxembourg",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.406,
+   "prediction": {
+    "home": {
+     "win": 8.91,
+     "draw": 1.41,
+     "loss": -6.09
+    },
+    "away": {
+     "loss": -8.91,
+     "draw": -1.41,
+     "win": 6.09
+    }
+   },
    "homeName": "Luxembourg",
    "awayName": "Iceland"
   },
@@ -5494,6 +6353,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Plovdiv",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.622,
+   "prediction": {
+    "home": {
+     "win": 5.67,
+     "draw": -1.83,
+     "loss": -9.33
+    },
+    "away": {
+     "loss": -5.67,
+     "draw": 1.83,
+     "win": 9.33
+    }
+   },
    "homeName": "Bulgaria",
    "awayName": "Estonia"
   },
@@ -5510,6 +6384,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "Venetian Road Settlement",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.475,
+   "prediction": {
+    "home": {
+     "win": 7.88,
+     "draw": 0.38,
+     "loss": -7.12
+    },
+    "away": {
+     "loss": -7.88,
+     "draw": -0.38,
+     "win": 7.12
+    }
+   },
    "homeName": "British Virgin Islands",
    "awayName": "Turks and Caicos Islands"
   },
@@ -5526,6 +6415,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "Christiansted",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.493,
+   "prediction": {
+    "home": {
+     "win": 7.6,
+     "draw": 0.1,
+     "loss": -7.4
+    },
+    "away": {
+     "loss": -7.6,
+     "draw": -0.1,
+     "win": 7.4
+    }
+   },
    "homeName": "US Virgin Islands",
    "awayName": "Bahamas"
   },
@@ -5542,6 +6446,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "NORTH SOUND",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.375,
+   "prediction": {
+    "home": {
+     "win": 9.37,
+     "draw": 1.87,
+     "loss": -5.63
+    },
+    "away": {
+     "loss": -9.37,
+     "draw": -1.87,
+     "win": 5.63
+    }
+   },
    "homeName": "Anguilla",
    "awayName": "Aruba"
   },
@@ -5558,6 +6477,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Córdoba",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.922,
+   "prediction": {
+    "home": {
+     "win": 0.78,
+     "draw": -4.22,
+     "loss": -9.22
+    },
+    "away": {
+     "loss": -0.78,
+     "draw": 4.22,
+     "win": 9.22
+    }
+   },
    "homeName": "Argentina",
    "awayName": "Bolivia"
   },
@@ -5574,6 +6508,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "St. Louis",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.714,
+   "prediction": {
+    "home": {
+     "win": 2.86,
+     "draw": -2.14,
+     "loss": -7.14
+    },
+    "away": {
+     "loss": -2.86,
+     "draw": 2.14,
+     "win": 7.14
+    }
+   },
    "homeName": "USA",
    "awayName": "Chile"
   },
@@ -5590,6 +6539,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "TBC",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.555,
+   "prediction": {
+    "home": {
+     "win": 4.45,
+     "draw": -0.55,
+     "loss": -5.55
+    },
+    "away": {
+     "loss": -4.45,
+     "draw": 0.55,
+     "win": 5.55
+    }
+   },
    "homeName": "Mauritius",
    "awayName": "Djibouti"
   },
@@ -5606,6 +6570,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Belmopan",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.441,
+   "prediction": {
+    "home": {
+     "win": 8.38,
+     "draw": 0.88,
+     "loss": -6.62
+    },
+    "away": {
+     "loss": -8.38,
+     "draw": -0.88,
+     "win": 6.62
+    }
+   },
    "homeName": "Belize",
    "awayName": "St Vincent and the Grenadines"
   },
@@ -5622,6 +6601,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Harrison",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.759,
+   "prediction": {
+    "home": {
+     "win": 2.41,
+     "draw": -2.59,
+     "loss": -7.59
+    },
+    "away": {
+     "loss": -2.41,
+     "draw": 2.59,
+     "win": 7.59
+    }
+   },
    "homeName": "Mexico",
    "awayName": "Peru"
   },
@@ -5638,6 +6632,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "Suva",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.442,
+   "prediction": {
+    "home": {
+     "win": 5.58,
+     "draw": 0.58,
+     "loss": -4.42
+    },
+    "away": {
+     "loss": -5.58,
+     "draw": -0.58,
+     "win": 4.42
+    }
+   },
    "homeName": "Papua New Guinea",
    "awayName": "Solomon Islands"
   },
@@ -5654,6 +6663,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "Suva",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.483,
+   "prediction": {
+    "home": {
+     "win": 5.17,
+     "draw": 0.17,
+     "loss": -4.83
+    },
+    "away": {
+     "loss": -5.17,
+     "draw": -0.17,
+     "win": 4.83
+    }
+   },
    "homeName": "Fiji",
    "awayName": "New Caledonia"
   },
@@ -5670,6 +6694,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 2",
    "city": "Hong Kong",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.404,
+   "prediction": {
+    "home": {
+     "win": 5.96,
+     "draw": 0.96,
+     "loss": -4.04
+    },
+    "away": {
+     "loss": -5.96,
+     "draw": -0.96,
+     "win": 4.04
+    }
+   },
    "homeName": "Timor-Leste",
    "awayName": "Cambodia"
   },
@@ -5686,6 +6725,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 2",
    "city": "Hong Kong",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.338,
+   "prediction": {
+    "home": {
+     "win": 6.62,
+     "draw": 1.62,
+     "loss": -3.38
+    },
+    "away": {
+     "loss": -6.62,
+     "draw": -1.62,
+     "win": 3.38
+    }
+   },
    "homeName": "Brunei Darussalam",
    "awayName": "Hong Kong, China"
   },
@@ -5702,6 +6756,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "VICTORIA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.431,
+   "prediction": {
+    "home": {
+     "win": 5.69,
+     "draw": 0.69,
+     "loss": -4.31
+    },
+    "away": {
+     "loss": -5.69,
+     "draw": -0.69,
+     "win": 4.31
+    }
+   },
    "homeName": "Seychelles",
    "awayName": "Sri Lanka"
   },
@@ -5718,6 +6787,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "Gaborone",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.356,
+   "prediction": {
+    "home": {
+     "win": 6.44,
+     "draw": 1.44,
+     "loss": -3.56
+    },
+    "away": {
+     "loss": -6.44,
+     "draw": -1.44,
+     "win": 3.56
+    }
+   },
    "homeName": "Botswana",
    "awayName": "Mozambique"
   },
@@ -5734,6 +6818,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 2",
    "city": "Kaunas",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.614,
+   "prediction": {
+    "home": {
+     "win": 3.86,
+     "draw": -1.14,
+     "loss": -6.14
+    },
+    "away": {
+     "loss": -3.86,
+     "draw": 1.14,
+     "win": 6.14
+    }
+   },
    "homeName": "Lithuania",
    "awayName": "Andorra"
   },
@@ -5750,6 +6849,21 @@
    "competition": "Gulf Cup of Nations",
    "stage": "Group Stage",
    "city": "Jeddah",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.461,
+   "prediction": {
+    "home": {
+     "win": 5.39,
+     "draw": 0.39,
+     "loss": -4.61
+    },
+    "away": {
+     "loss": -5.39,
+     "draw": -0.39,
+     "win": 4.61
+    }
+   },
    "homeName": "United Arab Emirates",
    "awayName": "Qatar"
   },
@@ -5766,6 +6880,21 @@
    "competition": "Gulf Cup of Nations",
    "stage": "Group Stage",
    "city": "Jeddah",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.674,
+   "prediction": {
+    "home": {
+     "win": 3.26,
+     "draw": -1.74,
+     "loss": -6.74
+    },
+    "away": {
+     "loss": -3.26,
+     "draw": 1.74,
+     "win": 6.74
+    }
+   },
    "homeName": "Bahrain",
    "awayName": "Yemen"
   },
@@ -5782,6 +6911,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "TBC",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.292,
+   "prediction": {
+    "home": {
+     "win": 7.08,
+     "draw": 2.08,
+     "loss": -2.92
+    },
+    "away": {
+     "loss": -7.08,
+     "draw": -2.08,
+     "win": 2.92
+    }
+   },
    "homeName": "Maldives",
    "awayName": "Lebanon"
   },
@@ -5798,6 +6942,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "Matavera, Rarotonga",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.367,
+   "prediction": {
+    "home": {
+     "win": 6.33,
+     "draw": 1.33,
+     "loss": -3.67
+    },
+    "away": {
+     "loss": -6.33,
+     "draw": -1.33,
+     "win": 3.67
+    }
+   },
    "homeName": "Cook Islands",
    "awayName": "Tahiti"
   },
@@ -5814,6 +6973,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 1",
    "city": "Jakarta",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.732,
+   "prediction": {
+    "home": {
+     "win": 2.68,
+     "draw": -2.32,
+     "loss": -7.32
+    },
+    "away": {
+     "loss": -2.68,
+     "draw": 2.32,
+     "win": 7.32
+    }
+   },
    "homeName": "Indonesia",
    "awayName": "Bangladesh"
   },
@@ -5830,6 +7004,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 1",
    "city": "Bandung",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.524,
+   "prediction": {
+    "home": {
+     "win": 4.76,
+     "draw": -0.24,
+     "loss": -5.24
+    },
+    "away": {
+     "loss": -4.76,
+     "draw": 0.24,
+     "win": 5.24
+    }
+   },
    "homeName": "Malaysia",
    "awayName": "Singapore"
   },
@@ -5846,6 +7035,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "TBC",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.625,
+   "prediction": {
+    "home": {
+     "win": 3.75,
+     "draw": -1.25,
+     "loss": -6.25
+    },
+    "away": {
+     "loss": -3.75,
+     "draw": 1.25,
+     "win": 6.25
+    }
+   },
    "homeName": "Uzbekistan",
    "awayName": "Syria"
   },
@@ -5862,6 +7066,21 @@
    "competition": "UEFA Nations League",
    "stage": "League D",
    "city": "Baku",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.789,
+   "prediction": {
+    "home": {
+     "win": 3.16,
+     "draw": -4.34,
+     "loss": -11.84
+    },
+    "away": {
+     "loss": -3.16,
+     "draw": 4.34,
+     "win": 11.84
+    }
+   },
    "homeName": "Azerbaijan",
    "awayName": "Liechtenstein"
   },
@@ -5878,6 +7097,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Copenhagen",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.334,
+   "prediction": {
+    "home": {
+     "win": 9.98,
+     "draw": 2.48,
+     "loss": -5.02
+    },
+    "away": {
+     "loss": -9.98,
+     "draw": -2.48,
+     "win": 5.02
+    }
+   },
    "homeName": "Denmark",
    "awayName": "Portugal"
   },
@@ -5894,6 +7128,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Thessaloniki",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.245,
+   "prediction": {
+    "home": {
+     "win": 11.33,
+     "draw": 3.83,
+     "loss": -3.67
+    },
+    "away": {
+     "loss": -11.33,
+     "draw": -3.83,
+     "win": 3.67
+    }
+   },
    "homeName": "Greece",
    "awayName": "Netherlands"
   },
@@ -5910,6 +7159,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Munich",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.71,
+   "prediction": {
+    "home": {
+     "win": 4.36,
+     "draw": -3.14,
+     "loss": -10.64
+    },
+    "away": {
+     "loss": -4.36,
+     "draw": 3.14,
+     "win": 10.64
+    }
+   },
    "homeName": "Germany",
    "awayName": "Serbia"
   },
@@ -5926,6 +7190,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Cardiff",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.364,
+   "prediction": {
+    "home": {
+     "win": 9.54,
+     "draw": 2.04,
+     "loss": -5.46
+    },
+    "away": {
+     "loss": -9.54,
+     "draw": -2.04,
+     "win": 5.46
+    }
+   },
    "homeName": "Wales",
    "awayName": "Norway"
   },
@@ -5942,6 +7221,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Dublin",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.342,
+   "prediction": {
+    "home": {
+     "win": 9.88,
+     "draw": 2.38,
+     "loss": -5.12
+    },
+    "away": {
+     "loss": -9.88,
+     "draw": -2.38,
+     "win": 5.12
+    }
+   },
    "homeName": "Republic of Ireland",
    "awayName": "Austria"
   },
@@ -5958,6 +7252,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Debrecen",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.502,
+   "prediction": {
+    "home": {
+     "win": 7.48,
+     "draw": -0.02,
+     "loss": -7.52
+    },
+    "away": {
+     "loss": -7.48,
+     "draw": 0.02,
+     "win": 7.52
+    }
+   },
    "homeName": "Israel",
    "awayName": "Kosovo"
   },
@@ -5974,6 +7283,21 @@
    "competition": "UEFA Nations League",
    "stage": "League D",
    "city": "Ta' Qali",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.665,
+   "prediction": {
+    "home": {
+     "win": 5.02,
+     "draw": -2.48,
+     "loss": -9.98
+    },
+    "away": {
+     "loss": -5.02,
+     "draw": 2.48,
+     "win": 9.98
+    }
+   },
    "homeName": "Malta",
    "awayName": "Gibraltar"
   },
@@ -5990,6 +7314,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "Venetian Road Settlement",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.355,
+   "prediction": {
+    "home": {
+     "win": 9.68,
+     "draw": 2.18,
+     "loss": -5.32
+    },
+    "away": {
+     "loss": -9.68,
+     "draw": -2.18,
+     "win": 5.32
+    }
+   },
    "homeName": "British Virgin Islands",
    "awayName": "Montserrat"
   },
@@ -6006,6 +7345,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Mayagüez",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.355,
+   "prediction": {
+    "home": {
+     "win": 9.68,
+     "draw": 2.18,
+     "loss": -5.32
+    },
+    "away": {
+     "loss": -9.68,
+     "draw": -2.18,
+     "win": 5.32
+    }
+   },
    "homeName": "Dominica",
    "awayName": "Guyana"
   },
@@ -6022,6 +7376,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Willemstad",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.579,
+   "prediction": {
+    "home": {
+     "win": 6.32,
+     "draw": -1.18,
+     "loss": -8.68
+    },
+    "away": {
+     "loss": -6.32,
+     "draw": 1.18,
+     "win": 8.68
+    }
+   },
    "homeName": "Curaçao",
    "awayName": "Trinidad and Tobago"
   },
@@ -6038,6 +7407,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "NORTH SOUND",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.293,
+   "prediction": {
+    "home": {
+     "win": 10.61,
+     "draw": 3.11,
+     "loss": -4.39
+    },
+    "away": {
+     "loss": -10.61,
+     "draw": -3.11,
+     "win": 4.39
+    }
+   },
    "homeName": "Anguilla",
    "awayName": "Antigua and Barbuda"
   },
@@ -6054,6 +7438,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "TBC",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.708,
+   "prediction": {
+    "home": {
+     "win": 2.92,
+     "draw": -2.08,
+     "loss": -7.08
+    },
+    "away": {
+     "loss": -2.92,
+     "draw": 2.08,
+     "win": 7.08
+    }
+   },
    "homeName": "Congo DR",
    "awayName": "Uganda"
   },
@@ -6070,6 +7469,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Santo Domingo",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.328,
+   "prediction": {
+    "home": {
+     "win": 10.08,
+     "draw": 2.58,
+     "loss": -4.92
+    },
+    "away": {
+     "loss": -10.08,
+     "draw": -2.58,
+     "win": 4.92
+    }
+   },
    "homeName": "Dominican Republic",
    "awayName": "Haiti"
   },
@@ -6086,6 +7500,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Mayagüez",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.346,
+   "prediction": {
+    "home": {
+     "win": 9.82,
+     "draw": 2.32,
+     "loss": -5.18
+    },
+    "away": {
+     "loss": -9.82,
+     "draw": -2.32,
+     "win": 5.18
+    }
+   },
    "homeName": "Cayman Islands",
    "awayName": "Puerto Rico"
   },
@@ -6102,6 +7531,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Managua",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.214,
+   "prediction": {
+    "home": {
+     "win": 11.8,
+     "draw": 4.3,
+     "loss": -3.2
+    },
+    "away": {
+     "loss": -11.8,
+     "draw": -4.3,
+     "win": 3.2
+    }
+   },
    "homeName": "Nicaragua",
    "awayName": "Costa Rica"
   },
@@ -6118,6 +7562,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 1",
    "city": "Bandung",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.657,
+   "prediction": {
+    "home": {
+     "win": 3.43,
+     "draw": -1.57,
+     "loss": -6.57
+    },
+    "away": {
+     "loss": -3.43,
+     "draw": 1.57,
+     "win": 6.57
+    }
+   },
    "homeName": "Thailand",
    "awayName": "Philippines"
   },
@@ -6134,6 +7593,21 @@
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 1",
    "city": "Jakarta",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.829,
+   "prediction": {
+    "home": {
+     "win": 1.71,
+     "draw": -3.29,
+     "loss": -8.29
+    },
+    "away": {
+     "loss": -1.71,
+     "draw": 3.29,
+     "win": 8.29
+    }
+   },
    "homeName": "Vietnam",
    "awayName": "Pakistan"
   },
@@ -6150,6 +7624,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Ulsan",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.59,
+   "prediction": {
+    "home": {
+     "win": 4.1,
+     "draw": -0.9,
+     "loss": -5.9
+    },
+    "away": {
+     "loss": -4.1,
+     "draw": 0.9,
+     "win": 5.9
+    }
+   },
    "homeName": "Korea Republic",
    "awayName": "Venezuela"
   },
@@ -6166,6 +7655,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Chongqing",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.665,
+   "prediction": {
+    "home": {
+     "win": 3.35,
+     "draw": -1.65,
+     "loss": -6.65
+    },
+    "away": {
+     "loss": -3.35,
+     "draw": 1.65,
+     "win": 6.65
+    }
+   },
    "homeName": "China PR",
    "awayName": "Turkmenistan"
   },
@@ -6182,6 +7686,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Chongqing",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.513,
+   "prediction": {
+    "home": {
+     "win": 4.87,
+     "draw": -0.13,
+     "loss": -5.13
+    },
+    "away": {
+     "loss": -4.87,
+     "draw": 0.13,
+     "win": 5.13
+    }
+   },
    "homeName": "China PR",
    "awayName": "Palestine"
   },
@@ -6198,6 +7717,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Nur-Sultan",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.661,
+   "prediction": {
+    "home": {
+     "win": 5.08,
+     "draw": -2.42,
+     "loss": -9.92
+    },
+    "away": {
+     "loss": -5.08,
+     "draw": 2.42,
+     "win": 9.92
+    }
+   },
    "homeName": "Kazakhstan",
    "awayName": "Moldova"
   },
@@ -6214,6 +7748,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "SAINT PIERRE",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.533,
+   "prediction": {
+    "home": {
+     "win": 4.67,
+     "draw": -0.33,
+     "loss": -5.33
+    },
+    "away": {
+     "loss": -4.67,
+     "draw": 0.33,
+     "win": 5.33
+    }
+   },
    "homeName": "Mauritius",
    "awayName": "Sri Lanka"
   },
@@ -6230,6 +7779,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Rīga",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.295,
+   "prediction": {
+    "home": {
+     "win": 10.58,
+     "draw": 3.08,
+     "loss": -4.42
+    },
+    "away": {
+     "loss": -10.58,
+     "draw": -3.08,
+     "win": 4.42
+    }
+   },
    "homeName": "Latvia",
    "awayName": "Montenegro"
   },
@@ -6246,6 +7810,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Nicosía (Levkosía)",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.436,
+   "prediction": {
+    "home": {
+     "win": 8.47,
+     "draw": 0.97,
+     "loss": -6.53
+    },
+    "away": {
+     "loss": -8.47,
+     "draw": -0.97,
+     "win": 6.53
+    }
+   },
    "homeName": "Cyprus",
    "awayName": "Armenia"
   },
@@ -6262,6 +7841,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Saint-Denis",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.726,
+   "prediction": {
+    "home": {
+     "win": 4.11,
+     "draw": -3.39,
+     "loss": -10.89
+    },
+    "away": {
+     "loss": -4.11,
+     "draw": 3.39,
+     "win": 10.89
+    }
+   },
    "homeName": "France",
    "awayName": "Italy"
   },
@@ -6278,6 +7872,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Liège",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.687,
+   "prediction": {
+    "home": {
+     "win": 4.69,
+     "draw": -2.81,
+     "loss": -10.31
+    },
+    "away": {
+     "loss": -4.69,
+     "draw": 2.81,
+     "win": 10.31
+    }
+   },
    "homeName": "Belgium",
    "awayName": "Türkiye"
   },
@@ -6294,6 +7903,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Trnava",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.669,
+   "prediction": {
+    "home": {
+     "win": 4.96,
+     "draw": -2.54,
+     "loss": -10.04
+    },
+    "away": {
+     "loss": -4.96,
+     "draw": 2.54,
+     "win": 10.04
+    }
+   },
    "homeName": "Ukraine",
    "awayName": "Northern Ireland"
   },
@@ -6310,6 +7934,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Warsaw",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.572,
+   "prediction": {
+    "home": {
+     "win": 6.43,
+     "draw": -1.07,
+     "loss": -8.57
+    },
+    "away": {
+     "loss": -6.43,
+     "draw": 1.07,
+     "win": 8.57
+    }
+   },
    "homeName": "Poland",
    "awayName": "Romania"
   },
@@ -6326,6 +7965,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Zenica",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.386,
+   "prediction": {
+    "home": {
+     "win": 9.22,
+     "draw": 1.72,
+     "loss": -5.78
+    },
+    "away": {
+     "loss": -9.22,
+     "draw": -1.72,
+     "win": 5.78
+    }
+   },
    "homeName": "Bosnia and Herzegovina",
    "awayName": "Sweden"
   },
@@ -6342,6 +7996,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Budapest",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.641,
+   "prediction": {
+    "home": {
+     "win": 5.38,
+     "draw": -2.12,
+     "loss": -9.62
+    },
+    "away": {
+     "loss": -5.38,
+     "draw": 2.12,
+     "win": 9.62
+    }
+   },
    "homeName": "Hungary",
    "awayName": "Georgia"
   },
@@ -6358,6 +8027,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Tórshavn",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.214,
+   "prediction": {
+    "home": {
+     "win": 11.79,
+     "draw": 4.29,
+     "loss": -3.21
+    },
+    "away": {
+     "loss": -11.79,
+     "draw": -4.29,
+     "win": 3.21
+    }
+   },
    "homeName": "Faroe Islands",
    "awayName": "Slovakia"
   },
@@ -6374,6 +8058,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Port of Spain",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.545,
+   "prediction": {
+    "home": {
+     "win": 6.82,
+     "draw": -0.68,
+     "loss": -8.18
+    },
+    "away": {
+     "loss": -6.82,
+     "draw": 0.68,
+     "win": 8.18
+    }
+   },
    "homeName": "St Kitts and Nevis",
    "awayName": "Cuba"
   },
@@ -6390,6 +8089,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Paramaribo",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.415,
+   "prediction": {
+    "home": {
+     "win": 8.78,
+     "draw": 1.28,
+     "loss": -6.22
+    },
+    "away": {
+     "loss": -8.78,
+     "draw": -1.28,
+     "win": 6.22
+    }
+   },
    "homeName": "Suriname",
    "awayName": "Guatemala"
   },
@@ -6406,6 +8120,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Buenos Aires",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.897,
+   "prediction": {
+    "home": {
+     "win": 1.03,
+     "draw": -3.97,
+     "loss": -8.97
+    },
+    "away": {
+     "loss": -1.03,
+     "draw": 3.97,
+     "win": 8.97
+    }
+   },
    "homeName": "Argentina",
    "awayName": "Burkina Faso"
   },
@@ -6422,6 +8151,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Harrison",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.681,
+   "prediction": {
+    "home": {
+     "win": 3.19,
+     "draw": -1.81,
+     "loss": -6.81
+    },
+    "away": {
+     "loss": -3.19,
+     "draw": 1.81,
+     "win": 6.81
+    }
+   },
    "homeName": "Colombia",
    "awayName": "Paraguay"
   },
@@ -6438,6 +8182,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.472,
+   "prediction": {
+    "home": {
+     "win": 5.28,
+     "draw": 0.28,
+     "loss": -4.72
+    },
+    "away": {
+     "loss": -5.28,
+     "draw": -0.28,
+     "win": 4.72
+    }
+   },
    "homeName": "Tunisia",
    "awayName": "Mali"
   },
@@ -6454,6 +8213,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Bridgetown",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.446,
+   "prediction": {
+    "home": {
+     "win": 8.31,
+     "draw": 0.81,
+     "loss": -6.69
+    },
+    "away": {
+     "loss": -8.31,
+     "draw": -0.81,
+     "win": 6.69
+    }
+   },
    "homeName": "Barbados",
    "awayName": "Bermuda"
   },
@@ -6470,6 +8244,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "TBC",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.522,
+   "prediction": {
+    "home": {
+     "win": 4.78,
+     "draw": -0.22,
+     "loss": -5.22
+    },
+    "away": {
+     "loss": -4.78,
+     "draw": 0.22,
+     "win": 5.22
+    }
+   },
    "homeName": "Sri Lanka",
    "awayName": "Djibouti"
   },
@@ -6486,6 +8275,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "San Salvador",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.37,
+   "prediction": {
+    "home": {
+     "win": 9.45,
+     "draw": 1.95,
+     "loss": -5.55
+    },
+    "away": {
+     "loss": -9.45,
+     "draw": -1.95,
+     "win": 5.55
+    }
+   },
    "homeName": "El Salvador",
    "awayName": "Jamaica"
   },
@@ -6502,6 +8306,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Helsinki (Helsingfors)",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.463,
+   "prediction": {
+    "home": {
+     "win": 8.05,
+     "draw": 0.55,
+     "loss": -6.95
+    },
+    "away": {
+     "loss": -8.05,
+     "draw": -0.55,
+     "win": 6.95
+    }
+   },
    "homeName": "Finland",
    "awayName": "Albania"
   },
@@ -6518,6 +8337,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Kolkata",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.06,
+   "prediction": {
+    "home": {
+     "win": 9.4,
+     "draw": 4.4,
+     "loss": -0.6
+    },
+    "away": {
+     "loss": -9.4,
+     "draw": -4.4,
+     "win": 0.6
+    }
+   },
    "homeName": "India",
    "awayName": "Brazil"
   },
@@ -6534,6 +8368,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Yekaterinburg",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.812,
+   "prediction": {
+    "home": {
+     "win": 1.88,
+     "draw": -3.12,
+     "loss": -8.12
+    },
+    "away": {
+     "loss": -1.88,
+     "draw": 3.12,
+     "win": 8.12
+    }
+   },
    "homeName": "Russia",
    "awayName": "Namibia"
   },
@@ -6550,6 +8399,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Rijeka",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.326,
+   "prediction": {
+    "home": {
+     "win": 10.11,
+     "draw": 2.61,
+     "loss": -4.89
+    },
+    "away": {
+     "loss": -10.11,
+     "draw": -2.61,
+     "win": 4.89
+    }
+   },
    "homeName": "Croatia",
    "awayName": "England"
   },
@@ -6566,6 +8430,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "REYKJAVIK",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.573,
+   "prediction": {
+    "home": {
+     "win": 6.41,
+     "draw": -1.09,
+     "loss": -8.59
+    },
+    "away": {
+     "loss": -6.41,
+     "draw": 1.09,
+     "win": 8.59
+    }
+   },
    "homeName": "Iceland",
    "awayName": "Bulgaria"
   },
@@ -6582,6 +8461,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Budapest",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.879,
+   "prediction": {
+    "home": {
+     "win": 1.81,
+     "draw": -5.69,
+     "loss": -13.19
+    },
+    "away": {
+     "loss": -1.81,
+     "draw": 5.69,
+     "win": 13.19
+    }
+   },
    "homeName": "Belarus",
    "awayName": "San Marino"
   },
@@ -6598,6 +8492,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Tallinn",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.398,
+   "prediction": {
+    "home": {
+     "win": 9.02,
+     "draw": 1.52,
+     "loss": -5.98
+    },
+    "away": {
+     "loss": -9.02,
+     "draw": -1.52,
+     "win": 5.98
+    }
+   },
    "homeName": "Estonia",
    "awayName": "Luxembourg"
   },
@@ -6614,6 +8523,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "MONTREAL",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.614,
+   "prediction": {
+    "home": {
+     "win": 3.86,
+     "draw": -1.14,
+     "loss": -6.14
+    },
+    "away": {
+     "loss": -3.86,
+     "draw": 1.14,
+     "win": 6.14
+    }
+   },
    "homeName": "Canada",
    "awayName": "Peru"
   },
@@ -6630,6 +8554,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Oviedo",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.888,
+   "prediction": {
+    "home": {
+     "win": 1.68,
+     "draw": -5.82,
+     "loss": -13.32
+    },
+    "away": {
+     "loss": -1.68,
+     "draw": 5.82,
+     "win": 13.32
+    }
+   },
    "homeName": "Spain",
    "awayName": "Czechia"
   },
@@ -6646,6 +8585,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Lucerne",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.74,
+   "prediction": {
+    "home": {
+     "win": 3.9,
+     "draw": -3.6,
+     "loss": -11.1
+    },
+    "away": {
+     "loss": -3.9,
+     "draw": 3.6,
+     "win": 11.1
+    }
+   },
    "homeName": "Switzerland",
    "awayName": "Slovenia"
   },
@@ -6662,6 +8616,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Skopje",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.383,
+   "prediction": {
+    "home": {
+     "win": 9.26,
+     "draw": 1.76,
+     "loss": -5.74
+    },
+    "away": {
+     "loss": -9.26,
+     "draw": -1.76,
+     "win": 5.74
+    }
+   },
    "homeName": "North Macedonia",
    "awayName": "Scotland"
   },
@@ -6678,6 +8647,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Abidjan",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.58,
+   "prediction": {
+    "home": {
+     "win": 4.2,
+     "draw": -0.8,
+     "loss": -5.8
+    },
+    "away": {
+     "loss": -4.2,
+     "draw": 0.8,
+     "win": 5.8
+    }
+   },
    "homeName": "Côte d'Ivoire",
    "awayName": "Cameroon"
   },
@@ -6694,6 +8678,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Glendale",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.442,
+   "prediction": {
+    "home": {
+     "win": 5.58,
+     "draw": 0.58,
+     "loss": -4.42
+    },
+    "away": {
+     "loss": -5.58,
+     "draw": -0.58,
+     "win": 4.42
+    }
+   },
    "homeName": "USA",
    "awayName": "Mexico"
   },
@@ -6710,6 +8709,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "MARSEILLE",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.144,
+   "prediction": {
+    "home": {
+     "win": 8.56,
+     "draw": 3.56,
+     "loss": -1.44
+    },
+    "away": {
+     "loss": -8.56,
+     "draw": -3.56,
+     "win": 1.44
+    }
+   },
    "homeName": "Comoros",
    "awayName": "Senegal"
   },
@@ -6726,6 +8740,21 @@
    "competition": "UEFA Nations League",
    "stage": "League D",
    "city": "Baku",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.573,
+   "prediction": {
+    "home": {
+     "win": 6.4,
+     "draw": -1.1,
+     "loss": -8.6
+    },
+    "away": {
+     "loss": -6.4,
+     "draw": 1.1,
+     "win": 8.6
+    }
+   },
    "homeName": "Azerbaijan",
    "awayName": "Lithuania"
   },
@@ -6742,6 +8771,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "Bishkek",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.519,
+   "prediction": {
+    "home": {
+     "win": 4.81,
+     "draw": -0.19,
+     "loss": -5.19
+    },
+    "away": {
+     "loss": -4.81,
+     "draw": 0.19,
+     "win": 5.19
+    }
+   },
    "homeName": "Kyrgyz Republic",
    "awayName": "Lebanon"
   },
@@ -6758,6 +8802,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Pristina",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.259,
+   "prediction": {
+    "home": {
+     "win": 11.12,
+     "draw": 3.62,
+     "loss": -3.88
+    },
+    "away": {
+     "loss": -11.12,
+     "draw": -3.62,
+     "win": 3.88
+    }
+   },
    "homeName": "Kosovo",
    "awayName": "Austria"
   },
@@ -6774,6 +8833,21 @@
    "competition": "UEFA Nations League",
    "stage": "League D",
    "city": "Ta' Qali",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.557,
+   "prediction": {
+    "home": {
+     "win": 6.64,
+     "draw": -0.86,
+     "loss": -8.36
+    },
+    "away": {
+     "loss": -6.64,
+     "draw": 0.86,
+     "win": 8.36
+    }
+   },
    "homeName": "Malta",
    "awayName": "Andorra"
   },
@@ -6790,6 +8864,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Cairo",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.636,
+   "prediction": {
+    "home": {
+     "win": 3.64,
+     "draw": -1.36,
+     "loss": -6.36
+    },
+    "away": {
+     "loss": -3.64,
+     "draw": 1.36,
+     "win": 6.36
+    }
+   },
    "homeName": "Egypt",
    "awayName": "South Africa"
   },
@@ -6806,6 +8895,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "PORTO",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.625,
+   "prediction": {
+    "home": {
+     "win": 5.62,
+     "draw": -1.88,
+     "loss": -9.38
+    },
+    "away": {
+     "loss": -5.62,
+     "draw": 1.88,
+     "win": 9.38
+    }
+   },
    "homeName": "Portugal",
    "awayName": "Norway"
   },
@@ -6822,6 +8926,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Eindhoven",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.746,
+   "prediction": {
+    "home": {
+     "win": 3.81,
+     "draw": -3.69,
+     "loss": -11.19
+    },
+    "away": {
+     "loss": -3.81,
+     "draw": 3.69,
+     "win": 11.19
+    }
+   },
    "homeName": "Netherlands",
    "awayName": "Serbia"
   },
@@ -6838,6 +8957,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Thessaloniki",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.28,
+   "prediction": {
+    "home": {
+     "win": 10.8,
+     "draw": 3.3,
+     "loss": -4.2
+    },
+    "away": {
+     "loss": -10.8,
+     "draw": -3.3,
+     "win": 4.2
+    }
+   },
    "homeName": "Greece",
    "awayName": "Germany"
   },
@@ -6854,6 +8988,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Cardiff",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.406,
+   "prediction": {
+    "home": {
+     "win": 8.91,
+     "draw": 1.41,
+     "loss": -6.09
+    },
+    "away": {
+     "loss": -8.91,
+     "draw": -1.41,
+     "win": 6.09
+    }
+   },
    "homeName": "Wales",
    "awayName": "Denmark"
   },
@@ -6870,6 +9019,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Bačka Topola",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.597,
+   "prediction": {
+    "home": {
+     "win": 6.05,
+     "draw": -1.45,
+     "loss": -8.95
+    },
+    "away": {
+     "loss": -6.05,
+     "draw": 1.45,
+     "win": 8.95
+    }
+   },
    "homeName": "Republic of Ireland",
    "awayName": "Israel"
   },
@@ -6886,6 +9050,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Tangier",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.832,
+   "prediction": {
+    "home": {
+     "win": 1.68,
+     "draw": -3.32,
+     "loss": -8.32
+    },
+    "away": {
+     "loss": -1.68,
+     "draw": 3.32,
+     "win": 8.32
+    }
+   },
    "homeName": "Morocco",
    "awayName": "Ghana"
   },
@@ -6902,6 +9081,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Mayagüez",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.645,
+   "prediction": {
+    "home": {
+     "win": 5.32,
+     "draw": -2.18,
+     "loss": -9.68
+    },
+    "away": {
+     "loss": -5.32,
+     "draw": 2.18,
+     "win": 9.68
+    }
+   },
    "homeName": "Guyana",
    "awayName": "Dominica"
   },
@@ -6918,6 +9112,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "Venetian Road Settlement",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.525,
+   "prediction": {
+    "home": {
+     "win": 7.12,
+     "draw": -0.38,
+     "loss": -7.88
+    },
+    "away": {
+     "loss": -7.12,
+     "draw": 0.38,
+     "win": 7.88
+    }
+   },
    "homeName": "Turks and Caicos Islands",
    "awayName": "British Virgin Islands"
   },
@@ -6934,6 +9143,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "Christiansted",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.507,
+   "prediction": {
+    "home": {
+     "win": 7.4,
+     "draw": -0.1,
+     "loss": -7.6
+    },
+    "away": {
+     "loss": -7.4,
+     "draw": 0.1,
+     "win": 7.6
+    }
+   },
    "homeName": "Bahamas",
    "awayName": "US Virgin Islands"
   },
@@ -6950,6 +9174,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Port of Spain",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.421,
+   "prediction": {
+    "home": {
+     "win": 8.68,
+     "draw": 1.18,
+     "loss": -6.32
+    },
+    "away": {
+     "loss": -8.68,
+     "draw": -1.18,
+     "win": 6.32
+    }
+   },
    "homeName": "Trinidad and Tobago",
    "awayName": "Curaçao"
   },
@@ -6966,6 +9205,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Mayagüez",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.654,
+   "prediction": {
+    "home": {
+     "win": 5.18,
+     "draw": -2.32,
+     "loss": -9.82
+    },
+    "away": {
+     "loss": -5.18,
+     "draw": 2.32,
+     "win": 9.82
+    }
+   },
    "homeName": "Puerto Rico",
    "awayName": "Cayman Islands"
   },
@@ -6982,6 +9236,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "NORTH SOUND",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.625,
+   "prediction": {
+    "home": {
+     "win": 5.63,
+     "draw": -1.87,
+     "loss": -9.37
+    },
+    "away": {
+     "loss": -5.63,
+     "draw": 1.87,
+     "win": 9.37
+    }
+   },
    "homeName": "Aruba",
    "awayName": "Anguilla"
   },
@@ -6998,6 +9267,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.292,
+   "prediction": {
+    "home": {
+     "win": 7.08,
+     "draw": 2.08,
+     "loss": -2.92
+    },
+    "away": {
+     "loss": -7.08,
+     "draw": -2.08,
+     "win": 2.92
+    }
+   },
    "homeName": "Uganda",
    "awayName": "Congo DR"
   },
@@ -7014,6 +9298,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "SAN JUAN",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.662,
+   "prediction": {
+    "home": {
+     "win": 5.08,
+     "draw": -2.42,
+     "loss": -9.92
+    },
+    "away": {
+     "loss": -5.08,
+     "draw": 2.42,
+     "win": 9.92
+    }
+   },
    "homeName": "Costa Rica",
    "awayName": "Haiti"
   },
@@ -7030,6 +9329,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Managua",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.521,
+   "prediction": {
+    "home": {
+     "win": 7.18,
+     "draw": -0.32,
+     "loss": -7.82
+    },
+    "away": {
+     "loss": -7.18,
+     "draw": 0.32,
+     "win": 7.82
+    }
+   },
    "homeName": "Nicaragua",
    "awayName": "Dominican Republic"
   },
@@ -7046,6 +9360,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 3",
    "city": "SAINT PIERRE",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.533,
+   "prediction": {
+    "home": {
+     "win": 4.67,
+     "draw": -0.33,
+     "loss": -5.33
+    },
+    "away": {
+     "loss": -4.67,
+     "draw": 0.33,
+     "win": 5.33
+    }
+   },
    "homeName": "Mauritius",
    "awayName": "Sri Lanka"
   },
@@ -7062,6 +9391,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Nicosía (Levkosía)",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.546,
+   "prediction": {
+    "home": {
+     "win": 6.8,
+     "draw": -0.7,
+     "loss": -8.2
+    },
+    "away": {
+     "loss": -6.8,
+     "draw": 0.7,
+     "win": 8.2
+    }
+   },
    "homeName": "Cyprus",
    "awayName": "Latvia"
   },
@@ -7078,6 +9422,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Saint-Denis",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.655,
+   "prediction": {
+    "home": {
+     "win": 5.17,
+     "draw": -2.33,
+     "loss": -9.83
+    },
+    "away": {
+     "loss": -5.17,
+     "draw": 2.33,
+     "win": 9.83
+    }
+   },
    "homeName": "France",
    "awayName": "Belgium"
   },
@@ -7094,6 +9453,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "Bologna",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.612,
+   "prediction": {
+    "home": {
+     "win": 5.82,
+     "draw": -1.68,
+     "loss": -9.18
+    },
+    "away": {
+     "loss": -5.82,
+     "draw": 1.68,
+     "win": 9.18
+    }
+   },
    "homeName": "Italy",
    "awayName": "Türkiye"
   },
@@ -7110,6 +9484,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Trnava",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.554,
+   "prediction": {
+    "home": {
+     "win": 6.69,
+     "draw": -0.81,
+     "loss": -8.31
+    },
+    "away": {
+     "loss": -6.69,
+     "draw": 0.81,
+     "win": 8.31
+    }
+   },
    "homeName": "Ukraine",
    "awayName": "Hungary"
   },
@@ -7126,6 +9515,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Zenica",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.392,
+   "prediction": {
+    "home": {
+     "win": 9.11,
+     "draw": 1.61,
+     "loss": -5.89
+    },
+    "away": {
+     "loss": -9.11,
+     "draw": -1.61,
+     "win": 5.89
+    }
+   },
    "homeName": "Bosnia and Herzegovina",
    "awayName": "Poland"
   },
@@ -7142,6 +9546,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Bucharest",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.421,
+   "prediction": {
+    "home": {
+     "win": 8.68,
+     "draw": 1.18,
+     "loss": -6.32
+    },
+    "away": {
+     "loss": -8.68,
+     "draw": -1.18,
+     "win": 6.32
+    }
+   },
    "homeName": "Romania",
    "awayName": "Sweden"
   },
@@ -7158,6 +9577,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Belfast",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.524,
+   "prediction": {
+    "home": {
+     "win": 7.14,
+     "draw": -0.36,
+     "loss": -7.86
+    },
+    "away": {
+     "loss": -7.14,
+     "draw": 0.36,
+     "win": 7.86
+    }
+   },
    "homeName": "Northern Ireland",
    "awayName": "Georgia"
   },
@@ -7174,6 +9608,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Podgorica",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.605,
+   "prediction": {
+    "home": {
+     "win": 5.92,
+     "draw": -1.58,
+     "loss": -9.08
+    },
+    "away": {
+     "loss": -5.92,
+     "draw": 1.58,
+     "win": 9.08
+    }
+   },
    "homeName": "Montenegro",
    "awayName": "Armenia"
   },
@@ -7190,6 +9639,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 2",
    "city": "Vaduz",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.474,
+   "prediction": {
+    "home": {
+     "win": 5.26,
+     "draw": 0.26,
+     "loss": -4.74
+    },
+    "away": {
+     "loss": -5.26,
+     "draw": -0.26,
+     "win": 4.74
+    }
+   },
    "homeName": "Liechtenstein",
    "awayName": "Gibraltar"
   },
@@ -7206,6 +9670,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Port of Spain",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.455,
+   "prediction": {
+    "home": {
+     "win": 8.18,
+     "draw": 0.68,
+     "loss": -6.82
+    },
+    "away": {
+     "loss": -8.18,
+     "draw": -0.68,
+     "win": 6.82
+    }
+   },
    "homeName": "Cuba",
    "awayName": "St Kitts and Nevis"
   },
@@ -7222,6 +9701,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Buenos Aires",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.94,
+   "prediction": {
+    "home": {
+     "win": 0.6,
+     "draw": -4.4,
+     "loss": -9.4
+    },
+    "away": {
+     "loss": -0.6,
+     "draw": 4.4,
+     "win": 9.4
+    }
+   },
    "homeName": "Argentina",
    "awayName": "Benin"
   },
@@ -7238,6 +9732,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Guatemala City",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.585,
+   "prediction": {
+    "home": {
+     "win": 6.22,
+     "draw": -1.28,
+     "loss": -8.78
+    },
+    "away": {
+     "loss": -6.22,
+     "draw": 1.28,
+     "win": 8.78
+    }
+   },
    "homeName": "Guatemala",
    "awayName": "Suriname"
   },
@@ -7254,6 +9763,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Bridgetown",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.554,
+   "prediction": {
+    "home": {
+     "win": 6.69,
+     "draw": -0.81,
+     "loss": -8.31
+    },
+    "away": {
+     "loss": -6.69,
+     "draw": 0.81,
+     "win": 8.31
+    }
+   },
    "homeName": "Bermuda",
    "awayName": "Barbados"
   },
@@ -7270,6 +9794,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Tegucigalpa",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.504,
+   "prediction": {
+    "home": {
+     "win": 7.44,
+     "draw": -0.06,
+     "loss": -7.56
+    },
+    "away": {
+     "loss": -7.44,
+     "draw": 0.06,
+     "win": 7.56
+    }
+   },
    "homeName": "Honduras",
    "awayName": "Jamaica"
   },
@@ -7286,6 +9825,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Yongin-si",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.638,
+   "prediction": {
+    "home": {
+     "win": 3.62,
+     "draw": -1.38,
+     "loss": -6.38
+    },
+    "away": {
+     "loss": -3.62,
+     "draw": 1.38,
+     "win": 6.38
+    }
+   },
    "homeName": "Korea Republic",
    "awayName": "Uzbekistan"
   },
@@ -7302,6 +9856,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Chongqing",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.537,
+   "prediction": {
+    "home": {
+     "win": 4.63,
+     "draw": -0.37,
+     "loss": -5.37
+    },
+    "away": {
+     "loss": -4.63,
+     "draw": 0.37,
+     "win": 5.37
+    }
+   },
    "homeName": "China PR",
    "awayName": "Tajikistan"
   },
@@ -7318,6 +9887,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Kolkata",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.111,
+   "prediction": {
+    "home": {
+     "win": 8.89,
+     "draw": 3.89,
+     "loss": -1.11
+    },
+    "away": {
+     "loss": -8.89,
+     "draw": -3.89,
+     "win": 1.11
+    }
+   },
    "homeName": "India",
    "awayName": "Uruguay"
   },
@@ -7334,6 +9918,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Nur-Sultan",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.541,
+   "prediction": {
+    "home": {
+     "win": 6.88,
+     "draw": -0.62,
+     "loss": -8.12
+    },
+    "away": {
+     "loss": -6.88,
+     "draw": 0.62,
+     "win": 8.12
+    }
+   },
    "homeName": "Kazakhstan",
    "awayName": "Faroe Islands"
   },
@@ -7350,6 +9949,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Nizhny Novgorod",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.447,
+   "prediction": {
+    "home": {
+     "win": 5.53,
+     "draw": 0.53,
+     "loss": -4.47
+    },
+    "away": {
+     "loss": -5.53,
+     "draw": -0.53,
+     "win": 4.47
+    }
+   },
    "homeName": "Russia",
    "awayName": "Nigeria"
   },
@@ -7366,6 +9980,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Amman",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.388,
+   "prediction": {
+    "home": {
+     "win": 6.12,
+     "draw": 1.12,
+     "loss": -3.88
+    },
+    "away": {
+     "loss": -6.12,
+     "draw": -1.12,
+     "win": 3.88
+    }
+   },
    "homeName": "Jordan",
    "awayName": "Venezuela"
   },
@@ -7382,6 +10011,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "SPLIT",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.258,
+   "prediction": {
+    "home": {
+     "win": 11.13,
+     "draw": 3.63,
+     "loss": -3.87
+    },
+    "away": {
+     "loss": -11.13,
+     "draw": -3.63,
+     "win": 3.87
+    }
+   },
    "homeName": "Croatia",
    "awayName": "Spain"
   },
@@ -7398,6 +10042,21 @@
    "competition": "UEFA Nations League",
    "stage": "League A",
    "city": "London",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.851,
+   "prediction": {
+    "home": {
+     "win": 2.24,
+     "draw": -5.26,
+     "loss": -12.76
+    },
+    "away": {
+     "loss": -2.24,
+     "draw": 5.26,
+     "win": 12.76
+    }
+   },
    "homeName": "England",
    "awayName": "Czechia"
   },
@@ -7414,6 +10073,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Lucerne",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.792,
+   "prediction": {
+    "home": {
+     "win": 3.12,
+     "draw": -4.38,
+     "loss": -11.88
+    },
+    "away": {
+     "loss": -3.12,
+     "draw": 4.38,
+     "win": 11.88
+    }
+   },
    "homeName": "Switzerland",
    "awayName": "North Macedonia"
   },
@@ -7430,6 +10104,21 @@
    "competition": "UEFA Nations League",
    "stage": "League B",
    "city": "Glasgow",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.547,
+   "prediction": {
+    "home": {
+     "win": 6.8,
+     "draw": -0.7,
+     "loss": -8.2
+    },
+    "away": {
+     "loss": -6.8,
+     "draw": 0.7,
+     "win": 8.2
+    }
+   },
    "homeName": "Scotland",
    "awayName": "Slovenia"
   },
@@ -7446,6 +10135,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Chișinău",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.142,
+   "prediction": {
+    "home": {
+     "win": 12.88,
+     "draw": 5.38,
+     "loss": -2.12
+    },
+    "away": {
+     "loss": -12.88,
+     "draw": -5.38,
+     "win": 2.12
+    }
+   },
    "homeName": "Moldova",
    "awayName": "Slovakia"
   },
@@ -7462,6 +10166,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Tirana",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.927,
+   "prediction": {
+    "home": {
+     "win": 1.1,
+     "draw": -6.4,
+     "loss": -13.9
+    },
+    "away": {
+     "loss": -1.1,
+     "draw": 6.4,
+     "win": 13.9
+    }
+   },
    "homeName": "Albania",
    "awayName": "San Marino"
   },
@@ -7478,6 +10197,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Tallinn",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.312,
+   "prediction": {
+    "home": {
+     "win": 10.32,
+     "draw": 2.82,
+     "loss": -4.68
+    },
+    "away": {
+     "loss": -10.32,
+     "draw": -2.82,
+     "win": 4.68
+    }
+   },
    "homeName": "Estonia",
    "awayName": "Iceland"
   },
@@ -7494,6 +10228,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Budapest",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.4,
+   "prediction": {
+    "home": {
+     "win": 9.0,
+     "draw": 1.5,
+     "loss": -6.0
+    },
+    "away": {
+     "loss": -9.0,
+     "draw": -1.5,
+     "win": 6.0
+    }
+   },
    "homeName": "Belarus",
    "awayName": "Finland"
   },
@@ -7510,6 +10259,21 @@
    "competition": "UEFA Nations League",
    "stage": "League C",
    "city": "Luxembourg",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.478,
+   "prediction": {
+    "home": {
+     "win": 7.83,
+     "draw": 0.33,
+     "loss": -7.17
+    },
+    "away": {
+     "loss": -7.83,
+     "draw": -0.33,
+     "win": 7.17
+    }
+   },
    "homeName": "Luxembourg",
    "awayName": "Bulgaria"
   },
@@ -7526,6 +10290,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "Venetian Road Settlement",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.622,
+   "prediction": {
+    "home": {
+     "win": 5.67,
+     "draw": -1.83,
+     "loss": -9.33
+    },
+    "away": {
+     "loss": -5.67,
+     "draw": 1.83,
+     "win": 9.33
+    }
+   },
    "homeName": "Montserrat",
    "awayName": "Turks and Caicos Islands"
   },
@@ -7542,6 +10321,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Tizi Ouzou",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.824,
+   "prediction": {
+    "home": {
+     "win": 1.76,
+     "draw": -3.24,
+     "loss": -8.24
+    },
+    "away": {
+     "loss": -1.76,
+     "draw": 3.24,
+     "win": 8.24
+    }
+   },
    "homeName": "Algeria",
    "awayName": "Niger"
   },
@@ -7558,6 +10352,21 @@
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "NORTH SOUND",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.592,
+   "prediction": {
+    "home": {
+     "win": 6.12,
+     "draw": -1.38,
+     "loss": -8.88
+    },
+    "away": {
+     "loss": -6.12,
+     "draw": 1.38,
+     "win": 8.88
+    }
+   },
    "homeName": "Antigua and Barbuda",
    "awayName": "Aruba"
   },
@@ -7574,6 +10383,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Saint Paul",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.611,
+   "prediction": {
+    "home": {
+     "win": 3.89,
+     "draw": -1.11,
+     "loss": -6.11
+    },
+    "away": {
+     "loss": -3.89,
+     "draw": 1.11,
+     "win": 6.11
+    }
+   },
    "homeName": "USA",
    "awayName": "Canada"
   },
@@ -7590,6 +10414,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Los Angeles",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.76,
+   "prediction": {
+    "home": {
+     "win": 2.4,
+     "draw": -2.6,
+     "loss": -7.6
+    },
+    "away": {
+     "loss": -2.4,
+     "draw": 2.6,
+     "win": 7.6
+    }
+   },
    "homeName": "Mexico",
    "awayName": "Chile"
   },
@@ -7606,6 +10445,21 @@
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Miami, Florida",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.749,
+   "prediction": {
+    "home": {
+     "win": 2.51,
+     "draw": -2.49,
+     "loss": -7.49
+    },
+    "away": {
+     "loss": -2.51,
+     "draw": 2.49,
+     "win": 7.49
+    }
+   },
    "homeName": "Colombia",
    "awayName": "Peru"
   }

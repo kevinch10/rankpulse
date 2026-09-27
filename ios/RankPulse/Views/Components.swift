@@ -131,3 +131,81 @@ struct StatusBanner: View {
         }
     }
 }
+
+/// Points each team would gain or lose for each result of an upcoming match.
+struct PredictionView: View {
+    let match: Match
+    var focus: String? = nil
+
+    private static let outcomes: [(key: String, label: String)] = [
+        ("win", "W"), ("draw", "D"), ("loss", "L"), ("pensWin", "W pens"), ("pensLoss", "L pens"),
+    ]
+
+    var body: some View {
+        if let p = match.prediction {
+            VStack(spacing: 6) {
+                HStack(spacing: 4) {
+                    Text("POINTS AT STAKE").font(.caption2.weight(.heavy)).tracking(0.6)
+                    Spacer()
+                    Text(caption).font(.caption2).foregroundStyle(.secondary)
+                }
+                HStack(alignment: .top, spacing: 12) {
+                    side(match.homeName, p.home, leading: true, dimmed: focus != nil && focus != match.home)
+                    side(match.awayName, p.away, leading: false, dimmed: focus != nil && focus != match.away)
+                }
+            }
+            .padding(10)
+            .background(.quaternary.opacity(0.5), in: .rect(cornerRadius: 12))
+            .accessibilityElement(children: .combine)
+        }
+    }
+
+    private var caption: String {
+        var parts = match.importance.map { ["I=\($0)"] } ?? []
+        if match.knockout == true { parts.append("knockout") }
+        if let e = match.expectedHome {
+            parts.append("exp. \(e.formatted(.number.precision(.fractionLength(2))))–\((1 - e).formatted(.number.precision(.fractionLength(2))))")
+        }
+        return parts.joined(separator: " · ")
+    }
+
+    private func side(_ name: String, _ values: [String: Double], leading: Bool, dimmed: Bool) -> some View {
+        VStack(alignment: leading ? .leading : .trailing, spacing: 4) {
+            Text(name).font(.caption.weight(.bold)).lineLimit(1)
+            HStack(spacing: 4) {
+                ForEach(Self.outcomes.filter { values[$0.key] != nil }, id: \.key) { o in
+                    let v = values[o.key] ?? 0
+                    HStack(spacing: 2) {
+                        Text(o.label).font(.system(size: 9, weight: .heavy))
+                        Text(v.signedShort).font(.system(size: 11, weight: .bold, design: .monospaced))
+                    }
+                    .foregroundStyle(v.tone)
+                    .padding(.horizontal, 5).padding(.vertical, 3)
+                    .background(v.tone.opacity(0.12), in: .rect(cornerRadius: 6))
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: leading ? .leading : .trailing)
+        .opacity(dimmed ? 0.45 : 1)
+    }
+}
+
+struct NotificationStatus: View {
+    @Environment(RankingStore.self) private var store
+    @Environment(\.openURL) private var openURL
+
+    var body: some View {
+        switch store.favourites.notificationsAllowed {
+        case true?:
+            Label("You'll be notified when these teams gain or lose points.", systemImage: "bell.badge.fill")
+        case false?:
+            Button {
+                if let url = URL(string: UIApplication.openNotificationSettingsURLString) { openURL(url) }
+            } label: {
+                Label("Notifications are off — tap to turn them on in Settings.", systemImage: "bell.slash")
+            }
+        case nil:
+            EmptyView()
+        }
+    }
+}

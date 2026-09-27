@@ -145,6 +145,14 @@ def expected(p_team, p_opp):
     return 1 / (10 ** (-(p_team - p_opp) / 600) + 1)
 
 
+def points_change(p_home, p_away, w_home, w_away, i, knockout):
+    dh = i * (w_home - expected(p_home, p_away))
+    da = i * (w_away - expected(p_away, p_home))
+    if knockout:  # losers in a finals knockout tie keep their points
+        dh, da = max(dh, 0), max(da, 0)
+    return dh, da
+
+
 def project(teams, matches, since):
     """Apply finished matches on or after `since` to the official points.
     Annotates each match in place with I and each side's points change."""
@@ -163,14 +171,33 @@ def project(teams, matches, since):
             w_home = w_away = 0.5
 
         i, knockout = importance(m["competition"], m["stage"])
-        dh = i * (w_home - expected(points[h], points[a]))
-        da = i * (w_away - expected(points[a], points[h]))
-        if knockout:
-            dh, da = max(dh, 0), max(da, 0)
+        dh, da = points_change(points[h], points[a], w_home, w_away, i, knockout)
         points[h] += dh
         points[a] += da
         m.update(counted=True, importance=i, homeDelta=round(dh, 2), awayDelta=round(da, 2))
     return points
+
+
+def predict(fixtures, points):
+    """Annotate each fixture with the points each side would gain or lose for
+    every possible result, from both teams' current live points."""
+    for m in fixtures:
+        h, a = m["home"], m["away"]
+        i, knockout = importance(m["competition"], m["stage"])
+        outcomes = {"win": (1.0, 0.0), "draw": (0.5, 0.5), "loss": (0.0, 1.0)}
+        if knockout:  # a level knockout tie is settled on penalties
+            del outcomes["draw"]
+            outcomes |= {"pensWin": (0.75, 0.5), "pensLoss": (0.5, 0.75)}
+        home, away = {}, {}
+        for name, (wh, wa) in outcomes.items():
+            dh, da = points_change(points[h], points[a], wh, wa, i, knockout)
+            home[name] = round(dh, 2)
+            # the away side's win is the home side's loss, and so on
+            flip = {"win": "loss", "loss": "win", "draw": "draw", "pensWin": "pensLoss", "pensLoss": "pensWin"}[name]
+            away[flip] = round(da, 2)
+        m.update(importance=i, knockout=knockout,
+                 expectedHome=round(expected(points[h], points[a]), 3),
+                 prediction={"home": home, "away": away})
 
 
 def main():
@@ -182,6 +209,7 @@ def main():
     matches = load_matches(teams, fetch_from - timedelta(days=1), today + timedelta(days=FIXTURE_DAYS))
     matches = [m for m in matches if m["date"] >= fetch_from.isoformat()]
     points = project(teams, matches, since)
+    predict([m for m in matches if m["status"] not in (FINISHED, LIVE)], points)
 
     live = sorted(teams.values(), key=lambda t: (-points[t["id"]], t["officialRank"]))
     for rank, t in enumerate(live, 1):

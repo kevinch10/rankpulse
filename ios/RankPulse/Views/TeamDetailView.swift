@@ -52,8 +52,9 @@ struct TeamDetailView: View {
             if !fixtures.isEmpty {
                 Section("Upcoming") {
                     ForEach(fixtures) { m in
-                        VStack(alignment: .leading, spacing: 2) {
+                        VStack(alignment: .leading, spacing: 8) {
                             MatchRow(match: m, fixture: true)
+                            PredictionView(match: m, focus: team.code)
                             if let d = m.kickoffDate {
                                 Text(d, format: .dateTime.weekday(.wide).day().month())
                                     .font(.caption2).foregroundStyle(.secondary)
@@ -66,5 +67,13 @@ struct TeamDetailView: View {
         }
         .navigationTitle(team.name)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            let on = store.favourites.contains(team.code)
+            Button { store.favourites.toggle(team) } label: {
+                Image(systemName: on ? "star.fill" : "star")
+            }
+            .tint(Theme.orange)
+            .accessibilityLabel(on ? "Remove from favourites" : "Add to favourites")
+        }
     }
 }
