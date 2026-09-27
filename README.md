@@ -1,8 +1,8 @@
-# FIFA Rankings NOW ⚽
+# World Football Rankings ⚽
 
 *Unofficial fan project — not affiliated with, endorsed by or connected to FIFA.*
 
-**Live projection of the FIFA men's world ranking, plus daily results and fixtures for every ranking match in every confederation.** FIFA only publishes its ranking a few times a year. FIFA Rankings NOW takes the latest official ranking and applies every international result played since, using FIFA's published formula. That way you can see where teams stand *right now*.
+**Live projection of the FIFA men's world ranking, plus daily results and fixtures for every ranking match in every confederation.** FIFA only publishes its ranking a few times a year. World Football Rankings takes the latest official ranking and applies every international result played since, using FIFA's published formula. That way you can see where teams stand *right now*.
 
 **Live site:** https://kevinch10.github.io/rankpulse/
 
@@ -11,7 +11,7 @@ It covers everything FIFA counts: friendlies, UEFA and Concacaf Nations League, 
 ## How it works
 
 ```
-GitHub Actions (every hour)
+GitHub Actions (scheduled)
   ├─ official ranking                 ← api.fifa.com/api/v3/rankings
   ├─ each ranked team's match calendar ← api.fifa.com/api/v3/calendar/matches?idTeam=…
   │    (211 teams, fetched in parallel, ~6s; + data/manual_results.csv corrections)

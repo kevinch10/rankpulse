@@ -2,7 +2,7 @@ const FLAG = code => `https://api.fifa.com/api/v3/picture/flags-sq-2/${code}`;
 const CONFEDS = ['All', 'FAV', 'UEFA', 'CONMEBOL', 'CONCACAF', 'CAF', 'AFC', 'OFC'];
 const LIVE = 3;
 
-const state = { data: null, view: 'rankings', confed: 'All', competition: '', query: '', open: null, favs: loadFavs() };
+const state = { data: null, view: 'rankings', confed: 'All', competition: '', date: '', query: '', open: null, favs: loadFavs() };
 const $ = id => document.getElementById(id);
 
 // ---------- favourites (kept in this browser only) ----------
@@ -83,6 +83,7 @@ function confedOK(code) {
 function matchVisible(m) {
   return (confedOK(m.home) || confedOK(m.away)) &&
     (!state.competition || m.competition === state.competition) &&
+    (!state.date || m.date === state.date) &&
     (teamMatchesFilter(m.home, m.homeName) || teamMatchesFilter(m.away, m.awayName));
 }
 
@@ -92,6 +93,17 @@ function renderControls() {
 
   const sel = $('competition');
   sel.hidden = state.view === 'rankings';
+  $('date-filter').hidden = sel.hidden;
+  if (!sel.hidden) {
+    // Limit the calendar to the days that actually have matches in this tab.
+    const days = (state.view === 'results' ? state.data.results : state.data.fixtures).map(m => m.date).sort();
+    const input = $('date');
+    input.min = days[0] || '';
+    input.max = days.at(-1) || '';
+    if (state.date && (state.date < input.min || state.date > input.max)) state.date = '';
+    input.value = state.date;
+    $('date-clear').hidden = !state.date;
+  }
   if (!sel.hidden) {
     const list = state.view === 'results' ? state.data.results : state.data.fixtures;
     const comps = [...new Set(list.map(m => m.competition))].sort();
@@ -203,7 +215,7 @@ function render() {
   $('empty').hidden = n > 0;
   $('empty').textContent = state.confed === 'FAV' && !state.favs.size
     ? 'No favourites yet — tap ☆ next to a team in Rankings.'
-    : 'Nothing matches these filters.';
+    : state.date ? `No matches on ${fmtDay(state.date)}.` : 'Nothing matches these filters.';
 }
 
 async function init() {
@@ -222,6 +234,8 @@ async function init() {
   });
   $('search').addEventListener('input', e => { state.query = e.target.value; render(); });
   $('competition').addEventListener('change', e => { state.competition = e.target.value; render(); });
+  $('date').addEventListener('change', e => { state.date = e.target.value; render(); });
+  $('date-clear').addEventListener('click', () => { state.date = ''; render(); });
   $('confeds').addEventListener('click', e => {
     const c = e.target.dataset.confed;
     if (c) { state.confed = c; render(); }

@@ -59,17 +59,17 @@ struct HeroHeader: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack(alignment: .firstTextBaseline, spacing: 8) {
-                Text("FIFA").foregroundStyle(Theme.spectrum)
-                Text("RANKINGS").foregroundStyle(.white)
-            }
-            .font(Theme.display(30))
-            .minimumScaleFactor(0.7)
-            .lineLimit(1)
+            // One Text so both lines scale together.
+            (Text("WORLD").foregroundStyle(Theme.spectrum) + Text(" FOOTBALL\nRANKINGS").foregroundStyle(.white))
+                .font(Theme.display(28))
+                .minimumScaleFactor(0.6)
+                .lineLimit(2)
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("World Football Rankings")
             HStack(spacing: 8) {
                 HStack(spacing: 5) {
                     PulseDot()
-                    Text("NOW").font(Theme.display(13))
+                    Text("LIVE").font(Theme.display(13))
                 }
                 .foregroundStyle(Theme.night)
                 .padding(.horizontal, 10).padding(.vertical, 4)

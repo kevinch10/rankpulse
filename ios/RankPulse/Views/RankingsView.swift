@@ -34,7 +34,7 @@ struct RankingsView: View {
         return List {
             if search.isEmpty && confed == .all {
                 Section {
-                    HeroHeader(subtitle: "Live projection from the official ranking of \(Self.dateText(data.official.pubDate)), updated every hour after every international match.")
+                    HeroHeader(subtitle: "Live projection from the official ranking of \(Self.dateText(data.official.pubDate)), updated after every international match.")
                         .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 12, trailing: 16))
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)

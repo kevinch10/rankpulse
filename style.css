@@ -68,11 +68,11 @@ a { color: var(--cyan); }
 
 .brand { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; }
 h1 {
-  margin: 0; font: 900 clamp(34px, 7vw, 60px)/0.95 Archivo, Inter, sans-serif;
+  margin: 0; font: 900 clamp(30px, 5.4vw, 56px)/0.95 Archivo, Inter, sans-serif;
   font-stretch: 118%; letter-spacing: -0.01em; text-transform: uppercase;
   display: flex; align-items: center; flex-wrap: wrap; gap: 0 .25em;
 }
-.wm-fifa { background: var(--spectrum); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.wm-world { background: var(--spectrum); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .now {
   display: inline-flex; align-items: center; gap: .3em;
   font-size: .5em; letter-spacing: .06em; padding: .25em .6em .25em .5em;
@@ -137,6 +137,19 @@ h1 {
 }
 #search { flex: 1 1 180px; min-width: 0; }
 #competition { max-width: 100%; }
+.date-filter {
+  display: inline-flex; align-items: center; gap: 6px; padding: 0 6px 0 12px;
+  border-radius: 999px; border: 1px solid var(--line); background: var(--bg);
+}
+.date-filter[hidden] { display: none; }
+.date-label { font-size: 14px; cursor: pointer; }
+#date { border: 0; background: none; color: var(--ink); font: inherit; font-size: 14px; padding: 8px 0; min-width: 0; }
+#date::-webkit-calendar-picker-indicator { cursor: pointer; opacity: .7; }
+#date-clear {
+  border: 0; cursor: pointer; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--magenta); color: #fff; font-size: 11px; line-height: 1;
+}
+#date-clear[hidden] { display: none; }
 .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
 .tabs button {
   border: 0; background: var(--chip); color: var(--ink); cursor: pointer;
