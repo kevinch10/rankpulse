@@ -18,6 +18,7 @@
 		5A0349400AE7BD5F09ACB1F4 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356952FEC2A433C430F44104 /* SharedStore.swift */; };
 		6304B4E220AED458C2E68C6B /* RankingsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F22D605107A78210D0F1A /* RankingsWidget.swift */; };
 		70EC6FE734E0AB9CA1E11CEA /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356952FEC2A433C430F44104 /* SharedStore.swift */; };
+		779514CE51EA6C9FC15C0736 /* MatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0490BDB7B18FDF7442E6B6D /* MatchDetailView.swift */; };
 		7A9180F4062D2A930C510A59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A2461C462100B291671E54 /* Assets.xcassets */; };
 		7F6E6DCD3AC260EF50B01379 /* RankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9BA5A408D5AF4EEFF2AAA7 /* RankingsView.swift */; };
 		82C53ECDEE0123250A9B6D69 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F67283C3AFE45A74BF61 /* Config.swift */; };
@@ -69,6 +70,7 @@
 		66F0F67283C3AFE45A74BF61 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		85C4058DB0AB446C40006957 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 		AF071C92D06E36A7F738C795 /* RankingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStore.swift; sourceTree = "<group>"; };
+		B0490BDB7B18FDF7442E6B6D /* MatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailView.swift; sourceTree = "<group>"; };
 		BF4F22D605107A78210D0F1A /* RankingsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsWidget.swift; sourceTree = "<group>"; };
 		C5DBE05DE3446D0F7516D61C /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		D115D71B9CC0208B8AA214BD /* RankPulse.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RankPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				FF710368159CE700B73F2C88 /* Components.swift */,
+				B0490BDB7B18FDF7442E6B6D /* MatchDetailView.swift */,
 				F3249FE5F05EBD3E467FDC2A /* MatchesView.swift */,
 				38BE8E1C45A6B7B4F8467009 /* NotificationSettingsView.swift */,
 				FB9BA5A408D5AF4EEFF2AAA7 /* RankingsView.swift */,
@@ -303,6 +306,7 @@
 				F4058C7A6C5802302A0B72FD /* Config.swift in Sources */,
 				381FC7975528FA0E1BDB0A66 /* Favourites.swift in Sources */,
 				B47D06BCC19A9B9A1F60A829 /* Formatting.swift in Sources */,
+				779514CE51EA6C9FC15C0736 /* MatchDetailView.swift in Sources */,
 				BF7B4D0A273BE3AD8E1756D9 /* MatchesView.swift in Sources */,
 				9511284D27F2DB5125579D22 /* Models.swift in Sources */,
 				07B036CA9B6705E385E2465C /* NotificationSettingsView.swift in Sources */,

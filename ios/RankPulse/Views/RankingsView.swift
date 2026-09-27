@@ -30,6 +30,7 @@ struct RankingsView: View {
             .searchable(text: $search, prompt: "Search team")
             .refreshable { await store.refresh() }
             .navigationDestination(for: Team.self) { TeamDetailView(team: $0) }
+            .navigationDestination(for: Match.self) { MatchDetailView(match: $0) }
         }
         .safeAreaInset(edge: .bottom) { BottomBannerAd() }
     }

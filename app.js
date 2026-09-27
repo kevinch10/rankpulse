@@ -272,7 +272,7 @@ function predictionBlock(m) {
 
 function matchRow(m, fixture) {
   const side = (code, name, delta, align) => `
-    <span class="side ${align}">${align === 'r' ? '' : flag(code)}<span class="nm">${esc(name)}</span>${align === 'r' ? flag(code) : ''}
+    <span class="side ${align}">${align === 'r' ? '' : flag(code)}<button class="nm team-link" data-team="${code}" title="Open ${esc(name)} in Rankings">${esc(name)}</button>${align === 'r' ? flag(code) : ''}
       ${m.counted ? `<span class="delta ${tone(delta)}">${signed(delta, 1)}</span>` : ''}</span>`;
   const middle = fixture
     ? `<span class="score time">${fmtTime(m.kickoff)}</span>`
@@ -375,7 +375,15 @@ async function init() {
   $('date').addEventListener('change', e => { state.date = e.target.value; state.limit = PAGE; render(); });
   $('period').addEventListener('change', e => { state.period = Number(e.target.value); state.limit = PAGE; render(); });
   document.querySelector('main').addEventListener('click', e => {
-    if (e.target.closest('#show-more')) { state.limit += PAGE; render(); }
+    if (e.target.closest('#show-more')) { state.limit += PAGE; render(); return; }
+    // A team name in a match opens that team, expanded, in the Rankings tab.
+    const link = e.target.closest('.team-link');
+    if (link) {
+      state.view = 'rankings'; state.confed = 'All'; state.query = ''; state.open = link.dataset.team;
+      $('search').value = '';
+      render();
+      document.querySelector(`tr[data-code="${link.dataset.team}"]`)?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }
   });
   $('date-clear').addEventListener('click', () => { state.date = ''; render(); });
   $('confeds').addEventListener('click', e => {

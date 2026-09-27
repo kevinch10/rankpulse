@@ -93,6 +93,7 @@ struct MatchesView: View {
             .searchable(text: $search, prompt: competition.isEmpty ? "Search team" : "Search teams in \(competition)")
             .refreshable { await store.refresh() }
             .navigationDestination(for: Team.self) { TeamDetailView(team: $0) }
+            .navigationDestination(for: Match.self) { MatchDetailView(match: $0) }
         }
         .safeAreaInset(edge: .bottom) { BottomBannerAd() }
     }
@@ -179,11 +180,7 @@ struct MatchesView: View {
                             MatchRow(match: m, fixture: kind == .fixtures)
                             if kind == .fixtures { PredictionView(match: m) }
                         }
-                        if let team = store.team(code: m.home) {
-                            NavigationLink(value: team) { row }
-                        } else {
-                            row
-                        }
+                        NavigationLink(value: m) { row }
                         if n % Config.inlineAdEvery == 0 && n < shown.count {
                             InlineAdRow()
                         }

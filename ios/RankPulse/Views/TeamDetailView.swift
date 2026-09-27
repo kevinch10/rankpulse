@@ -46,19 +46,21 @@ struct TeamDetailView: View {
             }
             if !results.isEmpty {
                 Section("Results") {
-                    ForEach(results) { MatchRow(match: $0) }
+                    ForEach(results) { m in NavigationLink(value: m) { MatchRow(match: m) } }
                 }
             }
             if !fixtures.isEmpty {
                 Section("Upcoming") {
                     ForEach(fixtures) { m in
-                        VStack(alignment: .leading, spacing: 8) {
-                            MatchRow(match: m, fixture: true)
-                            PredictionView(match: m, focus: team.code)
-                            if let d = m.kickoffDate {
-                                Text(d, format: .dateTime.weekday(.wide).day().month())
-                                    .font(.caption2).foregroundStyle(.secondary)
-                                    .frame(maxWidth: .infinity)
+                        NavigationLink(value: m) {
+                            VStack(alignment: .leading, spacing: 8) {
+                                MatchRow(match: m, fixture: true)
+                                PredictionView(match: m, focus: team.code)
+                                if let d = m.kickoffDate {
+                                    Text(d, format: .dateTime.weekday(.wide).day().month())
+                                        .font(.caption2).foregroundStyle(.secondary)
+                                        .frame(maxWidth: .infinity)
+                                }
                             }
                         }
                     }
