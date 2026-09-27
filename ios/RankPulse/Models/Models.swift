@@ -7,11 +7,23 @@ struct RankingData: Codable, Sendable {
     let teams: [Team]
     let results: [Match]
     let fixtures: [Match]
+    let competitions: [CompetitionInfo]?
 
     struct Official: Codable, Sendable {
         let pubDate: String
         let nextPubDate: String?
     }
+}
+
+/// One entry in the Competition filter: every competition that counts
+/// towards the ranking, with how many results and fixtures it has now.
+struct CompetitionInfo: Codable, Sendable, Identifiable, Hashable {
+    let name: String
+    let group: String
+    let weight: String
+    let results: Int
+    let fixtures: Int
+    var id: String { name }
 }
 
 struct Team: Codable, Sendable, Identifiable, Hashable {

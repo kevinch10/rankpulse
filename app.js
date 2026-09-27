@@ -2,7 +2,7 @@ const FLAG = code => `https://api.fifa.com/api/v3/picture/flags-sq-2/${code}`;
 const CONFEDS = ['All', 'FAV', 'UEFA', 'CONMEBOL', 'CONCACAF', 'CAF', 'AFC', 'OFC'];
 const LIVE = 3;
 
-const state = { data: null, view: 'rankings', confed: 'All', competition: '', date: '', query: '', open: null, favs: loadFavs() };
+const state = { data: null, view: 'rankings', confed: 'All', competition: '', compQuery: '', compActiveOnly: false, date: '', query: '', open: null, favs: loadFavs() };
 const $ = id => document.getElementById(id);
 
 // ---------- favourites (kept in this browser only) ----------
@@ -94,6 +94,7 @@ function renderControls() {
   const sel = $('competition');
   sel.hidden = state.view === 'rankings';
   $('date-filter').hidden = sel.hidden;
+  $('search').placeholder = state.competition && !sel.hidden ? `Search teams in ${state.competition}…` : 'Search team…';
   if (!sel.hidden) {
     // Limit the calendar to the days that actually have matches in this tab.
     const days = (state.view === 'results' ? state.data.results : state.data.fixtures).map(m => m.date).sort();
@@ -105,14 +106,60 @@ function renderControls() {
     $('date-clear').hidden = !state.date;
   }
   if (!sel.hidden) {
-    const list = state.view === 'results' ? state.data.results : state.data.fixtures;
-    const comps = [...new Set(list.map(m => m.competition))].sort();
-    if (state.competition && !comps.includes(state.competition)) state.competition = '';
-    sel.innerHTML = `<option value="">All competitions</option>` +
-      comps.map(c => `<option ${c === state.competition ? 'selected' : ''}>${esc(c)}</option>`).join('');
+    $('comp-label').textContent = state.competition || 'All competitions';
+    $('comp-btn').classList.toggle('active', !!state.competition);
+    renderCompetitionList();
   }
   document.querySelectorAll('.views button').forEach(b =>
     b.setAttribute('aria-selected', b.dataset.view === state.view));
+}
+
+// ---------- competition picker ----------
+
+function competitionCount(c) {
+  return state.view === 'results' ? c.results : c.fixtures;
+}
+
+function renderCompetitionList() {
+  const q = state.compQuery.trim().toLowerCase();
+  const comps = (state.data.competitions || []).filter(c =>
+    (!q || c.name.toLowerCase().includes(q) || c.group.toLowerCase().includes(q)) &&
+    (!state.compActiveOnly || competitionCount(c) > 0));
+  const groups = new Map();
+  for (const c of comps) {
+    if (!groups.has(c.group)) groups.set(c.group, []);
+    groups.get(c.group).push(c);
+  }
+  const item = (name, label, count, weight = '') => `
+    <li role="option" tabindex="-1" data-comp="${esc(name)}" aria-selected="${state.competition === name}" class="${count === 0 ? 'empty-comp' : ''}">
+      <span class="comp-name">${label}${weight ? `<small>${esc(weight)}</small>` : ''}</span>
+      ${count === null ? '' : `<span class="comp-count">${count}</span>`}
+    </li>`;
+  const all = !q ? item('', 'All competitions', null) : '';
+  $('comp-list').innerHTML = all + [...groups].map(([g, cs]) => `
+    <li class="comp-group" role="presentation" data-confed="${esc(g)}">${esc(g)}</li>
+    ${cs.map(c => item(c.name, esc(c.name), competitionCount(c), c.weight)).join('')}`).join('')
+    || `<li class="comp-none" role="presentation">No competitions match “${esc(state.compQuery)}”</li>`;
+}
+
+function openCompetitionPicker(open) {
+  $('comp-pop').hidden = !open;
+  $('comp-btn').setAttribute('aria-expanded', open);
+  if (open) {
+    const pop = $('comp-pop');
+    pop.style.left = '0px';
+    const overflow = pop.getBoundingClientRect().right - (document.documentElement.clientWidth - 12);
+    if (overflow > 0) pop.style.left = `${-overflow}px`;  // keep the popup on screen
+    $('comp-search').value = state.compQuery;
+    renderCompetitionList();
+    $('comp-search').focus();
+  }
+}
+
+function chooseCompetition(name) {
+  state.competition = name;
+  openCompetitionPicker(false);
+  render();
 }
 
 // ---------- rankings ----------
@@ -217,6 +264,8 @@ function render() {
   $('empty').hidden = n > 0;
   $('empty').textContent = state.confed === 'FAV' && !state.favs.size
     ? 'No favourites yet — tap ☆ next to a team in Rankings.'
+    : state.competition && !state.date && !state.query
+      ? `No ${state.competition} matches ${state.view === 'results' ? 'in the last few weeks' : 'scheduled in the next three weeks'}.`
     : state.date ? `No matches on ${fmtDay(state.date)}.` : 'Nothing matches these filters.';
 }
 
@@ -235,7 +284,29 @@ async function init() {
     if (b) { state.view = b.dataset.view; render(); }
   });
   $('search').addEventListener('input', e => { state.query = e.target.value; render(); });
-  $('competition').addEventListener('change', e => { state.competition = e.target.value; render(); });
+  $('comp-btn').addEventListener('click', () => openCompetitionPicker($('comp-pop').hidden));
+  $('comp-search').addEventListener('input', e => { state.compQuery = e.target.value; renderCompetitionList(); });
+  $('comp-active').addEventListener('change', e => { state.compActiveOnly = e.target.checked; renderCompetitionList(); });
+  $('comp-search').addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const first = $('comp-list').querySelector('li[data-comp]:not([data-comp=""])') || $('comp-list').querySelector('li[data-comp]');
+      if (first) chooseCompetition(first.dataset.comp);
+    }
+    if (e.key === 'ArrowDown') { e.preventDefault(); $('comp-list').querySelector('li[data-comp]')?.focus(); }
+  });
+  $('comp-list').addEventListener('keydown', e => {
+    const items = [...$('comp-list').querySelectorAll('li[data-comp]')];
+    const i = items.indexOf(document.activeElement);
+    if (e.key === 'ArrowDown') { e.preventDefault(); items[Math.min(i + 1, items.length - 1)]?.focus(); }
+    if (e.key === 'ArrowUp') { e.preventDefault(); i <= 0 ? $('comp-search').focus() : items[i - 1].focus(); }
+    if (e.key === 'Enter' && i >= 0) chooseCompetition(items[i].dataset.comp);
+  });
+  $('comp-list').addEventListener('click', e => {
+    const li = e.target.closest('li[data-comp]');
+    if (li) chooseCompetition(li.dataset.comp);
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') openCompetitionPicker(false); });
+  document.addEventListener('click', e => { if (!e.target.closest('#competition')) openCompetitionPicker(false); });
   $('date').addEventListener('change', e => { state.date = e.target.value; render(); });
   $('date-clear').addEventListener('click', () => { state.date = ''; render(); });
   $('confeds').addEventListener('click', e => {

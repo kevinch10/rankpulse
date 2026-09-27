@@ -10,6 +10,7 @@ struct MatchesView: View {
     @State private var competition = ""
     @State private var day: Date?
     @State private var showCalendar = false
+    @State private var showCompetitions = false
 
     var body: some View {
         NavigationStack {
@@ -31,28 +32,29 @@ struct MatchesView: View {
                     ConfedMenu(selection: $confed)
                 }
             }
+            .sheet(isPresented: $showCompetitions) {
+                CompetitionPickerSheet(selection: $competition, competitions: competitions, kind: kind)
+            }
             .sheet(isPresented: $showCalendar) {
                 DayPickerSheet(day: $day, available: availableDays)
                     .presentationDetents([.medium, .large])
             }
             .safeAreaInset(edge: .top) {
-                if let day {
-                    HStack(spacing: 8) {
-                        Image(systemName: "calendar")
-                        Text(day, format: .dateTime.weekday(.wide).day().month(.wide))
-                            .font(.subheadline.weight(.semibold))
-                        Spacer()
-                        Button("Show all dates") { self.day = nil }
-                            .font(.subheadline.weight(.semibold))
+                VStack(spacing: 6) {
+                    if !competition.isEmpty {
+                        FilterChip(icon: "trophy.fill", text: competition, clear: "All competitions", color: Theme.night) {
+                            competition = ""
+                        }
                     }
-                    .foregroundStyle(.white)
-                    .padding(.horizontal, 14).padding(.vertical, 8)
-                    .background(Theme.magenta, in: .capsule)
-                    .padding(.horizontal)
-                    .padding(.bottom, 4)
+                    if let day {
+                        FilterChip(icon: "calendar", text: day.formatted(.dateTime.weekday(.wide).day().month(.wide)),
+                                   clear: "All dates", color: Theme.magenta) { self.day = nil }
+                    }
                 }
+                .padding(.horizontal)
+                .padding(.bottom, competition.isEmpty && day == nil ? 0 : 4)
             }
-            .searchable(text: $search, prompt: "Search team")
+            .searchable(text: $search, prompt: competition.isEmpty ? "Search team" : "Search teams in \(competition)")
             .refreshable { await store.refresh() }
             .navigationDestination(for: Team.self) { TeamDetailView(team: $0) }
         }
@@ -79,14 +81,20 @@ struct MatchesView: View {
         return String(format: "%04d-%02d-%02d", c.year ?? 0, c.month ?? 0, c.day ?? 0)
     }
 
+    /// The full catalogue from the data, falling back to whatever the
+    /// matches mention if the data predates the catalogue.
+    private var competitions: [CompetitionInfo] {
+        if let list = store.data?.competitions, !list.isEmpty { return list }
+        guard let data = store.data else { return [] }
+        return Set((data.results + data.fixtures).map(\.competition)).sorted().map { name in
+            CompetitionInfo(name: name, group: "Competitions", weight: "",
+                            results: data.results.filter { $0.competition == name }.count,
+                            fixtures: data.fixtures.filter { $0.competition == name }.count)
+        }
+    }
+
     private var competitionMenu: some View {
-        let comps = Array(Set(allMatches.map(\.competition))).sorted()
-        return Menu {
-            Picker("Competition", selection: $competition) {
-                Text("All competitions").tag("")
-                ForEach(comps, id: \.self) { Text($0).tag($0) }
-            }
-        } label: {
+        Button { showCompetitions = true } label: {
             Image(systemName: competition.isEmpty ? "trophy" : "trophy.fill")
         }
         .accessibilityLabel("Competition")
@@ -135,10 +143,18 @@ struct MatchesView: View {
         }
         .overlay {
             if shown.isEmpty {
-                ContentUnavailableView(search.isEmpty ? (day == nil ? "No matches" : "No matches on this day") : "No results for “\(search)”",
-                                       systemImage: day == nil ? "sportscourt" : "calendar")
+                ContentUnavailableView(emptyTitle, systemImage: day == nil ? "sportscourt" : "calendar",
+                                       description: competition.isEmpty || !search.isEmpty ? nil
+                                           : Text(kind == .results ? "Nothing played in the last few weeks." : "Nothing scheduled in the next three weeks."))
             }
         }
+    }
+
+    private var emptyTitle: String {
+        if !search.isEmpty { return "No results for “\(search)”" }
+        if day != nil { return "No matches on this day" }
+        if !competition.isEmpty { return "No \(competition) matches" }
+        return "No matches"
     }
 
     private func dayTitle(_ m: Match?) -> String {
@@ -188,5 +204,110 @@ struct DayPickerSheet: View {
                 selection = day ?? available.first { $0 >= today } ?? available.last ?? today
             }
         }
+    }
+}
+
+struct FilterChip: View {
+    let icon: String
+    let text: String
+    let clear: String
+    let color: Color
+    let action: () -> Void
+
+    var body: some View {
+        HStack(spacing: 8) {
+            Image(systemName: icon)
+            Text(text).font(.subheadline.weight(.semibold)).lineLimit(1)
+            Spacer(minLength: 8)
+            Button(clear, action: action).font(.subheadline.weight(.semibold)).fixedSize()
+        }
+        .foregroundStyle(.white)
+        .padding(.horizontal, 14).padding(.vertical, 8)
+        .background(color, in: .capsule)
+    }
+}
+
+/// Searchable list of every competition that counts, grouped by
+/// confederation, with the number of matches in the current tab.
+struct CompetitionPickerSheet: View {
+    @Binding var selection: String
+    let competitions: [CompetitionInfo]
+    let kind: MatchesView.Kind
+    @Environment(\.dismiss) private var dismiss
+    @State private var query = ""
+    @State private var onlyWithMatches = false
+
+    private func count(_ c: CompetitionInfo) -> Int { kind == .results ? c.results : c.fixtures }
+
+    private var groups: [(String, [CompetitionInfo])] {
+        let shown = competitions.filter { c in
+            (query.isEmpty || c.name.localizedCaseInsensitiveContains(query) || c.group.localizedCaseInsensitiveContains(query))
+                && (!onlyWithMatches || count(c) > 0)
+        }
+        var order: [String] = []
+        var byGroup: [String: [CompetitionInfo]] = [:]
+        for c in shown {
+            if byGroup[c.group] == nil { order.append(c.group) }
+            byGroup[c.group, default: []].append(c)
+        }
+        return order.map { ($0, byGroup[$0] ?? []) }
+    }
+
+    var body: some View {
+        NavigationStack {
+            List {
+                if query.isEmpty {
+                    Section {
+                        row(name: "", title: "All competitions", subtitle: nil, count: nil)
+                        Toggle("Only with matches", isOn: $onlyWithMatches).tint(Theme.magenta)
+                    }
+                }
+                ForEach(groups, id: \.0) { group, comps in
+                    Section {
+                        ForEach(comps) { c in row(name: c.name, title: c.name, subtitle: c.weight, count: count(c)) }
+                    } header: {
+                        Text(group).foregroundStyle(group == "Global" ? Theme.violet : Theme.confedColor(group))
+                    }
+                }
+            }
+            .overlay {
+                if groups.isEmpty && !query.isEmpty { ContentUnavailableView.search(text: query) }
+            }
+            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search competitions")
+            .navigationTitle("Competition")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) { Button("Close") { dismiss() } }
+            }
+        }
+    }
+
+    private func row(name: String, title: String, subtitle: String?, count: Int?) -> some View {
+        Button {
+            selection = name
+            dismiss()
+        } label: {
+            HStack {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title).foregroundStyle(count == 0 ? .secondary : .primary)
+                    if let subtitle, !subtitle.isEmpty {
+                        Text(subtitle).font(.caption).foregroundStyle(.secondary)
+                    }
+                }
+                Spacer()
+                if let count {
+                    Text("\(count)")
+                        .font(.caption.monospacedDigit().weight(.bold))
+                        .foregroundStyle(count > 0 ? .white : .secondary)
+                        .padding(.horizontal, 8).padding(.vertical, 2)
+                        .background(count > 0 ? AnyShapeStyle(Theme.magenta) : AnyShapeStyle(.quaternary), in: .capsule)
+                }
+                if selection == name {
+                    Image(systemName: "checkmark").foregroundStyle(Theme.magenta).fontWeight(.bold)
+                }
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
     }
 }

@@ -52,6 +52,7 @@ def main():
     matches = update.load_matches(teams, date.fromisoformat(first) - timedelta(days=1), date.fromisoformat(last))
     matches = update.add_backup_sources(matches, teams, first, last)
     matches = update.apply_manual(matches, teams)
+    matches = update.normalize_competitions(matches, teams, update.load_catalog())
     matches.sort(key=lambda m: m["kickoff"])
 
     total_bad = 0

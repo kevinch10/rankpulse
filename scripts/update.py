@@ -28,6 +28,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "rankings.json"
 MANUAL = ROOT / "data" / "manual_results.csv"
 WINDOWS = ROOT / "data" / "match_windows.json"
+COMPETITIONS = ROOT / "data" / "competitions.json"
 
 API = "https://api.fifa.com/api/v3"
 RESULT_DAYS = 45    # show at least this many days of results
@@ -155,6 +156,42 @@ def add_backup_sources(matches, teams, since, until):
     return merged
 
 
+def load_catalog():
+    return json.loads(COMPETITIONS.read_text(encoding="utf-8"))["groups"]
+
+
+def normalize_competitions(matches, teams, catalog):
+    """Give each competition one name whichever source reported it."""
+    canonical = {}
+    for g in catalog:
+        for c in g["competitions"]:
+            for alias in [c["name"], *c.get("aliases", [])]:
+                canonical[alias.lower()] = c["name"]
+    for m in matches:
+        name = m["competition"]
+        # FIFA's feed calls the Asian Cup qualifiers' final round "Continental Qualifier"
+        if name == "Continental Qualifier" and teams[m["home"]]["confed"] == teams[m["away"]]["confed"] == "AFC":
+            name = "AFC Asian Cup Qualifiers"
+        m["competition"] = canonical.get(name.lower(), name)
+    return matches
+
+
+def competition_list(catalog, results, fixtures):
+    """Every competition for the filter, in catalog order, with match counts.
+    Anything the sources report that isn't in the catalog goes under Other."""
+    count = lambda ms, n: sum(1 for m in ms if m["competition"] == n)
+    out, known = [], set()
+    for g in catalog:
+        for c in g["competitions"]:
+            known.add(c["name"])
+            out.append({"name": c["name"], "group": g["group"], "weight": c.get("weight", ""),
+                        "results": count(results, c["name"]), "fixtures": count(fixtures, c["name"])})
+    for name in sorted({m["competition"] for m in results + fixtures} - known):
+        out.append({"name": name, "group": "Other", "weight": "", "results": count(results, name),
+                    "fixtures": count(fixtures, name)})
+    return out
+
+
 def apply_manual(matches, teams):
     """data/manual_results.csv corrects or adds results (e.g. forfeits
     awarded after the match). Team names must match FIFA's."""
@@ -257,6 +294,8 @@ def main():
     matches = load_matches(teams, fetch_from - timedelta(days=1), until)
     matches = add_backup_sources(matches, teams, fetch_from.isoformat(), until.isoformat())
     matches = apply_manual(matches, teams)
+    catalog = load_catalog()
+    matches = normalize_competitions(matches, teams, catalog)
     matches = sorted((m for m in matches if m["date"] >= fetch_from.isoformat()), key=lambda m: m["kickoff"])
     points = project(teams, matches, since)
     predict([m for m in matches if m["status"] not in (FINISHED, LIVE)], points)
@@ -284,6 +323,7 @@ def main():
         "teams": live,
         "results": list(reversed(played)),
         "fixtures": fixtures,
+        "competitions": competition_list(catalog, played, fixtures),
     }
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")

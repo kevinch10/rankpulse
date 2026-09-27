@@ -44,7 +44,16 @@
       <div class="controls">
         <input id="search" type="search" placeholder="Search team…" aria-label="Search team">
         <div class="tabs" id="confeds" aria-label="Confederation"></div>
-        <select id="competition" aria-label="Competition" hidden></select>
+        <div class="combo" id="competition" hidden>
+          <button type="button" class="combo-btn" id="comp-btn" aria-haspopup="listbox" aria-expanded="false">
+            <span aria-hidden="true">🏆</span> <span id="comp-label">All competitions</span> <span class="caret" aria-hidden="true">▾</span>
+          </button>
+          <div class="combo-pop" id="comp-pop" hidden>
+            <input type="search" id="comp-search" placeholder="Search competitions…" aria-label="Search competitions" autocomplete="off">
+            <label class="combo-toggle"><input type="checkbox" id="comp-active"> Only with matches</label>
+            <ul role="listbox" id="comp-list" aria-label="Competitions"></ul>
+          </div>
+        </div>
         <div class="date-filter" id="date-filter" hidden>
           <label for="date" class="date-label">📅</label>
           <input type="date" id="date" aria-label="Filter by date">

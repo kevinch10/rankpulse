@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-27T09:40:34+00:00",
+ "generatedAt": "2026-09-27T09:46:37+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null
@@ -12015,6 +12015,239 @@
    },
    "homeName": "Colombia",
    "awayName": "Peru"
+  }
+ ],
+ "competitions": [
+  {
+   "name": "FIFA World Cup™",
+   "group": "Global",
+   "weight": "I=50 · 60 from quarter-finals",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "FIFA World Cup™ Qualifiers",
+   "group": "Global",
+   "weight": "I=25",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "Friendlies",
+   "group": "Global",
+   "weight": "I=10 · 5 outside windows",
+   "results": 19,
+   "fixtures": 57
+  },
+  {
+   "name": "FIFA Series™",
+   "group": "Global",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "FIFA Arab Cup™",
+   "group": "Global",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "FIFA ASEAN Cup™",
+   "group": "Global",
+   "weight": "I=10 · 5 outside windows",
+   "results": 7,
+   "fixtures": 11
+  },
+  {
+   "name": "CONMEBOL/UEFA Finalissima",
+   "group": "Global",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "UEFA EURO",
+   "group": "UEFA",
+   "weight": "I=35 · 40 from quarter-finals",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "UEFA EURO Qualifiers",
+   "group": "UEFA",
+   "weight": "I=25",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "UEFA Nations League",
+   "group": "UEFA",
+   "weight": "I=15 · 25 play-offs & finals",
+   "results": 26,
+   "fixtures": 78
+  },
+  {
+   "name": "Baltic Cup",
+   "group": "UEFA",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "Copa América",
+   "group": "CONMEBOL",
+   "weight": "I=35 · 40 from quarter-finals",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "Concacaf Gold Cup",
+   "group": "CONCACAF",
+   "weight": "I=35 · 40 from quarter-finals",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "Concacaf Gold Cup Qualifiers",
+   "group": "CONCACAF",
+   "weight": "I=25",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "Concacaf Nations League",
+   "group": "CONCACAF",
+   "weight": "I=15 · 25 finals",
+   "results": 13,
+   "fixtures": 38
+  },
+  {
+   "name": "Concacaf Series",
+   "group": "CONCACAF",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "CAF Africa Cup of Nations",
+   "group": "CAF",
+   "weight": "I=35 · 40 from quarter-finals",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "CAF Africa Cup of Nations Qualifiers",
+   "group": "CAF",
+   "weight": "I=25",
+   "results": 24,
+   "fixtures": 24
+  },
+  {
+   "name": "COSAFA Cup",
+   "group": "CAF",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "CECAFA Cup",
+   "group": "CAF",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "WAFU Cup of Nations",
+   "group": "CAF",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "AFC Asian Cup",
+   "group": "AFC",
+   "weight": "I=35 · 40 from quarter-finals",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "AFC Asian Cup Qualifiers",
+   "group": "AFC",
+   "weight": "I=25",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "ASEAN Championship",
+   "group": "AFC",
+   "weight": "I=10 · 5 outside windows",
+   "results": 26,
+   "fixtures": 0
+  },
+  {
+   "name": "Gulf Cup of Nations",
+   "group": "AFC",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 6
+  },
+  {
+   "name": "SAFF Championship",
+   "group": "AFC",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "EAFF E-1 Championship",
+   "group": "AFC",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "CAFA Nations Cup",
+   "group": "AFC",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "WAFF Championship",
+   "group": "AFC",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "King's Cup",
+   "group": "AFC",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "OFC Nations Cup",
+   "group": "OFC",
+   "weight": "I=35 · 40 from quarter-finals",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "OFC Nations Cup Qualifiers",
+   "group": "OFC",
+   "weight": "I=25",
+   "results": 0,
+   "fixtures": 0
+  },
+  {
+   "name": "MSG Prime Minister's Cup",
+   "group": "OFC",
+   "weight": "I=10 · 5 outside windows",
+   "results": 0,
+   "fixtures": 0
   }
  ]
 }
