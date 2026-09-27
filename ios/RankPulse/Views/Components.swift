@@ -73,6 +73,7 @@ struct MatchRow: View {
                 }
                 .font(.system(.callout, design: .monospaced).weight(.bold))
                 .lineLimit(1)
+                .fixedSize()
                 .padding(.horizontal, 9).padding(.vertical, 5)
                 .background(fixture ? AnyShapeStyle(.quaternary) : AnyShapeStyle(Theme.night), in: .rect(cornerRadius: 9))
                 side(match.away, match.awayName, match.awayDelta, leading: false)
@@ -132,32 +133,57 @@ struct StatusBanner: View {
     }
 }
 
-/// Points each team would gain or lose for each result of an upcoming match.
+/// Points each team would gain or lose for each result of an upcoming match,
+/// laid out as a small Win / Draw / Loss table.
 struct PredictionView: View {
     let match: Match
     var focus: String? = nil
 
     private static let outcomes: [(key: String, label: String)] = [
-        ("win", "W"), ("draw", "D"), ("loss", "L"), ("pensWin", "W pens"), ("pensLoss", "L pens"),
+        ("win", "Win"), ("draw", "Draw"), ("pensWin", "Win on pens"), ("pensLoss", "Lose on pens"), ("loss", "Loss"),
     ]
 
     var body: some View {
         if let p = match.prediction {
             VStack(spacing: 6) {
-                HStack(spacing: 4) {
+                HStack {
                     Text("POINTS AT STAKE").font(.caption2.weight(.heavy)).tracking(0.6)
                     Spacer()
                     Text(caption).font(.caption2).foregroundStyle(.secondary)
                 }
-                HStack(alignment: .top, spacing: 12) {
-                    side(match.homeName, p.home, leading: true, dimmed: focus != nil && focus != match.home)
-                    side(match.awayName, p.away, leading: false, dimmed: focus != nil && focus != match.away)
+                Grid(horizontalSpacing: 8, verticalSpacing: 4) {
+                    GridRow {
+                        Text(match.homeName).gridColumnAlignment(.leading).opacity(opacity(match.home))
+                        Text("if they…").foregroundStyle(.secondary).gridColumnAlignment(.center)
+                        Text(match.awayName).gridColumnAlignment(.trailing).opacity(opacity(match.away))
+                    }
+                    .font(.caption.weight(.bold))
+                    .lineLimit(1)
+                    ForEach(Self.outcomes.filter { p.home[$0.key] != nil }, id: \.key) { o in
+                        GridRow {
+                            value(p.home[o.key]).opacity(opacity(match.home))
+                            Text(o.label).font(.caption2.weight(.semibold)).foregroundStyle(.secondary)
+                            value(p.away[o.key]).opacity(opacity(match.away))
+                        }
+                    }
                 }
             }
             .padding(10)
             .background(.quaternary.opacity(0.5), in: .rect(cornerRadius: 12))
             .accessibilityElement(children: .combine)
         }
+    }
+
+    private func opacity(_ code: String) -> Double { focus == nil || focus == code ? 1 : 0.45 }
+
+    private func value(_ v: Double?) -> some View {
+        let v = v ?? 0
+        return Text(v.signedShort)
+            .font(.system(size: 13, weight: .bold, design: .monospaced))
+            .foregroundStyle(v.tone)
+            .padding(.horizontal, 8).padding(.vertical, 2)
+            .background(v.tone.opacity(0.12), in: .capsule)
+            .fixedSize()
     }
 
     private var caption: String {
@@ -167,26 +193,6 @@ struct PredictionView: View {
             parts.append("exp. \(e.formatted(.number.precision(.fractionLength(2))))–\((1 - e).formatted(.number.precision(.fractionLength(2))))")
         }
         return parts.joined(separator: " · ")
-    }
-
-    private func side(_ name: String, _ values: [String: Double], leading: Bool, dimmed: Bool) -> some View {
-        VStack(alignment: leading ? .leading : .trailing, spacing: 4) {
-            Text(name).font(.caption.weight(.bold)).lineLimit(1)
-            HStack(spacing: 4) {
-                ForEach(Self.outcomes.filter { values[$0.key] != nil }, id: \.key) { o in
-                    let v = values[o.key] ?? 0
-                    HStack(spacing: 2) {
-                        Text(o.label).font(.system(size: 9, weight: .heavy))
-                        Text(v.signedShort).font(.system(size: 11, weight: .bold, design: .monospaced))
-                    }
-                    .foregroundStyle(v.tone)
-                    .padding(.horizontal, 5).padding(.vertical, 3)
-                    .background(v.tone.opacity(0.12), in: .rect(cornerRadius: 6))
-                }
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: leading ? .leading : .trailing)
-        .opacity(dimmed ? 0.45 : 1)
     }
 }
 

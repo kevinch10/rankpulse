@@ -122,7 +122,7 @@ struct TeamRow: View {
             FlagView(code: team.code)
             VStack(alignment: .leading, spacing: 1) {
                 HStack(spacing: 4) {
-                    Text(team.name).font(.body.weight(.semibold)).lineLimit(1)
+                    Text(team.name).font(.body.weight(.semibold)).lineLimit(1).layoutPriority(1)
                     if isFavourite {
                         Image(systemName: "star.fill").font(.caption2).foregroundStyle(Theme.orange)
                             .accessibilityLabel("Favourite")
@@ -130,13 +130,14 @@ struct TeamRow: View {
                 }
                 HStack(spacing: 5) {
                     ConfedPill(confed: team.confed)
-                    Text("Official #\(team.officialRank)").font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                    Text("#\(team.officialRank) official").font(.caption).foregroundStyle(.secondary).lineLimit(1)
                 }
             }
             Spacer()
             VStack(alignment: .trailing, spacing: 1) {
                 Text(team.livePoints, format: .number.precision(.fractionLength(2)))
                     .font(.subheadline.monospacedDigit())
+                    .fixedSize()
                 if team.pointsChange != 0 {
                     Text(team.pointsChange.signed).font(.caption2.monospacedDigit()).foregroundStyle(team.pointsChange.tone)
                 }

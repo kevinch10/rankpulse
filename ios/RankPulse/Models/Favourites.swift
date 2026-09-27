@@ -38,8 +38,11 @@ final class Favourites {
     }
 
     func refreshPermissionStatus() async {
-        let settings = await UNUserNotificationCenter.current().notificationSettings()
-        notificationsAllowed = settings.authorizationStatus == .authorized || settings.authorizationStatus == .provisional
+        switch await UNUserNotificationCenter.current().notificationSettings().authorizationStatus {
+        case .authorized, .provisional, .ephemeral: notificationsAllowed = true
+        case .denied: notificationsAllowed = false
+        default: notificationsAllowed = nil  // not asked yet
+        }
     }
 
     /// Posts a notification for every favourite whose live points moved since

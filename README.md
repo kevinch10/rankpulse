@@ -40,6 +40,12 @@ W = 1 win, 0.5 draw, 0 loss. Shootout winner 0.75, loser 0.5. Losers in a finals
 - **Forfeits and sanctions** that FIFA applies after a match (e.g. the South Africa v Lesotho forfeit, applied in the October 2025 ranking). Add these to `data/manual_results.csv`.
 - **Friendlies outside FIFA's international windows** count I=5 officially. FIFA's API doesn't mark them, so all friendlies use I=10 here.
 
+## Favourites, notifications and predictions
+
+- **Favourites:** star any team. On the web this is saved in your browser; in the iOS app, swipe left on a team or tap ★ on its page.
+- **Notifications (iOS):** when a favourite's live points change, the app posts a notification with the match and the new rank. It checks whenever you open the app and in the background via iOS Background App Refresh (iOS decides the timing — usually within an hour or two of a new result).
+- **Predictions:** every upcoming fixture shows the points each team would gain or lose for a win, draw or loss (and a penalty-shootout win/loss in knockout ties), computed from both teams' current live points with the same formula.
+
 ## Correcting a result
 
 To fix a result (e.g. a forfeit) or add a missing one, append a row to `data/manual_results.csv` using FIFA's team names:
