@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T18:24:38+00:00",
+ "generatedAt": "2026-09-28T19:20:25+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2752,6 +2752,91 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-09-28T18:45:00Z",
+   "date": "2026-09-28",
+   "home": "ROU",
+   "away": "BIH",
+   "homeScore": 1,
+   "awayScore": 2,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League B",
+   "city": "Bucharest",
+   "source": "FIFA",
+   "homeName": "Romania",
+   "awayName": "Bosnia and Herzegovina"
+  },
+  {
+   "kickoff": "2026-09-28T18:45:00Z",
+   "date": "2026-09-28",
+   "home": "NIR",
+   "away": "HUN",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League B",
+   "city": "Belfast",
+   "source": "FIFA",
+   "homeName": "Northern Ireland",
+   "awayName": "Hungary"
+  },
+  {
+   "kickoff": "2026-09-28T18:45:00Z",
+   "date": "2026-09-28",
+   "home": "SWE",
+   "away": "POL",
+   "homeScore": 1,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League B",
+   "city": "Solna",
+   "source": "FIFA",
+   "homeName": "Sweden",
+   "awayName": "Poland"
+  },
+  {
+   "kickoff": "2026-09-28T18:45:00Z",
+   "date": "2026-09-28",
+   "home": "TUR",
+   "away": "ITA",
+   "homeScore": 0,
+   "awayScore": 3,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League A",
+   "city": "Bursa",
+   "source": "FIFA",
+   "homeName": "Türkiye",
+   "awayName": "Italy"
+  },
+  {
+   "kickoff": "2026-09-28T18:45:00Z",
+   "date": "2026-09-28",
+   "home": "BEL",
+   "away": "FRA",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League A",
+   "city": "Brussels",
+   "source": "FIFA",
+   "homeName": "Belgium",
+   "awayName": "France"
+  },
   {
    "date": "2026-09-28",
    "kickoff": "2026-09-28T16:00:00Z",
@@ -5936,166 +6021,6 @@
    },
    "homeName": "Tajikistan",
    "awayName": "Palestine"
-  },
-  {
-   "kickoff": "2026-09-28T18:45:00Z",
-   "date": "2026-09-28",
-   "home": "BEL",
-   "away": "FRA",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League A",
-   "city": "Brussels",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.345,
-   "prediction": {
-    "home": {
-     "win": 9.83,
-     "draw": 2.33,
-     "loss": -5.17
-    },
-    "away": {
-     "loss": -9.83,
-     "draw": -2.33,
-     "win": 5.17
-    }
-   },
-   "homeName": "Belgium",
-   "awayName": "France"
-  },
-  {
-   "kickoff": "2026-09-28T18:45:00Z",
-   "date": "2026-09-28",
-   "home": "TUR",
-   "away": "ITA",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League A",
-   "city": "Bursa",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.388,
-   "prediction": {
-    "home": {
-     "win": 9.18,
-     "draw": 1.68,
-     "loss": -5.82
-    },
-    "away": {
-     "loss": -9.18,
-     "draw": -1.68,
-     "win": 5.82
-    }
-   },
-   "homeName": "Türkiye",
-   "awayName": "Italy"
-  },
-  {
-   "kickoff": "2026-09-28T18:45:00Z",
-   "date": "2026-09-28",
-   "home": "SWE",
-   "away": "POL",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League B",
-   "city": "Solna",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.507,
-   "prediction": {
-    "home": {
-     "win": 7.39,
-     "draw": -0.11,
-     "loss": -7.61
-    },
-    "away": {
-     "loss": -7.39,
-     "draw": 0.11,
-     "win": 7.61
-    }
-   },
-   "homeName": "Sweden",
-   "awayName": "Poland"
-  },
-  {
-   "kickoff": "2026-09-28T18:45:00Z",
-   "date": "2026-09-28",
-   "home": "NIR",
-   "away": "HUN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League B",
-   "city": "Belfast",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.381,
-   "prediction": {
-    "home": {
-     "win": 9.29,
-     "draw": 1.79,
-     "loss": -5.71
-    },
-    "away": {
-     "loss": -9.29,
-     "draw": -1.79,
-     "win": 5.71
-    }
-   },
-   "homeName": "Northern Ireland",
-   "awayName": "Hungary"
-  },
-  {
-   "kickoff": "2026-09-28T18:45:00Z",
-   "date": "2026-09-28",
-   "home": "ROU",
-   "away": "BIH",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League B",
-   "city": "Bucharest",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.537,
-   "prediction": {
-    "home": {
-     "win": 6.94,
-     "draw": -0.56,
-     "loss": -8.06
-    },
-    "away": {
-     "loss": -6.94,
-     "draw": 0.56,
-     "win": 8.06
-    }
-   },
-   "homeName": "Romania",
-   "awayName": "Bosnia and Herzegovina"
   },
   {
    "date": "2026-09-28",
@@ -18198,8 +18123,8 @@
    "name": "UEFA Nations League",
    "group": "UEFA",
    "weight": "I=15 · 25 play-offs & finals",
-   "results": 37,
-   "fixtures": 119
+   "results": 42,
+   "fixtures": 114
   },
   {
    "name": "Baltic Cup",
