@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T14:25:21+00:00",
+ "generatedAt": "2026-09-28T15:24:10+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1550,8 +1550,8 @@
    "officialPoints": 1157.14,
    "previousRank": 118,
    "liveRank": 119,
-   "livePoints": 1161.17,
-   "pointsChange": 4.03,
+   "livePoints": 1160.49,
+   "pointsChange": 3.35,
    "rankChange": -1
   },
   {
@@ -1784,8 +1784,8 @@
    "officialPoints": 1086.22,
    "previousRank": 136,
    "liveRank": 137,
-   "livePoints": 1090.35,
-   "pointsChange": 4.13,
+   "livePoints": 1091.03,
+   "pointsChange": 4.81,
    "rankChange": -1
   },
   {
@@ -2761,11 +2761,15 @@
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "FIFA ASEAN Cup™",
    "stage": "FIFA ASEAN Cup Group Stage",
    "city": "Jakarta",
    "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": 0.68,
+   "awayDelta": -0.68,
    "homeName": "Malaysia",
    "awayName": "Indonesia"
   },
@@ -10930,38 +10934,6 @@
   {
    "kickoff": "2026-10-06T00:00:00Z",
    "date": "2026-10-05",
-   "home": "ARG",
-   "away": "BEN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Buenos Aires",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.939,
-   "prediction": {
-    "home": {
-     "win": 0.61,
-     "draw": -4.39,
-     "loss": -9.39
-    },
-    "away": {
-     "loss": -0.61,
-     "draw": 4.39,
-     "win": 9.39
-    }
-   },
-   "homeName": "Argentina",
-   "awayName": "Benin"
-  },
-  {
-   "kickoff": "2026-10-06T00:00:00Z",
-   "date": "2026-10-05",
    "home": "GUA",
    "away": "SUR",
    "homeScore": null,
@@ -11598,6 +11570,38 @@
    },
    "homeName": "Algeria",
    "awayName": "Niger"
+  },
+  {
+   "kickoff": "2026-10-06T23:00:00Z",
+   "date": "2026-10-06",
+   "home": "ARG",
+   "away": "BEN",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Buenos Aires",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.939,
+   "prediction": {
+    "home": {
+     "win": 0.61,
+     "draw": -4.39,
+     "loss": -9.39
+    },
+    "away": {
+     "loss": -0.61,
+     "draw": 4.39,
+     "win": 9.39
+    }
+   },
+   "homeName": "Argentina",
+   "awayName": "Benin"
   },
   {
    "kickoff": "2026-10-06T23:00:00Z",
@@ -13023,17 +13027,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.673,
+   "expectedHome": 0.674,
    "prediction": {
     "home": {
-     "win": 3.27,
-     "draw": -1.73,
-     "loss": -6.73
+     "win": 3.26,
+     "draw": -1.74,
+     "loss": -6.74
     },
     "away": {
-     "loss": -3.27,
-     "draw": 1.73,
-     "win": 6.73
+     "loss": -3.26,
+     "draw": 1.74,
+     "win": 6.74
     }
    },
    "homeName": "Jordan",
@@ -15807,17 +15811,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.88,
+   "expectedHome": 0.881,
    "prediction": {
     "home": {
-     "win": 4.19,
-     "draw": -13.31,
-     "loss": -30.81
+     "win": 4.18,
+     "draw": -13.32,
+     "loss": -30.82
     },
     "away": {
-     "loss": -4.19,
-     "draw": 13.31,
-     "win": 30.81
+     "loss": -4.18,
+     "draw": 13.32,
+     "win": 30.82
     }
    },
    "homeName": "Japan",
@@ -16258,14 +16262,14 @@
    "expectedHome": 0.277,
    "prediction": {
     "home": {
-     "win": 25.3,
-     "draw": 7.8,
-     "loss": -9.7
+     "win": 25.32,
+     "draw": 7.82,
+     "loss": -9.68
     },
     "away": {
-     "loss": -25.3,
-     "draw": -7.8,
-     "win": 9.7
+     "loss": -25.32,
+     "draw": -7.82,
+     "win": 9.68
     }
    },
    "homeName": "Indonesia",
@@ -16607,17 +16611,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.588,
+   "expectedHome": 0.589,
    "prediction": {
     "home": {
-     "win": 14.42,
-     "draw": -3.08,
-     "loss": -20.58
+     "win": 14.39,
+     "draw": -3.11,
+     "loss": -20.61
     },
     "away": {
-     "loss": -14.42,
-     "draw": 3.08,
-     "win": 20.58
+     "loss": -14.39,
+     "draw": 3.11,
+     "win": 20.61
     }
    },
    "homeName": "Thailand",
