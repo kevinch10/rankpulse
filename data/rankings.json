@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-27T23:18:59+00:00",
+ "generatedAt": "2026-09-28T00:30:01+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2753,11 +2753,45 @@
  ],
  "results": [
   {
+   "kickoff": "2026-09-28T00:00:00Z",
+   "date": "2026-09-27",
+   "home": "DMA",
+   "away": "PUR",
+   "homeScore": 0,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League B",
+   "city": "Roseau",
+   "source": "FIFA",
+   "homeName": "Dominica",
+   "awayName": "Puerto Rico"
+  },
+  {
+   "kickoff": "2026-09-28T00:00:00Z",
+   "date": "2026-09-27",
+   "home": "CUW",
+   "away": "NCA",
+   "homeScore": 1,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League A",
+   "city": "Willemstad",
+   "source": "FIFA",
+   "homeName": "Curaçao",
+   "awayName": "Nicaragua"
+  },
+  {
    "kickoff": "2026-09-27T23:00:00Z",
    "date": "2026-09-27",
    "home": "HAI",
    "away": "CRC",
-   "homeScore": 1,
+   "homeScore": 2,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
@@ -5565,70 +5599,6 @@
  ],
  "fixtures": [
   {
-   "kickoff": "2026-09-27T15:55:00Z",
-   "date": "2026-09-27",
-   "home": "YEM",
-   "away": "QAT",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Gulf Cup of Nations",
-   "stage": "Group Stage",
-   "city": "Jeddah",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.21,
-   "prediction": {
-    "home": {
-     "win": 7.9,
-     "draw": 2.9,
-     "loss": -2.1
-    },
-    "away": {
-     "loss": -7.9,
-     "draw": -2.9,
-     "win": 2.1
-    }
-   },
-   "homeName": "Yemen",
-   "awayName": "Qatar"
-  },
-  {
-   "kickoff": "2026-09-27T18:00:00Z",
-   "date": "2026-09-27",
-   "home": "BHR",
-   "away": "UAE",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Gulf Cup of Nations",
-   "stage": "Group Stage",
-   "city": "Jeddah",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.39,
-   "prediction": {
-    "home": {
-     "win": 6.1,
-     "draw": 1.1,
-     "loss": -3.9
-    },
-    "away": {
-     "loss": -6.1,
-     "draw": -1.1,
-     "win": 3.9
-    }
-   },
-   "homeName": "Bahrain",
-   "awayName": "United Arab Emirates"
-  },
-  {
    "kickoff": "2026-09-27T22:00:00Z",
    "date": "2026-09-28",
    "home": "KGZ",
@@ -5659,102 +5629,6 @@
    },
    "homeName": "Kyrgyz Republic",
    "awayName": "Maldives"
-  },
-  {
-   "kickoff": "2026-09-28T00:00:00Z",
-   "date": "2026-09-27",
-   "home": "CUW",
-   "away": "NCA",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League A",
-   "city": "Willemstad",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.674,
-   "prediction": {
-    "home": {
-     "win": 4.89,
-     "draw": -2.61,
-     "loss": -10.11
-    },
-    "away": {
-     "loss": -4.89,
-     "draw": 2.61,
-     "win": 10.11
-    }
-   },
-   "homeName": "Curaçao",
-   "awayName": "Nicaragua"
-  },
-  {
-   "kickoff": "2026-09-28T00:00:00Z",
-   "date": "2026-09-27",
-   "home": "DMA",
-   "away": "PUR",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League B",
-   "city": "Roseau",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.39,
-   "prediction": {
-    "home": {
-     "win": 9.15,
-     "draw": 1.65,
-     "loss": -5.85
-    },
-    "away": {
-     "loss": -9.15,
-     "draw": -1.65,
-     "win": 5.85
-    }
-   },
-   "homeName": "Dominica",
-   "awayName": "Puerto Rico"
-  },
-  {
-   "kickoff": "2026-09-28T01:00:00Z",
-   "date": "2026-09-27",
-   "home": "TRI",
-   "away": "DOM",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League A",
-   "city": "Port of Spain",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.621,
-   "prediction": {
-    "home": {
-     "win": 5.69,
-     "draw": -1.81,
-     "loss": -9.31
-    },
-    "away": {
-     "loss": -5.69,
-     "draw": 1.81,
-     "win": 9.31
-    }
-   },
-   "homeName": "Trinidad and Tobago",
-   "awayName": "Dominican Republic"
   },
   {
    "kickoff": "2026-09-28T09:00:00Z",
@@ -18436,8 +18310,8 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 15,
-   "fixtures": 36
+   "results": 17,
+   "fixtures": 33
   },
   {
    "name": "Concacaf Series",
@@ -18507,7 +18381,7 @@
    "group": "AFC",
    "weight": "I=10 · 5 outside windows",
    "results": 0,
-   "fixtures": 6
+   "fixtures": 4
   },
   {
    "name": "SAFF Championship",
