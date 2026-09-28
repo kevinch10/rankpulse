@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T11:21:41+00:00",
+ "generatedAt": "2026-09-28T12:28:07+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -224,8 +224,8 @@
    "officialPoints": 1673.68,
    "previousRank": 18,
    "liveRank": 17,
-   "livePoints": 1678.31,
-   "pointsChange": 4.63,
+   "livePoints": 1681.4,
+   "pointsChange": 7.72,
    "rankChange": 0
   },
   {
@@ -606,19 +606,6 @@
    "rankChange": -2
   },
   {
-   "id": "43931",
-   "code": "VEN",
-   "name": "Venezuela",
-   "confed": "CONMEBOL",
-   "officialRank": 47,
-   "officialPoints": 1469.18,
-   "previousRank": 49,
-   "liveRank": 47,
-   "livePoints": 1469.18,
-   "pointsChange": 0.0,
-   "rankChange": 0
-  },
-  {
    "id": "43869",
    "code": "MLI",
    "name": "Mali",
@@ -626,10 +613,23 @@
    "officialRank": 53,
    "officialPoints": 1455.59,
    "previousRank": 55,
-   "liveRank": 48,
+   "liveRank": 47,
    "livePoints": 1466.83,
    "pointsChange": 11.24,
-   "rankChange": 5
+   "rankChange": 6
+  },
+  {
+   "id": "43931",
+   "code": "VEN",
+   "name": "Venezuela",
+   "confed": "CONMEBOL",
+   "officialRank": 47,
+   "officialPoints": 1469.18,
+   "previousRank": 49,
+   "liveRank": 48,
+   "livePoints": 1466.09,
+   "pointsChange": -3.09,
+   "rankChange": -1
   },
   {
    "id": "43995",
@@ -2758,7 +2758,7 @@
    "home": "KOR",
    "away": "URU",
    "homeScore": 0,
-   "awayScore": 1,
+   "awayScore": 4,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -2774,15 +2774,19 @@
    "date": "2026-09-28",
    "home": "JPN",
    "away": "VEN",
-   "homeScore": 0,
-   "awayScore": 0,
+   "homeScore": 2,
+   "awayScore": 1,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Hiroshima",
    "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": 3.09,
+   "awayDelta": -3.09,
    "homeName": "Japan",
    "awayName": "Venezuela"
   },
@@ -8774,17 +8778,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.59,
+   "expectedHome": 0.593,
    "prediction": {
     "home": {
-     "win": 4.1,
-     "draw": -0.9,
-     "loss": -5.9
+     "win": 4.07,
+     "draw": -0.93,
+     "loss": -5.93
     },
     "away": {
-     "loss": -4.1,
-     "draw": 0.9,
-     "win": 5.9
+     "loss": -4.07,
+     "draw": 0.93,
+     "win": 5.93
     }
    },
    "homeName": "Korea Republic",
@@ -11238,17 +11242,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.387,
+   "expectedHome": 0.39,
    "prediction": {
     "home": {
-     "win": 6.13,
-     "draw": 1.13,
-     "loss": -3.87
+     "win": 6.1,
+     "draw": 1.1,
+     "loss": -3.9
     },
     "away": {
-     "loss": -6.13,
-     "draw": -1.13,
-     "win": 3.87
+     "loss": -6.1,
+     "draw": -1.1,
+     "win": 3.9
     }
    },
    "homeName": "Jordan",
@@ -13446,17 +13450,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.383,
+   "expectedHome": 0.386,
    "prediction": {
     "home": {
-     "win": 6.17,
-     "draw": 1.17,
-     "loss": -3.83
+     "win": 6.14,
+     "draw": 1.14,
+     "loss": -3.86
     },
     "away": {
-     "loss": -6.17,
-     "draw": -1.17,
-     "win": 3.83
+     "loss": -6.14,
+     "draw": -1.14,
+     "win": 3.86
     }
    },
    "homeName": "Japan",
@@ -15174,17 +15178,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.625,
+   "expectedHome": 0.627,
    "prediction": {
     "home": {
-     "win": 3.75,
-     "draw": -1.25,
-     "loss": -6.25
+     "win": 3.73,
+     "draw": -1.27,
+     "loss": -6.27
     },
     "away": {
-     "loss": -3.75,
-     "draw": 1.25,
-     "win": 6.25
+     "loss": -3.73,
+     "draw": 1.27,
+     "win": 6.27
     }
    },
    "homeName": "Japan",
@@ -15814,17 +15818,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.879,
+   "expectedHome": 0.88,
    "prediction": {
     "home": {
-     "win": 4.23,
-     "draw": -13.27,
-     "loss": -30.77
+     "win": 4.19,
+     "draw": -13.31,
+     "loss": -30.81
     },
     "away": {
-     "loss": -4.23,
-     "draw": 13.27,
-     "win": 30.77
+     "loss": -4.19,
+     "draw": 13.31,
+     "win": 30.81
     }
    },
    "homeName": "Japan",
@@ -16230,17 +16234,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.164,
+   "expectedHome": 0.162,
    "prediction": {
     "home": {
-     "win": 29.26,
-     "draw": 11.76,
-     "loss": -5.74
+     "win": 29.32,
+     "draw": 11.82,
+     "loss": -5.68
     },
     "away": {
-     "loss": -29.26,
-     "draw": -11.76,
-     "win": 5.74
+     "loss": -29.32,
+     "draw": -11.82,
+     "win": 5.68
     }
    },
    "homeName": "Thailand",
@@ -16550,17 +16554,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.736,
+   "expectedHome": 0.738,
    "prediction": {
     "home": {
-     "win": 9.24,
-     "draw": -8.26,
-     "loss": -25.76
+     "win": 9.16,
+     "draw": -8.34,
+     "loss": -25.84
     },
     "away": {
-     "loss": -9.24,
-     "draw": 8.26,
-     "win": 25.76
+     "loss": -9.16,
+     "draw": 8.34,
+     "win": 25.84
     }
    },
    "homeName": "Japan",
