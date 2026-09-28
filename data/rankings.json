@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T06:29:35+00:00",
+ "generatedAt": "2026-09-28T09:25:00+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2752,6 +2752,23 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-09-28T09:00:00Z",
+   "date": "2026-09-28",
+   "home": "SGP",
+   "away": "BAN",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "FIFA ASEAN Cup™",
+   "stage": "Division 1",
+   "city": "Jakarta",
+   "source": "FIFA",
+   "homeName": "Singapore",
+   "awayName": "Bangladesh"
+  },
   {
    "kickoff": "2026-09-28T01:00:00Z",
    "date": "2026-09-27",
@@ -5662,38 +5679,6 @@
    },
    "homeName": "Kyrgyz Republic",
    "awayName": "Maldives"
-  },
-  {
-   "kickoff": "2026-09-28T09:00:00Z",
-   "date": "2026-09-28",
-   "home": "SGP",
-   "away": "BAN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "FIFA ASEAN Cup™",
-   "stage": "Division 1",
-   "city": "Jakarta",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.649,
-   "prediction": {
-    "home": {
-     "win": 3.51,
-     "draw": -1.49,
-     "loss": -6.49
-    },
-    "away": {
-     "loss": -3.51,
-     "draw": 1.49,
-     "win": 6.49
-    }
-   },
-   "homeName": "Singapore",
-   "awayName": "Bangladesh"
   },
   {
    "kickoff": "2026-09-28T09:30:00Z",
@@ -18280,8 +18265,8 @@
    "name": "FIFA ASEAN Cup™",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 8,
-   "fixtures": 10
+   "results": 9,
+   "fixtures": 9
   },
   {
    "name": "CONMEBOL/UEFA Finalissima",
