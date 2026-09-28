@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T16:25:15+00:00",
+ "generatedAt": "2026-09-28T17:21:36+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2774,8 +2774,8 @@
    "date": "2026-09-28",
    "home": "ARM",
    "away": "MNE",
-   "homeScore": 0,
-   "awayScore": 1,
+   "homeScore": 2,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -9993,6 +9993,38 @@
   {
    "kickoff": "2026-10-04T18:00:00Z",
    "date": "2026-10-04",
+   "home": "MAR",
+   "away": "GHA",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Tangier",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.838,
+   "prediction": {
+    "home": {
+     "win": 1.62,
+     "draw": -3.38,
+     "loss": -8.38
+    },
+    "away": {
+     "loss": -1.62,
+     "draw": 3.38,
+     "win": 8.38
+    }
+   },
+   "homeName": "Morocco",
+   "awayName": "Ghana"
+  },
+  {
+   "kickoff": "2026-10-04T18:00:00Z",
+   "date": "2026-10-04",
    "home": "EGY",
    "away": "RSA",
    "homeScore": null,
@@ -10181,38 +10213,6 @@
    },
    "homeName": "Republic of Ireland",
    "awayName": "Israel"
-  },
-  {
-   "kickoff": "2026-10-04T19:00:00Z",
-   "date": "2026-10-04",
-   "home": "MAR",
-   "away": "GHA",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Tangier",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.838,
-   "prediction": {
-    "home": {
-     "win": 1.62,
-     "draw": -3.38,
-     "loss": -8.38
-    },
-    "away": {
-     "loss": -1.62,
-     "draw": 3.38,
-     "win": 8.38
-    }
-   },
-   "homeName": "Morocco",
-   "awayName": "Ghana"
   },
   {
    "kickoff": "2026-10-04T19:00:00Z",
@@ -10889,6 +10889,38 @@
   {
    "kickoff": "2026-10-06T00:00:00Z",
    "date": "2026-10-05",
+   "home": "ARG",
+   "away": "BEN",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Buenos Aires",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.939,
+   "prediction": {
+    "home": {
+     "win": 0.61,
+     "draw": -4.39,
+     "loss": -9.39
+    },
+    "away": {
+     "loss": -0.61,
+     "draw": 4.39,
+     "win": 9.39
+    }
+   },
+   "homeName": "Argentina",
+   "awayName": "Benin"
+  },
+  {
+   "kickoff": "2026-10-06T00:00:00Z",
+   "date": "2026-10-05",
    "home": "GUA",
    "away": "SUR",
    "homeScore": null,
@@ -11525,38 +11557,6 @@
    },
    "homeName": "Algeria",
    "awayName": "Niger"
-  },
-  {
-   "kickoff": "2026-10-06T23:00:00Z",
-   "date": "2026-10-06",
-   "home": "ARG",
-   "away": "BEN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Buenos Aires",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.939,
-   "prediction": {
-    "home": {
-     "win": 0.61,
-     "draw": -4.39,
-     "loss": -9.39
-    },
-    "away": {
-     "loss": -0.61,
-     "draw": 4.39,
-     "win": 9.39
-    }
-   },
-   "homeName": "Argentina",
-   "awayName": "Benin"
   },
   {
    "kickoff": "2026-10-06T23:00:00Z",
