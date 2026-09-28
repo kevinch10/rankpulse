@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T02:21:31+00:00",
+ "generatedAt": "2026-09-28T03:22:46+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1342,8 +1342,8 @@
    "officialPoints": 1219.59,
    "previousRank": 102,
    "liveRank": 103,
-   "livePoints": 1212.74,
-   "pointsChange": -6.85,
+   "livePoints": 1203.43,
+   "pointsChange": -16.16,
    "rankChange": -1
   },
   {
@@ -1750,6 +1750,19 @@
    "rankChange": 0
   },
   {
+   "id": "43903",
+   "code": "DOM",
+   "name": "Dominican Republic",
+   "confed": "CONCACAF",
+   "officialRank": 144,
+   "officialPoints": 1076.5,
+   "previousRank": 144,
+   "liveRank": 135,
+   "livePoints": 1093.86,
+   "pointsChange": 17.36,
+   "rankChange": 9
+  },
+  {
    "id": "43833",
    "code": "PHI",
    "name": "Philippines",
@@ -1757,10 +1770,10 @@
    "officialRank": 135,
    "officialPoints": 1100.95,
    "previousRank": 135,
-   "liveRank": 135,
+   "liveRank": 136,
    "livePoints": 1091.53,
    "pointsChange": -9.42,
-   "rankChange": 0
+   "rankChange": -1
   },
   {
    "id": "43827",
@@ -1770,10 +1783,10 @@
    "officialRank": 136,
    "officialPoints": 1086.22,
    "previousRank": 136,
-   "liveRank": 136,
+   "liveRank": 137,
    "livePoints": 1090.35,
    "pointsChange": 4.13,
-   "rankChange": 0
+   "rankChange": -1
   },
   {
    "id": "43815",
@@ -1783,23 +1796,10 @@
    "officialRank": 138,
    "officialPoints": 1084.93,
    "previousRank": 138,
-   "liveRank": 137,
+   "liveRank": 138,
    "livePoints": 1088.12,
    "pointsChange": 3.19,
-   "rankChange": 1
-  },
-  {
-   "id": "43903",
-   "code": "DOM",
-   "name": "Dominican Republic",
-   "confed": "CONCACAF",
-   "officialRank": 144,
-   "officialPoints": 1076.5,
-   "previousRank": 144,
-   "liveRank": 138,
-   "livePoints": 1084.55,
-   "pointsChange": 8.05,
-   "rankChange": 6
+   "rankChange": 0
   },
   {
    "id": "43955",
@@ -2761,11 +2761,15 @@
    "awayScore": 2,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Port of Spain",
    "source": "FIFA",
+   "counted": true,
+   "importance": 15,
+   "homeDelta": -9.31,
+   "awayDelta": 9.31,
    "homeName": "Trinidad and Tobago",
    "awayName": "Dominican Republic"
   },
@@ -8555,17 +8559,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.583,
+   "expectedHome": 0.592,
    "prediction": {
     "home": {
-     "win": 6.25,
-     "draw": -1.25,
-     "loss": -8.75
+     "win": 6.12,
+     "draw": -1.38,
+     "loss": -8.88
     },
     "away": {
-     "loss": -6.25,
-     "draw": 1.25,
-     "win": 8.75
+     "loss": -6.12,
+     "draw": 1.38,
+     "win": 8.88
     }
    },
    "homeName": "Curaçao",
@@ -8651,17 +8655,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.32,
+   "expectedHome": 0.327,
    "prediction": {
     "home": {
-     "win": 10.2,
-     "draw": 2.7,
-     "loss": -4.8
+     "win": 10.09,
+     "draw": 2.59,
+     "loss": -4.91
     },
     "away": {
-     "loss": -10.2,
-     "draw": -2.7,
-     "win": 4.8
+     "loss": -10.09,
+     "draw": -2.59,
+     "win": 4.91
     }
    },
    "homeName": "Dominican Republic",
@@ -10411,17 +10415,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.417,
+   "expectedHome": 0.408,
    "prediction": {
     "home": {
-     "win": 8.75,
-     "draw": 1.25,
-     "loss": -6.25
+     "win": 8.88,
+     "draw": 1.38,
+     "loss": -6.12
     },
     "away": {
-     "loss": -8.75,
-     "draw": -1.25,
-     "win": 6.25
+     "loss": -8.88,
+     "draw": -1.38,
+     "win": 6.12
     }
    },
    "homeName": "Trinidad and Tobago",
@@ -10603,17 +10607,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.516,
+   "expectedHome": 0.508,
    "prediction": {
     "home": {
-     "win": 7.25,
-     "draw": -0.25,
-     "loss": -7.75
+     "win": 7.39,
+     "draw": -0.11,
+     "loss": -7.61
     },
     "away": {
-     "loss": -7.25,
-     "draw": 0.25,
-     "win": 7.75
+     "loss": -7.39,
+     "draw": 0.11,
+     "win": 7.61
     }
    },
    "homeName": "Nicaragua",
