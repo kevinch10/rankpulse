@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T00:30:01+00:00",
+ "generatedAt": "2026-09-28T02:21:31+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -697,19 +697,6 @@
    "rankChange": -1
   },
   {
-   "id": "43901",
-   "code": "CRC",
-   "name": "Costa Rica",
-   "confed": "CONCACAF",
-   "officialRank": 51,
-   "officialPoints": 1456.03,
-   "previousRank": 53,
-   "liveRank": 54,
-   "livePoints": 1446.16,
-   "pointsChange": -9.87,
-   "rankChange": -3
-  },
-  {
    "id": "43968",
    "code": "SVN",
    "name": "Slovenia",
@@ -717,10 +704,10 @@
    "officialRank": 56,
    "officialPoints": 1441.09,
    "previousRank": 59,
-   "liveRank": 55,
+   "liveRank": 54,
    "livePoints": 1441.81,
    "pointsChange": 0.72,
-   "rankChange": 1
+   "rankChange": 2
   },
   {
    "id": "43953",
@@ -730,10 +717,23 @@
    "officialRank": 55,
    "officialPoints": 1441.1,
    "previousRank": 58,
-   "liveRank": 56,
+   "liveRank": 55,
    "livePoints": 1437.93,
    "pointsChange": -3.17,
-   "rankChange": -1
+   "rankChange": 0
+  },
+  {
+   "id": "43901",
+   "code": "CRC",
+   "name": "Costa Rica",
+   "confed": "CONCACAF",
+   "officialRank": 51,
+   "officialPoints": 1456.03,
+   "previousRank": 53,
+   "liveRank": 56,
+   "livePoints": 1436.24,
+   "pointsChange": -19.79,
+   "rankChange": -5
   },
   {
    "id": "43835",
@@ -1056,8 +1056,8 @@
    "officialPoints": 1285.64,
    "previousRank": 82,
    "liveRank": 81,
-   "livePoints": 1295.51,
-   "pointsChange": 9.87,
+   "livePoints": 1300.4,
+   "pointsChange": 14.76,
    "rankChange": 1
   },
   {
@@ -1087,6 +1087,19 @@
    "rankChange": 0
   },
   {
+   "id": "43908",
+   "code": "HAI",
+   "name": "Haiti",
+   "confed": "CONCACAF",
+   "officialRank": 88,
+   "officialPoints": 1264.58,
+   "previousRank": 83,
+   "liveRank": 84,
+   "livePoints": 1281.36,
+   "pointsChange": 16.78,
+   "rankChange": 4
+  },
+  {
    "id": "43978",
    "code": "NZL",
    "name": "New Zealand",
@@ -1094,10 +1107,10 @@
    "officialRank": 86,
    "officialPoints": 1269.8,
    "previousRank": 85,
-   "liveRank": 84,
+   "liveRank": 85,
    "livePoints": 1274.43,
    "pointsChange": 4.63,
-   "rankChange": 2
+   "rankChange": 1
   },
   {
    "id": "43844",
@@ -1107,23 +1120,10 @@
    "officialRank": 87,
    "officialPoints": 1265.58,
    "previousRank": 88,
-   "liveRank": 85,
+   "liveRank": 86,
    "livePoints": 1272.61,
    "pointsChange": 7.03,
-   "rankChange": 2
-  },
-  {
-   "id": "43908",
-   "code": "HAI",
-   "name": "Haiti",
-   "confed": "CONCACAF",
-   "officialRank": 88,
-   "officialPoints": 1264.58,
-   "previousRank": 83,
-   "liveRank": 86,
-   "livePoints": 1271.43,
-   "pointsChange": 6.85,
-   "rankChange": 2
+   "rankChange": 1
   },
   {
    "id": "43858",
@@ -1711,19 +1711,6 @@
    "rankChange": 1
   },
   {
-   "id": "43913",
-   "code": "NCA",
-   "name": "Nicaragua",
-   "confed": "CONCACAF",
-   "officialRank": 131,
-   "officialPoints": 1114.63,
-   "previousRank": 131,
-   "liveRank": 132,
-   "livePoints": 1106.58,
-   "pointsChange": -8.05,
-   "rankChange": -1
-  },
-  {
    "id": "43823",
    "code": "KUW",
    "name": "Kuwait",
@@ -1731,10 +1718,23 @@
    "officialRank": 133,
    "officialPoints": 1106.47,
    "previousRank": 133,
-   "liveRank": 133,
+   "liveRank": 132,
    "livePoints": 1106.47,
    "pointsChange": 0.0,
-   "rankChange": 0
+   "rankChange": 1
+  },
+  {
+   "id": "43913",
+   "code": "NCA",
+   "name": "Nicaragua",
+   "confed": "CONCACAF",
+   "officialRank": 131,
+   "officialPoints": 1114.63,
+   "previousRank": 131,
+   "liveRank": 133,
+   "livePoints": 1101.69,
+   "pointsChange": -12.94,
+   "rankChange": -2
   },
   {
    "id": "43853",
@@ -2023,19 +2023,6 @@
    "rankChange": 0
   },
   {
-   "id": "43981",
-   "code": "TAH",
-   "name": "Tahiti",
-   "confed": "OFC",
-   "officialRank": 157,
-   "officialPoints": 1019.04,
-   "previousRank": 157,
-   "liveRank": 156,
-   "livePoints": 1022.71,
-   "pointsChange": 3.67,
-   "rankChange": 1
-  },
-  {
    "id": "43915",
    "code": "PUR",
    "name": "Puerto Rico",
@@ -2043,10 +2030,23 @@
    "officialRank": 154,
    "officialPoints": 1024.3,
    "previousRank": 154,
+   "liveRank": 156,
+   "livePoints": 1023.01,
+   "pointsChange": -1.29,
+   "rankChange": -2
+  },
+  {
+   "id": "43981",
+   "code": "TAH",
+   "name": "Tahiti",
+   "confed": "OFC",
+   "officialRank": 157,
+   "officialPoints": 1019.04,
+   "previousRank": 157,
    "liveRank": 157,
-   "livePoints": 1017.16,
-   "pointsChange": -7.14,
-   "rankChange": -3
+   "livePoints": 1022.71,
+   "pointsChange": 3.67,
+   "rankChange": 0
   },
   {
    "id": "43982",
@@ -2348,19 +2348,6 @@
    "rankChange": 0
   },
   {
-   "id": "43997",
-   "code": "DMA",
-   "name": "Dominica",
-   "confed": "CONCACAF",
-   "officialRank": 182,
-   "officialPoints": 897.69,
-   "previousRank": 182,
-   "liveRank": 181,
-   "livePoints": 900.66,
-   "pointsChange": 2.97,
-   "rankChange": 1
-  },
-  {
    "id": "43809",
    "code": "BAN",
    "name": "Bangladesh",
@@ -2368,10 +2355,10 @@
    "officialRank": 181,
    "officialPoints": 902.93,
    "previousRank": 181,
-   "liveRank": 182,
+   "liveRank": 181,
    "livePoints": 899.63,
    "pointsChange": -3.3,
-   "rankChange": -1
+   "rankChange": 0
   },
   {
    "id": "43852",
@@ -2381,10 +2368,23 @@
    "officialRank": 183,
    "officialPoints": 896.85,
    "previousRank": 183,
-   "liveRank": 183,
+   "liveRank": 182,
    "livePoints": 896.85,
    "pointsChange": 0.0,
-   "rankChange": 0
+   "rankChange": 1
+  },
+  {
+   "id": "43997",
+   "code": "DMA",
+   "name": "Dominica",
+   "confed": "CONCACAF",
+   "officialRank": 182,
+   "officialPoints": 897.69,
+   "previousRank": 182,
+   "liveRank": 183,
+   "livePoints": 894.81,
+   "pointsChange": -2.88,
+   "rankChange": -1
   },
   {
    "id": "20006",
@@ -2753,19 +2753,40 @@
  ],
  "results": [
   {
+   "kickoff": "2026-09-28T01:00:00Z",
+   "date": "2026-09-27",
+   "home": "TRI",
+   "away": "DOM",
+   "homeScore": 1,
+   "awayScore": 2,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League A",
+   "city": "Port of Spain",
+   "source": "FIFA",
+   "homeName": "Trinidad and Tobago",
+   "awayName": "Dominican Republic"
+  },
+  {
    "kickoff": "2026-09-28T00:00:00Z",
    "date": "2026-09-27",
    "home": "DMA",
    "away": "PUR",
    "homeScore": 0,
-   "awayScore": 1,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Roseau",
    "source": "FIFA",
+   "counted": true,
+   "importance": 15,
+   "homeDelta": -5.85,
+   "awayDelta": 5.85,
    "homeName": "Dominica",
    "awayName": "Puerto Rico"
   },
@@ -2774,15 +2795,19 @@
    "date": "2026-09-27",
    "home": "CUW",
    "away": "NCA",
-   "homeScore": 1,
-   "awayScore": 0,
+   "homeScore": 6,
+   "awayScore": 1,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Willemstad",
    "source": "FIFA",
+   "counted": true,
+   "importance": 15,
+   "homeDelta": 4.89,
+   "awayDelta": -4.89,
    "homeName": "Curaçao",
    "awayName": "Nicaragua"
   },
@@ -2795,11 +2820,15 @@
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Kingston",
    "source": "FIFA",
+   "counted": true,
+   "importance": 15,
+   "homeDelta": 9.92,
+   "awayDelta": -9.92,
    "homeName": "Haiti",
    "awayName": "Costa Rica"
   },
@@ -8494,17 +8523,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.351,
+   "expectedHome": 0.346,
    "prediction": {
     "home": {
-     "win": 9.74,
-     "draw": 2.24,
-     "loss": -5.26
+     "win": 9.82,
+     "draw": 2.32,
+     "loss": -5.18
     },
     "away": {
-     "loss": -9.74,
-     "draw": -2.24,
-     "win": 5.26
+     "loss": -9.82,
+     "draw": -2.32,
+     "win": 5.18
     }
    },
    "homeName": "Dominica",
@@ -8526,17 +8555,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.579,
+   "expectedHome": 0.583,
    "prediction": {
     "home": {
-     "win": 6.32,
-     "draw": -1.18,
-     "loss": -8.68
+     "win": 6.25,
+     "draw": -1.25,
+     "loss": -8.75
     },
     "away": {
-     "loss": -6.32,
-     "draw": 1.18,
-     "win": 8.68
+     "loss": -6.25,
+     "draw": 1.25,
+     "win": 8.75
     }
    },
    "homeName": "Curaçao",
@@ -8622,17 +8651,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.328,
+   "expectedHome": 0.32,
    "prediction": {
     "home": {
-     "win": 10.08,
-     "draw": 2.58,
-     "loss": -4.92
+     "win": 10.2,
+     "draw": 2.7,
+     "loss": -4.8
     },
     "away": {
-     "loss": -10.08,
-     "draw": -2.58,
-     "win": 4.92
+     "loss": -10.2,
+     "draw": -2.7,
+     "win": 4.8
     }
    },
    "homeName": "Dominican Republic",
@@ -8654,17 +8683,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.342,
+   "expectedHome": 0.337,
    "prediction": {
     "home": {
-     "win": 9.88,
-     "draw": 2.38,
-     "loss": -5.12
+     "win": 9.95,
+     "draw": 2.45,
+     "loss": -5.05
     },
     "away": {
-     "loss": -9.88,
-     "draw": -2.38,
-     "win": 5.12
+     "loss": -9.95,
+     "draw": -2.45,
+     "win": 5.05
     }
    },
    "homeName": "Cayman Islands",
@@ -8686,17 +8715,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.214,
+   "expectedHome": 0.217,
    "prediction": {
     "home": {
-     "win": 11.8,
-     "draw": 4.3,
-     "loss": -3.2
+     "win": 11.75,
+     "draw": 4.25,
+     "loss": -3.25
     },
     "away": {
-     "loss": -11.8,
-     "draw": -4.3,
-     "win": 3.2
+     "loss": -11.75,
+     "draw": -4.25,
+     "win": 3.25
     }
    },
    "homeName": "Nicaragua",
@@ -10286,17 +10315,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.649,
+   "expectedHome": 0.654,
    "prediction": {
     "home": {
-     "win": 5.26,
-     "draw": -2.24,
-     "loss": -9.74
+     "win": 5.18,
+     "draw": -2.32,
+     "loss": -9.82
     },
     "away": {
-     "loss": -5.26,
-     "draw": 2.24,
-     "win": 9.74
+     "loss": -5.18,
+     "draw": 2.32,
+     "win": 9.82
     }
    },
    "homeName": "Guyana",
@@ -10382,17 +10411,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.421,
+   "expectedHome": 0.417,
    "prediction": {
     "home": {
-     "win": 8.68,
-     "draw": 1.18,
-     "loss": -6.32
+     "win": 8.75,
+     "draw": 1.25,
+     "loss": -6.25
     },
     "away": {
-     "loss": -8.68,
-     "draw": -1.18,
-     "win": 6.32
+     "loss": -8.75,
+     "draw": -1.25,
+     "win": 6.25
     }
    },
    "homeName": "Trinidad and Tobago",
@@ -10414,17 +10443,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.658,
+   "expectedHome": 0.663,
    "prediction": {
     "home": {
-     "win": 5.12,
-     "draw": -2.38,
-     "loss": -9.88
+     "win": 5.05,
+     "draw": -2.45,
+     "loss": -9.95
     },
     "away": {
-     "loss": -5.12,
-     "draw": 2.38,
-     "win": 9.88
+     "loss": -5.05,
+     "draw": 2.45,
+     "win": 9.95
     }
    },
    "homeName": "Puerto Rico",
@@ -10542,17 +10571,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.662,
+   "expectedHome": 0.644,
    "prediction": {
     "home": {
-     "win": 5.08,
-     "draw": -2.42,
-     "loss": -9.92
+     "win": 5.33,
+     "draw": -2.17,
+     "loss": -9.67
     },
     "away": {
-     "loss": -5.08,
-     "draw": 2.42,
-     "win": 9.92
+     "loss": -5.33,
+     "draw": 2.17,
+     "win": 9.67
     }
    },
    "homeName": "Costa Rica",
@@ -10574,17 +10603,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.521,
+   "expectedHome": 0.516,
    "prediction": {
     "home": {
-     "win": 7.18,
-     "draw": -0.32,
-     "loss": -7.82
+     "win": 7.25,
+     "draw": -0.25,
+     "loss": -7.75
     },
     "away": {
-     "loss": -7.18,
-     "draw": 0.32,
-     "win": 7.82
+     "loss": -7.25,
+     "draw": 0.25,
+     "win": 7.75
     }
    },
    "homeName": "Nicaragua",
@@ -18310,7 +18339,7 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 17,
+   "results": 18,
    "fixtures": 33
   },
   {
