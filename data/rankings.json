@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T10:23:51+00:00",
+ "generatedAt": "2026-09-28T11:21:41+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1906,6 +1906,19 @@
    "rankChange": -1
   },
   {
+   "id": "43836",
+   "code": "SGP",
+   "name": "Singapore",
+   "confed": "AFC",
+   "officialRank": 148,
+   "officialPoints": 1057.95,
+   "previousRank": 148,
+   "liveRank": 147,
+   "livePoints": 1063.69,
+   "pointsChange": 5.74,
+   "rankChange": 1
+  },
+  {
    "id": "43957",
    "code": "LTU",
    "name": "Lithuania",
@@ -1913,10 +1926,10 @@
    "officialRank": 149,
    "officialPoints": 1056.85,
    "previousRank": 149,
-   "liveRank": 147,
+   "liveRank": 148,
    "livePoints": 1062.0,
    "pointsChange": 5.15,
-   "rankChange": 2
+   "rankChange": 1
   },
   {
    "id": "43907",
@@ -1926,23 +1939,10 @@
    "officialRank": 150,
    "officialPoints": 1049.32,
    "previousRank": 150,
-   "liveRank": 148,
+   "liveRank": 149,
    "livePoints": 1061.15,
    "pointsChange": 11.83,
-   "rankChange": 2
-  },
-  {
-   "id": "43836",
-   "code": "SGP",
-   "name": "Singapore",
-   "confed": "AFC",
-   "officialRank": 148,
-   "officialPoints": 1057.95,
-   "previousRank": 148,
-   "liveRank": 149,
-   "livePoints": 1060.18,
-   "pointsChange": 2.23,
-   "rankChange": -1
+   "rankChange": 1
   },
   {
    "id": "43864",
@@ -2348,19 +2348,6 @@
    "rankChange": 0
   },
   {
-   "id": "43809",
-   "code": "BAN",
-   "name": "Bangladesh",
-   "confed": "AFC",
-   "officialRank": 181,
-   "officialPoints": 902.93,
-   "previousRank": 181,
-   "liveRank": 181,
-   "livePoints": 899.63,
-   "pointsChange": -3.3,
-   "rankChange": 0
-  },
-  {
    "id": "43852",
    "code": "CHA",
    "name": "Chad",
@@ -2368,10 +2355,23 @@
    "officialRank": 183,
    "officialPoints": 896.85,
    "previousRank": 183,
-   "liveRank": 182,
+   "liveRank": 181,
    "livePoints": 896.85,
    "pointsChange": 0.0,
-   "rankChange": 1
+   "rankChange": 2
+  },
+  {
+   "id": "43809",
+   "code": "BAN",
+   "name": "Bangladesh",
+   "confed": "AFC",
+   "officialRank": 181,
+   "officialPoints": 902.93,
+   "previousRank": 181,
+   "liveRank": 182,
+   "livePoints": 896.12,
+   "pointsChange": -6.81,
+   "rankChange": -1
   },
   {
    "id": "43997",
@@ -2753,6 +2753,40 @@
  ],
  "results": [
   {
+   "kickoff": "2026-09-28T11:00:00Z",
+   "date": "2026-09-28",
+   "home": "KOR",
+   "away": "URU",
+   "homeScore": 0,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Seoul",
+   "source": "FIFA",
+   "homeName": "Korea Republic",
+   "awayName": "Uruguay"
+  },
+  {
+   "kickoff": "2026-09-28T10:25:00Z",
+   "date": "2026-09-28",
+   "home": "JPN",
+   "away": "VEN",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Hiroshima",
+   "source": "FIFA",
+   "homeName": "Japan",
+   "awayName": "Venezuela"
+  },
+  {
    "kickoff": "2026-09-28T09:00:00Z",
    "date": "2026-09-28",
    "home": "SGP",
@@ -2761,11 +2795,15 @@
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "FIFA ASEAN Cup™",
    "stage": "Division 1",
    "city": "Jakarta",
    "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": 3.51,
+   "awayDelta": -3.51,
    "homeName": "Singapore",
    "awayName": "Bangladesh"
   },
@@ -5713,70 +5751,6 @@
    "awayName": "Palestine"
   },
   {
-   "kickoff": "2026-09-28T10:25:00Z",
-   "date": "2026-09-28",
-   "home": "JPN",
-   "away": "VEN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Hiroshima",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.691,
-   "prediction": {
-    "home": {
-     "win": 3.09,
-     "draw": -1.91,
-     "loss": -6.91
-    },
-    "away": {
-     "loss": -3.09,
-     "draw": 1.91,
-     "win": 6.91
-    }
-   },
-   "homeName": "Japan",
-   "awayName": "Venezuela"
-  },
-  {
-   "kickoff": "2026-09-28T11:00:00Z",
-   "date": "2026-09-28",
-   "home": "KOR",
-   "away": "URU",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Seoul",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.437,
-   "prediction": {
-    "home": {
-     "win": 5.63,
-     "draw": 0.63,
-     "loss": -4.37
-    },
-    "away": {
-     "loss": -5.63,
-     "draw": -0.63,
-     "win": 4.37
-    }
-   },
-   "homeName": "Korea Republic",
-   "awayName": "Uruguay"
-  },
-  {
    "kickoff": "2026-09-28T12:00:00Z",
    "date": "2026-09-28",
    "home": "TJK",
@@ -8096,17 +8070,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.732,
+   "expectedHome": 0.734,
    "prediction": {
     "home": {
-     "win": 2.68,
-     "draw": -2.32,
-     "loss": -7.32
+     "win": 2.66,
+     "draw": -2.34,
+     "loss": -7.34
     },
     "away": {
-     "loss": -2.68,
-     "draw": 2.32,
-     "win": 7.32
+     "loss": -2.66,
+     "draw": 2.34,
+     "win": 7.34
     }
    },
    "homeName": "Indonesia",
@@ -8128,17 +8102,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.529,
+   "expectedHome": 0.526,
    "prediction": {
     "home": {
-     "win": 4.71,
-     "draw": -0.29,
-     "loss": -5.29
+     "win": 4.74,
+     "draw": -0.26,
+     "loss": -5.26
     },
     "away": {
-     "loss": -4.71,
-     "draw": 0.29,
-     "win": 5.29
+     "loss": -4.74,
+     "draw": 0.26,
+     "win": 5.26
     }
    },
    "homeName": "Malaysia",
@@ -11776,17 +11750,17 @@
    "source": "FIFA",
    "importance": 5,
    "knockout": false,
-   "expectedHome": 0.518,
+   "expectedHome": 0.514,
    "prediction": {
     "home": {
-     "win": 2.41,
-     "draw": -0.09,
-     "loss": -2.59
+     "win": 2.43,
+     "draw": -0.07,
+     "loss": -2.57
     },
     "away": {
-     "loss": -2.41,
-     "draw": 0.09,
-     "win": 2.59
+     "loss": -2.43,
+     "draw": 0.07,
+     "win": 2.57
     }
    },
    "homeName": "Bangladesh",
@@ -11904,17 +11878,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.472,
+   "expectedHome": 0.476,
    "prediction": {
     "home": {
-     "win": 5.28,
-     "draw": 0.28,
-     "loss": -4.72
+     "win": 5.24,
+     "draw": 0.24,
+     "loss": -4.76
     },
     "away": {
-     "loss": -5.28,
-     "draw": -0.28,
-     "win": 4.72
+     "loss": -5.24,
+     "draw": -0.24,
+     "win": 4.76
     }
    },
    "homeName": "Bhutan",
@@ -13088,17 +13062,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.134,
+   "expectedHome": 0.136,
    "prediction": {
     "home": {
-     "win": 8.66,
-     "draw": 3.66,
-     "loss": -1.34
+     "win": 8.64,
+     "draw": 3.64,
+     "loss": -1.36
     },
     "away": {
-     "loss": -8.66,
-     "draw": -3.66,
-     "win": 1.34
+     "loss": -8.64,
+     "draw": -3.64,
+     "win": 1.36
     }
    },
    "homeName": "Singapore",
@@ -15712,17 +15686,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.882,
+   "expectedHome": 0.88,
    "prediction": {
     "home": {
-     "win": 4.14,
-     "draw": -13.36,
-     "loss": -30.86
+     "win": 4.19,
+     "draw": -13.31,
+     "loss": -30.81
     },
     "away": {
-     "loss": -4.14,
-     "draw": 13.36,
-     "win": 30.86
+     "loss": -4.19,
+     "draw": 13.31,
+     "win": 30.81
     }
    },
    "homeName": "Australia",
@@ -16160,17 +16134,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.353,
+   "expectedHome": 0.356,
    "prediction": {
     "home": {
-     "win": 22.65,
-     "draw": 5.15,
-     "loss": -12.35
+     "win": 22.55,
+     "draw": 5.05,
+     "loss": -12.45
     },
     "away": {
-     "loss": -22.65,
-     "draw": -5.15,
-     "win": 12.35
+     "loss": -22.55,
+     "draw": -5.05,
+     "win": 12.45
     }
    },
    "homeName": "Singapore",
@@ -16544,17 +16518,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.789,
+   "expectedHome": 0.787,
    "prediction": {
     "home": {
-     "win": 7.38,
-     "draw": -10.12,
-     "loss": -27.62
+     "win": 7.46,
+     "draw": -10.04,
+     "loss": -27.54
     },
     "away": {
-     "loss": -7.38,
-     "draw": 10.12,
-     "win": 27.62
+     "loss": -7.46,
+     "draw": 10.04,
+     "win": 27.54
     }
    },
    "homeName": "Iraq",
@@ -18244,8 +18218,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 27,
-   "fixtures": 63
+   "results": 29,
+   "fixtures": 61
   },
   {
    "name": "FIFA Series™",
