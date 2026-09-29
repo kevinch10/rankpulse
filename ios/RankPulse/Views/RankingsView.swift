@@ -69,7 +69,7 @@ struct RankingsView: View {
         let current = min(page, pages - 1)
         let first = current * pageSize
         let teams = Array(allTeams.dropFirst(first).prefix(pageSize))
-        return List {
+        return ScrollViewReader { proxy in List {
             if search.isEmpty && confed == .all {
                 Section {
                     HeroHeader(subtitle: "Updated FIFA rankings")
@@ -100,6 +100,7 @@ struct RankingsView: View {
                 ForEach(Array(teams.enumerated()), id: \.element.id) { index, team in
                     NavigationLink(value: team) { TeamRow(team: team, isFavourite: favs.contains(team.code)) }
                         .swipeActions { favouriteButton(team) }
+                        .id(index == 0 ? "page-top" : team.code)
                     if index + 1 == 25 && teams.count > 30 {
                         InlineAdRow()
                     }
@@ -121,6 +122,7 @@ struct RankingsView: View {
                 }
             }
         }
+        .onChange(of: page) { withAnimation { proxy.scrollTo("page-top", anchor: .top) } }
         .onChange(of: search) { page = 0 }
         .onChange(of: confed) { page = 0 }
         .overlay {
@@ -132,6 +134,7 @@ struct RankingsView: View {
                     ContentUnavailableView.search(text: search)
                 }
             }
+        }
         }
     }
 
