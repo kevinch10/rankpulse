@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T22:04:38+00:00",
+ "generatedAt": "2026-09-29T23:04:34+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3032,6 +3032,39 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-09-29T23:00:00Z",
+   "date": "2026-09-29",
+   "home": "AIA",
+   "away": "ARU",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League C",
+   "city": "North Sound",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.375,
+   "prediction": {
+    "home": {
+     "win": 9.37,
+     "draw": 1.87,
+     "loss": -5.63
+    },
+    "away": {
+     "loss": -9.37,
+     "draw": -1.87,
+     "win": 5.63
+    }
+   },
+   "homeName": "Anguilla",
+   "awayName": "Aruba",
+   "fifaId": "dn38qvhzwo6wtfrbatjyav9xw"
+  },
   {
    "date": "2026-09-29",
    "kickoff": "2026-09-29T21:00:00Z",
@@ -7234,39 +7267,6 @@
    "homeName": "Oman",
    "awayName": "Kuwait",
    "fifaId": "cf02mrh43t82ef8v9g2z0v7ys"
-  },
-  {
-   "kickoff": "2026-09-29T23:00:00Z",
-   "date": "2026-09-29",
-   "home": "AIA",
-   "away": "ARU",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League C",
-   "city": "North Sound",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.375,
-   "prediction": {
-    "home": {
-     "win": 9.37,
-     "draw": 1.87,
-     "loss": -5.63
-    },
-    "away": {
-     "loss": -9.37,
-     "draw": -1.87,
-     "win": 5.63
-    }
-   },
-   "homeName": "Anguilla",
-   "awayName": "Aruba",
-   "fifaId": "dn38qvhzwo6wtfrbatjyav9xw"
   },
   {
    "kickoff": "2026-09-30T00:00:00Z",
@@ -18328,8 +18328,8 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 24,
-   "fixtures": 27
+   "results": 25,
+   "fixtures": 26
   },
   {
    "name": "Concacaf Series",
