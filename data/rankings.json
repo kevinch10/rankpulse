@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T19:41:34+00:00",
+ "generatedAt": "2026-09-29T20:05:55+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3033,6 +3033,39 @@
  ],
  "results": [
   {
+   "kickoff": "2026-09-29T20:00:00Z",
+   "date": "2026-09-29",
+   "home": "VIR",
+   "away": "BAH",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League C",
+   "city": "Christiansted",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.493,
+   "prediction": {
+    "home": {
+     "win": 7.6,
+     "draw": 0.1,
+     "loss": -7.4
+    },
+    "away": {
+     "loss": -7.6,
+     "draw": -0.1,
+     "win": 7.4
+    }
+   },
+   "homeName": "US Virgin Islands",
+   "awayName": "Bahamas",
+   "fifaId": "dngq70mnnfgsvn3hto0naujv8"
+  },
+  {
    "kickoff": "2026-09-29T19:00:00Z",
    "date": "2026-09-29",
    "home": "VGB",
@@ -3169,7 +3202,7 @@
    "date": "2026-09-29",
    "home": "SVN",
    "away": "MKD",
-   "homeScore": 0,
+   "homeScore": 1,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
@@ -3236,7 +3269,7 @@
    "home": "SCO",
    "away": "SUI",
    "homeScore": 0,
-   "awayScore": 1,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -3269,7 +3302,7 @@
    "home": "CZE",
    "away": "ENG",
    "homeScore": 0,
-   "awayScore": 0,
+   "awayScore": 1,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -7334,39 +7367,6 @@
    },
    "homeName": "Somalia",
    "awayName": "Côte d'Ivoire"
-  },
-  {
-   "kickoff": "2026-09-29T20:00:00Z",
-   "date": "2026-09-29",
-   "home": "VIR",
-   "away": "BAH",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League C",
-   "city": "Christiansted",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.493,
-   "prediction": {
-    "home": {
-     "win": 7.6,
-     "draw": 0.1,
-     "loss": -7.4
-    },
-    "away": {
-     "loss": -7.6,
-     "draw": -0.1,
-     "win": 7.4
-    }
-   },
-   "homeName": "US Virgin Islands",
-   "awayName": "Bahamas",
-   "fifaId": "dngq70mnnfgsvn3hto0naujv8"
   },
   {
    "date": "2026-09-29",
@@ -18493,8 +18493,8 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 23,
-   "fixtures": 28
+   "results": 24,
+   "fixtures": 27
   },
   {
    "name": "Concacaf Series",
