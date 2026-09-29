@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T20:52:57+00:00",
+ "generatedAt": "2026-09-29T21:25:09+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -617,20 +617,6 @@
    "rankChange": -2
   },
   {
-   "id": "43849",
-   "code": "CMR",
-   "name": "Cameroon",
-   "confed": "CAF",
-   "officialRank": 43,
-   "officialPoints": 1481.24,
-   "previousRank": 44,
-   "aliases": [],
-   "liveRank": 43,
-   "livePoints": 1487.36,
-   "pointsChange": 6.12,
-   "rankChange": 0
-  },
-  {
    "id": "43967",
    "code": "SCO",
    "name": "Scotland",
@@ -639,10 +625,10 @@
    "officialPoints": 1491.22,
    "previousRank": 42,
    "aliases": [],
-   "liveRank": 44,
+   "liveRank": 43,
    "livePoints": 1486.03,
    "pointsChange": -5.19,
-   "rankChange": -2
+   "rankChange": -1
   },
   {
    "id": "44002",
@@ -653,10 +639,24 @@
    "officialPoints": 1473.66,
    "previousRank": 47,
    "aliases": [],
-   "liveRank": 45,
+   "liveRank": 44,
    "livePoints": 1479.46,
    "pointsChange": 5.8,
-   "rankChange": 0
+   "rankChange": 1
+  },
+  {
+   "id": "43849",
+   "code": "CMR",
+   "name": "Cameroon",
+   "confed": "CAF",
+   "officialRank": 43,
+   "officialPoints": 1481.24,
+   "previousRank": 44,
+   "aliases": [],
+   "liveRank": 45,
+   "livePoints": 1479.4,
+   "pointsChange": -1.84,
+   "rankChange": -2
   },
   {
    "id": "43914",
@@ -1220,6 +1220,20 @@
    "rankChange": 4
   },
   {
+   "id": "43858",
+   "code": "GAB",
+   "name": "Gabon",
+   "confed": "CAF",
+   "officialRank": 84,
+   "officialPoints": 1272.51,
+   "previousRank": 86,
+   "aliases": [],
+   "liveRank": 85,
+   "livePoints": 1280.12,
+   "pointsChange": 7.61,
+   "rankChange": -1
+  },
+  {
    "id": "43889",
    "code": "UGA",
    "name": "Uganda",
@@ -1228,10 +1242,10 @@
    "officialPoints": 1264.09,
    "previousRank": 89,
    "aliases": [],
-   "liveRank": 85,
+   "liveRank": 86,
    "livePoints": 1278.26,
    "pointsChange": 14.17,
-   "rankChange": 4
+   "rankChange": 3
   },
   {
    "id": "43978",
@@ -1242,10 +1256,10 @@
    "officialPoints": 1269.8,
    "previousRank": 85,
    "aliases": [],
-   "liveRank": 86,
+   "liveRank": 87,
    "livePoints": 1274.43,
    "pointsChange": 4.63,
-   "rankChange": 0
+   "rankChange": -1
   },
   {
    "id": "43844",
@@ -1256,24 +1270,10 @@
    "officialPoints": 1265.58,
    "previousRank": 88,
    "aliases": [],
-   "liveRank": 87,
+   "liveRank": 88,
    "livePoints": 1272.61,
    "pointsChange": 7.03,
-   "rankChange": 0
-  },
-  {
-   "id": "43858",
-   "code": "GAB",
-   "name": "Gabon",
-   "confed": "CAF",
-   "officialRank": 84,
-   "officialPoints": 1272.51,
-   "previousRank": 86,
-   "aliases": [],
-   "liveRank": 88,
-   "livePoints": 1269.63,
-   "pointsChange": -2.88,
-   "rankChange": -4
+   "rankChange": -1
   },
   {
    "id": "43936",
@@ -1574,20 +1574,6 @@
    "rankChange": 4
   },
   {
-   "id": "43875",
-   "code": "NIG",
-   "name": "Niger",
-   "confed": "CAF",
-   "officialRank": 114,
-   "officialPoints": 1175.33,
-   "previousRank": 114,
-   "aliases": [],
-   "liveRank": 110,
-   "livePoints": 1185.21,
-   "pointsChange": 9.88,
-   "rankChange": 4
-  },
-  {
    "id": "43859",
    "code": "GAM",
    "name": "The Gambia",
@@ -1598,10 +1584,10 @@
    "aliases": [
     "Gambia"
    ],
-   "liveRank": 111,
+   "liveRank": 110,
    "livePoints": 1182.64,
    "pointsChange": 23.0,
-   "rankChange": 5
+   "rankChange": 6
   },
   {
    "id": "43863",
@@ -1612,10 +1598,10 @@
    "officialPoints": 1185.08,
    "previousRank": 109,
    "aliases": [],
-   "liveRank": 112,
+   "liveRank": 111,
    "livePoints": 1178.62,
    "pointsChange": -6.46,
-   "rankChange": -3
+   "rankChange": -2
   },
   {
    "id": "44027",
@@ -1626,10 +1612,24 @@
    "officialPoints": 1180.78,
    "previousRank": 111,
    "aliases": [],
-   "liveRank": 113,
+   "liveRank": 112,
    "livePoints": 1176.5,
    "pointsChange": -4.28,
-   "rankChange": -2
+   "rankChange": -1
+  },
+  {
+   "id": "43875",
+   "code": "NIG",
+   "name": "Niger",
+   "confed": "CAF",
+   "officialRank": 114,
+   "officialPoints": 1175.33,
+   "previousRank": 114,
+   "aliases": [],
+   "liveRank": 113,
+   "livePoints": 1174.71,
+   "pointsChange": -0.62,
+   "rankChange": 1
   },
   {
    "id": "43825",
@@ -1900,20 +1900,6 @@
    "rankChange": 1
   },
   {
-   "id": "43913",
-   "code": "NCA",
-   "name": "Nicaragua",
-   "confed": "CONCACAF",
-   "officialRank": 131,
-   "officialPoints": 1114.63,
-   "previousRank": 131,
-   "aliases": [],
-   "liveRank": 133,
-   "livePoints": 1101.69,
-   "pointsChange": -12.94,
-   "rankChange": -2
-  },
-  {
    "id": "43853",
    "code": "CGO",
    "name": "Congo",
@@ -1924,10 +1910,24 @@
    "aliases": [
     "Congo-Brazzaville"
    ],
+   "liveRank": 133,
+   "livePoints": 1102.45,
+   "pointsChange": -3.51,
+   "rankChange": 1
+  },
+  {
+   "id": "43913",
+   "code": "NCA",
+   "name": "Nicaragua",
+   "confed": "CONCACAF",
+   "officialRank": 131,
+   "officialPoints": 1114.63,
+   "previousRank": 131,
+   "aliases": [],
    "liveRank": 134,
-   "livePoints": 1094.49,
-   "pointsChange": -11.47,
-   "rankChange": 0
+   "livePoints": 1101.69,
+   "pointsChange": -12.94,
+   "rankChange": -3
   },
   {
    "id": "43903",
@@ -3033,11 +3033,32 @@
  ],
  "results": [
   {
+   "date": "2026-09-29",
+   "kickoff": "2026-09-29T21:00:00Z",
+   "home": "CGO",
+   "away": "CMR",
+   "homeScore": 1,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "city": "Brazzaville",
+   "status": 0,
+   "competition": "CAF Africa Cup of Nations Qualifiers",
+   "stage": "Group stage",
+   "source": "Wikipedia",
+   "counted": true,
+   "importance": 25,
+   "homeDelta": 7.97,
+   "awayDelta": -7.97,
+   "homeName": "Congo",
+   "awayName": "Cameroon"
+  },
+  {
    "kickoff": "2026-09-29T20:00:00Z",
    "date": "2026-09-29",
    "home": "VIR",
    "away": "BAH",
-   "homeScore": 2,
+   "homeScore": 3,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
@@ -3064,6 +3085,27 @@
    "homeName": "US Virgin Islands",
    "awayName": "Bahamas",
    "fifaId": "dngq70mnnfgsvn3hto0naujv8"
+  },
+  {
+   "date": "2026-09-29",
+   "kickoff": "2026-09-29T19:00:00Z",
+   "home": "GAB",
+   "away": "NIG",
+   "homeScore": 2,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "city": "Franceville",
+   "status": 0,
+   "competition": "CAF Africa Cup of Nations Qualifiers",
+   "stage": "Group stage",
+   "source": "Wikipedia",
+   "counted": true,
+   "importance": 25,
+   "homeDelta": 10.49,
+   "awayDelta": -10.49,
+   "homeName": "Gabon",
+   "awayName": "Niger"
   },
   {
    "kickoff": "2026-09-29T19:00:00Z",
@@ -7176,38 +7218,6 @@
   {
    "date": "2026-09-29",
    "kickoff": "2026-09-29T19:00:00Z",
-   "home": "GAB",
-   "away": "NIG",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "Franceville",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.58,
-   "prediction": {
-    "home": {
-     "win": 10.49,
-     "draw": -2.01,
-     "loss": -14.51
-    },
-    "away": {
-     "loss": -10.49,
-     "draw": 2.01,
-     "win": 14.51
-    }
-   },
-   "homeName": "Gabon",
-   "awayName": "Niger"
-  },
-  {
-   "date": "2026-09-29",
-   "kickoff": "2026-09-29T19:00:00Z",
    "home": "ANG",
    "away": "MWI",
    "homeScore": null,
@@ -7268,38 +7278,6 @@
    },
    "homeName": "Somalia",
    "awayName": "Côte d'Ivoire"
-  },
-  {
-   "date": "2026-09-29",
-   "kickoff": "2026-09-29T21:00:00Z",
-   "home": "CGO",
-   "away": "CMR",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.181,
-   "prediction": {
-    "home": {
-     "win": 20.47,
-     "draw": 7.97,
-     "loss": -4.53
-    },
-    "away": {
-     "loss": -20.47,
-     "draw": -7.97,
-     "win": 4.53
-    }
-   },
-   "homeName": "Congo",
-   "awayName": "Cameroon"
   },
   {
    "date": "2026-09-29",
@@ -9723,17 +9701,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.582,
+   "expectedHome": 0.59,
    "prediction": {
     "home": {
-     "win": 4.18,
-     "draw": -0.82,
-     "loss": -5.82
+     "win": 4.1,
+     "draw": -0.9,
+     "loss": -5.9
     },
     "away": {
-     "loss": -4.18,
-     "draw": 0.82,
-     "win": 5.82
+     "loss": -4.1,
+     "draw": 0.9,
+     "win": 5.9
     }
    },
    "homeName": "Côte d'Ivoire",
@@ -11538,17 +11516,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.816,
+   "expectedHome": 0.822,
    "prediction": {
     "home": {
-     "win": 1.84,
-     "draw": -3.16,
-     "loss": -8.16
+     "win": 1.78,
+     "draw": -3.22,
+     "loss": -8.22
     },
     "away": {
-     "loss": -1.84,
-     "draw": 3.16,
-     "win": 8.16
+     "loss": -1.78,
+     "draw": 3.22,
+     "win": 8.22
     }
    },
    "homeName": "Algeria",
@@ -11934,17 +11912,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.697,
+   "expectedHome": 0.705,
    "prediction": {
     "home": {
-     "win": 7.59,
-     "draw": -4.91,
-     "loss": -17.41
+     "win": 7.37,
+     "draw": -5.13,
+     "loss": -17.63
     },
     "away": {
-     "loss": -7.59,
-     "draw": 4.91,
-     "win": 17.41
+     "loss": -7.37,
+     "draw": 5.13,
+     "win": 17.63
     }
    },
    "homeName": "Gabon",
@@ -11966,17 +11944,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.916,
+   "expectedHome": 0.919,
    "prediction": {
     "home": {
-     "win": 2.1,
-     "draw": -10.4,
-     "loss": -22.9
+     "win": 2.02,
+     "draw": -10.48,
+     "loss": -22.98
     },
     "away": {
-     "loss": -2.1,
-     "draw": 10.4,
-     "win": 22.9
+     "loss": -2.02,
+     "draw": 10.48,
+     "win": 22.98
     }
    },
    "homeName": "Morocco",
@@ -12318,17 +12296,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.786,
+   "expectedHome": 0.781,
    "prediction": {
     "home": {
-     "win": 5.35,
-     "draw": -7.15,
-     "loss": -19.65
+     "win": 5.48,
+     "draw": -7.02,
+     "loss": -19.52
     },
     "away": {
-     "loss": -5.35,
-     "draw": 7.15,
-     "win": 19.65
+     "loss": -5.48,
+     "draw": 7.02,
+     "win": 19.52
     }
    },
    "homeName": "Cameroon",
@@ -12350,17 +12328,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.594,
+   "expectedHome": 0.587,
    "prediction": {
     "home": {
-     "win": 10.15,
-     "draw": -2.35,
-     "loss": -14.85
+     "win": 10.33,
+     "draw": -2.17,
+     "loss": -14.67
     },
     "away": {
-     "loss": -10.15,
-     "draw": 2.35,
-     "win": 14.85
+     "loss": -10.33,
+     "draw": 2.17,
+     "win": 14.67
     }
    },
    "homeName": "Comoros",
@@ -13791,17 +13769,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.303,
+   "expectedHome": 0.295,
    "prediction": {
     "home": {
-     "win": 17.41,
-     "draw": 4.91,
-     "loss": -7.59
+     "win": 17.63,
+     "draw": 5.13,
+     "loss": -7.37
     },
     "away": {
-     "loss": -17.41,
-     "draw": -4.91,
-     "win": 7.59
+     "loss": -17.63,
+     "draw": -5.13,
+     "win": 7.37
     }
    },
    "homeName": "Lesotho",
@@ -13823,17 +13801,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.084,
+   "expectedHome": 0.081,
    "prediction": {
     "home": {
-     "win": 22.9,
-     "draw": 10.4,
-     "loss": -2.1
+     "win": 22.98,
+     "draw": 10.48,
+     "loss": -2.02
     },
     "away": {
-     "loss": -22.9,
-     "draw": -10.4,
-     "win": 2.1
+     "loss": -22.98,
+     "draw": -10.48,
+     "win": 2.02
     }
    },
    "homeName": "Niger",
@@ -14175,17 +14153,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.406,
+   "expectedHome": 0.413,
    "prediction": {
     "home": {
-     "win": 14.85,
-     "draw": 2.35,
-     "loss": -10.15
+     "win": 14.67,
+     "draw": 2.17,
+     "loss": -10.33
     },
     "away": {
-     "loss": -14.85,
-     "draw": -2.35,
-     "win": 10.15
+     "loss": -14.67,
+     "draw": -2.17,
+     "win": 10.33
     }
    },
    "homeName": "Congo",
@@ -14207,17 +14185,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.214,
+   "expectedHome": 0.219,
    "prediction": {
     "home": {
-     "win": 19.65,
-     "draw": 7.15,
-     "loss": -5.35
+     "win": 19.52,
+     "draw": 7.02,
+     "loss": -5.48
     },
     "away": {
-     "loss": -19.65,
-     "draw": -7.15,
-     "win": 5.35
+     "loss": -19.52,
+     "draw": -7.02,
+     "win": 5.48
     }
    },
    "homeName": "Namibia",
@@ -16770,17 +16748,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.112,
+   "expectedHome": 0.116,
    "prediction": {
     "home": {
-     "win": 22.19,
-     "draw": 9.69,
-     "loss": -2.81
+     "win": 22.09,
+     "draw": 9.59,
+     "loss": -2.91
     },
     "away": {
-     "loss": -22.19,
-     "draw": -9.69,
-     "win": 2.81
+     "loss": -22.09,
+     "draw": -9.59,
+     "win": 2.91
     }
    },
    "homeName": "Gabon",
@@ -16802,17 +16780,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.376,
+   "expectedHome": 0.385,
    "prediction": {
     "home": {
-     "win": 15.6,
-     "draw": 3.1,
-     "loss": -9.4
+     "win": 15.37,
+     "draw": 2.87,
+     "loss": -9.63
     },
     "away": {
-     "loss": -15.6,
-     "draw": -3.1,
-     "win": 9.4
+     "loss": -15.37,
+     "draw": -2.87,
+     "win": 9.63
     }
    },
    "homeName": "Lesotho",
@@ -17154,17 +17132,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.449,
+   "expectedHome": 0.456,
    "prediction": {
     "home": {
-     "win": 13.79,
-     "draw": 1.29,
-     "loss": -11.21
+     "win": 13.6,
+     "draw": 1.1,
+     "loss": -11.4
     },
     "away": {
-     "loss": -13.79,
-     "draw": -1.29,
-     "win": 11.21
+     "loss": -13.6,
+     "draw": -1.1,
+     "win": 11.4
     }
    },
    "homeName": "Congo",
@@ -17186,17 +17164,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.245,
+   "expectedHome": 0.25,
    "prediction": {
     "home": {
-     "win": 18.88,
-     "draw": 6.38,
-     "loss": -6.12
+     "win": 18.74,
+     "draw": 6.24,
+     "loss": -6.26
     },
     "away": {
-     "loss": -18.88,
-     "draw": -6.38,
-     "win": 6.12
+     "loss": -18.74,
+     "draw": -6.24,
+     "win": 6.26
     }
    },
    "homeName": "Comoros",
@@ -17570,17 +17548,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.42,
+   "expectedHome": 0.4,
    "prediction": {
     "home": {
-     "win": 14.51,
-     "draw": 2.01,
-     "loss": -10.49
+     "win": 14.99,
+     "draw": 2.49,
+     "loss": -10.01
     },
     "away": {
-     "loss": -14.51,
-     "draw": -2.01,
-     "win": 10.49
+     "loss": -14.99,
+     "draw": -2.49,
+     "win": 10.01
     }
    },
    "homeName": "Niger",
@@ -17922,17 +17900,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.819,
+   "expectedHome": 0.809,
    "prediction": {
     "home": {
-     "win": 4.53,
-     "draw": -7.97,
-     "loss": -20.47
+     "win": 4.76,
+     "draw": -7.74,
+     "loss": -20.24
     },
     "away": {
-     "loss": -4.53,
-     "draw": 7.97,
-     "win": 20.47
+     "loss": -4.76,
+     "draw": 7.74,
+     "win": 20.24
     }
    },
    "homeName": "Cameroon",
@@ -18415,8 +18393,8 @@
    "name": "CAF Africa Cup of Nations Qualifiers",
    "group": "CAF",
    "weight": "I=25",
-   "results": 40,
-   "fixtures": 104
+   "results": 42,
+   "fixtures": 102
   },
   {
    "name": "COSAFA Cup",
