@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T11:21:45+00:00",
+ "generatedAt": "2026-09-29T12:28:14+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -81,8 +81,8 @@
    "officialPoints": 1804.92,
    "previousRank": 6,
    "liveRank": 6,
-   "livePoints": 1802.9,
-   "pointsChange": -2.02,
+   "livePoints": 1805.91,
+   "pointsChange": 0.99,
    "rankChange": -1
   },
   {
@@ -346,19 +346,6 @@
    "rankChange": -1
   },
   {
-   "id": "43976",
-   "code": "AUS",
-   "name": "Australia",
-   "confed": "AFC",
-   "officialRank": 28,
-   "officialPoints": 1581.51,
-   "previousRank": 27,
-   "liveRank": 27,
-   "livePoints": 1583.53,
-   "pointsChange": 2.02,
-   "rankChange": 1
-  },
-  {
    "id": "43843",
    "code": "ALG",
    "name": "Algeria",
@@ -366,10 +353,23 @@
    "officialRank": 29,
    "officialPoints": 1576.8,
    "previousRank": 28,
-   "liveRank": 28,
+   "liveRank": 27,
    "livePoints": 1582.45,
    "pointsChange": 5.65,
-   "rankChange": 1
+   "rankChange": 2
+  },
+  {
+   "id": "43976",
+   "code": "AUS",
+   "name": "Australia",
+   "confed": "AFC",
+   "officialRank": 28,
+   "officialPoints": 1581.51,
+   "previousRank": 27,
+   "liveRank": 28,
+   "livePoints": 1580.52,
+   "pointsChange": -0.99,
+   "rankChange": 0
   },
   {
    "id": "43899",
@@ -2758,14 +2758,18 @@
    "home": "AUS",
    "away": "BRA",
    "homeScore": 2,
-   "awayScore": 2,
+   "awayScore": 4,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Brisbane",
    "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": -3.01,
+   "awayDelta": 3.01,
    "homeName": "Australia",
    "awayName": "Brazil"
   },
@@ -12793,17 +12797,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.34,
+   "expectedHome": 0.343,
    "prediction": {
     "home": {
-     "win": 6.6,
-     "draw": 1.6,
-     "loss": -3.4
+     "win": 6.57,
+     "draw": 1.57,
+     "loss": -3.43
     },
     "away": {
-     "loss": -6.6,
-     "draw": -1.6,
-     "win": 3.4
+     "loss": -6.57,
+     "draw": -1.57,
+     "win": 3.43
     }
    },
    "homeName": "Qatar",
@@ -13145,17 +13149,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.386,
+   "expectedHome": 0.383,
    "prediction": {
     "home": {
-     "win": 6.14,
-     "draw": 1.14,
-     "loss": -3.86
+     "win": 6.17,
+     "draw": 1.17,
+     "loss": -3.83
     },
     "away": {
-     "loss": -6.14,
-     "draw": -1.14,
-     "win": 3.86
+     "loss": -6.17,
+     "draw": -1.17,
+     "win": 3.83
     }
    },
    "homeName": "Japan",
@@ -14905,17 +14909,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.29,
+   "expectedHome": 0.292,
    "prediction": {
     "home": {
-     "win": 7.1,
-     "draw": 2.1,
-     "loss": -2.9
+     "win": 7.08,
+     "draw": 2.08,
+     "loss": -2.92
     },
     "away": {
-     "loss": -7.1,
-     "draw": -2.1,
-     "win": 2.9
+     "loss": -7.08,
+     "draw": -2.08,
+     "win": 2.92
     }
    },
    "homeName": "Jordan",
@@ -15385,17 +15389,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.88,
+   "expectedHome": 0.879,
    "prediction": {
     "home": {
-     "win": 4.19,
-     "draw": -13.31,
-     "loss": -30.81
+     "win": 4.23,
+     "draw": -13.27,
+     "loss": -30.77
     },
     "away": {
-     "loss": -4.19,
-     "draw": 13.31,
-     "win": 30.81
+     "loss": -4.23,
+     "draw": 13.27,
+     "win": 30.77
     }
    },
    "homeName": "Australia",
@@ -15769,17 +15773,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.334,
+   "expectedHome": 0.337,
    "prediction": {
     "home": {
-     "win": 23.3,
-     "draw": 5.8,
-     "loss": -11.7
+     "win": 23.21,
+     "draw": 5.71,
+     "loss": -11.79
     },
     "away": {
-     "loss": -23.3,
-     "draw": -5.8,
-     "win": 11.7
+     "loss": -23.21,
+     "draw": -5.71,
+     "win": 11.79
     }
    },
    "homeName": "Iraq",
@@ -16185,17 +16189,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.802,
+   "expectedHome": 0.801,
    "prediction": {
     "home": {
-     "win": 6.91,
-     "draw": -10.59,
-     "loss": -28.09
+     "win": 6.98,
+     "draw": -10.52,
+     "loss": -28.02
     },
     "away": {
-     "loss": -6.91,
-     "draw": 10.59,
-     "win": 28.09
+     "loss": -6.98,
+     "draw": 10.52,
+     "win": 28.02
     }
    },
    "homeName": "Australia",
