@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T12:28:14+00:00",
+ "generatedAt": "2026-09-29T13:26:11+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2752,6 +2752,23 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-09-29T12:30:00Z",
+   "date": "2026-09-29",
+   "home": "THA",
+   "away": "VIE",
+   "homeScore": 1,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "FIFA ASEAN Cup™",
+   "stage": "FIFA ASEAN Cup Group Stage",
+   "city": "Bandung",
+   "source": "FIFA",
+   "homeName": "Thailand",
+   "awayName": "Vietnam"
+  },
   {
    "kickoff": "2026-09-29T10:00:00Z",
    "date": "2026-09-29",
@@ -6093,38 +6110,6 @@
   }
  ],
  "fixtures": [
-  {
-   "kickoff": "2026-09-29T12:30:00Z",
-   "date": "2026-09-29",
-   "home": "THA",
-   "away": "VIE",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
-   "city": "Bandung",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.513,
-   "prediction": {
-    "home": {
-     "win": 4.87,
-     "draw": -0.13,
-     "loss": -5.13
-    },
-    "away": {
-     "loss": -4.87,
-     "draw": 0.13,
-     "win": 5.13
-    }
-   },
-   "homeName": "Thailand",
-   "awayName": "Vietnam"
-  },
   {
    "date": "2026-09-29",
    "kickoff": "2026-09-29T13:00:00Z",
@@ -17942,8 +17927,8 @@
    "name": "FIFA ASEAN Cup™",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 11,
-   "fixtures": 7
+   "results": 12,
+   "fixtures": 6
   },
   {
    "name": "CONMEBOL/UEFA Finalissima",
