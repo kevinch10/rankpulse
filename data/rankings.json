@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T01:20:24+00:00",
+ "generatedAt": "2026-09-29T02:20:20+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -866,6 +866,19 @@
    "rankChange": -1
   },
   {
+   "id": "43909",
+   "code": "HON",
+   "name": "Honduras",
+   "confed": "CONCACAF",
+   "officialRank": 66,
+   "officialPoints": 1378.97,
+   "previousRank": 65,
+   "liveRank": 67,
+   "livePoints": 1375.6,
+   "pointsChange": -3.37,
+   "rankChange": -1
+  },
+  {
    "id": "43952",
    "code": "NIR",
    "name": "Northern Ireland",
@@ -873,10 +886,10 @@
    "officialRank": 70,
    "officialPoints": 1365.3,
    "previousRank": 70,
-   "liveRank": 67,
+   "liveRank": 68,
    "livePoints": 1374.45,
    "pointsChange": 9.15,
-   "rankChange": 3
+   "rankChange": 2
   },
   {
    "id": "43840",
@@ -886,23 +899,10 @@
    "officialRank": 68,
    "officialPoints": 1370.47,
    "previousRank": 68,
-   "liveRank": 68,
+   "liveRank": 69,
    "livePoints": 1370.47,
    "pointsChange": 0.0,
-   "rankChange": 0
-  },
-  {
-   "id": "43909",
-   "code": "HON",
-   "name": "Honduras",
-   "confed": "CONCACAF",
-   "officialRank": 66,
-   "officialPoints": 1378.97,
-   "previousRank": 65,
-   "liveRank": 69,
-   "livePoints": 1368.16,
-   "pointsChange": -10.81,
-   "rankChange": -3
+   "rankChange": -1
   },
   {
    "id": "44000",
@@ -926,8 +926,8 @@
    "officialPoints": 1357.84,
    "previousRank": 71,
    "liveRank": 71,
-   "livePoints": 1363.66,
-   "pointsChange": 5.82,
+   "livePoints": 1356.22,
+   "pointsChange": -1.62,
    "rankChange": 0
   },
   {
@@ -1958,19 +1958,6 @@
    "rankChange": -4
   },
   {
-   "id": "43980",
-   "code": "SOL",
-   "name": "Solomon Islands",
-   "confed": "OFC",
-   "officialRank": 153,
-   "officialPoints": 1031.89,
-   "previousRank": 153,
-   "liveRank": 151,
-   "livePoints": 1036.6,
-   "pointsChange": 4.71,
-   "rankChange": 2
-  },
-  {
    "id": "43916",
    "code": "SKN",
    "name": "St Kitts and Nevis",
@@ -1978,10 +1965,23 @@
    "officialRank": 152,
    "officialPoints": 1036.33,
    "previousRank": 152,
+   "liveRank": 151,
+   "livePoints": 1042.94,
+   "pointsChange": 6.61,
+   "rankChange": 1
+  },
+  {
+   "id": "43980",
+   "code": "SOL",
+   "name": "Solomon Islands",
+   "confed": "OFC",
+   "officialRank": 153,
+   "officialPoints": 1031.89,
+   "previousRank": 153,
    "liveRank": 152,
-   "livePoints": 1036.33,
-   "pointsChange": 0.0,
-   "rankChange": 0
+   "livePoints": 1036.6,
+   "pointsChange": 4.71,
+   "rankChange": 1
   },
   {
    "id": "20010",
@@ -2140,30 +2140,17 @@
    "rankChange": 1
   },
   {
-   "id": "43898",
-   "code": "BER",
-   "name": "Bermuda",
+   "id": "43917",
+   "code": "LCA",
+   "name": "St Lucia",
    "confed": "CONCACAF",
-   "officialRank": 167,
-   "officialPoints": 975.05,
-   "previousRank": 167,
+   "officialRank": 166,
+   "officialPoints": 976.71,
+   "previousRank": 166,
    "liveRank": 165,
-   "livePoints": 975.05,
-   "pointsChange": 0.0,
-   "rankChange": 2
-  },
-  {
-   "id": "43905",
-   "code": "GRN",
-   "name": "Grenada",
-   "confed": "CONCACAF",
-   "officialRank": 163,
-   "officialPoints": 981.82,
-   "previousRank": 163,
-   "liveRank": 166,
-   "livePoints": 974.31,
-   "pointsChange": -7.51,
-   "rankChange": -3
+   "livePoints": 975.85,
+   "pointsChange": -0.86,
+   "rankChange": 1
   },
   {
    "id": "43979",
@@ -2173,10 +2160,10 @@
    "officialRank": 168,
    "officialPoints": 974.9,
    "previousRank": 168,
-   "liveRank": 167,
+   "liveRank": 166,
    "livePoints": 968.49,
    "pointsChange": -6.41,
-   "rankChange": 1
+   "rankChange": 2
   },
   {
    "id": "43918",
@@ -2186,23 +2173,10 @@
    "officialRank": 170,
    "officialPoints": 968.27,
    "previousRank": 170,
-   "liveRank": 168,
+   "liveRank": 167,
    "livePoints": 968.27,
    "pointsChange": 0.0,
-   "rankChange": 2
-  },
-  {
-   "id": "43917",
-   "code": "LCA",
-   "name": "St Lucia",
-   "confed": "CONCACAF",
-   "officialRank": 166,
-   "officialPoints": 976.71,
-   "previousRank": 166,
-   "liveRank": 169,
-   "livePoints": 968.25,
-   "pointsChange": -8.46,
-   "rankChange": -3
+   "rankChange": 3
   },
   {
    "id": "20000",
@@ -2212,10 +2186,36 @@
    "officialRank": 171,
    "officialPoints": 968.07,
    "previousRank": 171,
-   "liveRank": 170,
+   "liveRank": 168,
    "livePoints": 968.07,
    "pointsChange": 0.0,
-   "rankChange": 1
+   "rankChange": 3
+  },
+  {
+   "id": "43905",
+   "code": "GRN",
+   "name": "Grenada",
+   "confed": "CONCACAF",
+   "officialRank": 163,
+   "officialPoints": 981.82,
+   "previousRank": 163,
+   "liveRank": 169,
+   "livePoints": 967.7,
+   "pointsChange": -14.12,
+   "rankChange": -6
+  },
+  {
+   "id": "43898",
+   "code": "BER",
+   "name": "Bermuda",
+   "confed": "CONCACAF",
+   "officialRank": 167,
+   "officialPoints": 975.05,
+   "previousRank": 167,
+   "liveRank": 170,
+   "livePoints": 967.45,
+   "pointsChange": -7.6,
+   "rankChange": -3
   },
   {
    "id": "1935341",
@@ -2753,19 +2753,40 @@
  ],
  "results": [
   {
-   "kickoff": "2026-09-29T00:00:00Z",
+   "kickoff": "2026-09-29T02:00:00Z",
    "date": "2026-09-28",
-   "home": "LCA",
-   "away": "BER",
-   "homeScore": 4,
-   "awayScore": 1,
+   "home": "GUA",
+   "away": "SLV",
+   "homeScore": 1,
+   "awayScore": 0,
    "homePens": null,
    "awayPens": null,
    "status": 3,
    "competition": "Concacaf Nations League",
+   "stage": "League A",
+   "city": "Guatemala City",
+   "source": "FIFA",
+   "homeName": "Guatemala",
+   "awayName": "El Salvador"
+  },
+  {
+   "kickoff": "2026-09-29T00:00:00Z",
+   "date": "2026-09-28",
+   "home": "LCA",
+   "away": "BER",
+   "homeScore": 5,
+   "awayScore": 2,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Gros Islet",
    "source": "FIFA",
+   "counted": true,
+   "importance": 15,
+   "homeDelta": 7.6,
+   "awayDelta": -7.6,
    "homeName": "St Lucia",
    "awayName": "Bermuda"
   },
@@ -2774,15 +2795,19 @@
    "date": "2026-09-28",
    "home": "SKN",
    "away": "GRN",
-   "homeScore": 2,
+   "homeScore": 3,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Monkey Hill",
    "source": "FIFA",
+   "counted": true,
+   "importance": 15,
+   "homeDelta": 6.61,
+   "awayDelta": -6.61,
    "homeName": "St Kitts and Nevis",
    "awayName": "Grenada"
   },
@@ -2795,11 +2820,15 @@
    "awayScore": 1,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Kingston",
    "source": "FIFA",
+   "counted": true,
+   "importance": 15,
+   "homeDelta": -7.44,
+   "awayDelta": 7.44,
    "homeName": "Jamaica",
    "awayName": "Honduras"
   },
@@ -8914,17 +8943,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.545,
+   "expectedHome": 0.552,
    "prediction": {
     "home": {
-     "win": 6.82,
-     "draw": -0.68,
-     "loss": -8.18
+     "win": 6.73,
+     "draw": -0.77,
+     "loss": -8.27
     },
     "away": {
-     "loss": -6.82,
-     "draw": 0.68,
-     "win": 8.18
+     "loss": -6.73,
+     "draw": 0.77,
+     "win": 8.27
     }
    },
    "homeName": "St Kitts and Nevis",
@@ -9042,17 +9071,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.446,
+   "expectedHome": 0.453,
    "prediction": {
     "home": {
-     "win": 8.31,
-     "draw": 0.81,
-     "loss": -6.69
+     "win": 8.2,
+     "draw": 0.7,
+     "loss": -6.8
     },
     "away": {
-     "loss": -8.31,
-     "draw": -0.81,
-     "win": 6.69
+     "loss": -8.2,
+     "draw": -0.7,
+     "win": 6.8
     }
    },
    "homeName": "Barbados",
@@ -9106,17 +9135,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.37,
+   "expectedHome": 0.377,
    "prediction": {
     "home": {
-     "win": 9.45,
-     "draw": 1.95,
-     "loss": -5.55
+     "win": 9.34,
+     "draw": 1.84,
+     "loss": -5.66
     },
     "away": {
-     "loss": -9.45,
-     "draw": -1.95,
-     "win": 5.55
+     "loss": -9.34,
+     "draw": -1.84,
+     "win": 5.66
     }
    },
    "homeName": "El Salvador",
@@ -10610,17 +10639,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.455,
+   "expectedHome": 0.448,
    "prediction": {
     "home": {
-     "win": 8.18,
-     "draw": 0.68,
-     "loss": -6.82
+     "win": 8.27,
+     "draw": 0.77,
+     "loss": -6.73
     },
     "away": {
-     "loss": -8.18,
-     "draw": -0.68,
-     "win": 6.82
+     "loss": -8.27,
+     "draw": -0.77,
+     "win": 6.73
     }
    },
    "homeName": "Cuba",
@@ -10674,17 +10703,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.554,
+   "expectedHome": 0.547,
    "prediction": {
     "home": {
-     "win": 6.69,
-     "draw": -0.81,
-     "loss": -8.31
+     "win": 6.8,
+     "draw": -0.7,
+     "loss": -8.2
     },
     "away": {
-     "loss": -6.69,
-     "draw": 0.81,
-     "win": 8.31
+     "loss": -6.8,
+     "draw": 0.7,
+     "win": 8.2
     }
    },
    "homeName": "Bermuda",
@@ -10706,17 +10735,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.504,
+   "expectedHome": 0.519,
    "prediction": {
     "home": {
-     "win": 7.44,
-     "draw": -0.06,
-     "loss": -7.56
+     "win": 7.22,
+     "draw": -0.28,
+     "loss": -7.78
     },
     "away": {
-     "loss": -7.44,
-     "draw": 0.06,
-     "win": 7.56
+     "loss": -7.22,
+     "draw": 0.28,
+     "win": 7.78
     }
    },
    "homeName": "Honduras",
@@ -17994,7 +18023,7 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 21,
+   "results": 22,
    "fixtures": 29
   },
   {
