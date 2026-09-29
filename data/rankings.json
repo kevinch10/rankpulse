@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T21:51:43+00:00",
+ "generatedAt": "2026-09-29T22:04:38+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2958,20 +2958,6 @@
    "rankChange": 0
   },
   {
-   "id": "43895",
-   "code": "BAH",
-   "name": "Bahamas",
-   "confed": "CONCACAF",
-   "officialRank": 207,
-   "officialPoints": 786.82,
-   "previousRank": 207,
-   "aliases": [],
-   "liveRank": 207,
-   "livePoints": 786.82,
-   "pointsChange": 0.0,
-   "rankChange": 0
-  },
-  {
    "id": "1881967",
    "code": "VIR",
    "name": "US Virgin Islands",
@@ -2983,10 +2969,24 @@
     "USVI",
     "United States Virgin Islands"
    ],
+   "liveRank": 207,
+   "livePoints": 787.36,
+   "pointsChange": 7.6,
+   "rankChange": 1
+  },
+  {
+   "id": "43895",
+   "code": "BAH",
+   "name": "Bahamas",
+   "confed": "CONCACAF",
+   "officialRank": 207,
+   "officialPoints": 786.82,
+   "previousRank": 207,
+   "aliases": [],
    "liveRank": 208,
-   "livePoints": 779.76,
-   "pointsChange": 0.0,
-   "rankChange": 0
+   "livePoints": 779.22,
+   "pointsChange": -7.6,
+   "rankChange": -1
   },
   {
    "id": "20004",
@@ -3083,26 +3083,15 @@
    "awayScore": 1,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "Christiansted",
    "source": "FIFA",
+   "counted": true,
    "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.493,
-   "prediction": {
-    "home": {
-     "win": 7.6,
-     "draw": 0.1,
-     "loss": -7.4
-    },
-    "away": {
-     "loss": -7.6,
-     "draw": -0.1,
-     "win": 7.4
-    }
-   },
+   "homeDelta": 7.6,
+   "awayDelta": -7.6,
    "homeName": "US Virgin Islands",
    "awayName": "Bahamas",
    "fifaId": "dngq70mnnfgsvn3hto0naujv8"
@@ -10197,17 +10186,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.507,
+   "expectedHome": 0.492,
    "prediction": {
     "home": {
-     "win": 7.4,
-     "draw": -0.1,
-     "loss": -7.6
+     "win": 7.62,
+     "draw": 0.12,
+     "loss": -7.38
     },
     "away": {
-     "loss": -7.4,
-     "draw": 0.1,
-     "win": 7.6
+     "loss": -7.62,
+     "draw": -0.12,
+     "win": 7.38
     }
    },
    "homeName": "Bahamas",
