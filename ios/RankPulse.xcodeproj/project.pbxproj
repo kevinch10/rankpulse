@@ -17,8 +17,10 @@
 		381FC7975528FA0E1BDB0A66 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4058DB0AB446C40006957 /* Favourites.swift */; };
 		5A0349400AE7BD5F09ACB1F4 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356952FEC2A433C430F44104 /* SharedStore.swift */; };
 		6304B4E220AED458C2E68C6B /* RankingsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F22D605107A78210D0F1A /* RankingsWidget.swift */; };
+		68A9FA0D3AAE689E6DB33F62 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9841737CAE45C037A6B8B67 /* Formula.swift */; };
 		70EC6FE734E0AB9CA1E11CEA /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356952FEC2A433C430F44104 /* SharedStore.swift */; };
 		779514CE51EA6C9FC15C0736 /* MatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0490BDB7B18FDF7442E6B6D /* MatchDetailView.swift */; };
+		78402492A9F241DF465E77C1 /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9841737CAE45C037A6B8B67 /* Formula.swift */; };
 		7A9180F4062D2A930C510A59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A2461C462100B291671E54 /* Assets.xcassets */; };
 		7F6E6DCD3AC260EF50B01379 /* RankingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9BA5A408D5AF4EEFF2AAA7 /* RankingsView.swift */; };
 		82C53ECDEE0123250A9B6D69 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F67283C3AFE45A74BF61 /* Config.swift */; };
@@ -29,9 +31,11 @@
 		9ED78932FED6E4433A5F7355 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DBE05DE3446D0F7516D61C /* Formatting.swift */; };
 		9F3501EBDDB0170A0A3150E2 /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2202C25CB70F899F75D62EC2 /* Ads.swift */; };
 		B47D06BCC19A9B9A1F60A829 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DBE05DE3446D0F7516D61C /* Formatting.swift */; };
+		B50A583215F8311CA8B25B70 /* FantasyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5E2FF02DA2300CD56B753 /* FantasyView.swift */; };
 		BE34736BB9EC35169244363A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA4B1A33B74C515208BF29 /* Models.swift */; };
 		BF7B4D0A273BE3AD8E1756D9 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249FE5F05EBD3E467FDC2A /* MatchesView.swift */; };
 		D26B9BA14B42F7491A575532 /* rankings.json in Resources */ = {isa = PBXBuildFile; fileRef = DE498D50DD52E5A1B65924A6 /* rankings.json */; };
+		D6E1BD915BA85967046FF258 /* Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5454119CC9689AB420191CE /* Premium.swift */; };
 		EBD2C886BADA1087D0F1D29C /* LiveScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F9B57D0B4BB38EF1A30CE /* LiveScores.swift */; };
 		F4058C7A6C5802302A0B72FD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F67283C3AFE45A74BF61 /* Config.swift */; };
 		FBDE8D677B518DA2E9E54948 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9CB84E47F69D235BB0F937 /* HelpView.swift */; };
@@ -75,9 +79,12 @@
 		AA9CB84E47F69D235BB0F937 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		AF071C92D06E36A7F738C795 /* RankingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingStore.swift; sourceTree = "<group>"; };
 		B0490BDB7B18FDF7442E6B6D /* MatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailView.swift; sourceTree = "<group>"; };
+		B9841737CAE45C037A6B8B67 /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
 		BF4F22D605107A78210D0F1A /* RankingsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsWidget.swift; sourceTree = "<group>"; };
 		C5DBE05DE3446D0F7516D61C /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
+		CEC5E2FF02DA2300CD56B753 /* FantasyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FantasyView.swift; sourceTree = "<group>"; };
 		D115D71B9CC0208B8AA214BD /* RankPulse.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RankPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5454119CC9689AB420191CE /* Premium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premium.swift; sourceTree = "<group>"; };
 		D7487C5049A792124DA00058 /* RankPulseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPulseApp.swift; sourceTree = "<group>"; };
 		DE498D50DD52E5A1B65924A6 /* rankings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rankings.json; sourceTree = "<group>"; };
 		DF1530799C2FE2E31BC47B20 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -113,6 +120,7 @@
 			children = (
 				85C4058DB0AB446C40006957 /* Favourites.swift */,
 				556F9B57D0B4BB38EF1A30CE /* LiveScores.swift */,
+				D5454119CC9689AB420191CE /* Premium.swift */,
 				AF071C92D06E36A7F738C795 /* RankingStore.swift */,
 			);
 			path = Models;
@@ -123,6 +131,7 @@
 			children = (
 				66F0F67283C3AFE45A74BF61 /* Config.swift */,
 				C5DBE05DE3446D0F7516D61C /* Formatting.swift */,
+				B9841737CAE45C037A6B8B67 /* Formula.swift */,
 				13EA4B1A33B74C515208BF29 /* Models.swift */,
 				356952FEC2A433C430F44104 /* SharedStore.swift */,
 				DF1530799C2FE2E31BC47B20 /* Theme.swift */,
@@ -164,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				FF710368159CE700B73F2C88 /* Components.swift */,
+				CEC5E2FF02DA2300CD56B753 /* FantasyView.swift */,
 				AA9CB84E47F69D235BB0F937 /* HelpView.swift */,
 				B0490BDB7B18FDF7442E6B6D /* MatchDetailView.swift */,
 				F3249FE5F05EBD3E467FDC2A /* MatchesView.swift */,
@@ -296,6 +306,7 @@
 			files = (
 				82C53ECDEE0123250A9B6D69 /* Config.swift in Sources */,
 				9ED78932FED6E4433A5F7355 /* Formatting.swift in Sources */,
+				68A9FA0D3AAE689E6DB33F62 /* Formula.swift in Sources */,
 				BE34736BB9EC35169244363A /* Models.swift in Sources */,
 				6304B4E220AED458C2E68C6B /* RankingsWidget.swift in Sources */,
 				70EC6FE734E0AB9CA1E11CEA /* SharedStore.swift in Sources */,
@@ -310,14 +321,17 @@
 				9F3501EBDDB0170A0A3150E2 /* Ads.swift in Sources */,
 				11A7EB911C52A9A9AA903E67 /* Components.swift in Sources */,
 				F4058C7A6C5802302A0B72FD /* Config.swift in Sources */,
+				B50A583215F8311CA8B25B70 /* FantasyView.swift in Sources */,
 				381FC7975528FA0E1BDB0A66 /* Favourites.swift in Sources */,
 				B47D06BCC19A9B9A1F60A829 /* Formatting.swift in Sources */,
+				78402492A9F241DF465E77C1 /* Formula.swift in Sources */,
 				FBDE8D677B518DA2E9E54948 /* HelpView.swift in Sources */,
 				EBD2C886BADA1087D0F1D29C /* LiveScores.swift in Sources */,
 				779514CE51EA6C9FC15C0736 /* MatchDetailView.swift in Sources */,
 				BF7B4D0A273BE3AD8E1756D9 /* MatchesView.swift in Sources */,
 				9511284D27F2DB5125579D22 /* Models.swift in Sources */,
 				07B036CA9B6705E385E2465C /* NotificationSettingsView.swift in Sources */,
+				D6E1BD915BA85967046FF258 /* Premium.swift in Sources */,
 				375A3C5554C039705437B725 /* RankPulseApp.swift in Sources */,
 				36F250173FA302BED0592F8B /* RankingStore.swift in Sources */,
 				7F6E6DCD3AC260EF50B01379 /* RankingsView.swift in Sources */,

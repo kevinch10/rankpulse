@@ -37,6 +37,7 @@
       <button role="tab" data-view="rankings" aria-selected="true">Rankings</button>
       <button role="tab" data-view="results" aria-selected="false">Results <span class="count" id="results-count"></span></button>
       <button role="tab" data-view="fixtures" aria-selected="false">Fixtures <span class="count" id="fixtures-count"></span></button>
+      <button role="tab" data-view="fantasy" aria-selected="false">Fantasy</button>
     </nav>
 
     <section class="card">
@@ -84,6 +85,19 @@
       </div>
       <div id="view-results" hidden></div>
       <div id="view-fixtures" hidden></div>
+      <div id="view-fantasy" hidden>
+        <h2 class="fantasy-title">Fantasy match</h2>
+        <p class="fantasy-intro">Pair up any two national teams, pick a multiplier (how much the match counts: friendlies are ×10, World Cup knockouts ×60), and see who would gain or lose points. The numbers use both teams' live points and FIFA's formula.</p>
+        <div class="fantasy-form">
+          <label>First team <select id="fa"></select></label>
+          <label>Second team <select id="fb"></select></label>
+          <label>Multiplier <select id="fmult"></select></label>
+          <label class="check"><input type="checkbox" id="fko"> Knockout (a draw goes to penalties; the loser keeps its points)</label>
+          <button type="button" id="fplay">Play fantasy match</button>
+        </div>
+        <p class="fantasy-quota" id="fquota"></p>
+        <div id="fresult"></div>
+      </div>
       <p class="empty" id="empty" hidden>Nothing matches these filters.</p>
     </section>
   </main>

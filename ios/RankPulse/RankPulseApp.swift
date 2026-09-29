@@ -28,6 +28,7 @@ struct RankPulseApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @State private var store = RankingStore()
     @State private var ads = AdsManager()
+    @State private var premium = PremiumStore()
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
@@ -35,6 +36,7 @@ struct RankPulseApp: App {
             ContentView()
                 .environment(store)
                 .environment(ads)
+                .environment(premium)
                 .task {
                     await store.load()
                     await ads.start()
@@ -63,6 +65,7 @@ struct ContentView: View {
             Tab("Rankings", systemImage: "list.number", value: "rankings") { RankingsView() }
             Tab("Results", systemImage: "sportscourt", value: "results") { MatchesView(kind: .results) }
             Tab("Fixtures", systemImage: "calendar", value: "fixtures") { MatchesView(kind: .fixtures) }
+            Tab("Fantasy", systemImage: "wand.and.stars", value: "fantasy") { FantasyView() }
         }
         .tint(Theme.magenta)
         .onOpenURL { url in

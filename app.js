@@ -8,7 +8,7 @@ const RANK_PAGE = 50;  // teams per page in Rankings
 const FIFA_CALENDAR = 'https://api.fifa.com/api/v3/calendar/matches';
 const saved = loadPrefs();
 const state = { data: null, history: null, historyFrom: '', historyFailed: false,
-  view: ['rankings', 'results', 'fixtures'].includes(location.hash.slice(1)) ? location.hash.slice(1) : (saved.view || 'rankings'),
+  view: ['rankings', 'results', 'fixtures', 'fantasy'].includes(location.hash.slice(1)) ? location.hash.slice(1) : (saved.view || 'rankings'),
   period: saved.period || 7, limit: PAGE, confed: saved.confed || 'All',
   competition: '', compQuery: '', compActiveOnly: false, date: '', query: '', open: null, favs: loadFavs(),
   rankPage: 0, base: null, live: new Map(), liveCheckedAt: null };
@@ -402,6 +402,96 @@ function renderMatchList(el, list, fixture) {
   return all.length;
 }
 
+// ---------- fantasy matches ----------
+
+const MULTIPLIERS = Array.from({ length: 12 }, (_, i) => (i + 1) * 5);  // 5, 10 … 60 (FIFA's highest)
+const fantasyToday = () => ymd(new Date());
+const pairKey = (a, b) => [a, b].sort().join('-');
+
+// Free: one pairing per day (its match type can be changed freely). Kept in this browser.
+function fantasyUsed() {
+  try {
+    const q = JSON.parse(localStorage.getItem('fantasy') || '{}');
+    return q.day === fantasyToday() ? q.pair : null;
+  } catch { return null; }
+}
+
+function recordFantasy(pair) {
+  try { localStorage.setItem('fantasy', JSON.stringify({ day: fantasyToday(), pair })); } catch {}
+}
+
+function setupFantasy() {
+  const teams = [...state.data.teams].sort((a, b) => a.name.localeCompare(b.name));
+  const opts = sel => `<option value="">Choose a team</option>` +
+    teams.map(t => `<option value="${t.code}" ${t.code === sel ? 'selected' : ''}>${esc(t.name)} (#${t.liveRank})</option>`).join('');
+  const firstFav = [...state.favs][0] || '';
+  $('fa').innerHTML = opts(firstFav);
+  $('fb').innerHTML = opts('');
+  $('fmult').innerHTML = MULTIPLIERS.map(m => `<option value="${m}" ${m === 10 ? 'selected' : ''}>×${m}</option>`).join('');
+  const changed = () => { state.fantasyShown = null; renderFantasy(); };
+  $('fa').onchange = changed;
+  $('fb').onchange = changed;
+  $('fmult').onchange = () => renderFantasy();
+  $('fko').onchange = () => renderFantasy();
+  $('fplay').onclick = () => {
+    const a = $('fa').value, b = $('fb').value;
+    if (!a || !b) return;
+    const pair = pairKey(a, b), used = fantasyUsed();
+    if (used && used !== pair) return;
+    recordFantasy(pair);
+    state.fantasyShown = pair;
+    renderFantasy();
+  };
+}
+
+function renderFantasy() {
+  const a = $('fa').value, b = $('fb').value;
+  // Error prevention: a team can't play itself.
+  [...$('fb').options].forEach(o => { o.disabled = !!o.value && o.value === a; });
+  [...$('fa').options].forEach(o => { o.disabled = !!o.value && o.value === b; });
+  const pair = a && b ? pairKey(a, b) : null;
+  const used = fantasyUsed();
+  const blocked = pair && used && used !== pair;
+  const btn = $('fplay');
+  btn.disabled = !pair || blocked || pair === state.fantasyShown;
+  btn.textContent = pair && pair === state.fantasyShown ? 'Showing this match' : blocked ? 'Free match used today' : 'Play fantasy match';
+  const names = key => key.split('-').map(c => state.data.teams.find(t => t.code === c)?.name || c).join(' v ');
+  $('fquota').innerHTML = used
+    ? `Today's free match: <b>${esc(names(used))}</b>. Change its multiplier as often as you like; a new pairing is available tomorrow. Unlimited fantasy matches come with <b>Premium in the iPhone app</b>.`
+    : '1 free fantasy match per day. Unlimited fantasy matches come with Premium in the iPhone app.';
+
+  if (!pair || pair !== state.fantasyShown) { $('fresult').innerHTML = ''; return; }
+  const weight = Number($('fmult').value), knockout = $('fko').checked;
+  const A = state.data.teams.find(t => t.code === a), B = state.data.teams.find(t => t.code === b);
+  const outcomes = [[`${A.name} win`, 1, 0]];
+  if (knockout) outcomes.push([`${A.name} win on penalties`, 0.75, 0.5], [`${B.name} win on penalties`, 0.5, 0.75]);
+  else outcomes.push(['Draw', 0.5, 0.5]);
+  outcomes.push([`${B.name} win`, 0, 1]);
+
+  const rankAfter = (team, pts, other, otherPts) => 1 + state.data.teams.filter(t => {
+    if (t.code === team.code) return false;
+    const p = t.code === other.code ? otherPts : t.livePoints;
+    return p > pts || (p === pts && t.officialRank < team.officialRank);
+  }).length;
+
+  const row = (t, d, rank) => {
+    const move = t.liveRank - rank;
+    return `<div class="f-row">${flag(t.code)}<span class="f-name">${esc(t.name)}</span>
+      <span class="f-delta ${tone(d)}">${signed(d)}</span>
+      <span class="f-rank">#${t.liveRank} → #${rank} ${move ? moveBadge(move) : ''}</span></div>`;
+  };
+  $('fresult').innerHTML = (knockout ? '<p class="fantasy-note">Knockout: a draw goes to penalties, and the losing team keeps its points.</p>' : '') +
+    outcomes.map(([label, wa, wb]) => {
+      const eh = expected(A.livePoints, B.livePoints);
+      let da = weight * (wa - eh), db = weight * (wb - (1 - eh));
+      if (knockout) { da = Math.max(da, 0); db = Math.max(db, 0); }
+      da = round2(da); db = round2(db);
+      const pa = A.livePoints + da, pb = B.livePoints + db;
+      return `<section class="f-outcome"><h3>${esc(label)}</h3>
+        ${row(A, da, rankAfter(A, pa, B, pb))}${row(B, db, rankAfter(B, pb, A, pa))}</section>`;
+    }).join('');
+}
+
 // ---------- live scores (straight from FIFA while matches are on) ----------
 
 const FINISHED = 0;
@@ -522,7 +612,16 @@ function nearestMatchDay(day) {
 function render() {
   savePrefs();
   renderControls();
-  for (const v of ['rankings', 'results', 'fixtures']) $(`view-${v}`).hidden = v !== state.view;
+  for (const v of ['rankings', 'results', 'fixtures', 'fantasy']) $(`view-${v}`).hidden = v !== state.view;
+  document.querySelector('.controls').hidden = state.view === 'fantasy';
+  if (state.view === 'fantasy') {
+    if (!state.fantasyReady) { setupFantasy(); state.fantasyReady = true; }
+    renderFantasy();
+    $('empty').hidden = true;
+    $('pager').hidden = true;
+    return;
+  }
+  if (state.view !== 'rankings') $('pager').hidden = true;
   const n = state.view === 'rankings' ? renderRankings()
     : state.view === 'results' ? renderMatchList($('view-results'), allResults(), false)
     : renderMatchList($('view-fixtures'), state.data.fixtures, true);

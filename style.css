@@ -329,6 +329,33 @@ kbd { font: 700 12px 'JetBrains Mono', monospace; background: var(--chip); paddi
   .meta { font-size: 11px; }
 }
 
+/* ---------- fantasy ---------- */
+
+.controls[hidden] { display: none; }
+.fantasy-title { font: 900 22px Archivo, Inter, sans-serif; font-stretch: 112%; margin: 4px 0 4px; text-transform: uppercase; }
+.fantasy-intro, .fantasy-quota, .fantasy-note { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+.fantasy-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: end; }
+.fantasy-form label { display: flex; flex-direction: column; gap: 4px; font: 700 12px Inter, sans-serif; color: var(--muted); }
+.fantasy-form .wide { grid-column: 1 / -1; }
+.fantasy-form .check { flex-direction: row; align-items: center; gap: 8px; font-weight: 600; color: var(--ink); align-self: center; }
+.fantasy-form select {
+  padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg);
+  color: var(--ink); font: 500 14px Inter, sans-serif;
+}
+#fplay {
+  grid-column: 1 / -1; border: 0; border-radius: 999px; padding: 12px; cursor: pointer;
+  background: var(--magenta); color: #fff; font: 800 15px Inter, sans-serif;
+}
+#fplay:disabled { background: var(--chip); color: var(--muted); cursor: default; }
+.fantasy-quota { margin-top: 12px; }
+.f-outcome { background: var(--bg); border-radius: 14px; padding: 10px 14px; margin-top: 10px; }
+.f-outcome h3 { font: 800 13px Inter, sans-serif; margin: 0 0 6px; }
+.f-row { display: grid; grid-template-columns: auto 1fr auto auto; gap: 10px; align-items: center; padding: 4px 0; }
+.f-name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.f-delta { font: 700 14px 'JetBrains Mono', monospace; }
+.f-rank { color: var(--muted); font-size: 12px; min-width: 110px; text-align: right; }
+@media (max-width: 560px) { .fantasy-form { grid-template-columns: 1fr; } .f-rank { min-width: 0; } }
+
 .day + .day { margin-top: 22px; }
 .day h3 {
   display: flex; align-items: baseline; gap: 8px; margin: 0 0 8px;

@@ -97,10 +97,7 @@ enum LiveScores {
             var wh = 0.5, wa = 0.5
             if hs != aws { wh = hs > aws ? 1 : 0; wa = 1 - wh }
             else if let hp = m.homePens, let ap = m.awayPens { (wh, wa) = hp > ap ? (0.75, 0.5) : (0.5, 0.75) }
-            let eh = 1 / (pow(10, -(ph - pa) / 600) + 1)
-            var dh = Double(weight) * (wh - eh), da = Double(weight) * (wa - (1 - eh))
-            if m.knockout == true { dh = max(dh, 0); da = max(da, 0) }
-            dh = round2(dh); da = round2(da)
+            let (dh, da) = Formula.change(home: ph, away: pa, wHome: wh, wAway: wa, weight: weight, knockout: m.knockout == true)
             points[m.home] = ph + dh
             points[m.away] = pa + da
             results[i].counted = true

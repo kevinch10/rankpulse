@@ -69,3 +69,13 @@ targets:
         INFOPLIST_KEY_CFBundleDisplayName: "Football Rankings"
         TARGETED_DEVICE_FAMILY: "1"
         SKIP_INSTALL: YES
+schemes:
+  RankPulse:
+    build:
+      targets:
+        RankPulse: all
+    run:
+      config: Debug
+      storeKitConfiguration: Premium.storekit
+    archive:
+      config: Release
