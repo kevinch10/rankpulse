@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T02:20:20+00:00",
+ "generatedAt": "2026-09-29T04:22:07+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1269,19 +1269,6 @@
    "rankChange": 2
   },
   {
-   "id": "43937",
-   "code": "BLR",
-   "name": "Belarus",
-   "confed": "UEFA",
-   "officialRank": 96,
-   "officialPoints": 1242.88,
-   "previousRank": 96,
-   "liveRank": 98,
-   "livePoints": 1237.26,
-   "pointsChange": -5.62,
-   "rankChange": -2
-  },
-  {
    "id": "43906",
    "code": "GUA",
    "name": "Guatemala",
@@ -1289,10 +1276,23 @@
    "officialRank": 97,
    "officialPoints": 1238.74,
    "previousRank": 97,
+   "liveRank": 98,
+   "livePoints": 1240.32,
+   "pointsChange": 1.58,
+   "rankChange": -1
+  },
+  {
+   "id": "43937",
+   "code": "BLR",
+   "name": "Belarus",
+   "confed": "UEFA",
+   "officialRank": 96,
+   "officialPoints": 1242.88,
+   "previousRank": 96,
    "liveRank": 99,
-   "livePoints": 1232.92,
-   "pointsChange": -5.82,
-   "rankChange": -2
+   "livePoints": 1237.26,
+   "pointsChange": -5.62,
+   "rankChange": -3
   },
   {
    "id": "43873",
@@ -1308,19 +1308,6 @@
    "rankChange": 3
   },
   {
-   "id": "43904",
-   "code": "SLV",
-   "name": "El Salvador",
-   "confed": "CONCACAF",
-   "officialRank": 100,
-   "officialPoints": 1225.34,
-   "previousRank": 100,
-   "liveRank": 101,
-   "livePoints": 1225.34,
-   "pointsChange": 0.0,
-   "rankChange": -1
-  },
-  {
    "id": "44003",
    "code": "TJK",
    "name": "Tajikistan",
@@ -1328,10 +1315,23 @@
    "officialRank": 101,
    "officialPoints": 1224.19,
    "previousRank": 101,
-   "liveRank": 102,
+   "liveRank": 101,
    "livePoints": 1218.31,
    "pointsChange": -5.88,
-   "rankChange": -1
+   "rankChange": 0
+  },
+  {
+   "id": "43904",
+   "code": "SLV",
+   "name": "El Salvador",
+   "confed": "CONCACAF",
+   "officialRank": 100,
+   "officialPoints": 1225.34,
+   "previousRank": 100,
+   "liveRank": 102,
+   "livePoints": 1217.95,
+   "pointsChange": -7.39,
+   "rankChange": -2
   },
   {
    "id": "43920",
@@ -2757,15 +2757,19 @@
    "date": "2026-09-28",
    "home": "GUA",
    "away": "SLV",
-   "homeScore": 1,
+   "homeScore": 6,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Guatemala City",
    "source": "FIFA",
+   "counted": true,
+   "importance": 15,
+   "homeDelta": 7.39,
+   "awayDelta": -7.39,
    "homeName": "Guatemala",
    "awayName": "El Salvador"
   },
@@ -8975,17 +8979,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.415,
+   "expectedHome": 0.408,
    "prediction": {
     "home": {
-     "win": 8.78,
-     "draw": 1.28,
-     "loss": -6.22
+     "win": 8.88,
+     "draw": 1.38,
+     "loss": -6.12
     },
     "away": {
-     "loss": -8.78,
-     "draw": -1.28,
-     "win": 6.22
+     "loss": -8.88,
+     "draw": -1.38,
+     "win": 6.12
     }
    },
    "homeName": "Suriname",
@@ -9135,17 +9139,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.377,
+   "expectedHome": 0.37,
    "prediction": {
     "home": {
-     "win": 9.34,
-     "draw": 1.84,
-     "loss": -5.66
+     "win": 9.44,
+     "draw": 1.94,
+     "loss": -5.56
     },
     "away": {
-     "loss": -9.34,
-     "draw": -1.84,
-     "win": 5.66
+     "loss": -9.44,
+     "draw": -1.94,
+     "win": 5.56
     }
    },
    "homeName": "El Salvador",
@@ -10671,17 +10675,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.585,
+   "expectedHome": 0.592,
    "prediction": {
     "home": {
-     "win": 6.22,
-     "draw": -1.28,
-     "loss": -8.78
+     "win": 6.12,
+     "draw": -1.38,
+     "loss": -8.88
     },
     "away": {
-     "loss": -6.22,
-     "draw": 1.28,
-     "win": 8.78
+     "loss": -6.12,
+     "draw": 1.38,
+     "win": 8.88
     }
    },
    "homeName": "Guatemala",
