@@ -50,6 +50,33 @@ def text(localized):
     return (localized or [{}])[0].get("Description", "").strip()
 
 
+def city_name(raw):
+    """FIFA sends some cities in capitals ("NORTH SOUND"); show them normally."""
+    return raw.title() if raw.isupper() else raw
+
+
+# Everyday names people search for, beyond FIFA's official spelling.
+EXTRA_ALIASES = {
+    "Korea Republic": ["South Korea", "Korea"], "DPR Korea": ["North Korea"],
+    "USA": ["United States", "America", "US", "USMNT"], "IR Iran": ["Iran"],
+    "Türkiye": ["Turkey", "Turkiye"], "Côte d'Ivoire": ["Ivory Coast", "Cote d'Ivoire"],
+    "China PR": ["China"], "Chinese Taipei": ["Taiwan"], "Czechia": ["Czech Republic"],
+    "Congo DR": ["DR Congo", "Democratic Republic of the Congo"], "Congo": ["Congo-Brazzaville"],
+    "Cabo Verde": ["Cape Verde"], "Netherlands": ["Holland"], "United Arab Emirates": ["UAE"],
+    "Kyrgyz Republic": ["Kyrgyzstan"], "Brunei Darussalam": ["Brunei"], "Hong Kong, China": ["Hong Kong"],
+    "The Gambia": ["Gambia"], "Curaçao": ["Curacao"], "São Tomé and Príncipe": ["Sao Tome"],
+    "Republic of Ireland": ["Ireland", "Eire"], "Bosnia and Herzegovina": ["Bosnia"],
+    "North Macedonia": ["Macedonia"], "Eswatini": ["Swaziland"], "Timor-Leste": ["East Timor"],
+    "St Kitts and Nevis": ["Saint Kitts"], "St Lucia": ["Saint Lucia"],
+    "St Vincent and the Grenadines": ["Saint Vincent"], "US Virgin Islands": ["USVI"],
+}
+
+
+def team_aliases(name):
+    community = [k for k, v in sources.COMMUNITY_NAMES.items() if v == name]
+    return sorted(set(community + EXTRA_ALIASES.get(name, [])) - {name})
+
+
 def load_windows():
     try:
         return [tuple(w) for w in json.loads(WINDOWS.read_text(encoding="utf-8"))["windows"]]
@@ -107,6 +134,7 @@ def load_official():
             "officialRank": r["Rank"],
             "officialPoints": r["DecimalTotalPoints"],
             "previousRank": r["PrevRank"],
+            "aliases": team_aliases(text(r["TeamName"])),
         }
     meta = {"pubDate": rows[0]["PubDate"], "nextPubDate": rows[0].get("NextPubDate"),
             "releaseId": rows[0].get("IdSchedule")}
@@ -163,7 +191,7 @@ def load_matches(teams, since, until):
             "status": m["MatchStatus"],
             "competition": competition,
             "stage": stage,
-            "city": text((m.get("Stadium") or {}).get("CityName")),
+            "city": city_name(text((m.get("Stadium") or {}).get("CityName"))),
             "source": "FIFA",
         }
     return list(matches.values())

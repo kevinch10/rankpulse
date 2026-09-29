@@ -24,7 +24,7 @@
       <div class="brand">
         <h1><span class="wm-world">World</span> <span class="wm-rank">Football Rankings</span></h1>
       </div>
-      <p class="tagline">Updated rankings after every international match</p>
+      <p class="tagline">Updated rankings after every international match · <button class="help-link" id="help-open" type="button">How it works</button></p>
       <dl class="meta" id="meta"></dl>
     </div>
     <div class="stripe" aria-hidden="true"></div>
@@ -41,7 +41,8 @@
 
     <section class="card">
       <div class="controls">
-        <input id="search" type="search" placeholder="Search team…" aria-label="Search team">
+        <input id="search" type="search" placeholder="Search team, e.g. Brazil or South Korea" aria-label="Search team" title="Tip: press / to search">
+        <button class="clear-filters" id="clear-filters" type="button" hidden>Clear filters</button>
         <div class="tabs" id="confeds" aria-label="Confederation"></div>
         <div class="combo" id="competition" hidden>
           <button type="button" class="combo-btn" id="comp-btn" aria-haspopup="listbox" aria-expanded="false">
@@ -77,7 +78,7 @@
               <th class="num">+/-</th>
             </tr>
           </thead>
-          <tbody id="rows"></tbody>
+          <tbody id="rows"><tr><td colspan="5" class="loading-row"><span class="spinner" aria-hidden="true"></span> Loading the latest rankings…</td></tr></tbody>
         </table>
       </div>
       <div id="view-results" hidden></div>
@@ -85,6 +86,36 @@
       <p class="empty" id="empty" hidden>Nothing matches these filters.</p>
     </section>
   </main>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <dialog id="help" aria-labelledby="help-title">
+    <form method="dialog"><button class="help-close" aria-label="Close">✕</button></form>
+    <h2 id="help-title">How it works</h2>
+    <h3>Official vs live</h3>
+    <p>FIFA publishes the official men's world ranking a few times a year. Between releases, this site takes the latest official points and adds the result of every international match played since, using FIFA's own formula. That's the <b>live</b> rank. The <b>official</b> rank is the one FIFA last published.</p>
+    <h3>How points change</h3>
+    <p>After each match, each team gains or loses points depending on the result, the strength of the opponent, and how much the match counts (its <b>weight</b>). Beating a stronger team earns more; losing to a weaker one costs more. Both teams' changes always add up to zero, except in knockout rounds of a final tournament, where the losing team keeps its points.</p>
+    <h3 id="help-weights">Match weights</h3>
+    <table class="help-table">
+      <tr><td>Friendly outside an international window</td><td>5</td></tr>
+      <tr><td>Friendly in a window, or a regional cup</td><td>10</td></tr>
+      <tr><td>Nations League (league phase and play-offs)</td><td>15</td></tr>
+      <tr><td>Nations League finals · World Cup and continental qualifiers</td><td>25</td></tr>
+      <tr><td>Continental finals (EURO, AFCON, Asian Cup…): before / from quarter-finals</td><td>35 / 40</td></tr>
+      <tr><td>World Cup finals: before / from quarter-finals</td><td>50 / 60</td></tr>
+    </table>
+    <h3>Points at stake</h3>
+    <p>For upcoming matches, the numbers show what each team would gain or lose for a win, draw or loss, based on today's live points.</p>
+    <h3>Where the data comes from</h3>
+    <p>Rankings, results and fixtures come from FIFA's public data, updated about every hour. A few competitions FIFA's feed doesn't carry (such as AFCON qualifiers) come from Wikipedia and a community results dataset; those matches are labelled. Rarely, FIFA changes a result after the match (a forfeit, for example). The live rank can then differ slightly from the next official ranking.</p>
+    <h3>Tips</h3>
+    <ul>
+      <li>Search by everyday names: "South Korea", "USA", "Ivory Coast" all work.</li>
+      <li>Tap ☆ to follow a team, then use the ★ Favourites filter.</li>
+      <li>Press <kbd>/</kbd> to jump to search. Your tab and filters are remembered on this device.</li>
+    </ul>
+  </dialog>
 
   <footer class="wrap">
     <p><strong>World Football Rankings</strong> is an independent project and is not affiliated with, endorsed by or connected to FIFA.

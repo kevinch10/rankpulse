@@ -258,6 +258,65 @@ tr[data-top="3"] .rank b { background: linear-gradient(135deg, #f3b37a, #c8702e)
 
 /* ---------- results & fixtures ---------- */
 
+/* ---------- status, help, errors ---------- */
+
+.meta div.stale { border-color: var(--yellow); }
+.meta div.stale dd { color: var(--yellow); }
+.help-link, .linkish {
+  border: 0; background: none; padding: 0; font: inherit; color: inherit; cursor: pointer;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.linkish { color: var(--magenta); font-weight: 700; }
+.loading-row, .error-row { text-align: center; padding: 32px 10px !important; color: var(--muted); }
+.error-row b { color: var(--ink); display: block; margin-bottom: 4px; }
+.error-row button, .notice button, .clear-filters {
+  border: 0; border-radius: 999px; background: var(--night); color: #fff; cursor: pointer;
+  font: 700 13px Inter, sans-serif; padding: 8px 14px; margin-left: 6px;
+}
+.clear-filters { background: var(--magenta); margin-left: 0; }
+.clear-filters[hidden] { display: none; }
+.notice { text-align: center; color: var(--muted); font-size: 13px; margin-top: 14px; }
+.spinner {
+  display: inline-block; width: 14px; height: 14px; border-radius: 50%; vertical-align: -2px; margin-right: 6px;
+  border: 2px solid var(--line); border-top-color: var(--magenta); animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.tabs button small { font-weight: 500; opacity: .7; margin-left: 3px; }
+@media (max-width: 560px) { .tabs button small { display: none; } }
+.help-q {
+  border: 0; width: 18px; height: 18px; border-radius: 50%; cursor: pointer; margin-left: 4px;
+  background: var(--chip); color: var(--ink); font: 800 11px Inter, sans-serif; vertical-align: 1px;
+}
+.toast {
+  position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+  display: flex; align-items: center; gap: 12px; z-index: 50;
+  background: var(--night); color: #fff; padding: 10px 16px; border-radius: 999px; font-size: 14px;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,.5);
+}
+.toast[hidden] { display: none; }
+.toast button { border: 0; background: none; color: var(--yellow); font: 800 14px Inter, sans-serif; cursor: pointer; }
+dialog#help {
+  max-width: 620px; width: calc(100% - 32px); border: 0; border-radius: 20px; padding: 22px 24px;
+  background: var(--card); color: var(--ink); box-shadow: 0 30px 80px -20px rgba(0,0,0,.5);
+}
+dialog#help::backdrop { background: rgba(11, 11, 31, .55); }
+dialog#help h2 { font: 900 22px Archivo, Inter, sans-serif; font-stretch: 112%; margin: 0 0 8px; }
+dialog#help h3 { font-size: 14px; margin: 18px 0 4px; }
+dialog#help p, dialog#help li { color: var(--muted); font-size: 14px; margin: 0; }
+dialog#help ul { padding-left: 18px; margin: 0; }
+.help-close { float: right; border: 0; background: var(--chip); color: var(--ink); border-radius: 50%; width: 30px; height: 30px; cursor: pointer; }
+.help-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.help-table td { padding: 6px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
+.help-table td:last-child { text-align: right; font: 700 13px 'JetBrains Mono', monospace; color: var(--ink); white-space: nowrap; }
+kbd { font: 700 12px 'JetBrains Mono', monospace; background: var(--chip); padding: 1px 6px; border-radius: 4px; }
+
+/* aesthetic: a calmer, shorter header on phones so the table shows sooner */
+@media (max-width: 560px) {
+  .hero { padding: calc(24px + env(safe-area-inset-top)) 0 34px; }
+  .tagline { font-size: 14px; margin: 10px 0 12px; }
+  .meta { font-size: 11px; }
+}
+
 .day + .day { margin-top: 22px; }
 .day h3 {
   display: flex; align-items: baseline; gap: 8px; margin: 0 0 8px;

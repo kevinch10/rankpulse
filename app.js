@@ -1,11 +1,26 @@
 const FLAG = code => `https://api.fifa.com/api/v3/picture/flags-sq-2/${code}`;
 const CONFEDS = ['All', 'FAV', 'UEFA', 'CONMEBOL', 'CONCACAF', 'CAF', 'AFC', 'OFC'];
+const REGIONS = { UEFA: 'Europe', CONMEBOL: 'South America', CONCACAF: 'North & Central America', CAF: 'Africa', AFC: 'Asia', OFC: 'Oceania' };
 const LIVE = 3;
 
 const PAGE = 150;  // matches rendered before "Show more"
-const state = { data: null, history: null, historyFrom: '', view: 'rankings', period: 7, limit: PAGE,
-  confed: 'All', competition: '', compQuery: '', compActiveOnly: false, date: '', query: '', open: null, favs: loadFavs() };
+const saved = loadPrefs();
+const state = { data: null, history: null, historyFrom: '', historyFailed: false,
+  view: ['rankings', 'results', 'fixtures'].includes(location.hash.slice(1)) ? location.hash.slice(1) : (saved.view || 'rankings'),
+  period: saved.period || 7, limit: PAGE, confed: saved.confed || 'All',
+  competition: '', compQuery: '', compActiveOnly: false, date: '', query: '', open: null, favs: loadFavs() };
 const $ = id => document.getElementById(id);
+
+// ---------- preferences (this browser only) ----------
+
+function loadPrefs() {
+  try { return JSON.parse(localStorage.getItem('prefs') || '{}'); } catch { return {}; }
+}
+
+function savePrefs() {
+  try { localStorage.setItem('prefs', JSON.stringify({ view: state.view, confed: state.confed, period: state.period })); } catch {}
+  if (location.hash.slice(1) !== state.view) history.replaceState(null, '', `#${state.view}`);
+}
 
 // ---------- favourites (kept in this browser only) ----------
 
@@ -14,8 +29,21 @@ function loadFavs() {
 }
 
 function toggleFav(code) {
-  state.favs.has(code) ? state.favs.delete(code) : state.favs.add(code);
+  const removing = state.favs.has(code);
+  removing ? state.favs.delete(code) : state.favs.add(code);
   try { localStorage.setItem('favs', JSON.stringify([...state.favs])); } catch {}
+  const name = state.data.teams.find(t => t.code === code)?.name || code;
+  toast(removing ? `Removed ${name} from favourites` : `Added ${name} to favourites`, removing ? () => { toggleFav(code); render(); } : null);
+}
+
+let toastTimer;
+function toast(text, undo) {
+  const el = $('toast');
+  el.innerHTML = `<span>${esc(text)}</span>${undo ? '<button type="button">Undo</button>' : ''}`;
+  el.hidden = false;
+  if (undo) el.querySelector('button').onclick = () => { el.hidden = true; undo(); };
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.hidden = true; }, 5000);
 }
 
 function starButton(code) {
@@ -27,6 +55,18 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};
 const fmtDate = iso => new Date(iso).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
 const fmtDay = ymd => new Date(`${ymd}T12:00:00`).toLocaleDateString(undefined, { weekday: 'long', day: 'numeric', month: 'long' });
 const fmtTime = iso => new Date(iso).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+const fmtShort = ymd => new Date(`${ymd}T12:00:00`).toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
+
+function ago(iso) {
+  const mins = Math.round((Date.now() - new Date(iso)) / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins} min ago`;
+  const hours = Math.round(mins / 60);
+  return hours < 48 ? `${hours} h ago` : `${Math.round(hours / 24)} days ago`;
+}
+
+// Everyday names and accent-free spellings, so "south korea" or "cote" find the team.
+const fold = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 const signed = (n, digits = 2) => (n > 0 ? '+' : '') + n.toFixed(digits);
 const tone = n => (n > 0 ? 'up' : n < 0 ? 'down' : 'flat');
 
@@ -43,13 +83,15 @@ function moveBadge(n) {
 
 function renderMeta({ official, generatedAt, results, matchesSince }) {
   const counted = results.filter(m => m.counted).length;
+  const stale = Date.now() - new Date(generatedAt) > 3 * 3600 * 1000;
   const items = [
-    ['Official ranking', fmtDate(official.pubDate)],
-    ['Matches applied', `${counted} since then`],
-    ['Last refreshed', new Date(generatedAt).toLocaleString()],
+    ['Last official FIFA ranking', fmtDate(official.pubDate)],
+    ['Matches counted since', String(counted)],
+    ['Updated', ago(generatedAt), new Date(generatedAt).toLocaleString(), stale],
   ];
   if (official.nextPubDate) items.push(['Next official release', fmtDate(official.nextPubDate)]);
-  $('meta').innerHTML = items.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('');
+  $('meta').innerHTML = items.map(([k, v, title, warn]) =>
+    `<div class="${warn ? 'stale' : ''}" ${title ? `title="${esc(title)}"` : ''}><dt>${k}</dt><dd>${esc(v)}${warn ? ' · may be out of date' : ''}</dd></div>`).join('');
 }
 
 function renderMovers(teams) {
@@ -81,8 +123,10 @@ async function loadHistory() {
     const seen = new Set(state.data.results.map(m => `${m.date}|${m.home}|${m.away}`));
     state.history = h.results.filter(m => !seen.has(`${m.date}|${m.home}|${m.away}`));
     state.historyFrom = h.from;
+    state.historyFailed = false;
   } catch {
-    state.history = [];
+    state.history = null;
+    state.historyFailed = true;
   }
   if (state.view === 'results') render();
 }
@@ -109,8 +153,14 @@ function currentList() {
 // ---------- filters ----------
 
 function teamMatchesFilter(code, name) {
-  const q = state.query.trim().toLowerCase();
-  return !q || name.toLowerCase().includes(q) || code.toLowerCase().includes(q);
+  const q = fold(state.query.trim());
+  if (!q) return true;
+  return [name, code, ...(state.aliasesOf[code] || [])].some(s => fold(s).includes(q));
+}
+
+function filtersActive() {
+  return state.confed !== 'All' || !!state.competition || !!state.date || !!state.query.trim() ||
+    (state.view === 'results' && state.period !== 7);
 }
 
 function confedOK(code) {
@@ -128,8 +178,12 @@ function matchVisible(m) {
 }
 
 function renderControls() {
-  $('confeds').innerHTML = CONFEDS.map(c =>
-    `<button aria-pressed="${c === state.confed}" data-confed="${c}">${c === 'FAV' ? `★ Favourites${state.favs.size ? ` (${state.favs.size})` : ''}` : c}</button>`).join('');
+  $('confeds').innerHTML = CONFEDS.map(c => {
+    const label = c === 'FAV' ? `★ Favourites${state.favs.size ? ` (${state.favs.size})` : ''}`
+      : c === 'All' ? 'All' : `${c} <small>${REGIONS[c]}</small>`;
+    return `<button aria-pressed="${c === state.confed}" data-confed="${c}" ${REGIONS[c] ? `title="${REGIONS[c]}"` : ''}>${label}</button>`;
+  }).join('');
+  $('clear-filters').hidden = !filtersActive();
 
   const sel = $('competition');
   sel.hidden = state.view === 'rankings';
@@ -137,7 +191,7 @@ function renderControls() {
   $('period').hidden = state.view !== 'results';
   $('period').value = String(state.period);
   $('period').disabled = !!state.date;
-  $('search').placeholder = state.competition && !sel.hidden ? `Search teams in ${state.competition}…` : 'Search team…';
+  $('search').placeholder = state.competition && !sel.hidden ? `Search teams in ${state.competition}…` : 'Search team, e.g. Brazil or South Korea';
   if (!sel.hidden) {
     // Limit the calendar to the days that actually have matches in this tab.
     const days = currentList().map(m => m.date).sort();
@@ -224,7 +278,7 @@ function detailRow(t) {
   const body = ms.length
     ? `<ul>${ms.map(m => {
         const d = m.home === t.code ? m.homeDelta : m.awayDelta;
-        return `<li>${esc(m.date)} · ${esc(m.homeName)} ${scoreText(m)} ${esc(m.awayName)} · ${esc(m.competition)} (I=${m.importance}) · <span class="${tone(d)}">${signed(d)}</span></li>`;
+        return `<li>${fmtShort(m.date)} · ${esc(m.homeName)} ${scoreText(m)} ${esc(m.awayName)} · ${esc(m.competition)} (weight ${m.importance}) · <span class="${tone(d)}">${signed(d)}</span></li>`;
       }).join('')}</ul>`
     : 'No matches since the last official ranking.';
   return `<tr class="detail"><td colspan="5">${body}</td></tr>`;
@@ -260,12 +314,13 @@ function predictionBlock(m) {
       <div class="pred-name">${esc(name)}</div>
       <div class="pred-chips">${OUTCOMES.filter(([k]) => k in m.prediction[side]).map(([k, label]) => {
         const v = m.prediction[side][k];
-        return `<span class="pred ${tone(v)}"><b>${label}</b>${signed(v, 1)}</span>`;
+        return `<span class="pred ${tone(v)}"><b>${label}</b>${signed(v)}</span>`;
       }).join('')}</div>
     </div>`;
   return `
     <div class="prediction">
-      <div class="pred-head">Points at stake <span>I=${m.importance}${m.knockout ? ' · knockout' : ''}</span></div>
+      <div class="pred-head">Points at stake <button class="help-q" type="button" data-help="help-weights" aria-label="What do these numbers mean?">?</button>
+        <span>Match weight ${m.importance}${m.knockout ? ' · knockout: the loser keeps its points' : ''}</span></div>
       <div class="pred-grid">${col('home', m.homeName)}${col('away', m.awayName)}</div>
     </div>`;
 }
@@ -273,14 +328,14 @@ function predictionBlock(m) {
 function matchRow(m, fixture) {
   const side = (code, name, delta, align) => `
     <span class="side ${align}">${align === 'r' ? '' : flag(code)}<button class="nm team-link" data-team="${code}" title="Open ${esc(name)} in Rankings">${esc(name)}</button>${align === 'r' ? flag(code) : ''}
-      ${m.counted ? `<span class="delta ${tone(delta)}">${signed(delta, 1)}</span>` : ''}</span>`;
+      ${m.counted ? `<span class="delta ${tone(delta)}">${signed(delta)}</span>` : ''}</span>`;
   const middle = fixture
     ? `<span class="score time">${fmtTime(m.kickoff)}</span>`
     : `<span class="score">${scoreText(m)}</span>`;
   const tags = [
     m.status === LIVE ? '<span class="tag live">Live</span>' : '',
-    m.counted ? `<span class="tag">I=${m.importance}</span>` : '',
-    !fixture && !m.counted && m.status !== LIVE ? '<span class="tag muted" title="Already included in the official ranking">In official</span>' : '',
+    m.counted ? `<span class="tag" title="How much this match counts in FIFA's formula">Weight ${m.importance}</span>` : '',
+    !fixture && !m.counted && m.status !== LIVE ? '<span class="tag muted" title="Played before the last official ranking, so it is already included there">In official ranking</span>' : '',
     m.note ? `<span class="tag" title="${esc(m.note)}">Corrected</span>` : '',
     m.source && m.source !== 'FIFA' && m.source !== 'Manual'
       ? `<span class="tag muted" title="FIFA's feed doesn't carry this match yet; result from ${esc(m.source)}">via ${m.source === 'Wikipedia' ? 'Wikipedia' : 'community data'}</span>` : '',
@@ -308,14 +363,22 @@ function renderMatchList(el, list, fixture) {
     </section>`).join('') +
     (all.length > shown.length
       ? `<button class="more" id="show-more">Show more <span>${all.length - shown.length} older</span></button>` : '') +
-    (!fixture && !state.date && state.period > 7 && !state.history
-      ? `<p class="loading">Loading older results…</p>` : '');
+    (!fixture && state.historyFailed && (state.period > 7 || state.date)
+      ? `<p class="notice">Couldn't load older results — check your connection. <button type="button" id="retry-history">Try again</button></p>`
+      : !fixture && !state.date && state.period > 7 && !state.history
+      ? `<p class="loading"><span class="spinner" aria-hidden="true"></span> Loading older results…</p>` : '');
   return all.length;
 }
 
 // ---------- render ----------
 
+function nearestMatchDay(day) {
+  const days = [...new Set(currentList().map(m => m.date))];
+  return days.sort((a, b) => Math.abs(new Date(a) - new Date(day)) - Math.abs(new Date(b) - new Date(day)))[0];
+}
+
 function render() {
+  savePrefs();
   renderControls();
   for (const v of ['rankings', 'results', 'fixtures']) $(`view-${v}`).hidden = v !== state.view;
   const n = state.view === 'rankings' ? renderRankings()
@@ -329,12 +392,21 @@ function render() {
     : state.competition && !state.date && !state.query
       ? `No ${state.competition} matches scheduled yet.`
     : state.date ? `No matches on ${fmtDay(state.date)}.` : 'Nothing matches these filters.';
+  if (n === 0 && state.date && !state.query && !state.competition && state.confed === 'All') {
+    const near = nearestMatchDay(state.date);
+    if (near && near !== state.date) {
+      $('empty').innerHTML = `No matches on ${fmtDay(state.date)}. <button type="button" class="linkish" data-goto-day="${near}">Show ${fmtDay(near)}</button>`;
+    }
+  }
 }
 
 async function init() {
   const res = await fetch('data/rankings.json', { cache: 'no-cache' });
+  if (!res.ok) throw new Error(`server ${res.status}`);
   state.data = await res.json();
   state.confedOf = Object.fromEntries(state.data.teams.map(t => [t.code, t.confed]));
+  state.aliasesOf = Object.fromEntries(state.data.teams.map(t => [t.code, t.aliases || []]));
+  setInterval(() => renderMeta(state.data), 60000);  // keep "Updated … ago" current
   renderMeta(state.data);
   renderMovers(state.data.teams);
   const weekAgo = new Date(); weekAgo.setDate(weekAgo.getDate() - 7);
@@ -343,12 +415,32 @@ async function init() {
   $('fixtures-count').textContent = state.data.fixtures.length;
   render();
   loadHistory();
+  if (state.bound) return;  // a retry after a failed load mustn't bind handlers twice
+  state.bound = true;
 
   document.querySelector('.views').addEventListener('click', e => {
     const b = e.target.closest('button[data-view]');
     if (b) { state.view = b.dataset.view; state.limit = PAGE; render(); }
   });
   $('search').addEventListener('input', e => { state.query = e.target.value; render(); });
+  $('clear-filters').addEventListener('click', () => {
+    Object.assign(state, { confed: 'All', competition: '', date: '', query: '', period: 7, limit: PAGE });
+    $('search').value = '';
+    render();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+      e.preventDefault(); $('search').focus();
+    }
+  });
+  $('help-open').addEventListener('click', () => $('help').showModal());
+  document.addEventListener('click', e => {
+    const q = e.target.closest('[data-help]');
+    if (q) { $('help').showModal(); document.getElementById(q.dataset.help)?.scrollIntoView(); }
+    const goto = e.target.closest('[data-goto-day]');
+    if (goto) { state.date = goto.dataset.gotoDay; render(); }
+    if (e.target.closest('#retry-history')) { state.historyFailed = false; render(); loadHistory(); }
+  });
   $('comp-btn').addEventListener('click', () => openCompetitionPicker($('comp-pop').hidden));
   $('comp-search').addEventListener('input', e => { state.compQuery = e.target.value; renderCompetitionList(); });
   $('comp-active').addEventListener('change', e => { state.compActiveOnly = e.target.checked; renderCompetitionList(); });
@@ -387,7 +479,7 @@ async function init() {
   });
   $('date-clear').addEventListener('click', () => { state.date = ''; render(); });
   $('confeds').addEventListener('click', e => {
-    const c = e.target.dataset.confed;
+    const c = e.target.closest('[data-confed]')?.dataset.confed;
     if (c) { state.confed = c; render(); }
   });
   $('rows').addEventListener('click', e => {
@@ -400,9 +492,22 @@ async function init() {
   });
 }
 
-init().catch(err => {
-  $('rows').innerHTML = `<tr><td colspan="5">Could not load rankings: ${esc(err.message)}</td></tr>`;
-});
+function start() {
+  init().catch(err => {
+    // Say what went wrong in plain words, and offer a way out.
+    const offline = !navigator.onLine;
+    const why = offline ? "You're offline. Check your connection and try again."
+      : /server/.test(err.message) ? 'The rankings server is having a problem right now. Please try again in a minute.'
+      : "The rankings couldn't be loaded. Please try again.";
+    $('rows').innerHTML = `<tr><td colspan="5" class="error-row"><b>Couldn't load the rankings.</b> ${why}
+      <button type="button" id="retry">Try again</button></td></tr>`;
+    $('retry').onclick = () => {
+      $('rows').innerHTML = '<tr><td colspan="5" class="loading-row"><span class="spinner" aria-hidden="true"></span> Loading the latest rankings…</td></tr>';
+      start();
+    };
+  });
+}
+start();
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(() => {});
