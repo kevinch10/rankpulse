@@ -20,6 +20,7 @@ struct NotificationSettingsView: View {
                             }
                         }
                         .tint(Theme.magenta)
+                        .disabled(store.favourites.notificationsAllowed == false)
                     }
                 } header: {
                     Text("For your favourite teams")
@@ -40,6 +41,8 @@ struct NotificationSettingsView: View {
                 }
                 if store.favourites.notificationsAllowed == false {
                     Section {
+                        Text("Notifications are turned off for this app, so these switches can't do anything yet.")
+                            .font(.footnote).foregroundStyle(.secondary)
                         Button("Turn on notifications in Settings") {
                             if let url = URL(string: UIApplication.openNotificationSettingsURLString) { openURL(url) }
                         }

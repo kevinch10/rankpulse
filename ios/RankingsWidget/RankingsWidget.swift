@@ -169,7 +169,7 @@ private struct Move: View {
 
 private func nextLine(_ m: Match?, for code: String) -> String? {
     guard let m else { return nil }
-    let opponent = m.home == code ? m.away : m.home
+    let opponent = m.home == code ? m.awayName : m.homeName
     let day = m.kickoffDate?.formatted(.dateTime.weekday(.abbreviated).day()) ?? m.date
     return "Next: v \(opponent) · \(day)"
 }
@@ -198,6 +198,7 @@ struct SmallView: View {
             }
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .widgetURL(URL(string: "footballrankings://team/\(t.team.code)"))
         } else {
             Text("Open the app to load rankings").font(.caption).foregroundStyle(.white)
         }
@@ -211,6 +212,7 @@ struct MediumView: View {
         VStack(alignment: .leading, spacing: 8) {
             Header(entry: entry)
             ForEach(entry.teams) { t in
+                Link(destination: URL(string: "footballrankings://team/\(t.team.code)")!) {
                 HStack(spacing: 8) {
                     Text("\(t.team.liveRank)")
                         .font(Theme.display(13).monospacedDigit())
@@ -234,11 +236,12 @@ struct MediumView: View {
                             .font(.caption.monospacedDigit().weight(.semibold))
                         HStack(spacing: 4) {
                             Move(change: t.team.rankChange)
-                            Text(t.team.pointsChange.signedShort)
+                            Text(t.team.pointsChange.signed)
                                 .foregroundStyle(t.team.pointsChange >= 0 ? Color(hex: 0x2EE88A) : Color(hex: 0xFF5A6E))
                         }
                         .font(.system(size: 10, weight: .bold).monospacedDigit())
                     }
+                }
                 }
             }
             if entry.teams.isEmpty {
@@ -260,7 +263,7 @@ struct RectangularView: View {
                 HStack(spacing: 4) {
                     Text("#\(t.team.liveRank)").font(.title3.weight(.bold))
                     Move(change: t.team.rankChange).font(.caption)
-                    Text("\(t.team.pointsChange.signedShort) pts").font(.caption)
+                    Text("\(t.team.pointsChange.signed) pts").font(.caption)
                 }
                 if let line = nextLine(t.next, for: t.team.code) {
                     Text(line).font(.caption2).lineLimit(1)

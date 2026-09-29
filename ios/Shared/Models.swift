@@ -39,6 +39,7 @@ struct Team: Codable, Sendable, Identifiable, Hashable {
     let officialRank: Int
     let officialPoints: Double
     let previousRank: Int
+    let aliases: [String]?
     let liveRank: Int
     let livePoints: Double
     let pointsChange: Double
@@ -96,6 +97,22 @@ struct Match: Codable, Sendable, Identifiable, Hashable {
     func delta(for code: String) -> Double? { home == code ? homeDelta : awayDelta }
 }
 
+extension String {
+    /// Case- and accent-insensitive "contains", so "cote" finds Côte d'Ivoire.
+    func looselyContains(_ other: String) -> Bool {
+        let fold: (String) -> String = { $0.folding(options: [.caseInsensitive, .diacriticInsensitive], locale: nil) }
+        return fold(self).contains(fold(other))
+    }
+}
+
+extension Team {
+    /// Matches FIFA's name, the team code, or an everyday name ("South Korea", "USA", "Turkey").
+    func matches(_ query: String) -> Bool {
+        let q = query.trimmingCharacters(in: .whitespaces)
+        return q.isEmpty || ([name, code] + (aliases ?? [])).contains { $0.looselyContains(q) }
+    }
+}
+
 enum Confederation: String, CaseIterable, Identifiable {
     case all = "All", favourites = "★ Favourites", uefa = "UEFA", conmebol = "CONMEBOL", concacaf = "CONCACAF",
          caf = "CAF", afc = "AFC", ofc = "OFC"
@@ -103,6 +120,21 @@ enum Confederation: String, CaseIterable, Identifiable {
 }
 
 extension Confederation {
+    /// Plain-language region, so nobody has to remember what "AFC" means.
+    var region: String? {
+        switch self {
+        case .uefa: "Europe"
+        case .conmebol: "South America"
+        case .concacaf: "North & Central America"
+        case .caf: "Africa"
+        case .afc: "Asia"
+        case .ofc: "Oceania"
+        default: nil
+        }
+    }
+
+    var menuTitle: String { region.map { "\(rawValue) · \($0)" } ?? rawValue }
+
     func includes(_ code: String, confed: String?, favourites: Set<String>) -> Bool {
         switch self {
         case .all: true

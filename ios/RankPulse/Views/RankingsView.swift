@@ -5,29 +5,52 @@ struct RankingsView: View {
     @State private var search = ""
     @State private var confed = Confederation.all
     @State private var showSettings = false
+    @State private var showHelp = false
+    @State private var path = NavigationPath()
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             Group {
                 if let data = store.data {
                     list(data)
                 } else if let error = store.error {
-                    ContentUnavailableView("Couldn't load rankings", systemImage: "wifi.slash", description: Text(error))
+                    ContentUnavailableView {
+                        Label("Couldn't load the rankings", systemImage: "wifi.slash")
+                    } description: {
+                        Text(error)
+                    } actions: {
+                        Button("Try again") { Task { await store.refresh() } }.buttonStyle(.borderedProminent)
+                    }
                 } else {
-                    ProgressView()
+                    ProgressView("Loading the latest rankings…")
                 }
             }
             .navigationTitle("Rankings")
             .toolbarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItemGroup(placement: .topBarLeading) {
                     Button { showSettings = true } label: { Image(systemName: "bell.badge") }
                         .accessibilityLabel("Notification settings")
+                    Button { showHelp = true } label: { Image(systemName: "questionmark.circle") }
+                        .accessibilityLabel("How it works")
                 }
                 ToolbarItem { ConfedMenu(selection: $confed) }
             }
             .sheet(isPresented: $showSettings) { NotificationSettingsView() }
-            .searchable(text: $search, prompt: "Search team")
+            .sheet(isPresented: $showHelp) { HelpView() }
+            .searchable(text: $search, prompt: "Search team, e.g. Brazil or South Korea")
+            .safeAreaInset(edge: .top) {
+                if confed != .all {
+                    FilterChip(icon: "globe", text: confed.menuTitle, clear: "Show all teams", color: Theme.night) { confed = .all }
+                        .padding(.horizontal).padding(.bottom, 4)
+                }
+            }
+            .onChange(of: store.openTeamCode, initial: true) { _, code in
+                // A widget tap lands here: open that team's page.
+                guard let code, let team = store.team(code: code) else { return }
+                store.openTeamCode = nil
+                path = NavigationPath([team])
+            }
             .refreshable { await store.refresh() }
             .navigationDestination(for: Team.self) { TeamDetailView(team: $0) }
             .navigationDestination(for: Match.self) { MatchDetailView(match: $0) }
@@ -38,8 +61,7 @@ struct RankingsView: View {
     private func list(_ data: RankingData) -> some View {
         let favs = store.favourites.codes
         let teams = data.teams.filter { t in
-            confed.includes(t.code, confed: t.confed, favourites: favs) &&
-            (search.isEmpty || t.name.localizedCaseInsensitiveContains(search) || t.code.localizedCaseInsensitiveContains(search))
+            confed.includes(t.code, confed: t.confed, favourites: favs) && t.matches(search)
         }
         return List {
             if search.isEmpty && confed == .all {
@@ -65,7 +87,7 @@ struct RankingsView: View {
                 } header: {
                     Label("Favourites", systemImage: "star.fill").foregroundStyle(Theme.orange)
                 } footer: {
-                    NotificationStatus()
+                    if store.favourites.notificationsAllowed != true { NotificationStatus() }
                 }
             }
             Section {
@@ -169,12 +191,12 @@ struct MoversView: View {
 
     var body: some View {
         let byPoints = teams.sorted { $0.pointsChange > $1.pointsChange }
-        let byRank = teams.max { $0.rankChange < $1.rankChange }
+        let byRank = teams.max { $0.rankChange < $1.rankChange }  // "Most places up" (same label as the website)
         // Three equal cards that fit the screen width — no sideways scrolling.
         HStack(spacing: 8) {
-            if let up = byPoints.first { card("Biggest gain", up, up.pointsChange.signedShort, 1) }
-            if let down = byPoints.last { card("Biggest drop", down, down.pointsChange.signedShort, 2) }
-            if let mover = byRank, mover.rankChange > 0 { card("Places up", mover, "▲\(mover.rankChange)", 3) }
+            if let up = byPoints.first { card("Biggest gain", up, up.pointsChange.signed, 1) }
+            if let down = byPoints.last { card("Biggest drop", down, down.pointsChange.signed, 2) }
+            if let mover = byRank, mover.rankChange > 0 { card("Most places up", mover, "▲\(mover.rankChange)", 3) }
         }
         .padding(.horizontal, 16)
     }

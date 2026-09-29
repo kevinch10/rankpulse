@@ -3,7 +3,7 @@ import SwiftUI
 struct MatchesView: View {
     enum Kind { case results, fixtures }
 
-    enum Period: Int, CaseIterable, Identifiable {
+    enum Period: Int, CaseIterable, Identifiable, Codable {
         case week = 7, month = 30, quarter = 90, year = 365
         var id: Int { rawValue }
         var title: String {
@@ -24,7 +24,7 @@ struct MatchesView: View {
     @State private var day: Date?
     @State private var showCalendar = false
     @State private var showCompetitions = false
-    @State private var period = Period.week
+    @AppStorage("resultsPeriod") private var period = Period.week  // remembered between visits
 
     var body: some View {
         NavigationStack {
@@ -77,10 +77,22 @@ struct MatchesView: View {
                             Spacer()
                         }
                     }
+                    if confed != .all {
+                        FilterChip(icon: "globe", text: confed.menuTitle, clear: "All teams", color: Theme.night) { confed = .all }
+                    }
                     if !competition.isEmpty {
                         FilterChip(icon: "trophy.fill", text: competition, clear: "All competitions", color: Theme.night) {
                             competition = ""
                         }
+                    }
+                    if kind == .results && store.historyFailed && (period != .week || day != nil) {
+                        HStack {
+                            Label("Couldn't load older results.", systemImage: "wifi.slash").font(.footnote)
+                            Spacer()
+                            Button("Try again") { Task { await store.loadHistory() } }.font(.footnote.bold())
+                        }
+                        .padding(10)
+                        .background(.quaternary.opacity(0.5), in: .rect(cornerRadius: 12))
                     }
                     if let day {
                         FilterChip(icon: "calendar", text: day.formatted(.dateTime.weekday(.wide).day().month(.wide)),
@@ -90,7 +102,7 @@ struct MatchesView: View {
                 .padding(.horizontal)
                 .padding(.bottom, 4)
             }
-            .searchable(text: $search, prompt: competition.isEmpty ? "Search team" : "Search teams in \(competition)")
+            .searchable(text: $search, prompt: competition.isEmpty ? "Search team, e.g. Brazil or South Korea" : "Search teams in \(competition)")
             .refreshable { await store.refresh() }
             .navigationDestination(for: Team.self) { TeamDetailView(team: $0) }
             .navigationDestination(for: Match.self) { MatchDetailView(match: $0) }
@@ -159,8 +171,9 @@ struct MatchesView: View {
             || confed.includes(m.away, confed: store.confed(of: m.away), favourites: favs)
         let compOK = competition.isEmpty || m.competition == competition
         let dayOK = (day.map { Self.ymd($0) == m.date } ?? true) && inPeriod(m)
-        let searchOK = search.isEmpty || [m.homeName, m.awayName, m.home, m.away]
-            .contains { $0.localizedCaseInsensitiveContains(search) }
+        let searchOK = search.isEmpty || [m.home, m.away].contains { code in
+            store.team(code: code)?.matches(search) ?? false
+        } || [m.homeName, m.awayName].contains { $0.looselyContains(search) }
         return confedOK && compOK && dayOK && searchOK
     }
 
@@ -231,6 +244,9 @@ struct DayPickerSheet: View {
     @Environment(\.dismiss) private var dismiss
     @State private var selection = Date()
 
+    private var hasMatches: Bool { available.contains { Calendar.current.isDate($0, inSameDayAs: selection) } }
+    private var nearest: Date? { available.min { abs($0.timeIntervalSince(selection)) < abs($1.timeIntervalSince(selection)) } }
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 12) {
@@ -238,9 +254,15 @@ struct DayPickerSheet: View {
                     DatePicker("Match day", selection: $selection, in: first...last, displayedComponents: .date)
                         .datePickerStyle(.graphical)
                         .tint(Theme.magenta)
-                    let count = available.contains { Calendar.current.isDate($0, inSameDayAs: selection) }
-                    Text(count ? "Matches on this day" : "No matches on this day")
-                        .font(.footnote).foregroundStyle(.secondary)
+                    if hasMatches {
+                        Text("Matches on this day").font(.footnote).foregroundStyle(.secondary)
+                    } else if let near = nearest {
+                        // Can't pick an empty day: point to the closest one instead.
+                        Button("No matches this day — go to \(near.formatted(.dateTime.weekday(.wide).day().month()))") {
+                            selection = near
+                        }
+                        .font(.footnote)
+                    }
                 } else {
                     ContentUnavailableView("No match days", systemImage: "calendar")
                 }
@@ -253,7 +275,7 @@ struct DayPickerSheet: View {
                     Button("All dates") { day = nil; dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Show") { day = selection; dismiss() }.bold()
+                    Button("Show") { day = selection; dismiss() }.bold().disabled(!hasMatches)
                 }
             }
             .onAppear {

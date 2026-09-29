@@ -8,6 +8,9 @@ final class RankingStore {
     private(set) var error: String?
     private(set) var isLoading = false
     private(set) var isSnapshot = false
+    private(set) var historyFailed = false
+    /// Set by a widget tap: the Rankings tab opens this team.
+    var openTeamCode: String?
     /// Results from the year before the latest official ranking.
     private(set) var history: [Match] = []
     private(set) var historyFrom: String?
@@ -52,7 +55,26 @@ final class RankingStore {
             await favourites.scheduleMatchReminders(fresh)
             await favourites.scheduleWeeklyDigest(fresh)
         } catch {
-            self.error = data == nil ? error.localizedDescription : "Offline — showing saved data"
+            self.error = Self.explain(error, haveData: data != nil)
+        }
+    }
+
+    /// When the data was last rebuilt on the server.
+    var updatedAt: Date? { data.flatMap { try? Date($0.generatedAt, strategy: .iso8601) } }
+    var isStale: Bool { updatedAt.map { Date().timeIntervalSince($0) > 3 * 3600 } ?? false }
+
+    /// Plain-language reason and what to do next, instead of a system error.
+    static func explain(_ error: Error, haveData: Bool) -> String {
+        let saved = haveData ? " Showing the last rankings you downloaded." : ""
+        switch (error as? URLError)?.code {
+        case .notConnectedToInternet?, .networkConnectionLost?, .dataNotAllowed?:
+            return "You're offline.\(saved) Pull down to try again when you're connected."
+        case .timedOut?:
+            return "The rankings server is taking too long to answer.\(saved) Pull down to try again."
+        case .some:
+            return "Couldn't reach the rankings server.\(saved) Pull down to try again."
+        case nil:
+            return "The rankings data couldn't be read.\(saved) Try again in a few minutes."
         }
     }
 
@@ -83,8 +105,10 @@ final class RankingStore {
             history = fresh.results
             historyFrom = fresh.from
             historyLoadedAt = Date()
+            historyFailed = false
         } catch {
             // keep whatever we had; the recent results still work
+            historyFailed = history.isEmpty
         }
     }
 

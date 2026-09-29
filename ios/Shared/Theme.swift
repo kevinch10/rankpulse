@@ -61,7 +61,7 @@ struct HeroHeader: View {
         VStack(alignment: .leading, spacing: 10) {
             // One Text so both lines scale together.
             (Text("WORLD").foregroundStyle(Theme.spectrum) + Text(" FOOTBALL\nRANKINGS").foregroundStyle(.white))
-                .font(Theme.display(28))
+                .font(Theme.display(22))
                 .minimumScaleFactor(0.6)
                 .lineLimit(2)
             .accessibilityElement(children: .combine)
@@ -71,8 +71,8 @@ struct HeroHeader: View {
                 .foregroundStyle(.white.opacity(0.8))
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(18)
-        .padding(.bottom, 6)
+        .padding(.horizontal, 16).padding(.vertical, 12)
+        .padding(.bottom, 4)
         .background {
             ZStack {
                 Theme.night

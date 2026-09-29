@@ -41,7 +41,7 @@ struct ConfedMenu: View {
     var body: some View {
         Menu {
             Picker("Confederation", selection: $selection) {
-                ForEach(Confederation.allCases) { Text($0.rawValue).tag($0) }
+                ForEach(Confederation.allCases) { Text($0.menuTitle).tag($0) }
             }
         } label: {
             Label(selection == .all ? "Confederation" : selection.rawValue,
@@ -81,7 +81,7 @@ struct MatchRow: View {
                 }
                 Text([match.competition, match.stageText].compactMap { $0 }.joined(separator: " · "))
                 if let i = match.importance {
-                    Text("I=\(i)").font(.caption2.weight(.heavy)).foregroundStyle(.white)
+                    Text("Weight \(i)").font(.caption2.weight(.heavy)).foregroundStyle(.white)
                         .padding(.horizontal, 6).padding(.vertical, 1)
                         .background(accent, in: .capsule)
                 }
@@ -107,7 +107,7 @@ struct MatchRow: View {
             VStack(alignment: leading ? .leading : .trailing, spacing: 1) {
                 Text(name).font(.subheadline.weight(.semibold)).lineLimit(1).minimumScaleFactor(0.8)
                 if let delta, match.isCounted {
-                    Text(delta.signedShort).font(.caption2.monospaced()).foregroundStyle(delta.tone)
+                    Text(delta.signed).font(.caption2.monospaced()).foregroundStyle(delta.tone)
                 }
             }
             if !leading { FlagView(code: code, width: 22) }
@@ -116,15 +116,32 @@ struct MatchRow: View {
     }
 }
 
+/// Where the numbers stand right now: updating, how fresh, or why not.
 struct StatusBanner: View {
     @Environment(RankingStore.self) private var store
 
     var body: some View {
-        if let error = store.error {
-            Label(error, systemImage: "wifi.slash").font(.footnote).foregroundStyle(.secondary)
-        } else if store.isSnapshot {
-            Label("Showing bundled data", systemImage: "shippingbox").font(.footnote).foregroundStyle(.secondary)
+        Group {
+            if store.isLoading {
+                HStack(spacing: 6) { ProgressView().controlSize(.mini); Text("Updating…") }
+            } else if let error = store.error {
+                Label(error, systemImage: "wifi.slash")
+            } else if store.isSnapshot {
+                Label("Showing saved rankings — pull down to update", systemImage: "arrow.clockwise")
+            } else if let updated = store.updatedAt {
+                TimelineView(.periodic(from: .now, by: 60)) { _ in
+                    Label {
+                        Text("Updated \(updated, format: .relative(presentation: .named))") +
+                        Text(store.isStale ? " · may be out of date, pull down to refresh" : "")
+                    } icon: {
+                        Image(systemName: store.isStale ? "exclamationmark.triangle" : "checkmark.circle")
+                    }
+                    .foregroundStyle(store.isStale ? Theme.orange : .secondary)
+                }
+            }
         }
+        .font(.footnote)
+        .foregroundStyle(.secondary)
     }
 }
 
@@ -173,7 +190,7 @@ struct PredictionView: View {
 
     private func value(_ v: Double?) -> some View {
         let v = v ?? 0
-        return Text(v.signedShort)
+        return Text(v.signed)
             .font(.system(size: 13, weight: .bold, design: .monospaced))
             .foregroundStyle(v.tone)
             .padding(.horizontal, 8).padding(.vertical, 2)
@@ -182,8 +199,8 @@ struct PredictionView: View {
     }
 
     private var caption: String {
-        var parts = match.importance.map { ["I=\($0)"] } ?? []
-        if match.knockout == true { parts.append("knockout") }
+        var parts = match.importance.map { ["Match weight \($0)"] } ?? []
+        if match.knockout == true { parts.append("knockout: loser keeps its points") }
         return parts.joined(separator: " · ")
     }
 }

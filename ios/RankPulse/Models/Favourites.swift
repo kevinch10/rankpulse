@@ -35,12 +35,20 @@ enum NotificationKind: String, CaseIterable, Identifiable {
     }
 }
 
+/// The most recent add/remove, so the UI can offer Undo.
+struct FavouriteChange: Equatable {
+    let id = UUID()
+    let team: Team
+    let added: Bool
+}
+
 /// Favourite teams, plus the points and live rank each one had when we last
 /// told the user about it, so a refresh notifies only about changes since.
 @MainActor
 @Observable
 final class Favourites {
     private(set) var codes: Set<String>
+    private(set) var lastChange: FavouriteChange?
     private(set) var notificationsAllowed: Bool?
 
     private let defaults = UserDefaults.standard
@@ -79,6 +87,7 @@ final class Favourites {
     func contains(_ code: String) -> Bool { codes.contains(code) }
 
     func toggle(_ team: Team) {
+        lastChange = FavouriteChange(team: team, added: !codes.contains(team.code))
         if codes.remove(team.code) == nil {
             codes.insert(team.code)
             baselines[team.code] = team.livePoints
@@ -332,7 +341,7 @@ final class Favourites {
                 parts.append("\(played.count) result\(played.count == 1 ? "" : "s")")
             }
             if let next = data.fixtures.first(where: { $0.involves(t.code) }) {
-                let opponent = next.home == t.code ? next.away : next.home
+                let opponent = next.home == t.code ? next.awayName : next.homeName
                 let day = next.kickoffDate?.formatted(.dateTime.weekday(.abbreviated).day().month(.abbreviated)) ?? next.date
                 parts.append("next v \(opponent) \(day)")
             }

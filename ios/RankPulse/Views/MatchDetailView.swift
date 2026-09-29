@@ -4,6 +4,7 @@ import SwiftUI
 /// the points exchanged or at stake, and previous meetings.
 struct MatchDetailView: View {
     @Environment(RankingStore.self) private var store
+    @State private var showHelp = false
     let match: Match
 
     private var isFixture: Bool { match.homeScore == nil && !match.isLive }
@@ -23,10 +24,21 @@ struct MatchDetailView: View {
                 teamLink(away, fallbackName: match.awayName, code: match.away)
             }
 
+            if match.isLive {
+                Section {
+                    Label("Match in progress. Points are added to the rankings at full time.", systemImage: "clock")
+                        .font(.subheadline)
+                }
+            }
+
             if isFixture {
-                Section("Points at stake") {
+                Section {
                     PredictionView(match: match)
                         .listRowInsets(EdgeInsets(top: 6, leading: 8, bottom: 6, trailing: 8))
+                } header: {
+                    Text("Points at stake")
+                } footer: {
+                    Button("What do these numbers mean?") { showHelp = true }.font(.footnote)
                 }
             } else if match.isCounted {
                 Section {
@@ -35,7 +47,11 @@ struct MatchDetailView: View {
                 } header: {
                     Text("Points exchanged")
                 } footer: {
-                    if let i = match.importance { Text("Match weight I=\(i) in the FIFA ranking formula.") }
+                    HStack(alignment: .firstTextBaseline) {
+                        if let i = match.importance { Text("Match weight \(i) in FIFA's ranking formula.") }
+                        Button("How it works") { showHelp = true }
+                    }
+                    .font(.footnote)
                 }
             }
 
@@ -55,8 +71,9 @@ struct MatchDetailView: View {
                 }
             }
         }
-        .navigationTitle("\(match.home) v \(match.away)")
+        .navigationTitle("\(match.homeName) v \(match.awayName)")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $showHelp) { HelpView() }
     }
 
     private var scoreboard: some View {

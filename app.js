@@ -333,7 +333,7 @@ function matchRow(m, fixture) {
     ? `<span class="score time">${fmtTime(m.kickoff)}</span>`
     : `<span class="score">${scoreText(m)}</span>`;
   const tags = [
-    m.status === LIVE ? '<span class="tag live">Live</span>' : '',
+    m.status === LIVE ? '<span class="tag live" title="In progress — points are added at full time">Live</span>' : '',
     m.counted ? `<span class="tag" title="How much this match counts in FIFA's formula">Weight ${m.importance}</span>` : '',
     !fixture && !m.counted && m.status !== LIVE ? '<span class="tag muted" title="Played before the last official ranking, so it is already included there">In official ranking</span>' : '',
     m.note ? `<span class="tag" title="${esc(m.note)}">Corrected</span>` : '',
