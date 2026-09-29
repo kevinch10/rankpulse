@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T20:41:10+00:00",
+ "generatedAt": "2026-09-29T20:52:57+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2916,20 +2916,6 @@
    "rankChange": 0
   },
   {
-   "id": "43880",
-   "code": "SEY",
-   "name": "Seychelles",
-   "confed": "CAF",
-   "officialRank": 204,
-   "officialPoints": 804.16,
-   "previousRank": 204,
-   "aliases": [],
-   "liveRank": 204,
-   "livePoints": 799.85,
-   "pointsChange": -4.31,
-   "rankChange": 0
-  },
-  {
    "id": "20011",
    "code": "TCA",
    "name": "Turks and Caicos Islands",
@@ -2938,10 +2924,24 @@
    "officialPoints": 803.98,
    "previousRank": 205,
    "aliases": [],
+   "liveRank": 204,
+   "livePoints": 805.2,
+   "pointsChange": 1.22,
+   "rankChange": 1
+  },
+  {
+   "id": "43880",
+   "code": "SEY",
+   "name": "Seychelles",
+   "confed": "CAF",
+   "officialRank": 204,
+   "officialPoints": 804.16,
+   "previousRank": 204,
+   "aliases": [],
    "liveRank": 205,
-   "livePoints": 798.08,
-   "pointsChange": -5.9,
-   "rankChange": 0
+   "livePoints": 799.85,
+   "pointsChange": -4.31,
+   "rankChange": -1
   },
   {
    "id": "43956",
@@ -2998,8 +2998,8 @@
    "previousRank": 209,
    "aliases": [],
    "liveRank": 209,
-   "livePoints": 771.95,
-   "pointsChange": -5.46,
+   "livePoints": 764.82,
+   "pointsChange": -12.59,
    "rankChange": 0
   },
   {
@@ -3037,7 +3037,7 @@
    "date": "2026-09-29",
    "home": "VIR",
    "away": "BAH",
-   "homeScore": 1,
+   "homeScore": 2,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
@@ -3074,26 +3074,15 @@
    "awayScore": 3,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "Venetian Road Settlement",
    "source": "FIFA",
+   "counted": true,
    "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.475,
-   "prediction": {
-    "home": {
-     "win": 7.88,
-     "draw": 0.38,
-     "loss": -7.12
-    },
-    "away": {
-     "loss": -7.88,
-     "draw": -0.38,
-     "win": 7.12
-    }
-   },
+   "homeDelta": -7.12,
+   "awayDelta": 7.12,
    "homeName": "British Virgin Islands",
    "awayName": "Turks and Caicos Islands",
    "fifaId": "dmpqy3gt8n9toclz7gg1uk1ec"
@@ -8348,17 +8337,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.355,
+   "expectedHome": 0.348,
    "prediction": {
     "home": {
-     "win": 9.68,
-     "draw": 2.18,
-     "loss": -5.32
+     "win": 9.78,
+     "draw": 2.28,
+     "loss": -5.22
     },
     "away": {
-     "loss": -9.68,
-     "draw": -2.18,
-     "win": 5.32
+     "loss": -9.78,
+     "draw": -2.28,
+     "win": 5.22
     }
    },
    "homeName": "British Virgin Islands",
@@ -10262,17 +10251,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.525,
+   "expectedHome": 0.539,
    "prediction": {
     "home": {
-     "win": 7.12,
-     "draw": -0.38,
-     "loss": -7.88
+     "win": 6.92,
+     "draw": -0.58,
+     "loss": -8.08
     },
     "away": {
-     "loss": -7.12,
-     "draw": 0.38,
-     "win": 7.88
+     "loss": -6.92,
+     "draw": 0.58,
+     "win": 8.08
     }
    },
    "homeName": "Turks and Caicos Islands",
@@ -11516,17 +11505,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.622,
+   "expectedHome": 0.616,
    "prediction": {
     "home": {
-     "win": 5.67,
-     "draw": -1.83,
-     "loss": -9.33
+     "win": 5.76,
+     "draw": -1.74,
+     "loss": -9.24
     },
     "away": {
-     "loss": -5.67,
-     "draw": 1.83,
-     "win": 9.33
+     "loss": -5.76,
+     "draw": 1.74,
+     "win": 9.24
     }
    },
    "homeName": "Montserrat",
