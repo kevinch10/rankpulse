@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T16:24:53+00:00",
+ "generatedAt": "2026-09-29T17:21:29+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2758,7 +2758,7 @@
    "home": "MDA",
    "away": "FRO",
    "homeScore": 0,
-   "awayScore": 0,
+   "awayScore": 1,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -2791,7 +2791,7 @@
    "date": "2026-09-29",
    "home": "RUS",
    "away": "IRN",
-   "homeScore": 0,
+   "homeScore": 2,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
