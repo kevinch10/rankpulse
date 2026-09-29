@@ -32,6 +32,7 @@
 		BE34736BB9EC35169244363A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA4B1A33B74C515208BF29 /* Models.swift */; };
 		BF7B4D0A273BE3AD8E1756D9 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249FE5F05EBD3E467FDC2A /* MatchesView.swift */; };
 		D26B9BA14B42F7491A575532 /* rankings.json in Resources */ = {isa = PBXBuildFile; fileRef = DE498D50DD52E5A1B65924A6 /* rankings.json */; };
+		EBD2C886BADA1087D0F1D29C /* LiveScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556F9B57D0B4BB38EF1A30CE /* LiveScores.swift */; };
 		F4058C7A6C5802302A0B72FD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F0F67283C3AFE45A74BF61 /* Config.swift */; };
 		FBDE8D677B518DA2E9E54948 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9CB84E47F69D235BB0F937 /* HelpView.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		356952FEC2A433C430F44104 /* SharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
 		38BE8E1C45A6B7B4F8467009 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
 		4CD962C6C1E8BEAEC17ACA6B /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
+		556F9B57D0B4BB38EF1A30CE /* LiveScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScores.swift; sourceTree = "<group>"; };
 		63A2461C462100B291671E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66F0F67283C3AFE45A74BF61 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		85C4058DB0AB446C40006957 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				85C4058DB0AB446C40006957 /* Favourites.swift */,
+				556F9B57D0B4BB38EF1A30CE /* LiveScores.swift */,
 				AF071C92D06E36A7F738C795 /* RankingStore.swift */,
 			);
 			path = Models;
@@ -310,6 +313,7 @@
 				381FC7975528FA0E1BDB0A66 /* Favourites.swift in Sources */,
 				B47D06BCC19A9B9A1F60A829 /* Formatting.swift in Sources */,
 				FBDE8D677B518DA2E9E54948 /* HelpView.swift in Sources */,
+				EBD2C886BADA1087D0F1D29C /* LiveScores.swift in Sources */,
 				779514CE51EA6C9FC15C0736 /* MatchDetailView.swift in Sources */,
 				BF7B4D0A273BE3AD8E1756D9 /* MatchesView.swift in Sources */,
 				9511284D27F2DB5125579D22 /* Models.swift in Sources */,

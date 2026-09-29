@@ -356,7 +356,8 @@ def main():
     matches = normalize_competitions(matches, teams, catalog)
     matches = sorted((m for m in matches if m["date"] >= fetch_from.isoformat()), key=lambda m: m["kickoff"])
     points = project(teams, matches, since)
-    predict([m for m in matches if m["status"] not in (FINISHED, LIVE)], points)
+    # Live matches too: the apps finish them off locally from FIFA's live scores.
+    predict([m for m in matches if m["status"] != FINISHED], points)
 
     live = sorted(teams.values(), key=lambda t: (-points[t["id"]], t["officialRank"]))
     for rank, t in enumerate(live, 1):
@@ -370,7 +371,9 @@ def main():
     for m in matches:
         m["homeName"], m["awayName"] = name[m["home"]], name[m["away"]]
         m["home"], m["away"] = code[m["home"]], code[m["away"]]
-        m.pop("id")
+        mid = m.pop("id")
+        if m.get("source") == "FIFA":
+            m["fifaId"] = mid  # lets the app and site fetch live scores straight from FIFA
 
     played = [m for m in matches if m["status"] in (FINISHED, LIVE)]
     fixtures = [m for m in matches if m["status"] not in (FINISHED, LIVE) and m["date"] >= today.isoformat()]

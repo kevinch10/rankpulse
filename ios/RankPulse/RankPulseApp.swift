@@ -56,6 +56,7 @@ struct ContentView: View {
     @Environment(RankingStore.self) private var store
     @AppStorage("selectedTab") private var tab = "rankings"  // reopen where you left off
     @State private var undo: FavouriteChange?
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         TabView(selection: $tab) {
@@ -99,5 +100,11 @@ struct ContentView: View {
             }
         }
         .animation(.spring(duration: 0.3), value: undo)
+        .task(id: scenePhase) {
+            // Live scores every minute while the app is on screen.
+            guard scenePhase == .active else { return }
+            try? await Task.sleep(for: .seconds(60))
+            await store.liveLoop()
+        }
     }
 }

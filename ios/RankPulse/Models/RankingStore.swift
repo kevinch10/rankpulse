@@ -5,6 +5,11 @@ import Observation
 @Observable
 final class RankingStore {
     private(set) var data: RankingData?
+    /// The last server data, before live scores are layered on.
+    private var base: RankingData?
+    private var live: [String: LiveScore] = [:]
+    private(set) var liveCheckedAt: Date?
+    private var serverFetchedAt: Date?
     private(set) var error: String?
     private(set) var isLoading = false
     private(set) var isSnapshot = false
@@ -50,12 +55,44 @@ final class RankingStore {
             let fresh = try JSONDecoder().decode(RankingData.self, from: bytes)
             try? bytes.write(to: Self.cacheURL)
             apply(fresh, snapshot: false)
+            serverFetchedAt = Date()
             error = nil
-            await favourites.notifyChanges(in: fresh)
-            await favourites.scheduleMatchReminders(fresh)
-            await favourites.scheduleWeeklyDigest(fresh)
+            await pollLive(notify: false)
+            if let data {
+                await favourites.notifyChanges(in: data)
+                await favourites.scheduleMatchReminders(data)
+                await favourites.scheduleWeeklyDigest(data)
+            }
         } catch {
             self.error = Self.explain(error, haveData: data != nil)
+        }
+    }
+
+    /// Live scores from FIFA for matches on now; favourites get alerts at full time.
+    func pollLive(notify: Bool = true) async {
+        guard let base else { return }
+        let wanted = LiveScores.candidates(base)
+        guard !wanted.isEmpty else { liveCheckedAt = nil; return }
+        do {
+            let fresh = try await LiveScores.fetch(wanted)
+            live.merge(fresh) { _, new in new }
+            liveCheckedAt = Date()
+            data = LiveScores.apply(live, to: base)
+            if notify, let data { await favourites.notifyChanges(in: data) }
+        } catch {
+            // keep the last scores; try again next minute
+        }
+    }
+
+    /// Runs while the app is open: live scores every minute, server data every 10.
+    func liveLoop() async {
+        while !Task.isCancelled {
+            if serverFetchedAt.map({ Date().timeIntervalSince($0) > 600 }) ?? false {
+                await refresh()
+            } else {
+                await pollLive()
+            }
+            try? await Task.sleep(for: .seconds(60))
         }
     }
 
@@ -117,7 +154,11 @@ final class RankingStore {
     func team(code: String) -> Team? { data?.teams.first { $0.code == code } }
 
     private func apply(_ new: RankingData, snapshot: Bool) {
-        data = new
+        base = new
+        // Drop live scores for matches the server has now caught up with.
+        let pending = LiveScores.candidates(new)
+        live = live.filter { pending.contains($0.key) }
+        data = LiveScores.apply(live, to: new)
         isSnapshot = snapshot
         confedByCode = Dictionary(uniqueKeysWithValues: new.teams.map { ($0.code, $0.confed) })
     }

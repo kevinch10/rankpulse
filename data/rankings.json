@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T19:29:53+00:00",
+ "generatedAt": "2026-09-29T19:38:56+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3046,8 +3046,24 @@
    "stage": "League C",
    "city": "Venetian Road Settlement",
    "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.475,
+   "prediction": {
+    "home": {
+     "win": 7.88,
+     "draw": 0.38,
+     "loss": -7.12
+    },
+    "away": {
+     "loss": -7.88,
+     "draw": -0.38,
+     "win": 7.12
+    }
+   },
    "homeName": "British Virgin Islands",
-   "awayName": "Turks and Caicos Islands"
+   "awayName": "Turks and Caicos Islands",
+   "fifaId": "dmpqy3gt8n9toclz7gg1uk1ec"
   },
   {
    "kickoff": "2026-09-29T18:45:00Z",
@@ -3063,8 +3079,24 @@
    "stage": "League C",
    "city": "Plovdiv",
    "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.622,
+   "prediction": {
+    "home": {
+     "win": 5.67,
+     "draw": -1.83,
+     "loss": -9.33
+    },
+    "away": {
+     "loss": -5.67,
+     "draw": 1.83,
+     "win": 9.33
+    }
+   },
    "homeName": "Bulgaria",
-   "awayName": "Estonia"
+   "awayName": "Estonia",
+   "fifaId": "1766i9rk4zf5dcpv6wlihbklw"
   },
   {
    "kickoff": "2026-09-29T18:45:00Z",
@@ -3080,8 +3112,24 @@
    "stage": "League C",
    "city": "Luxembourg",
    "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.406,
+   "prediction": {
+    "home": {
+     "win": 8.91,
+     "draw": 1.41,
+     "loss": -6.09
+    },
+    "away": {
+     "loss": -8.91,
+     "draw": -1.41,
+     "win": 6.09
+    }
+   },
    "homeName": "Luxembourg",
-   "awayName": "Iceland"
+   "awayName": "Iceland",
+   "fifaId": "17p8vt23o326u50tnhy5btvys"
   },
   {
    "kickoff": "2026-09-29T18:45:00Z",
@@ -3097,8 +3145,24 @@
    "stage": "League C",
    "city": "Serravalle",
    "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.073,
+   "prediction": {
+    "home": {
+     "win": 13.9,
+     "draw": 6.4,
+     "loss": -1.1
+    },
+    "away": {
+     "loss": -13.9,
+     "draw": -6.4,
+     "win": 1.1
+    }
+   },
    "homeName": "San Marino",
-   "awayName": "Albania"
+   "awayName": "Albania",
+   "fifaId": "15iu01kbrrgjra8nsgonon3mc"
   },
   {
    "kickoff": "2026-09-29T18:45:00Z",
@@ -3114,8 +3178,24 @@
    "stage": "League B",
    "city": "Ljubljana",
    "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.572,
+   "prediction": {
+    "home": {
+     "win": 6.42,
+     "draw": -1.08,
+     "loss": -8.58
+    },
+    "away": {
+     "loss": -6.42,
+     "draw": 1.08,
+     "win": 8.58
+    }
+   },
    "homeName": "Slovenia",
-   "awayName": "North Macedonia"
+   "awayName": "North Macedonia",
+   "fifaId": "eqhhrurgzgqzhk91x1d1wgs2c"
   },
   {
    "kickoff": "2026-09-29T18:45:00Z",
@@ -3131,8 +3211,24 @@
    "stage": "League C",
    "city": "Košice",
    "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.757,
+   "prediction": {
+    "home": {
+     "win": 3.65,
+     "draw": -3.85,
+     "loss": -11.35
+    },
+    "away": {
+     "loss": -3.65,
+     "draw": 3.85,
+     "win": 11.35
+    }
+   },
    "homeName": "Slovakia",
-   "awayName": "Kazakhstan"
+   "awayName": "Kazakhstan",
+   "fifaId": "16mb0kiysgfc4ujjxirj54lck"
   },
   {
    "kickoff": "2026-09-29T18:45:00Z",
@@ -3148,8 +3244,24 @@
    "stage": "League B",
    "city": "Glasgow",
    "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.298,
+   "prediction": {
+    "home": {
+     "win": 10.53,
+     "draw": 3.03,
+     "loss": -4.47
+    },
+    "away": {
+     "loss": -10.53,
+     "draw": -3.03,
+     "win": 4.47
+    }
+   },
    "homeName": "Scotland",
-   "awayName": "Switzerland"
+   "awayName": "Switzerland",
+   "fifaId": "epv7lpysl3ynjxveby3v0r09g"
   },
   {
    "kickoff": "2026-09-29T18:45:00Z",
@@ -3165,8 +3277,24 @@
    "stage": "League A",
    "city": "Prague",
    "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.149,
+   "prediction": {
+    "home": {
+     "win": 12.76,
+     "draw": 5.26,
+     "loss": -2.24
+    },
+    "away": {
+     "loss": -12.76,
+     "draw": -5.26,
+     "win": 2.24
+    }
+   },
    "homeName": "Czechia",
-   "awayName": "England"
+   "awayName": "England",
+   "fifaId": "71w8t9zroiv2n21vvbzjpme50"
   },
   {
    "kickoff": "2026-09-29T18:45:00Z",
@@ -3182,8 +3310,24 @@
    "stage": "League A",
    "city": "Seville",
    "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.742,
+   "prediction": {
+    "home": {
+     "win": 3.87,
+     "draw": -3.63,
+     "loss": -11.13
+    },
+    "away": {
+     "loss": -3.87,
+     "draw": 3.63,
+     "win": 11.13
+    }
+   },
    "homeName": "Spain",
-   "awayName": "Croatia"
+   "awayName": "Croatia",
+   "fifaId": "72ghwsi4k4uw77g2cc20f5x5g"
   },
   {
    "date": "2026-09-29",
@@ -3309,7 +3453,8 @@
    "homeDelta": 1.85,
    "awayDelta": -1.85,
    "homeName": "Moldova",
-   "awayName": "Faroe Islands"
+   "awayName": "Faroe Islands",
+   "fifaId": "16288enhlbs07yjiyn6zumz9w"
   },
   {
    "kickoff": "2026-09-29T16:00:00Z",
@@ -3330,7 +3475,8 @@
    "homeDelta": -1.5,
    "awayDelta": 1.5,
    "homeName": "Finland",
-   "awayName": "Belarus"
+   "awayName": "Belarus",
+   "fifaId": "14z8tce7q79t79gmjhhmzzm6s"
   },
   {
    "kickoff": "2026-09-29T16:00:00Z",
@@ -3351,7 +3497,8 @@
    "homeDelta": 5.7,
    "awayDelta": -5.7,
    "homeName": "Russia",
-   "awayName": "IR Iran"
+   "awayName": "IR Iran",
+   "fifaId": "9zoz532m4bo43t8xch9cxerys"
   },
   {
    "date": "2026-09-29",
@@ -3519,7 +3666,8 @@
    "homeDelta": 4.87,
    "awayDelta": -4.87,
    "homeName": "Thailand",
-   "awayName": "Vietnam"
+   "awayName": "Vietnam",
+   "fifaId": "400022948"
   },
   {
    "kickoff": "2026-09-29T10:00:00Z",
@@ -3540,7 +3688,8 @@
    "homeDelta": -3.01,
    "awayDelta": 3.01,
    "homeName": "Australia",
-   "awayName": "Brazil"
+   "awayName": "Brazil",
+   "fifaId": "693yczjbghrrgrzfdrzhx8p3o"
   },
   {
    "kickoff": "2026-09-29T09:00:00Z",
@@ -3561,7 +3710,8 @@
    "homeDelta": -2.25,
    "awayDelta": 2.25,
    "homeName": "Philippines",
-   "awayName": "Pakistan"
+   "awayName": "Pakistan",
+   "fifaId": "400022946"
   },
   {
    "kickoff": "2026-09-29T02:00:00Z",
@@ -3582,7 +3732,8 @@
    "homeDelta": 7.39,
    "awayDelta": -7.39,
    "homeName": "Guatemala",
-   "awayName": "El Salvador"
+   "awayName": "El Salvador",
+   "fifaId": "1y9dxwpy8va0fci9c3bbq2pzo"
   },
   {
    "kickoff": "2026-09-29T00:00:00Z",
@@ -3603,7 +3754,8 @@
    "homeDelta": 7.6,
    "awayDelta": -7.6,
    "homeName": "St Lucia",
-   "awayName": "Bermuda"
+   "awayName": "Bermuda",
+   "fifaId": "dlylleztuo7clusepxogr3x90"
   },
   {
    "kickoff": "2026-09-29T00:00:00Z",
@@ -3624,7 +3776,8 @@
    "homeDelta": 6.61,
    "awayDelta": -6.61,
    "homeName": "St Kitts and Nevis",
-   "awayName": "Grenada"
+   "awayName": "Grenada",
+   "fifaId": "dmsporsevs7aqyf35mbzj8qac"
   },
   {
    "kickoff": "2026-09-29T00:00:00Z",
@@ -3645,7 +3798,8 @@
    "homeDelta": -7.44,
    "awayDelta": 7.44,
    "homeName": "Jamaica",
-   "awayName": "Honduras"
+   "awayName": "Honduras",
+   "fifaId": "1xhg0550hjzg2lvht3ed6l4wk"
   },
   {
    "date": "2026-09-28",
@@ -3687,7 +3841,8 @@
    "homeDelta": -8.06,
    "awayDelta": 8.06,
    "homeName": "Romania",
-   "awayName": "Bosnia and Herzegovina"
+   "awayName": "Bosnia and Herzegovina",
+   "fifaId": "eoqhwcyfiti6nrt4fdveqwoic"
   },
   {
    "kickoff": "2026-09-28T18:45:00Z",
@@ -3708,7 +3863,8 @@
    "homeDelta": 1.79,
    "awayDelta": -1.79,
    "homeName": "Northern Ireland",
-   "awayName": "Hungary"
+   "awayName": "Hungary",
+   "fifaId": "eo3huqlpx4guc6w2w2bljo4yc"
   },
   {
    "kickoff": "2026-09-28T18:45:00Z",
@@ -3729,7 +3885,8 @@
    "homeDelta": 7.39,
    "awayDelta": -7.39,
    "homeName": "Sweden",
-   "awayName": "Poland"
+   "awayName": "Poland",
+   "fifaId": "epbtlemu0ujrpj879vwq4up04"
   },
   {
    "kickoff": "2026-09-28T18:45:00Z",
@@ -3750,7 +3907,8 @@
    "homeDelta": -5.82,
    "awayDelta": 5.82,
    "homeName": "Türkiye",
-   "awayName": "Italy"
+   "awayName": "Italy",
+   "fifaId": "71bqi0k5txvo37bsw1z63x5p0"
   },
   {
    "kickoff": "2026-09-28T18:45:00Z",
@@ -3771,7 +3929,8 @@
    "homeDelta": -5.17,
    "awayDelta": 5.17,
    "homeName": "Belgium",
-   "awayName": "France"
+   "awayName": "France",
+   "fifaId": "70r1jhm9mvh1xlb6m0r9php1w"
   },
   {
    "date": "2026-09-28",
@@ -3855,7 +4014,8 @@
    "homeDelta": 0.7,
    "awayDelta": -0.7,
    "homeName": "Latvia",
-   "awayName": "Cyprus"
+   "awayName": "Cyprus",
+   "fifaId": "14gpxz6muubypaxupqcgbtzx0"
   },
   {
    "kickoff": "2026-09-28T16:00:00Z",
@@ -3876,7 +4036,8 @@
    "homeDelta": -5.92,
    "awayDelta": 5.92,
    "homeName": "Armenia",
-   "awayName": "Montenegro"
+   "awayName": "Montenegro",
+   "fifaId": "13ppk3fcf8ncswsnwvckofytw"
   },
   {
    "kickoff": "2026-09-28T16:00:00Z",
@@ -3897,7 +4058,8 @@
    "homeDelta": 2.85,
    "awayDelta": -2.85,
    "homeName": "Georgia",
-   "awayName": "Ukraine"
+   "awayName": "Ukraine",
+   "fifaId": "enj6dzub3j08ogq1lr48lhh5g"
   },
   {
    "kickoff": "2026-09-28T12:30:00Z",
@@ -3918,7 +4080,8 @@
    "homeDelta": 0.68,
    "awayDelta": -0.68,
    "homeName": "Malaysia",
-   "awayName": "Indonesia"
+   "awayName": "Indonesia",
+   "fifaId": "400022941"
   },
   {
    "kickoff": "2026-09-28T11:00:00Z",
@@ -3939,7 +4102,8 @@
    "homeDelta": -4.37,
    "awayDelta": 4.37,
    "homeName": "Korea Republic",
-   "awayName": "Uruguay"
+   "awayName": "Uruguay",
+   "fifaId": "53bylr5wciajcitm1nvxi2a6s"
   },
   {
    "kickoff": "2026-09-28T10:25:00Z",
@@ -3960,7 +4124,8 @@
    "homeDelta": 3.09,
    "awayDelta": -3.09,
    "homeName": "Japan",
-   "awayName": "Venezuela"
+   "awayName": "Venezuela",
+   "fifaId": "52gdhzk9gjoq0xkhsk19tknpw"
   },
   {
    "kickoff": "2026-09-28T09:00:00Z",
@@ -3981,7 +4146,8 @@
    "homeDelta": 3.51,
    "awayDelta": -3.51,
    "homeName": "Singapore",
-   "awayName": "Bangladesh"
+   "awayName": "Bangladesh",
+   "fifaId": "400022942"
   },
   {
    "kickoff": "2026-09-28T01:00:00Z",
@@ -4002,7 +4168,8 @@
    "homeDelta": -9.31,
    "awayDelta": 9.31,
    "homeName": "Trinidad and Tobago",
-   "awayName": "Dominican Republic"
+   "awayName": "Dominican Republic",
+   "fifaId": "1x3inmafrb00wb461arfz45xw"
   },
   {
    "kickoff": "2026-09-28T00:00:00Z",
@@ -4023,7 +4190,8 @@
    "homeDelta": -5.85,
    "awayDelta": 5.85,
    "homeName": "Dominica",
-   "awayName": "Puerto Rico"
+   "awayName": "Puerto Rico",
+   "fifaId": "dl4kc47i2dnifvp59is74izv8"
   },
   {
    "kickoff": "2026-09-28T00:00:00Z",
@@ -4044,7 +4212,8 @@
    "homeDelta": 4.89,
    "awayDelta": -4.89,
    "homeName": "Curaçao",
-   "awayName": "Nicaragua"
+   "awayName": "Nicaragua",
+   "fifaId": "1wpjm25v2o37m8vl38fylqh3o"
   },
   {
    "kickoff": "2026-09-27T23:00:00Z",
@@ -4065,7 +4234,8 @@
    "homeDelta": 9.92,
    "awayDelta": -9.92,
    "homeName": "Haiti",
-   "awayName": "Costa Rica"
+   "awayName": "Costa Rica",
+   "fifaId": "1wb7g5cmimok92zqfvgunr5zo"
   },
   {
    "kickoff": "2026-09-27T20:30:00Z",
@@ -4086,7 +4256,8 @@
    "homeDelta": -3.03,
    "awayDelta": 3.03,
    "homeName": "Bolivia",
-   "awayName": "Paraguay"
+   "awayName": "Paraguay",
+   "fifaId": "efchz2ndzeizt2yd03kmcbf9w"
   },
   {
    "kickoff": "2026-09-27T19:00:00Z",
@@ -4107,7 +4278,8 @@
    "homeDelta": 4.68,
    "awayDelta": -4.68,
    "homeName": "Guyana",
-   "awayName": "Cayman Islands"
+   "awayName": "Cayman Islands",
+   "fifaId": "dkpieq2scrn0g0he8hh1nwt1w"
   },
   {
    "kickoff": "2026-09-27T18:45:00Z",
@@ -4128,7 +4300,8 @@
    "homeDelta": -6.05,
    "awayDelta": 6.05,
    "homeName": "Israel",
-   "awayName": "Republic of Ireland"
+   "awayName": "Republic of Ireland",
+   "fifaId": "emyjy88498oqclj5d7ph0lvdg"
   },
   {
    "kickoff": "2026-09-27T18:45:00Z",
@@ -4149,7 +4322,8 @@
    "homeDelta": -10.8,
    "awayDelta": 10.8,
    "homeName": "Germany",
-   "awayName": "Greece"
+   "awayName": "Greece",
+   "fifaId": "6zlyjthjd6hdz2ng3uie67lec"
   },
   {
    "kickoff": "2026-09-27T18:45:00Z",
@@ -4170,7 +4344,8 @@
    "homeDelta": -5.62,
    "awayDelta": 5.62,
    "homeName": "Norway",
-   "awayName": "Portugal"
+   "awayName": "Portugal",
+   "fifaId": "706jxoe5fnvb2aevmtzje3bbo"
   },
   {
    "kickoff": "2026-09-27T17:00:00Z",
@@ -4191,7 +4366,8 @@
    "homeDelta": -0.64,
    "awayDelta": 0.64,
    "homeName": "Jordan",
-   "awayName": "Syria"
+   "awayName": "Syria",
+   "fifaId": "f4h5hzizcwh6obla9hjo35q1g"
   },
   {
    "kickoff": "2026-09-27T16:30:00Z",
@@ -4212,7 +4388,8 @@
    "homeDelta": 3.12,
    "awayDelta": -3.12,
    "homeName": "Malta",
-   "awayName": "Liechtenstein"
+   "awayName": "Liechtenstein",
+   "fifaId": "dfn908cg8fh3u2gxzf65jkd1w"
   },
   {
    "kickoff": "2026-09-27T16:00:00Z",
@@ -4233,7 +4410,8 @@
    "homeDelta": 1.68,
    "awayDelta": -1.68,
    "homeName": "Gibraltar",
-   "awayName": "Andorra"
+   "awayName": "Andorra",
+   "fifaId": "dwkaj5a6xt23c6q2f9f7uil90"
   },
   {
    "kickoff": "2026-09-27T16:00:00Z",
@@ -4254,7 +4432,8 @@
    "homeDelta": 3.88,
    "awayDelta": -3.88,
    "homeName": "Austria",
-   "awayName": "Kosovo"
+   "awayName": "Kosovo",
+   "fifaId": "emccx75mvddqt6pqw3fbw5hxw"
   },
   {
    "kickoff": "2026-09-27T16:00:00Z",
@@ -4275,7 +4454,8 @@
    "homeDelta": 6.09,
    "awayDelta": -6.09,
    "homeName": "Denmark",
-   "awayName": "Wales"
+   "awayName": "Wales",
+   "fifaId": "6z1sobgw401xuk2ybvcgcpyc4"
   },
   {
    "kickoff": "2026-09-27T16:00:00Z",
@@ -4296,7 +4476,8 @@
    "homeDelta": -3.81,
    "awayDelta": 3.81,
    "homeName": "Serbia",
-   "awayName": "Netherlands"
+   "awayName": "Netherlands",
+   "fifaId": "6yf91f7pmp2wywnjp98jrupzo"
   },
   {
    "kickoff": "2026-09-27T13:00:00Z",
@@ -4317,7 +4498,8 @@
    "homeDelta": 1.1,
    "awayDelta": -1.1,
    "homeName": "Lithuania",
-   "awayName": "Azerbaijan"
+   "awayName": "Azerbaijan",
+   "fifaId": "bp0s8rxvaiewm3k2f6ukhchsk"
   },
   {
    "kickoff": "2026-09-27T12:00:00Z",
@@ -4338,7 +4520,8 @@
    "homeDelta": -4.31,
    "awayDelta": 4.31,
    "homeName": "Seychelles",
-   "awayName": "Sri Lanka"
+   "awayName": "Sri Lanka",
+   "fifaId": "75t7zliedl9dz2q6b17w3807o"
   },
   {
    "kickoff": "2026-09-27T11:35:00Z",
@@ -4359,7 +4542,8 @@
    "homeDelta": -4.88,
    "awayDelta": 4.88,
    "homeName": "China PR",
-   "awayName": "New Zealand"
+   "awayName": "New Zealand",
+   "fifaId": "4wzfcp1t7d3i9od2n9jjuzj84"
   },
   {
    "kickoff": "2026-09-27T10:00:00Z",
@@ -4380,7 +4564,8 @@
    "homeDelta": 5.89,
    "awayDelta": -5.89,
    "homeName": "Cambodia",
-   "awayName": "Myanmar"
+   "awayName": "Myanmar",
+   "fifaId": "400022953"
   },
   {
    "kickoff": "2026-09-27T07:00:00Z",
@@ -4401,7 +4586,8 @@
    "homeDelta": 3.69,
    "awayDelta": -3.69,
    "homeName": "Hong Kong, China",
-   "awayName": "Laos"
+   "awayName": "Laos",
+   "fifaId": "400022951"
   },
   {
    "kickoff": "2026-09-27T07:00:00Z",
@@ -4422,7 +4608,8 @@
    "homeDelta": 4.56,
    "awayDelta": -4.56,
    "homeName": "Fiji",
-   "awayName": "Papua New Guinea"
+   "awayName": "Papua New Guinea",
+   "fifaId": "c47clcyqzh6o1cb7bor1ehr84"
   },
   {
    "kickoff": "2026-09-27T04:00:00Z",
@@ -4443,7 +4630,8 @@
    "homeDelta": -3.67,
    "awayDelta": 3.67,
    "homeName": "Cook Islands",
-   "awayName": "Tahiti"
+   "awayName": "Tahiti",
+   "fifaId": "df4p9wbaq7o02lk4132f0bn6c"
   },
   {
    "kickoff": "2026-09-27T04:00:00Z",
@@ -4464,7 +4652,8 @@
    "homeDelta": 5.3,
    "awayDelta": -5.3,
    "homeName": "Vanuatu",
-   "awayName": "New Caledonia"
+   "awayName": "New Caledonia",
+   "fifaId": "c3y13nheby9hbgm70tzdtxdzo"
   },
   {
    "kickoff": "2026-09-27T01:00:00Z",
@@ -4485,7 +4674,8 @@
    "homeDelta": -0.14,
    "awayDelta": 0.14,
    "homeName": "Mexico",
-   "awayName": "Colombia"
+   "awayName": "Colombia",
+   "fifaId": "1vws3icob1lf40wia77ztw7bo"
   },
   {
    "kickoff": "2026-09-26T23:00:00Z",
@@ -4506,7 +4696,8 @@
    "homeDelta": 4.5,
    "awayDelta": -4.5,
    "homeName": "Antigua and Barbuda",
-   "awayName": "Anguilla"
+   "awayName": "Anguilla",
+   "fifaId": "dls1yttnn35sivswb4m1c5wyc"
   },
   {
    "kickoff": "2026-09-26T23:00:00Z",
@@ -4527,7 +4718,8 @@
    "homeDelta": 3.93,
    "awayDelta": -3.93,
    "homeName": "Canada",
-   "awayName": "Chile"
+   "awayName": "Chile",
+   "fifaId": "5tpxkv84prmz0f5yqckemkob8"
   },
   {
    "kickoff": "2026-09-26T20:30:00Z",
@@ -4548,7 +4740,8 @@
    "homeDelta": 2.91,
    "awayDelta": -2.91,
    "homeName": "USA",
-   "awayName": "Peru"
+   "awayName": "Peru",
+   "fifaId": "3e9b6037p30m93ms9mmvt3xn8"
   },
   {
    "kickoff": "2026-09-26T19:00:00Z",
@@ -4569,7 +4762,8 @@
    "homeDelta": 5.46,
    "awayDelta": -5.46,
    "homeName": "Montserrat",
-   "awayName": "British Virgin Islands"
+   "awayName": "British Virgin Islands",
+   "fifaId": "dlajikovmkocwda0a50q0go44"
   },
   {
    "kickoff": "2026-09-26T18:45:00Z",
@@ -4590,7 +4784,8 @@
    "homeDelta": 5.62,
    "awayDelta": -5.62,
    "homeName": "Albania",
-   "awayName": "Belarus"
+   "awayName": "Belarus",
+   "fifaId": "12464vc4eulj2onw0owas2gwk"
   },
   {
    "kickoff": "2026-09-26T18:45:00Z",
@@ -4611,7 +4806,8 @@
    "homeDelta": 2.15,
    "awayDelta": -2.15,
    "homeName": "Slovakia",
-   "awayName": "Moldova"
+   "awayName": "Moldova",
+   "fifaId": "12wzj83iaup8xkgt47l42gpas"
   },
   {
    "kickoff": "2026-09-26T18:45:00Z",
@@ -4632,7 +4828,8 @@
    "homeDelta": -3.18,
    "awayDelta": 3.18,
    "homeName": "North Macedonia",
-   "awayName": "Switzerland"
+   "awayName": "Switzerland",
+   "fifaId": "elmetc7b7jodmhflow3wj77ro"
   },
   {
    "kickoff": "2026-09-26T18:45:00Z",
@@ -4653,7 +4850,8 @@
    "homeDelta": -4.09,
    "awayDelta": 4.09,
    "homeName": "Czechia",
-   "awayName": "Croatia"
+   "awayName": "Croatia",
+   "fifaId": "6wqcfcniouf1rgcafpks9yntg"
   },
   {
    "kickoff": "2026-09-26T18:45:00Z",
@@ -4674,7 +4872,8 @@
    "homeDelta": -6.46,
    "awayDelta": 6.46,
    "homeName": "England",
-   "awayName": "Spain"
+   "awayName": "Spain",
+   "fifaId": "6xoieijss6lahcen7v531mp78"
   },
   {
    "kickoff": "2026-09-26T16:00:00Z",
@@ -4695,7 +4894,8 @@
    "homeDelta": 0.63,
    "awayDelta": -0.63,
    "homeName": "Faroe Islands",
-   "awayName": "Kazakhstan"
+   "awayName": "Kazakhstan",
+   "fifaId": "101udrif448sogdl0mmmjb190"
   },
   {
    "kickoff": "2026-09-26T16:00:00Z",
@@ -4716,7 +4916,8 @@
    "homeDelta": -8.06,
    "awayDelta": 8.06,
    "homeName": "Bulgaria",
-   "awayName": "Luxembourg"
+   "awayName": "Luxembourg",
+   "fifaId": "10rxmu1lmbsyupvva42tjct90"
   },
   {
    "kickoff": "2026-09-26T16:00:00Z",
@@ -4737,7 +4938,8 @@
    "homeDelta": -1.27,
    "awayDelta": 1.27,
    "homeName": "San Marino",
-   "awayName": "Finland"
+   "awayName": "Finland",
+   "fifaId": "z9n3jsyplrk1hzwg379me0wk"
   },
   {
    "kickoff": "2026-09-26T16:00:00Z",
@@ -4758,7 +4960,8 @@
    "homeDelta": -2.89,
    "awayDelta": 2.89,
    "homeName": "Iceland",
-   "awayName": "Estonia"
+   "awayName": "Estonia",
+   "fifaId": "11fmibp5gnpgoadu016cdshsk"
   },
   {
    "date": "2026-09-26",
@@ -4821,7 +5024,8 @@
    "homeDelta": 3.67,
    "awayDelta": -3.67,
    "homeName": "Vietnam",
-   "awayName": "Philippines"
+   "awayName": "Philippines",
+   "fifaId": "400022949"
   },
   {
    "kickoff": "2026-09-26T13:00:00Z",
@@ -4842,7 +5046,8 @@
    "homeDelta": 0.72,
    "awayDelta": -0.72,
    "homeName": "Slovenia",
-   "awayName": "Scotland"
+   "awayName": "Scotland",
+   "fifaId": "ektkruntlzz5dv1fytlt5u6ms"
   },
   {
    "kickoff": "2026-09-26T09:00:00Z",
@@ -4863,7 +5068,8 @@
    "homeDelta": -1.71,
    "awayDelta": 1.71,
    "homeName": "Pakistan",
-   "awayName": "Thailand"
+   "awayName": "Thailand",
+   "fifaId": "400022945"
   },
   {
    "kickoff": "2026-09-26T01:00:00Z",
@@ -4884,7 +5090,8 @@
    "homeDelta": -10.81,
    "awayDelta": 10.81,
    "homeName": "Honduras",
-   "awayName": "Suriname"
+   "awayName": "Suriname",
+   "fifaId": "1uxd2qlbgfdxidgefbuayy7tg"
   },
   {
    "kickoff": "2026-09-26T00:00:00Z",
@@ -4905,7 +5112,8 @@
    "homeDelta": 8.46,
    "awayDelta": -8.46,
    "homeName": "Barbados",
-   "awayName": "St Lucia"
+   "awayName": "St Lucia",
+   "fifaId": "dhi7uplig9drztu7qp4u9u1w4"
   },
   {
    "kickoff": "2026-09-26T00:00:00Z",
@@ -4926,7 +5134,8 @@
    "homeDelta": 5.82,
    "awayDelta": -5.82,
    "homeName": "Jamaica",
-   "awayName": "Guatemala"
+   "awayName": "Guatemala",
+   "fifaId": "1vul4ucfdbfim2265tx9z7zf8"
   },
   {
    "date": "2026-09-25",
@@ -4989,7 +5198,8 @@
    "homeDelta": -7.51,
    "awayDelta": 7.51,
    "homeName": "Grenada",
-   "awayName": "Cuba"
+   "awayName": "Cuba",
+   "fifaId": "di5pq0t89nvjtbudz3blqn7ys"
   },
   {
    "date": "2026-09-25",
@@ -5073,7 +5283,8 @@
    "homeDelta": 5.15,
    "awayDelta": -5.15,
    "homeName": "Montenegro",
-   "awayName": "Cyprus"
+   "awayName": "Cyprus",
+   "fifaId": "yh37sflnk6k046gh5gkc08b8"
   },
   {
    "kickoff": "2026-09-25T18:45:00Z",
@@ -5094,7 +5305,8 @@
    "homeDelta": 6.5,
    "awayDelta": -6.5,
    "homeName": "Sweden",
-   "awayName": "Romania"
+   "awayName": "Romania",
+   "fifaId": "ek3vw4xe7jnuutaa4ul5ep7v8"
   },
   {
    "kickoff": "2026-09-25T18:45:00Z",
@@ -5115,7 +5327,8 @@
    "homeDelta": -1.66,
    "awayDelta": 1.66,
    "homeName": "Poland",
-   "awayName": "Bosnia and Herzegovina"
+   "awayName": "Bosnia and Herzegovina",
+   "fifaId": "ejamx4pdo98csx7ok4f4msphw"
   },
   {
    "kickoff": "2026-09-25T18:45:00Z",
@@ -5136,7 +5349,8 @@
    "homeDelta": -6.88,
    "awayDelta": 6.88,
    "homeName": "Hungary",
-   "awayName": "Ukraine"
+   "awayName": "Ukraine",
+   "fifaId": "eihx0e3entlajzfqqjzeoul1w"
   },
   {
    "kickoff": "2026-09-25T18:45:00Z",
@@ -5157,7 +5371,8 @@
    "homeDelta": -6.45,
    "awayDelta": 6.45,
    "homeName": "Italy",
-   "awayName": "Belgium"
+   "awayName": "Belgium",
+   "fifaId": "6v680w5o0qauwgb1p05fzcf10"
   },
   {
    "kickoff": "2026-09-25T18:45:00Z",
@@ -5178,7 +5393,8 @@
    "homeDelta": -2.95,
    "awayDelta": 2.95,
    "homeName": "Türkiye",
-   "awayName": "France"
+   "awayName": "France",
+   "fifaId": "6vvfis08nmuih2ogkqjwuxbf8"
   },
   {
    "date": "2026-09-25",
@@ -5325,7 +5541,8 @@
    "homeDelta": 6.02,
    "awayDelta": -6.02,
    "homeName": "Armenia",
-   "awayName": "Latvia"
+   "awayName": "Latvia",
+   "fifaId": "xosgpo99jtogqdt7q1fjkkyc"
   },
   {
    "kickoff": "2026-09-25T16:00:00Z",
@@ -5346,7 +5563,8 @@
    "homeDelta": -7.36,
    "awayDelta": 7.36,
    "homeName": "Georgia",
-   "awayName": "Northern Ireland"
+   "awayName": "Northern Ireland",
+   "fifaId": "ehsjuntz8jabbaap6uzs2mbkk"
   },
   {
    "date": "2026-09-25",
@@ -5430,7 +5648,8 @@
    "homeDelta": 3.19,
    "awayDelta": -3.19,
    "homeName": "India",
-   "awayName": "Panama"
+   "awayName": "Panama",
+   "fifaId": "1dwcosff7fhk6r7wn4aeztqfo"
   },
   {
    "kickoff": "2026-09-25T13:00:00Z",
@@ -5451,7 +5670,8 @@
    "homeDelta": 4.12,
    "awayDelta": -4.12,
    "homeName": "Indonesia",
-   "awayName": "Singapore"
+   "awayName": "Singapore",
+   "fifaId": "400022940"
   },
   {
    "kickoff": "2026-09-25T10:00:00Z",
@@ -5472,7 +5692,8 @@
    "homeDelta": 2.02,
    "awayDelta": -2.02,
    "homeName": "Australia",
-   "awayName": "Brazil"
+   "awayName": "Brazil",
+   "fifaId": "68imuqdojzshcjouach2ltt78"
   },
   {
    "kickoff": "2026-09-25T09:00:00Z",
@@ -5493,7 +5714,8 @@
    "homeDelta": -3.3,
    "awayDelta": 3.3,
    "homeName": "Bangladesh",
-   "awayName": "Malaysia"
+   "awayName": "Malaysia",
+   "fifaId": "400022938"
   },
   {
    "kickoff": "2026-09-25T02:00:00Z",
@@ -5514,7 +5736,8 @@
    "homeDelta": -9.87,
    "awayDelta": 9.87,
    "homeName": "Costa Rica",
-   "awayName": "Curaçao"
+   "awayName": "Curaçao",
+   "fifaId": "1tgc5t7tltj9l2z24cxjjyjh0"
   },
   {
    "kickoff": "2026-09-25T00:20:00Z",
@@ -5535,7 +5758,8 @@
    "homeDelta": 6.85,
    "awayDelta": -6.85,
    "homeName": "Haiti",
-   "awayName": "Trinidad and Tobago"
+   "awayName": "Trinidad and Tobago",
+   "fifaId": "1ugmakye78pbd4pv9ffujkydw"
   },
   {
    "kickoff": "2026-09-25T00:10:00Z",
@@ -5556,7 +5780,8 @@
    "homeDelta": 0.74,
    "awayDelta": -0.74,
    "homeName": "Cayman Islands",
-   "awayName": "Dominica"
+   "awayName": "Dominica",
+   "fifaId": "dg76df01hs17g98pd54m38u8k"
   },
   {
    "kickoff": "2026-09-25T00:00:00Z",
@@ -5577,7 +5802,8 @@
    "homeDelta": 8.05,
    "awayDelta": -8.05,
    "homeName": "Dominican Republic",
-   "awayName": "Nicaragua"
+   "awayName": "Nicaragua",
+   "fifaId": "1u018g91k5ovadk6etk2mxxjo"
   },
   {
    "date": "2026-09-24",
@@ -5682,7 +5908,8 @@
    "homeDelta": -7.14,
    "awayDelta": 7.14,
    "homeName": "Puerto Rico",
-   "awayName": "Guyana"
+   "awayName": "Guyana",
+   "fifaId": "dfgontqamj7ncfhk46iqp5ams"
   },
   {
    "kickoff": "2026-09-24T18:45:00Z",
@@ -5703,7 +5930,8 @@
    "homeDelta": -4.05,
    "awayDelta": 4.05,
    "homeName": "Liechtenstein",
-   "awayName": "Lithuania"
+   "awayName": "Lithuania",
+   "fifaId": "boe81afv20jgbbb0patpmx5w4"
   },
   {
    "kickoff": "2026-09-24T18:45:00Z",
@@ -5724,7 +5952,8 @@
    "homeDelta": 9.22,
    "awayDelta": -9.22,
    "homeName": "Kosovo",
-   "awayName": "Republic of Ireland"
+   "awayName": "Republic of Ireland",
+   "fifaId": "egzx1e9ue9ao6dijwlnb2xel0"
   },
   {
    "kickoff": "2026-09-24T18:45:00Z",
@@ -5745,7 +5974,8 @@
    "homeDelta": -7.92,
    "awayDelta": 7.92,
    "homeName": "Serbia",
-   "awayName": "Greece"
+   "awayName": "Greece",
+   "fifaId": "6sxcuxtkdqga4yljytqt2we8k"
   },
   {
    "kickoff": "2026-09-24T18:45:00Z",
@@ -5766,7 +5996,8 @@
    "homeDelta": 3.99,
    "awayDelta": -3.99,
    "homeName": "Austria",
-   "awayName": "Israel"
+   "awayName": "Israel",
+   "fifaId": "eg2zc60i82m5910xeer2zfv2s"
   },
   {
    "kickoff": "2026-09-24T18:45:00Z",
@@ -5787,7 +6018,8 @@
    "homeDelta": 7.04,
    "awayDelta": -7.04,
    "homeName": "Norway",
-   "awayName": "Denmark"
+   "awayName": "Denmark",
+   "fifaId": "6tpz7jt971y5eha5scct99j4k"
   },
   {
    "kickoff": "2026-09-24T18:45:00Z",
@@ -5808,7 +6040,8 @@
    "homeDelta": -0.71,
    "awayDelta": 0.71,
    "homeName": "Netherlands",
-   "awayName": "Germany"
+   "awayName": "Germany",
+   "fifaId": "6rxvxtpbtvthvexj3g0r33mz8"
   },
   {
    "kickoff": "2026-09-24T18:45:00Z",
@@ -5829,7 +6062,8 @@
    "homeDelta": 3.92,
    "awayDelta": -3.92,
    "homeName": "Portugal",
-   "awayName": "Wales"
+   "awayName": "Wales",
+   "fifaId": "6ugqh1u9tn5s6syg5acinhlhw"
   },
   {
    "date": "2026-09-24",
@@ -5892,7 +6126,8 @@
    "homeDelta": -6.83,
    "awayDelta": 6.83,
    "homeName": "Andorra",
-   "awayName": "Malta"
+   "awayName": "Malta",
+   "fifaId": "9nhlkonwl9zcyg36i31kyoydw"
   },
   {
    "date": "2026-09-24",
@@ -5955,7 +6190,8 @@
    "homeDelta": 6.83,
    "awayDelta": -6.83,
    "homeName": "Uzbekistan",
-   "awayName": "IR Iran"
+   "awayName": "IR Iran",
+   "fifaId": "cwpgocxccb4375huahldswt0"
   },
   {
    "kickoff": "2026-09-24T12:00:00Z",
@@ -5976,7 +6212,8 @@
    "homeDelta": 3.29,
    "awayDelta": -3.29,
    "homeName": "Myanmar",
-   "awayName": "Timor-Leste"
+   "awayName": "Timor-Leste",
+   "fifaId": "400022955"
   },
   {
    "kickoff": "2026-09-24T11:35:00Z",
@@ -5997,7 +6234,8 @@
    "homeDelta": 2.33,
    "awayDelta": -2.33,
    "homeName": "China PR",
-   "awayName": "Maldives"
+   "awayName": "Maldives",
+   "fifaId": "7qptae21szgzovljy53dh1ul0"
   },
   {
    "kickoff": "2026-09-24T11:00:00Z",
@@ -6018,7 +6256,8 @@
    "homeDelta": 5.32,
    "awayDelta": -5.32,
    "homeName": "Korea Republic",
-   "awayName": "Ecuador"
+   "awayName": "Ecuador",
+   "fifaId": "52vjg1ek3p0d37mq8mmj6z1uc"
   },
   {
    "kickoff": "2026-09-24T10:05:00Z",
@@ -6039,7 +6278,8 @@
    "homeDelta": 4.63,
    "awayDelta": -4.63,
    "homeName": "Japan",
-   "awayName": "Uruguay"
+   "awayName": "Uruguay",
+   "fifaId": "6wxu5np16p17ivqwsk167vk0k"
   },
   {
    "kickoff": "2026-09-24T09:30:00Z",
@@ -6060,7 +6300,8 @@
    "homeDelta": 0.25,
    "awayDelta": -0.25,
    "homeName": "Palestine",
-   "awayName": "New Zealand"
+   "awayName": "New Zealand",
+   "fifaId": "8q2oq7j2stieqz284lsz275lg"
   },
   {
    "kickoff": "2026-09-24T09:00:00Z",
@@ -6081,7 +6322,8 @@
    "homeDelta": 4.8,
    "awayDelta": -4.8,
    "homeName": "Laos",
-   "awayName": "Brunei Darussalam"
+   "awayName": "Brunei Darussalam",
+   "fifaId": "400022952"
   },
   {
    "kickoff": "2026-09-24T07:00:00Z",
@@ -6102,7 +6344,8 @@
    "homeDelta": -4.48,
    "awayDelta": 4.48,
    "homeName": "Papua New Guinea",
-   "awayName": "New Caledonia"
+   "awayName": "New Caledonia",
+   "fifaId": "c3ot5ljtqn8s6wslr7u5okv10"
   },
   {
    "kickoff": "2026-09-24T04:00:00Z",
@@ -6123,7 +6366,8 @@
    "homeDelta": -0.3,
    "awayDelta": 0.3,
    "homeName": "Solomon Islands",
-   "awayName": "Vanuatu"
+   "awayName": "Vanuatu",
+   "fifaId": "c3fhzkemoo9yqhe0rl6gbi8es"
   },
   {
    "kickoff": "2026-09-23T23:00:00Z",
@@ -6144,7 +6388,8 @@
    "homeDelta": 9.07,
    "awayDelta": -9.07,
    "homeName": "Aruba",
-   "awayName": "Antigua and Barbuda"
+   "awayName": "Antigua and Barbuda",
+   "fifaId": "dk4qcmo5k5xmwctsts4fucphw"
   },
   {
    "kickoff": "2026-09-23T19:00:00Z",
@@ -6165,7 +6410,8 @@
    "homeDelta": -5.9,
    "awayDelta": 5.9,
    "homeName": "Turks and Caicos Islands",
-   "awayName": "Montserrat"
+   "awayName": "Montserrat",
+   "fifaId": "djgdocjyifocdsjixwb2m2rkk"
   },
   {
    "kickoff": "2026-09-23T16:00:00Z",
@@ -6186,7 +6432,8 @@
    "homeDelta": 0.34,
    "awayDelta": -0.34,
    "homeName": "Gibraltar",
-   "awayName": "São Tomé and Príncipe"
+   "awayName": "São Tomé and Príncipe",
+   "fifaId": "52w6bxwil5no53hom1lc9f9ck"
   },
   {
    "kickoff": "2026-09-23T16:00:00Z",
@@ -6207,7 +6454,8 @@
    "homeDelta": 5.88,
    "awayDelta": -5.88,
    "homeName": "Azerbaijan",
-   "awayName": "Tajikistan"
+   "awayName": "Tajikistan",
+   "fifaId": "883pipq4bwonqowabd7q0wwt0"
   },
   {
    "kickoff": "2026-09-21T15:00:00Z",
@@ -6228,7 +6476,8 @@
    "homeDelta": 3.71,
    "awayDelta": -3.71,
    "homeName": "Dominica",
-   "awayName": "Anguilla"
+   "awayName": "Anguilla",
+   "fifaId": "2vg4i9o9mps9pf3g2l0uekd90"
   },
   {
    "kickoff": "2026-09-21T07:00:00Z",
@@ -6249,7 +6498,8 @@
    "homeDelta": -5.23,
    "awayDelta": 5.23,
    "homeName": "Fiji",
-   "awayName": "Vanuatu"
+   "awayName": "Vanuatu",
+   "fifaId": "c36bk9sk9ul0smx90tukka710"
   },
   {
    "kickoff": "2026-09-21T04:00:00Z",
@@ -6270,7 +6520,8 @@
    "homeDelta": -5.05,
    "awayDelta": 5.05,
    "homeName": "New Caledonia",
-   "awayName": "Solomon Islands"
+   "awayName": "Solomon Islands",
+   "fifaId": "c2x0pbv2o9vedobnaqv1rau50"
   },
   {
    "kickoff": "2026-09-18T07:00:00Z",
@@ -6291,7 +6542,8 @@
    "homeDelta": 0.04,
    "awayDelta": -0.04,
    "homeName": "Fiji",
-   "awayName": "Solomon Islands"
+   "awayName": "Solomon Islands",
+   "fifaId": "c2nr9vwdkitol1xxy6x9qfl04"
   },
   {
    "kickoff": "2026-09-18T02:00:00Z",
@@ -6312,7 +6564,8 @@
    "homeDelta": 2.63,
    "awayDelta": -2.63,
    "homeName": "Papua New Guinea",
-   "awayName": "Vanuatu"
+   "awayName": "Vanuatu",
+   "fifaId": "c2ecpxbj8uh3c4jmi2gmquntg"
   },
   {
    "kickoff": "2026-08-26T13:00:00Z",
@@ -6333,7 +6586,8 @@
    "homeDelta": 0.07,
    "awayDelta": -0.07,
    "homeName": "Vietnam",
-   "awayName": "Thailand"
+   "awayName": "Thailand",
+   "fifaId": "38w3neiqa1x8wrv2ibhgum978"
   },
   {
    "kickoff": "2026-08-22T13:00:00Z",
@@ -6354,7 +6608,8 @@
    "homeDelta": -2.6,
    "awayDelta": 2.6,
    "homeName": "Thailand",
-   "awayName": "Vietnam"
+   "awayName": "Vietnam",
+   "fifaId": "3860alcnfbut9fghyv01m4zdg"
   },
   {
    "kickoff": "2026-08-19T13:00:00Z",
@@ -6375,7 +6630,8 @@
    "homeDelta": 1.83,
    "awayDelta": -1.83,
    "homeName": "Vietnam",
-   "awayName": "Malaysia"
+   "awayName": "Malaysia",
+   "fifaId": "8s7nru8oa00ew2ccjd383vcwk"
   },
   {
    "kickoff": "2026-08-18T13:00:00Z",
@@ -6396,7 +6652,8 @@
    "homeDelta": -3.4,
    "awayDelta": 3.4,
    "homeName": "Thailand",
-   "awayName": "Singapore"
+   "awayName": "Singapore",
+   "fifaId": "8rhjmea8xqqopxzwycfzlsduc"
   },
   {
    "kickoff": "2026-08-16T13:00:00Z",
@@ -6417,7 +6674,8 @@
    "homeDelta": -1.84,
    "awayDelta": 1.84,
    "homeName": "Malaysia",
-   "awayName": "Vietnam"
+   "awayName": "Vietnam",
+   "fifaId": "8qs2zeoa8k5kwv8tut3qedvdg"
   },
   {
    "kickoff": "2026-08-15T13:00:00Z",
@@ -6438,7 +6696,8 @@
    "homeDelta": -1.61,
    "awayDelta": 1.61,
    "homeName": "Singapore",
-   "awayName": "Thailand"
+   "awayName": "Thailand",
+   "fifaId": "8q1tvn2o2tqoyqfxjxw2slyj8"
   },
   {
    "kickoff": "2026-08-08T13:00:00Z",
@@ -6459,7 +6718,8 @@
    "homeDelta": 2.55,
    "awayDelta": -2.55,
    "homeName": "Malaysia",
-   "awayName": "Philippines"
+   "awayName": "Philippines",
+   "fifaId": "9mz2zffybtyovpl76q5fkoys4"
   },
   {
    "kickoff": "2026-08-08T13:00:00Z",
@@ -6480,7 +6740,8 @@
    "homeDelta": 1.41,
    "awayDelta": -1.41,
    "homeName": "Thailand",
-   "awayName": "Myanmar"
+   "awayName": "Myanmar",
+   "fifaId": "9mlpt8so52t0ljqv1gwxi38yc"
   },
   {
    "kickoff": "2026-08-07T13:00:00Z",
@@ -6501,7 +6762,8 @@
    "homeDelta": 0.45,
    "awayDelta": -0.45,
    "homeName": "Singapore",
-   "awayName": "Indonesia"
+   "awayName": "Indonesia",
+   "fifaId": "5szfys598acemrhp2vkcft0d0"
   },
   {
    "kickoff": "2026-08-07T13:00:00Z",
@@ -6522,7 +6784,8 @@
    "homeDelta": 1.17,
    "awayDelta": -1.17,
    "homeName": "Vietnam",
-   "awayName": "Cambodia"
+   "awayName": "Cambodia",
+   "fifaId": "5sn8uut8jc8tu8nw9ssmhv8k4"
   },
   {
    "kickoff": "2026-08-04T13:00:00Z",
@@ -6543,7 +6806,8 @@
    "homeDelta": -1.78,
    "awayDelta": 1.78,
    "homeName": "Philippines",
-   "awayName": "Thailand"
+   "awayName": "Thailand",
+   "fifaId": "9lu0iledwtdn6zu7smkjmtiqc"
   },
   {
    "kickoff": "2026-08-04T10:00:00Z",
@@ -6564,7 +6828,8 @@
    "homeDelta": 1.89,
    "awayDelta": -1.89,
    "homeName": "Myanmar",
-   "awayName": "Laos"
+   "awayName": "Laos",
+   "fifaId": "9m7aeiwfdt10gun5z6bl8qtxw"
   },
   {
    "kickoff": "2026-08-03T13:30:00Z",
@@ -6585,7 +6850,8 @@
    "homeDelta": -2.18,
    "awayDelta": 2.18,
    "homeName": "Indonesia",
-   "awayName": "Vietnam"
+   "awayName": "Vietnam",
+   "fifaId": "5sb6fxpeovc5hh0tdqd4lugwk"
   },
   {
    "kickoff": "2026-08-03T10:30:00Z",
@@ -6606,7 +6872,8 @@
    "homeDelta": 2.07,
    "awayDelta": -2.07,
    "homeName": "Cambodia",
-   "awayName": "Timor-Leste"
+   "awayName": "Timor-Leste",
+   "fifaId": "ct4uis3jogzmjmni969sgjdg"
   },
   {
    "kickoff": "2026-08-01T13:00:00Z",
@@ -6627,7 +6894,8 @@
    "homeDelta": 1.75,
    "awayDelta": -1.75,
    "homeName": "Thailand",
-   "awayName": "Malaysia"
+   "awayName": "Malaysia",
+   "fifaId": "9lgy1h5avy02d3eiakaez8nx0"
   },
   {
    "kickoff": "2026-08-01T10:00:00Z",
@@ -6648,7 +6916,8 @@
    "homeDelta": -1.52,
    "awayDelta": 1.52,
    "homeName": "Laos",
-   "awayName": "Philippines"
+   "awayName": "Philippines",
+   "fifaId": "9l3rzgyq8xakbmq01juwt3dw4"
   },
   {
    "kickoff": "2026-07-31T13:00:00Z",
@@ -6669,7 +6938,8 @@
    "homeDelta": -0.77,
    "awayDelta": 0.77,
    "homeName": "Vietnam",
-   "awayName": "Singapore"
+   "awayName": "Singapore",
+   "fifaId": "5rw6azr4balbm0gww0706kges"
   },
   {
    "kickoff": "2026-07-31T10:00:00Z",
@@ -6690,7 +6960,8 @@
    "homeDelta": -1.1,
    "awayDelta": 1.1,
    "homeName": "Timor-Leste",
-   "awayName": "Indonesia"
+   "awayName": "Indonesia",
+   "fifaId": "e1na6zmpd13au6bv2ypxxdses"
   },
   {
    "kickoff": "2026-07-28T13:00:00Z",
@@ -6711,7 +6982,8 @@
    "homeDelta": 1.57,
    "awayDelta": -1.57,
    "homeName": "Malaysia",
-   "awayName": "Laos"
+   "awayName": "Laos",
+   "fifaId": "9kaz0vc8bs0voywdru0pvqcr8"
   },
   {
    "kickoff": "2026-07-28T10:00:00Z",
@@ -6732,7 +7004,8 @@
    "homeDelta": -2.94,
    "awayDelta": 2.94,
    "homeName": "Philippines",
-   "awayName": "Myanmar"
+   "awayName": "Myanmar",
+   "fifaId": "9knzp49imdbgo0bd8ajlo3kes"
   },
   {
    "kickoff": "2026-07-27T13:30:00Z",
@@ -6753,7 +7026,8 @@
    "homeDelta": 1.44,
    "awayDelta": -1.44,
    "homeName": "Indonesia",
-   "awayName": "Cambodia"
+   "awayName": "Cambodia",
+   "fifaId": "5rhc9xl9z3dvgwlho4l19lams"
   },
   {
    "kickoff": "2026-07-27T11:00:00Z",
@@ -6774,7 +7048,8 @@
    "homeDelta": 1.46,
    "awayDelta": -1.46,
    "homeName": "Singapore",
-   "awayName": "Timor-Leste"
+   "awayName": "Timor-Leste",
+   "fifaId": "cmmr7oa4oe5e2r75bp1pcp53o"
   },
   {
    "kickoff": "2026-07-25T13:00:00Z",
@@ -6795,7 +7070,8 @@
    "homeDelta": -0.99,
    "awayDelta": 0.99,
    "homeName": "Laos",
-   "awayName": "Thailand"
+   "awayName": "Thailand",
+   "fifaId": "9jsdh9v3ygeotcwiar1klnspg"
   },
   {
    "kickoff": "2026-07-25T10:00:00Z",
@@ -6816,7 +7092,8 @@
    "homeDelta": -2.13,
    "awayDelta": 2.13,
    "homeName": "Myanmar",
-   "awayName": "Malaysia"
+   "awayName": "Malaysia",
+   "fifaId": "9j6j1y7xg2hlna3zlktze58us"
   },
   {
    "kickoff": "2026-07-24T13:30:00Z",
@@ -6837,7 +7114,8 @@
    "homeDelta": -0.9,
    "awayDelta": 0.9,
    "homeName": "Timor-Leste",
-   "awayName": "Vietnam"
+   "awayName": "Vietnam",
+   "fifaId": "aa1xjyzuguuao51etdbet2adw"
   },
   {
    "kickoff": "2026-07-24T12:00:00Z",
@@ -6858,362 +7136,11 @@
    "homeDelta": -1.86,
    "awayDelta": 1.86,
    "homeName": "Cambodia",
-   "awayName": "Singapore"
+   "awayName": "Singapore",
+   "fifaId": "5qwcsl59r8s96ylfl4y9tndp0"
   }
  ],
  "fixtures": [
-  {
-   "date": "2026-09-29",
-   "kickoff": "2026-09-29T17:00:00Z",
-   "home": "BEN",
-   "away": "MTN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "Abidjan (Ivory Coast)",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.566,
-   "prediction": {
-    "home": {
-     "win": 10.86,
-     "draw": -1.64,
-     "loss": -14.14
-    },
-    "away": {
-     "loss": -10.86,
-     "draw": 1.64,
-     "win": 14.14
-    }
-   },
-   "homeName": "Benin",
-   "awayName": "Mauritania"
-  },
-  {
-   "kickoff": "2026-09-29T17:30:00Z",
-   "date": "2026-09-29",
-   "home": "KSA",
-   "away": "IRQ",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Gulf Cup of Nations",
-   "stage": "Group Stage",
-   "city": "Jeddah",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.52,
-   "prediction": {
-    "home": {
-     "win": 4.8,
-     "draw": -0.2,
-     "loss": -5.2
-    },
-    "away": {
-     "loss": -4.8,
-     "draw": 0.2,
-     "win": 5.2
-    }
-   },
-   "homeName": "Saudi Arabia",
-   "awayName": "Iraq"
-  },
-  {
-   "kickoff": "2026-09-29T17:30:00Z",
-   "date": "2026-09-29",
-   "home": "OMA",
-   "away": "KUW",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Gulf Cup of Nations",
-   "stage": "Group Stage",
-   "city": "Jeddah",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.683,
-   "prediction": {
-    "home": {
-     "win": 3.17,
-     "draw": -1.83,
-     "loss": -6.83
-    },
-    "away": {
-     "loss": -3.17,
-     "draw": 1.83,
-     "win": 6.83
-    }
-   },
-   "homeName": "Oman",
-   "awayName": "Kuwait"
-  },
-  {
-   "date": "2026-09-29",
-   "kickoff": "2026-09-29T19:00:00Z",
-   "home": "GAB",
-   "away": "NIG",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "Franceville",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.58,
-   "prediction": {
-    "home": {
-     "win": 10.49,
-     "draw": -2.01,
-     "loss": -14.51
-    },
-    "away": {
-     "loss": -10.49,
-     "draw": 2.01,
-     "win": 14.51
-    }
-   },
-   "homeName": "Gabon",
-   "awayName": "Niger"
-  },
-  {
-   "date": "2026-09-29",
-   "kickoff": "2026-09-29T19:00:00Z",
-   "home": "ANG",
-   "away": "MWI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "Luanda",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.633,
-   "prediction": {
-    "home": {
-     "win": 9.19,
-     "draw": -3.31,
-     "loss": -15.81
-    },
-    "away": {
-     "loss": -9.19,
-     "draw": 3.31,
-     "win": 15.81
-    }
-   },
-   "homeName": "Angola",
-   "awayName": "Malawi"
-  },
-  {
-   "date": "2026-09-29",
-   "kickoff": "2026-09-29T19:00:00Z",
-   "home": "SOM",
-   "away": "CIV",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "Accra (Ghana)",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.055,
-   "prediction": {
-    "home": {
-     "win": 23.62,
-     "draw": 11.12,
-     "loss": -1.38
-    },
-    "away": {
-     "loss": -23.62,
-     "draw": -11.12,
-     "win": 1.38
-    }
-   },
-   "homeName": "Somalia",
-   "awayName": "Côte d'Ivoire"
-  },
-  {
-   "kickoff": "2026-09-29T20:00:00Z",
-   "date": "2026-09-29",
-   "home": "VIR",
-   "away": "BAH",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League C",
-   "city": "Christiansted",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.493,
-   "prediction": {
-    "home": {
-     "win": 7.6,
-     "draw": 0.1,
-     "loss": -7.4
-    },
-    "away": {
-     "loss": -7.6,
-     "draw": -0.1,
-     "win": 7.4
-    }
-   },
-   "homeName": "US Virgin Islands",
-   "awayName": "Bahamas"
-  },
-  {
-   "date": "2026-09-29",
-   "kickoff": "2026-09-29T21:00:00Z",
-   "home": "CGO",
-   "away": "CMR",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.181,
-   "prediction": {
-    "home": {
-     "win": 20.47,
-     "draw": 7.97,
-     "loss": -4.53
-    },
-    "away": {
-     "loss": -20.47,
-     "draw": -7.97,
-     "win": 4.53
-    }
-   },
-   "homeName": "Congo",
-   "awayName": "Cameroon"
-  },
-  {
-   "date": "2026-09-29",
-   "kickoff": "2026-09-29T21:00:00Z",
-   "home": "LBR",
-   "away": "MLI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.178,
-   "prediction": {
-    "home": {
-     "win": 20.54,
-     "draw": 8.04,
-     "loss": -4.46
-    },
-    "away": {
-     "loss": -20.54,
-     "draw": -8.04,
-     "win": 4.46
-    }
-   },
-   "homeName": "Liberia",
-   "awayName": "Mali"
-  },
-  {
-   "kickoff": "2026-09-29T23:00:00Z",
-   "date": "2026-09-29",
-   "home": "AIA",
-   "away": "ARU",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League C",
-   "city": "North Sound",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.375,
-   "prediction": {
-    "home": {
-     "win": 9.37,
-     "draw": 1.87,
-     "loss": -5.63
-    },
-    "away": {
-     "loss": -9.37,
-     "draw": -1.87,
-     "win": 5.63
-    }
-   },
-   "homeName": "Anguilla",
-   "awayName": "Aruba"
-  },
-  {
-   "kickoff": "2026-09-30T00:00:00Z",
-   "date": "2026-09-29",
-   "home": "USA",
-   "away": "CHI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "St. Louis",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.714,
-   "prediction": {
-    "home": {
-     "win": 2.86,
-     "draw": -2.14,
-     "loss": -7.14
-    },
-    "away": {
-     "loss": -2.86,
-     "draw": 2.14,
-     "win": 7.14
-    }
-   },
-   "homeName": "USA",
-   "awayName": "Chile"
-  },
   {
    "kickoff": "2026-09-30T00:00:00Z",
    "date": "2026-09-30",
@@ -7244,71 +7171,8 @@
     }
    },
    "homeName": "Mauritius",
-   "awayName": "Djibouti"
-  },
-  {
-   "kickoff": "2026-09-30T02:00:00Z",
-   "date": "2026-09-29",
-   "home": "BLZ",
-   "away": "VIN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League B",
-   "city": "Belmopan",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.441,
-   "prediction": {
-    "home": {
-     "win": 8.38,
-     "draw": 0.88,
-     "loss": -6.62
-    },
-    "away": {
-     "loss": -8.38,
-     "draw": -0.88,
-     "win": 6.62
-    }
-   },
-   "homeName": "Belize",
-   "awayName": "St Vincent and the Grenadines"
-  },
-  {
-   "kickoff": "2026-09-30T02:30:00Z",
-   "date": "2026-09-29",
-   "home": "MEX",
-   "away": "PER",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Harrison",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.759,
-   "prediction": {
-    "home": {
-     "win": 2.41,
-     "draw": -2.59,
-     "loss": -7.59
-    },
-    "away": {
-     "loss": -2.41,
-     "draw": 2.59,
-     "win": 7.59
-    }
-   },
-   "homeName": "Mexico",
-   "awayName": "Peru"
+   "awayName": "Djibouti",
+   "fifaId": "axjyhxkueeefvyubngxaltmvo"
   },
   {
    "kickoff": "2026-09-30T04:00:00Z",
@@ -7340,7 +7204,8 @@
     }
    },
    "homeName": "Papua New Guinea",
-   "awayName": "Solomon Islands"
+   "awayName": "Solomon Islands",
+   "fifaId": "c4glyxpu6ga3uqihm67dg68t0"
   },
   {
    "kickoff": "2026-09-30T07:00:00Z",
@@ -7372,7 +7237,8 @@
     }
    },
    "homeName": "Fiji",
-   "awayName": "New Caledonia"
+   "awayName": "New Caledonia",
+   "fifaId": "c4q30zq2v96eza88y96xz70no"
   },
   {
    "kickoff": "2026-09-30T09:00:00Z",
@@ -7404,7 +7270,8 @@
     }
    },
    "homeName": "Timor-Leste",
-   "awayName": "Cambodia"
+   "awayName": "Cambodia",
+   "fifaId": "400022954"
   },
   {
    "kickoff": "2026-09-30T12:00:00Z",
@@ -7436,7 +7303,8 @@
     }
    },
    "homeName": "Brunei Darussalam",
-   "awayName": "Hong Kong, China"
+   "awayName": "Hong Kong, China",
+   "fifaId": "400022950"
   },
   {
    "kickoff": "2026-09-30T13:00:00Z",
@@ -7468,7 +7336,8 @@
     }
    },
    "homeName": "Seychelles",
-   "awayName": "Sri Lanka"
+   "awayName": "Sri Lanka",
+   "fifaId": "761fg0gxqkxptgemq43xwvcpg"
   },
   {
    "kickoff": "2026-09-30T14:00:00Z",
@@ -7500,7 +7369,8 @@
     }
    },
    "homeName": "Botswana",
-   "awayName": "Mozambique"
+   "awayName": "Mozambique",
+   "fifaId": "adq98i7cfbioqcfk7t8bbuzh0"
   },
   {
    "kickoff": "2026-09-30T16:00:00Z",
@@ -7532,7 +7402,8 @@
     }
    },
    "homeName": "Lithuania",
-   "awayName": "Andorra"
+   "awayName": "Andorra",
+   "fifaId": "8s8n4sccrbuastvgjbjxps1zo"
   },
   {
    "date": "2026-09-30",
@@ -7596,7 +7467,8 @@
     }
    },
    "homeName": "United Arab Emirates",
-   "awayName": "Qatar"
+   "awayName": "Qatar",
+   "fifaId": "6aky6ityitwj9hkq87tyukges"
   },
   {
    "kickoff": "2026-09-30T17:30:00Z",
@@ -7628,7 +7500,8 @@
     }
    },
    "homeName": "Bahrain",
-   "awayName": "Yemen"
+   "awayName": "Yemen",
+   "fifaId": "6avvm95mvovmrziq9ch5pm68k"
   },
   {
    "kickoff": "2026-09-30T23:00:00Z",
@@ -7660,7 +7533,8 @@
     }
    },
    "homeName": "Argentina",
-   "awayName": "Bolivia"
+   "awayName": "Bolivia",
+   "fifaId": "855g6ww4czhvs9o8jcdo1w8wk"
   },
   {
    "kickoff": "2026-10-01T00:00:00Z",
@@ -7692,7 +7566,8 @@
     }
    },
    "homeName": "Maldives",
-   "awayName": "Lebanon"
+   "awayName": "Lebanon",
+   "fifaId": "73xmmdo8ph6wju9at87eagys4"
   },
   {
    "kickoff": "2026-10-01T02:00:00Z",
@@ -7724,7 +7599,8 @@
     }
    },
    "homeName": "Cook Islands",
-   "awayName": "Tahiti"
+   "awayName": "Tahiti",
+   "fifaId": "dfcv4a69655b4nnxgb8u9q6tw"
   },
   {
    "kickoff": "2026-10-01T12:30:00Z",
@@ -7756,7 +7632,8 @@
     }
    },
    "homeName": "Indonesia",
-   "awayName": "Bangladesh"
+   "awayName": "Bangladesh",
+   "fifaId": "400022939"
   },
   {
    "kickoff": "2026-10-01T12:30:00Z",
@@ -7788,7 +7665,8 @@
     }
    },
    "homeName": "Malaysia",
-   "awayName": "Singapore"
+   "awayName": "Singapore",
+   "fifaId": "400022943"
   },
   {
    "kickoff": "2026-10-01T14:00:00Z",
@@ -7820,7 +7698,8 @@
     }
    },
    "homeName": "Uzbekistan",
-   "awayName": "Syria"
+   "awayName": "Syria",
+   "fifaId": "d5ncqeklen9d7w1fe33ydyy38"
   },
   {
    "kickoff": "2026-10-01T16:00:00Z",
@@ -7852,7 +7731,8 @@
     }
    },
    "homeName": "Azerbaijan",
-   "awayName": "Liechtenstein"
+   "awayName": "Liechtenstein",
+   "fifaId": "bpfw5f74zlysp5n229yblxwyc"
   },
   {
    "date": "2026-10-01",
@@ -7916,7 +7796,8 @@
     }
    },
    "homeName": "Denmark",
-   "awayName": "Portugal"
+   "awayName": "Portugal",
+   "fifaId": "74882wljw1vbbfojlbv2xjqj8"
   },
   {
    "kickoff": "2026-10-01T18:45:00Z",
@@ -7948,7 +7829,8 @@
     }
    },
    "homeName": "Greece",
-   "awayName": "Netherlands"
+   "awayName": "Netherlands",
+   "fifaId": "73nbo1cxcvm18bwutce9ip0r8"
   },
   {
    "kickoff": "2026-10-01T18:45:00Z",
@@ -7980,7 +7862,8 @@
     }
    },
    "homeName": "Germany",
-   "awayName": "Serbia"
+   "awayName": "Serbia",
+   "fifaId": "730t75w56g2inuuhdvcp4ox78"
   },
   {
    "kickoff": "2026-10-01T18:45:00Z",
@@ -8012,7 +7895,8 @@
     }
    },
    "homeName": "Wales",
-   "awayName": "Norway"
+   "awayName": "Norway",
+   "fifaId": "74s5v2g17opw14c1z0go2wi6s"
   },
   {
    "kickoff": "2026-10-01T18:45:00Z",
@@ -8044,7 +7928,8 @@
     }
    },
    "homeName": "Republic of Ireland",
-   "awayName": "Austria"
+   "awayName": "Austria",
+   "fifaId": "erog2nrclcimh1ezcka2drnro"
   },
   {
    "kickoff": "2026-10-01T18:45:00Z",
@@ -8076,7 +7961,8 @@
     }
    },
    "homeName": "Israel",
-   "awayName": "Kosovo"
+   "awayName": "Kosovo",
+   "fifaId": "er1ybb9wws6zb97811bkwry8k"
   },
   {
    "kickoff": "2026-10-01T18:45:00Z",
@@ -8108,7 +7994,8 @@
     }
    },
    "homeName": "Malta",
-   "awayName": "Gibraltar"
+   "awayName": "Gibraltar",
+   "fifaId": "g1fawoktrqaa39jcn5luvg9g"
   },
   {
    "kickoff": "2026-10-01T19:00:00Z",
@@ -8140,7 +8027,8 @@
     }
    },
    "homeName": "British Virgin Islands",
-   "awayName": "Montserrat"
+   "awayName": "Montserrat",
+   "fifaId": "dnu5w502zssuibz0vh0ikn21g"
   },
   {
    "kickoff": "2026-10-01T21:00:00Z",
@@ -8172,7 +8060,8 @@
     }
    },
    "homeName": "Dominica",
-   "awayName": "Guyana"
+   "awayName": "Guyana",
+   "fifaId": "do25o5p08f48abpaina3tpmac"
   },
   {
    "kickoff": "2026-10-01T22:00:00Z",
@@ -8204,7 +8093,8 @@
     }
    },
    "homeName": "Curaçao",
-   "awayName": "Trinidad and Tobago"
+   "awayName": "Trinidad and Tobago",
+   "fifaId": "206rs2iga7ytxw58gqfsx7xg4"
   },
   {
    "kickoff": "2026-10-01T23:00:00Z",
@@ -8236,7 +8126,8 @@
     }
    },
    "homeName": "Anguilla",
-   "awayName": "Antigua and Barbuda"
+   "awayName": "Antigua and Barbuda",
+   "fifaId": "do81z9nlq98fz6yv7xl0o76s4"
   },
   {
    "kickoff": "2026-10-02T00:00:00Z",
@@ -8268,7 +8159,8 @@
     }
    },
    "homeName": "Congo DR",
-   "awayName": "Uganda"
+   "awayName": "Uganda",
+   "fifaId": "dtu39w72p2eg7r0zcdb84lces"
   },
   {
    "kickoff": "2026-10-02T00:00:00Z",
@@ -8300,7 +8192,8 @@
     }
    },
    "homeName": "Dominican Republic",
-   "awayName": "Haiti"
+   "awayName": "Haiti",
+   "fifaId": "20kr0hpyvx6gczzp3w29psbh0"
   },
   {
    "kickoff": "2026-10-02T00:00:00Z",
@@ -8332,7 +8225,8 @@
     }
    },
    "homeName": "Cayman Islands",
-   "awayName": "Puerto Rico"
+   "awayName": "Puerto Rico",
+   "fifaId": "doh1luo9r9brtvnipfxwyjrx0"
   },
   {
    "kickoff": "2026-10-02T02:00:00Z",
@@ -8364,7 +8258,8 @@
     }
    },
    "homeName": "Nicaragua",
-   "awayName": "Costa Rica"
+   "awayName": "Costa Rica",
+   "fifaId": "1zswi5rq6gfp7skp7igvqnytw"
   },
   {
    "kickoff": "2026-10-02T09:00:00Z",
@@ -8396,7 +8291,8 @@
     }
    },
    "homeName": "Thailand",
-   "awayName": "Philippines"
+   "awayName": "Philippines",
+   "fifaId": "400022947"
   },
   {
    "kickoff": "2026-10-02T09:00:00Z",
@@ -8428,7 +8324,8 @@
     }
    },
    "homeName": "Vietnam",
-   "awayName": "Pakistan"
+   "awayName": "Pakistan",
+   "fifaId": "400022944"
   },
   {
    "kickoff": "2026-10-02T11:00:00Z",
@@ -8460,7 +8357,8 @@
     }
    },
    "homeName": "Korea Republic",
-   "awayName": "Venezuela"
+   "awayName": "Venezuela",
+   "fifaId": "52zyck6fvi37zwzzeu6f2l444"
   },
   {
    "kickoff": "2026-10-02T11:35:00Z",
@@ -8492,7 +8390,8 @@
     }
    },
    "homeName": "China PR",
-   "awayName": "Turkmenistan"
+   "awayName": "Turkmenistan",
+   "fifaId": "4xcr1tm4dhzuutwfscmlp4iz8"
   },
   {
    "kickoff": "2026-10-02T11:35:00Z",
@@ -8524,7 +8423,8 @@
     }
    },
    "homeName": "China PR",
-   "awayName": "Palestine"
+   "awayName": "Palestine",
+   "fifaId": "4wk5atkfwp4c04yoxr47tpct0"
   },
   {
    "kickoff": "2026-10-02T14:00:00Z",
@@ -8556,7 +8456,8 @@
     }
    },
    "homeName": "Kazakhstan",
-   "awayName": "Moldova"
+   "awayName": "Moldova",
+   "fifaId": "186cud7f18vw34bylni8yoff8"
   },
   {
    "kickoff": "2026-10-02T15:00:00Z",
@@ -8588,7 +8489,8 @@
     }
    },
    "homeName": "Mauritius",
-   "awayName": "Sri Lanka"
+   "awayName": "Sri Lanka",
+   "fifaId": "dd2qvxljq6kuedcyianbqlono"
   },
   {
    "kickoff": "2026-10-02T16:00:00Z",
@@ -8620,7 +8522,8 @@
     }
    },
    "homeName": "Latvia",
-   "awayName": "Montenegro"
+   "awayName": "Montenegro",
+   "fifaId": "19bwh3n9hqe6gim02koy33nro"
   },
   {
    "kickoff": "2026-10-02T16:00:00Z",
@@ -8652,7 +8555,8 @@
     }
    },
    "homeName": "Cyprus",
-   "awayName": "Armenia"
+   "awayName": "Armenia",
+   "fifaId": "18q6peq7mtrjoxo1onqg4udxw"
   },
   {
    "kickoff": "2026-10-02T18:45:00Z",
@@ -8684,7 +8588,8 @@
     }
    },
    "homeName": "France",
-   "awayName": "Italy"
+   "awayName": "Italy",
+   "fifaId": "75yqc6tdu0o7lgtwxus8ae784"
   },
   {
    "kickoff": "2026-10-02T18:45:00Z",
@@ -8716,7 +8621,8 @@
     }
    },
    "homeName": "Belgium",
-   "awayName": "Türkiye"
+   "awayName": "Türkiye",
+   "fifaId": "75dq7nggn0fzriu4lyoryxudw"
   },
   {
    "kickoff": "2026-10-02T18:45:00Z",
@@ -8748,7 +8654,8 @@
     }
    },
    "homeName": "Ukraine",
-   "awayName": "Northern Ireland"
+   "awayName": "Northern Ireland",
+   "fifaId": "estoc8giuoyh706fag5urd0d0"
   },
   {
    "kickoff": "2026-10-02T18:45:00Z",
@@ -8780,7 +8687,8 @@
     }
    },
    "homeName": "Poland",
-   "awayName": "Romania"
+   "awayName": "Romania",
+   "fifaId": "etzjts1y0rc20eu0zgb8d3wus"
   },
   {
    "kickoff": "2026-10-02T18:45:00Z",
@@ -8812,7 +8720,8 @@
     }
    },
    "homeName": "Bosnia and Herzegovina",
-   "awayName": "Sweden"
+   "awayName": "Sweden",
+   "fifaId": "etf9jfqj7jwbrxlr9qc1ha3o4"
   },
   {
    "kickoff": "2026-10-02T18:45:00Z",
@@ -8844,7 +8753,8 @@
     }
    },
    "homeName": "Hungary",
-   "awayName": "Georgia"
+   "awayName": "Georgia",
+   "fifaId": "es8vo4dvd90ujbhzq783d3eok"
   },
   {
    "kickoff": "2026-10-02T18:45:00Z",
@@ -8876,7 +8786,8 @@
     }
    },
    "homeName": "Faroe Islands",
-   "awayName": "Slovakia"
+   "awayName": "Slovakia",
+   "fifaId": "19um3mz3t05ciug60fwfly044"
   },
   {
    "kickoff": "2026-10-02T21:00:00Z",
@@ -8908,7 +8819,8 @@
     }
    },
    "homeName": "St Kitts and Nevis",
-   "awayName": "Cuba"
+   "awayName": "Cuba",
+   "fifaId": "dpq93lc1q0yqyyuze5cad5vys"
   },
   {
    "kickoff": "2026-10-02T22:00:00Z",
@@ -8940,7 +8852,8 @@
     }
    },
    "homeName": "Suriname",
-   "awayName": "Guatemala"
+   "awayName": "Guatemala",
+   "fifaId": "1z158l71gj8mp41yfdyzuh0d0"
   },
   {
    "kickoff": "2026-10-03T00:00:00Z",
@@ -8972,7 +8885,8 @@
     }
    },
    "homeName": "Colombia",
-   "awayName": "Paraguay"
+   "awayName": "Paraguay",
+   "fifaId": "5w98q2uuvgvcsli7pdzif651w"
   },
   {
    "kickoff": "2026-10-03T00:00:00Z",
@@ -9004,7 +8918,8 @@
     }
    },
    "homeName": "Tunisia",
-   "awayName": "Mali"
+   "awayName": "Mali",
+   "fifaId": "ds2fbobbhchlhtnuceojk2uc4"
   },
   {
    "kickoff": "2026-10-03T00:00:00Z",
@@ -9036,7 +8951,8 @@
     }
    },
    "homeName": "Barbados",
-   "awayName": "Bermuda"
+   "awayName": "Bermuda",
+   "fifaId": "dpbab1ywwj3tn0imo09uxilg4"
   },
   {
    "kickoff": "2026-10-03T00:00:00Z",
@@ -9068,7 +8984,8 @@
     }
    },
    "homeName": "Sri Lanka",
-   "awayName": "Djibouti"
+   "awayName": "Djibouti",
+   "fifaId": "axt8dtutmfftyoyayddxy5vro"
   },
   {
    "kickoff": "2026-10-03T02:00:00Z",
@@ -9100,7 +9017,8 @@
     }
    },
    "homeName": "El Salvador",
-   "awayName": "Jamaica"
+   "awayName": "Jamaica",
+   "fifaId": "1zf4b2lwb480oukknqfosd4wk"
   },
   {
    "kickoff": "2026-10-03T13:00:00Z",
@@ -9132,7 +9050,8 @@
     }
    },
    "homeName": "Finland",
-   "awayName": "Albania"
+   "awayName": "Albania",
+   "fifaId": "1afoc6davexpvi1ssbvpb30us"
   },
   {
    "kickoff": "2026-10-03T14:00:00Z",
@@ -9164,7 +9083,8 @@
     }
    },
    "homeName": "India",
-   "awayName": "Brazil"
+   "awayName": "Brazil",
+   "fifaId": "88m0901hn6qaqtj0dws3wqnmc"
   },
   {
    "kickoff": "2026-10-03T15:00:00Z",
@@ -9196,7 +9116,8 @@
     }
    },
    "homeName": "Russia",
-   "awayName": "Namibia"
+   "awayName": "Namibia",
+   "fifaId": "9qwlftdxjdrcz4iobe0dw15hw"
   },
   {
    "kickoff": "2026-10-03T16:00:00Z",
@@ -9228,7 +9149,8 @@
     }
    },
    "homeName": "Croatia",
-   "awayName": "England"
+   "awayName": "England",
+   "fifaId": "76l01unqj7nqp3uy33bj0h34k"
   },
   {
    "kickoff": "2026-10-03T16:00:00Z",
@@ -9260,7 +9182,8 @@
     }
    },
    "homeName": "Iceland",
-   "awayName": "Bulgaria"
+   "awayName": "Bulgaria",
+   "fifaId": "1c4q49ydcao7gx55henazlno4"
   },
   {
    "kickoff": "2026-10-03T16:00:00Z",
@@ -9292,7 +9215,8 @@
     }
    },
    "homeName": "Belarus",
-   "awayName": "San Marino"
+   "awayName": "San Marino",
+   "fifaId": "1b0k365nuw7vwlp4odelq5edw"
   },
   {
    "kickoff": "2026-10-03T16:00:00Z",
@@ -9324,7 +9248,8 @@
     }
    },
    "homeName": "Estonia",
-   "awayName": "Luxembourg"
+   "awayName": "Luxembourg",
+   "fifaId": "1bl6dlbbm6m1jpl2pm5pdt6ac"
   },
   {
    "kickoff": "2026-10-03T18:00:00Z",
@@ -9356,7 +9281,8 @@
     }
    },
    "homeName": "Canada",
-   "awayName": "Peru"
+   "awayName": "Peru",
+   "fifaId": "5u57vp3xuss620vpcr94oayok"
   },
   {
    "kickoff": "2026-10-03T18:45:00Z",
@@ -9388,7 +9314,8 @@
     }
    },
    "homeName": "Spain",
-   "awayName": "Czechia"
+   "awayName": "Czechia",
+   "fifaId": "77bswkzcz3npf869k58t9kro4"
   },
   {
    "kickoff": "2026-10-03T18:45:00Z",
@@ -9420,7 +9347,8 @@
     }
    },
    "homeName": "Switzerland",
-   "awayName": "Slovenia"
+   "awayName": "Slovenia",
+   "fifaId": "ev55yrw9la9wqyk2vpueuhzx0"
   },
   {
    "kickoff": "2026-10-03T18:45:00Z",
@@ -9452,7 +9380,8 @@
     }
    },
    "homeName": "North Macedonia",
-   "awayName": "Scotland"
+   "awayName": "Scotland",
+   "fifaId": "eukilq7lbvze9fvcivaf18nis"
   },
   {
    "kickoff": "2026-10-03T19:00:00Z",
@@ -9484,7 +9413,8 @@
     }
    },
    "homeName": "Côte d'Ivoire",
-   "awayName": "Cameroon"
+   "awayName": "Cameroon",
+   "fifaId": "e8fp7iev2y64n8u1xibm9uo0k"
   },
   {
    "kickoff": "2026-10-03T20:00:00Z",
@@ -9516,7 +9446,8 @@
     }
    },
    "homeName": "Argentina",
-   "awayName": "Burkina Faso"
+   "awayName": "Burkina Faso",
+   "fifaId": "85odt9nfqumvxiiplfiwcgnbo"
   },
   {
    "kickoff": "2026-10-04T02:00:00Z",
@@ -9548,7 +9479,8 @@
     }
    },
    "homeName": "USA",
-   "awayName": "Mexico"
+   "awayName": "Mexico",
+   "fifaId": "3f2wj2hnnwxn8mt4iyzg7k9w4"
   },
   {
    "kickoff": "2026-10-04T13:00:00Z",
@@ -9580,7 +9512,8 @@
     }
    },
    "homeName": "Comoros",
-   "awayName": "Senegal"
+   "awayName": "Senegal",
+   "fifaId": "ag4uo7lsgamtkp7tkgb0flzis"
   },
   {
    "kickoff": "2026-10-04T13:00:00Z",
@@ -9612,7 +9545,8 @@
     }
    },
    "homeName": "Azerbaijan",
-   "awayName": "Lithuania"
+   "awayName": "Lithuania",
+   "fifaId": "bpsibgsdc6qostdoi2unorhn8"
   },
   {
    "kickoff": "2026-10-04T14:00:00Z",
@@ -9644,7 +9578,8 @@
     }
    },
    "homeName": "Kyrgyz Republic",
-   "awayName": "Lebanon"
+   "awayName": "Lebanon",
+   "fifaId": "c7txqebls70jxpsnw0fpsh5hw"
   },
   {
    "kickoff": "2026-10-04T16:00:00Z",
@@ -9676,7 +9611,8 @@
     }
    },
    "homeName": "Kosovo",
-   "awayName": "Austria"
+   "awayName": "Austria",
+   "fifaId": "evq4c68buoi3sva8hv67uoaok"
   },
   {
    "kickoff": "2026-10-04T16:00:00Z",
@@ -9708,7 +9644,8 @@
     }
    },
    "homeName": "Malta",
-   "awayName": "Andorra"
+   "awayName": "Andorra",
+   "fifaId": "1x1au3dpkf90rrf3afikn6hp0"
   },
   {
    "kickoff": "2026-10-04T18:00:00Z",
@@ -9740,7 +9677,8 @@
     }
    },
    "homeName": "Morocco",
-   "awayName": "Ghana"
+   "awayName": "Ghana",
+   "fifaId": "bl18thkp8kwjm2mnyy2guuy38"
   },
   {
    "kickoff": "2026-10-04T18:00:00Z",
@@ -9772,7 +9710,8 @@
     }
    },
    "homeName": "Egypt",
-   "awayName": "South Africa"
+   "awayName": "South Africa",
+   "fifaId": "70sz2ghk45ij0psfbihjfj84"
   },
   {
    "kickoff": "2026-10-04T18:45:00Z",
@@ -9804,7 +9743,8 @@
     }
    },
    "homeName": "Portugal",
-   "awayName": "Norway"
+   "awayName": "Norway",
+   "fifaId": "795y24v1fs9x19us4p8hyt5as"
   },
   {
    "kickoff": "2026-10-04T18:45:00Z",
@@ -9836,7 +9776,8 @@
     }
    },
    "homeName": "Netherlands",
-   "awayName": "Serbia"
+   "awayName": "Serbia",
+   "fifaId": "78i4i8qsh0otjt9w0yfjk0tn8"
   },
   {
    "kickoff": "2026-10-04T18:45:00Z",
@@ -9868,7 +9809,8 @@
     }
    },
    "homeName": "Greece",
-   "awayName": "Germany"
+   "awayName": "Germany",
+   "fifaId": "77wuhps43r3ylcc092f418mqc"
   },
   {
    "kickoff": "2026-10-04T18:45:00Z",
@@ -9900,7 +9842,8 @@
     }
    },
    "homeName": "Wales",
-   "awayName": "Denmark"
+   "awayName": "Denmark",
+   "fifaId": "79os1gg8jjseoavxriovn21as"
   },
   {
    "kickoff": "2026-10-04T18:45:00Z",
@@ -9932,7 +9875,8 @@
     }
    },
    "homeName": "Republic of Ireland",
-   "awayName": "Israel"
+   "awayName": "Israel",
+   "fifaId": "ewdn9cg6873sq0ea54rvg1mvo"
   },
   {
    "kickoff": "2026-10-04T19:00:00Z",
@@ -9964,7 +9908,8 @@
     }
    },
    "homeName": "Guyana",
-   "awayName": "Dominica"
+   "awayName": "Dominica",
+   "fifaId": "dreduxup1xnc95dykx3uppu6s"
   },
   {
    "kickoff": "2026-10-04T19:00:00Z",
@@ -9996,7 +9941,8 @@
     }
    },
    "homeName": "Turks and Caicos Islands",
-   "awayName": "British Virgin Islands"
+   "awayName": "British Virgin Islands",
+   "fifaId": "doz4a3ysbd34qgwjwn7hwg93o"
   },
   {
    "kickoff": "2026-10-04T20:00:00Z",
@@ -10028,7 +9974,8 @@
     }
    },
    "homeName": "Bahamas",
-   "awayName": "US Virgin Islands"
+   "awayName": "US Virgin Islands",
+   "fifaId": "dpq4bok0skaj0eya1x4xgicyc"
   },
   {
    "kickoff": "2026-10-04T22:00:00Z",
@@ -10060,7 +10007,8 @@
     }
    },
    "homeName": "Trinidad and Tobago",
-   "awayName": "Curaçao"
+   "awayName": "Curaçao",
+   "fifaId": "22i1lywrs85sz5r984xogpo2c"
   },
   {
    "kickoff": "2026-10-04T22:00:00Z",
@@ -10092,7 +10040,8 @@
     }
    },
    "homeName": "Puerto Rico",
-   "awayName": "Cayman Islands"
+   "awayName": "Cayman Islands",
+   "fifaId": "drtpqy3z9m5hkwvoux533u2ac"
   },
   {
    "kickoff": "2026-10-04T22:30:00Z",
@@ -10124,7 +10073,8 @@
     }
    },
    "homeName": "Bolivia",
-   "awayName": "The Gambia"
+   "awayName": "The Gambia",
+   "fifaId": "a4cxw248eo49umm7lsb2pv0no"
   },
   {
    "kickoff": "2026-10-04T23:00:00Z",
@@ -10156,7 +10106,8 @@
     }
    },
    "homeName": "Aruba",
-   "awayName": "Anguilla"
+   "awayName": "Anguilla",
+   "fifaId": "dpckf5vjffch45yunb07www0k"
   },
   {
    "kickoff": "2026-10-05T00:00:00Z",
@@ -10188,7 +10139,8 @@
     }
    },
    "homeName": "Uganda",
-   "awayName": "Congo DR"
+   "awayName": "Congo DR",
+   "fifaId": "du2tjquisqd2y616091cmw7x0"
   },
   {
    "kickoff": "2026-10-05T00:00:00Z",
@@ -10220,7 +10172,8 @@
     }
    },
    "homeName": "Costa Rica",
-   "awayName": "Haiti"
+   "awayName": "Haiti",
+   "fifaId": "2245geck1ra6cc6g3lknao8b8"
   },
   {
    "kickoff": "2026-10-05T02:00:00Z",
@@ -10252,7 +10205,8 @@
     }
    },
    "homeName": "Nicaragua",
-   "awayName": "Dominican Republic"
+   "awayName": "Dominican Republic",
+   "fifaId": "22vzmv4uawrvo20ni0z64jzf8"
   },
   {
    "kickoff": "2026-10-05T15:00:00Z",
@@ -10284,7 +10238,8 @@
     }
    },
    "homeName": "Mauritius",
-   "awayName": "Sri Lanka"
+   "awayName": "Sri Lanka",
+   "fifaId": "ay2e1seqw7zpovsj5gsplqeqc"
   },
   {
    "kickoff": "2026-10-05T16:00:00Z",
@@ -10316,7 +10271,8 @@
     }
    },
    "homeName": "Cyprus",
-   "awayName": "Latvia"
+   "awayName": "Latvia",
+   "fifaId": "1cqsz6syh0mai0jmm3ua61d04"
   },
   {
    "kickoff": "2026-10-05T18:45:00Z",
@@ -10348,7 +10304,8 @@
     }
    },
    "homeName": "France",
-   "awayName": "Belgium"
+   "awayName": "Belgium",
+   "fifaId": "7abu9s4w6yd4g3rjnns1kuz9w"
   },
   {
    "kickoff": "2026-10-05T18:45:00Z",
@@ -10380,7 +10337,8 @@
     }
    },
    "homeName": "Italy",
-   "awayName": "Türkiye"
+   "awayName": "Türkiye",
+   "fifaId": "7avn9pw8o6kws1vk3uq70o3ys"
   },
   {
    "kickoff": "2026-10-05T18:45:00Z",
@@ -10412,7 +10370,8 @@
     }
    },
    "homeName": "Ukraine",
-   "awayName": "Hungary"
+   "awayName": "Hungary",
+   "fifaId": "exoj5ojkwed8kfbssfv1wk45w"
   },
   {
    "kickoff": "2026-10-05T18:45:00Z",
@@ -10444,7 +10403,8 @@
     }
    },
    "homeName": "Bosnia and Herzegovina",
-   "awayName": "Poland"
+   "awayName": "Poland",
+   "fifaId": "eya52jplv8e9gg12lvm5yqrys"
   },
   {
    "kickoff": "2026-10-05T18:45:00Z",
@@ -10476,7 +10436,8 @@
     }
    },
    "homeName": "Romania",
-   "awayName": "Sweden"
+   "awayName": "Sweden",
+   "fifaId": "eyvtw963mnajhv6rl3oug4jys"
   },
   {
    "kickoff": "2026-10-05T18:45:00Z",
@@ -10508,7 +10469,8 @@
     }
    },
    "homeName": "Northern Ireland",
-   "awayName": "Georgia"
+   "awayName": "Georgia",
+   "fifaId": "ex3gck48lra5b9fz34167wyl0"
   },
   {
    "kickoff": "2026-10-05T18:45:00Z",
@@ -10540,7 +10502,8 @@
     }
    },
    "homeName": "Montenegro",
-   "awayName": "Armenia"
+   "awayName": "Armenia",
+   "fifaId": "1ddnun84fkppj898zosere5g4"
   },
   {
    "kickoff": "2026-10-05T18:45:00Z",
@@ -10572,7 +10535,8 @@
     }
    },
    "homeName": "Liechtenstein",
-   "awayName": "Gibraltar"
+   "awayName": "Gibraltar",
+   "fifaId": "2ohatfk2h0ladt4o0fpjyp5hw"
   },
   {
    "kickoff": "2026-10-05T21:00:00Z",
@@ -10604,7 +10568,8 @@
     }
    },
    "homeName": "Cuba",
-   "awayName": "St Kitts and Nevis"
+   "awayName": "St Kitts and Nevis",
+   "fifaId": "dt314bbr87srg39fzuiw3vz10"
   },
   {
    "kickoff": "2026-10-06T00:00:00Z",
@@ -10636,7 +10601,8 @@
     }
    },
    "homeName": "Guatemala",
-   "awayName": "Suriname"
+   "awayName": "Suriname",
+   "fifaId": "21ci2jqrr1qqtrh6d23ngshzo"
   },
   {
    "kickoff": "2026-10-06T00:00:00Z",
@@ -10668,7 +10634,8 @@
     }
    },
    "homeName": "Bermuda",
-   "awayName": "Barbados"
+   "awayName": "Barbados",
+   "fifaId": "dsnxsu82wi8rhiy3bvpim75lg"
   },
   {
    "kickoff": "2026-10-06T02:00:00Z",
@@ -10700,7 +10667,8 @@
     }
    },
    "homeName": "Honduras",
-   "awayName": "Jamaica"
+   "awayName": "Jamaica",
+   "fifaId": "20ykmuqp8k53uhonvgo8u4lxw"
   },
   {
    "kickoff": "2026-10-06T11:00:00Z",
@@ -10732,7 +10700,8 @@
     }
    },
    "homeName": "Korea Republic",
-   "awayName": "Uzbekistan"
+   "awayName": "Uzbekistan",
+   "fifaId": "e4hs4t6kqzx5qo7qf7hqvayvo"
   },
   {
    "kickoff": "2026-10-06T11:35:00Z",
@@ -10764,7 +10733,8 @@
     }
    },
    "homeName": "China PR",
-   "awayName": "Tajikistan"
+   "awayName": "Tajikistan",
+   "fifaId": "4xq4i3ez07hxqn8vt0jn4ljis"
   },
   {
    "kickoff": "2026-10-06T14:00:00Z",
@@ -10796,7 +10766,8 @@
     }
    },
    "homeName": "India",
-   "awayName": "Uruguay"
+   "awayName": "Uruguay",
+   "fifaId": "y9ctd6b3p8wil5fpjdnxxbmc"
   },
   {
    "kickoff": "2026-10-06T14:00:00Z",
@@ -10828,7 +10799,8 @@
     }
    },
    "homeName": "Kazakhstan",
-   "awayName": "Faroe Islands"
+   "awayName": "Faroe Islands",
+   "fifaId": "1dyr8vo8tzrlqmi81s99ae9lg"
   },
   {
    "kickoff": "2026-10-06T16:00:00Z",
@@ -10860,7 +10832,8 @@
     }
    },
    "homeName": "Russia",
-   "awayName": "Nigeria"
+   "awayName": "Nigeria",
+   "fifaId": "9rcbid2h5g18y2h8mhowcb7dg"
   },
   {
    "kickoff": "2026-10-06T17:00:00Z",
@@ -10892,7 +10865,8 @@
     }
    },
    "homeName": "Jordan",
-   "awayName": "Venezuela"
+   "awayName": "Venezuela",
+   "fifaId": "4cpmwbdm4vbqyfx1rgn7e4a38"
   },
   {
    "kickoff": "2026-10-06T18:45:00Z",
@@ -10924,7 +10898,8 @@
     }
    },
    "homeName": "Croatia",
-   "awayName": "Spain"
+   "awayName": "Spain",
+   "fifaId": "7bgdax2ll1pjx30k069pt4utw"
   },
   {
    "kickoff": "2026-10-06T18:45:00Z",
@@ -10956,7 +10931,8 @@
     }
    },
    "homeName": "England",
-   "awayName": "Czechia"
+   "awayName": "Czechia",
+   "fifaId": "7c1d5jw2nwac6s95hjp7fet5g"
   },
   {
    "kickoff": "2026-10-06T18:45:00Z",
@@ -10988,7 +10964,8 @@
     }
    },
    "homeName": "Switzerland",
-   "awayName": "North Macedonia"
+   "awayName": "North Macedonia",
+   "fifaId": "f00pvup9cpq8rl2sis73mri1g"
   },
   {
    "kickoff": "2026-10-06T18:45:00Z",
@@ -11020,7 +10997,8 @@
     }
    },
    "homeName": "Scotland",
-   "awayName": "Slovenia"
+   "awayName": "Slovenia",
+   "fifaId": "ezfz8z8earcgiu8zvcu7gr6l0"
   },
   {
    "kickoff": "2026-10-06T18:45:00Z",
@@ -11052,7 +11030,8 @@
     }
    },
    "homeName": "Moldova",
-   "awayName": "Slovakia"
+   "awayName": "Slovakia",
+   "fifaId": "1ftsf9lomt4a9muhvp5ysxgk4"
   },
   {
    "kickoff": "2026-10-06T18:45:00Z",
@@ -11084,7 +11063,8 @@
     }
    },
    "homeName": "Albania",
-   "awayName": "San Marino"
+   "awayName": "San Marino",
+   "fifaId": "1elu8l4hu4b1v3bys9s9kafpw"
   },
   {
    "kickoff": "2026-10-06T18:45:00Z",
@@ -11116,7 +11096,8 @@
     }
    },
    "homeName": "Estonia",
-   "awayName": "Iceland"
+   "awayName": "Iceland",
+   "fifaId": "1gdy0r0xrkfu00e9qafgm7dhw"
   },
   {
    "kickoff": "2026-10-06T18:45:00Z",
@@ -11148,7 +11129,8 @@
     }
    },
    "homeName": "Belarus",
-   "awayName": "Finland"
+   "awayName": "Finland",
+   "fifaId": "1f9ifqgyitlfr713t9sxcmlg4"
   },
   {
    "kickoff": "2026-10-06T18:45:00Z",
@@ -11180,7 +11162,8 @@
     }
    },
    "homeName": "Luxembourg",
-   "awayName": "Bulgaria"
+   "awayName": "Bulgaria",
+   "fifaId": "1gwrrbw7zkhthik8a9yqbyvbo"
   },
   {
    "kickoff": "2026-10-06T19:00:00Z",
@@ -11212,7 +11195,8 @@
     }
    },
    "homeName": "Montserrat",
-   "awayName": "Turks and Caicos Islands"
+   "awayName": "Turks and Caicos Islands",
+   "fifaId": "dq3rp0kxxiajo312uqqon6r6c"
   },
   {
    "kickoff": "2026-10-06T19:30:00Z",
@@ -11244,7 +11228,8 @@
     }
    },
    "homeName": "Algeria",
-   "awayName": "Niger"
+   "awayName": "Niger",
+   "fifaId": "ewklvq839bgtbleo5ay0e7mc"
   },
   {
    "kickoff": "2026-10-06T23:00:00Z",
@@ -11276,7 +11261,8 @@
     }
    },
    "homeName": "Argentina",
-   "awayName": "Benin"
+   "awayName": "Benin",
+   "fifaId": "aub5n5rlvq4zdwz7uljjs97h0"
   },
   {
    "kickoff": "2026-10-06T23:00:00Z",
@@ -11308,7 +11294,8 @@
     }
    },
    "homeName": "Antigua and Barbuda",
-   "awayName": "Aruba"
+   "awayName": "Aruba",
+   "fifaId": "dqhehhz24yuy52ihfjkh9wmc4"
   },
   {
    "kickoff": "2026-10-07T00:00:00Z",
@@ -11340,7 +11327,8 @@
     }
    },
    "homeName": "USA",
-   "awayName": "Canada"
+   "awayName": "Canada",
+   "fifaId": "3fdnlj1pov6lh0bije275vms4"
   },
   {
    "kickoff": "2026-10-07T02:30:00Z",
@@ -11372,7 +11360,8 @@
     }
    },
    "homeName": "Mexico",
-   "awayName": "Chile"
+   "awayName": "Chile",
+   "fifaId": "3liejir6jq09q4pp43h7iwiz8"
   },
   {
    "kickoff": "2026-10-07T03:00:00Z",
@@ -11404,7 +11393,8 @@
     }
    },
    "homeName": "Colombia",
-   "awayName": "Peru"
+   "awayName": "Peru",
+   "fifaId": "5s6e2etvolgvd484zawil6dck"
   },
   {
    "kickoff": "2026-11-04T00:00:00Z",
@@ -11436,7 +11426,8 @@
     }
    },
    "homeName": "Bangladesh",
-   "awayName": "Sri Lanka"
+   "awayName": "Sri Lanka",
+   "fifaId": "72td9n51t974untmwgrsp3is"
   },
   {
    "kickoff": "2026-11-05T00:00:00Z",
@@ -11468,7 +11459,8 @@
     }
    },
    "homeName": "India",
-   "awayName": "Pakistan"
+   "awayName": "Pakistan",
+   "fifaId": "2nclcvmjhnftz2dvletfqeqz8"
   },
   {
    "kickoff": "2026-11-07T00:00:00Z",
@@ -11500,7 +11492,8 @@
     }
    },
    "homeName": "Sri Lanka",
-   "awayName": "Bhutan"
+   "awayName": "Bhutan",
+   "fifaId": "7llr2hcj6fmheky7osuxe49g"
   },
   {
    "kickoff": "2026-11-08T00:00:00Z",
@@ -11532,7 +11525,8 @@
     }
    },
    "homeName": "Pakistan",
-   "awayName": "Maldives"
+   "awayName": "Maldives",
+   "fifaId": "2nxt1fklkpe6ip32x1ha848wk"
   },
   {
    "kickoff": "2026-11-10T00:00:00Z",
@@ -11564,7 +11558,8 @@
     }
    },
    "homeName": "Bhutan",
-   "awayName": "Bangladesh"
+   "awayName": "Bangladesh",
+   "fifaId": "7yuypdr28ajyswnzzzrpnmdw"
   },
   {
    "kickoff": "2026-11-11T00:00:00Z",
@@ -11596,7 +11591,8 @@
     }
    },
    "homeName": "Maldives",
-   "awayName": "India"
+   "awayName": "India",
+   "fifaId": "2ocqcriq7jx27zm8l4rqfxpg4"
   },
   {
    "date": "2026-11-11",
@@ -12396,7 +12392,8 @@
     }
    },
    "homeName": "New Zealand",
-   "awayName": "India"
+   "awayName": "India",
+   "fifaId": "6ydvm6rqneh73t7x6zlpmck4"
   },
   {
    "kickoff": "2026-11-12T17:00:00Z",
@@ -12428,7 +12425,8 @@
     }
    },
    "homeName": "Türkiye",
-   "awayName": "Belgium"
+   "awayName": "Belgium",
+   "fifaId": "7cmhkeym2i0pvl8m8t1zzmihg"
   },
   {
    "kickoff": "2026-11-12T17:00:00Z",
@@ -12460,7 +12458,8 @@
     }
    },
    "homeName": "Armenia",
-   "awayName": "Cyprus"
+   "awayName": "Cyprus",
+   "fifaId": "1hfb507bu2677jwssrzjqobh0"
   },
   {
    "kickoff": "2026-11-12T19:45:00Z",
@@ -12492,7 +12491,8 @@
     }
    },
    "homeName": "Czechia",
-   "awayName": "Spain"
+   "awayName": "Spain",
+   "fifaId": "7dulob6sd7ywy3nk9ju4j6ihg"
   },
   {
    "kickoff": "2026-11-12T19:45:00Z",
@@ -12524,7 +12524,8 @@
     }
    },
    "homeName": "Italy",
-   "awayName": "France"
+   "awayName": "France",
+   "fifaId": "7d9bcd9xkoyvhq70b6kr3b0gk"
   },
   {
    "kickoff": "2026-11-12T19:45:00Z",
@@ -12556,7 +12557,8 @@
     }
    },
    "homeName": "England",
-   "awayName": "Croatia"
+   "awayName": "Croatia",
+   "fifaId": "7ehcfnxp5fqfdvmwent252iac"
   },
   {
    "kickoff": "2026-11-12T19:45:00Z",
@@ -12588,7 +12590,8 @@
     }
    },
    "homeName": "Albania",
-   "awayName": "Finland"
+   "awayName": "Finland",
+   "fifaId": "1hzkdebe6qgdkzxgo3kqb4hsk"
   },
   {
    "kickoff": "2026-11-12T19:45:00Z",
@@ -12620,7 +12623,8 @@
     }
    },
    "homeName": "Montenegro",
-   "awayName": "Latvia"
+   "awayName": "Latvia",
+   "fifaId": "1j3txbshzsdyazm1tgc3w5l3o"
   },
   {
    "kickoff": "2026-11-12T19:45:00Z",
@@ -12652,7 +12656,8 @@
     }
    },
    "homeName": "San Marino",
-   "awayName": "Belarus"
+   "awayName": "Belarus",
+   "fifaId": "1ijx6ydywqeshfl0wmdbipez8"
   },
   {
    "kickoff": "2026-11-13T00:00:00Z",
@@ -12684,7 +12689,8 @@
     }
    },
    "homeName": "Colombia",
-   "awayName": "Chile"
+   "awayName": "Chile",
+   "fifaId": "dit49kaj1xto6v8y436kcy49g"
   },
   {
    "kickoff": "2026-11-13T00:00:00Z",
@@ -12716,7 +12722,8 @@
     }
    },
    "homeName": "Jordan",
-   "awayName": "Indonesia"
+   "awayName": "Indonesia",
+   "fifaId": "4d5hhhwye4jk62apqsr9nnod0"
   },
   {
    "kickoff": "2026-11-13T12:00:00Z",
@@ -12748,7 +12755,8 @@
     }
    },
    "homeName": "Singapore",
-   "awayName": "Paraguay"
+   "awayName": "Paraguay",
+   "fifaId": "5mz4ghtu4ewty2n7g60sxyj2s"
   },
   {
    "kickoff": "2026-11-13T14:45:00Z",
@@ -12780,7 +12788,8 @@
     }
    },
    "homeName": "Qatar",
-   "awayName": "Australia"
+   "awayName": "Australia",
+   "fifaId": "b350euln40z62ytujdhrsn95g"
   },
   {
    "kickoff": "2026-11-13T17:00:00Z",
@@ -12812,7 +12821,8 @@
     }
    },
    "homeName": "Moldova",
-   "awayName": "Kazakhstan"
+   "awayName": "Kazakhstan",
+   "fifaId": "1jpjop6resgb4rdrg9s6rgs9g"
   },
   {
    "kickoff": "2026-11-13T19:45:00Z",
@@ -12844,7 +12854,8 @@
     }
    },
    "homeName": "Netherlands",
-   "awayName": "Greece"
+   "awayName": "Greece",
+   "fifaId": "7f2uuphgt26zk1eh9x152wb2s"
   },
   {
    "kickoff": "2026-11-13T19:45:00Z",
@@ -12876,7 +12887,8 @@
     }
    },
    "homeName": "Serbia",
-   "awayName": "Germany"
+   "awayName": "Germany",
+   "fifaId": "7fnr0dkpwgk6nepehrkl12djo"
   },
   {
    "kickoff": "2026-11-13T19:45:00Z",
@@ -12908,7 +12920,8 @@
     }
    },
    "homeName": "Slovenia",
-   "awayName": "Switzerland"
+   "awayName": "Switzerland",
+   "fifaId": "f1b0s0pelq5gom0rral59s8b8"
   },
   {
    "kickoff": "2026-11-13T19:45:00Z",
@@ -12940,7 +12953,8 @@
     }
    },
    "homeName": "Scotland",
-   "awayName": "North Macedonia"
+   "awayName": "North Macedonia",
+   "fifaId": "f0mmm3dse7xo91y2tk6k5n3f8"
   },
   {
    "kickoff": "2026-11-13T19:45:00Z",
@@ -12972,7 +12986,8 @@
     }
    },
    "homeName": "Slovakia",
-   "awayName": "Faroe Islands"
+   "awayName": "Faroe Islands",
+   "fifaId": "1k9o30ut44k97quazdhureexg"
   },
   {
    "kickoff": "2026-11-13T19:45:00Z",
@@ -13004,7 +13019,8 @@
     }
    },
    "homeName": "Bulgaria",
-   "awayName": "Iceland"
+   "awayName": "Iceland",
+   "fifaId": "1ku1btxd1a3gd6k09pm2ldkic"
   },
   {
    "kickoff": "2026-11-13T19:45:00Z",
@@ -13036,7 +13052,8 @@
     }
    },
    "homeName": "Luxembourg",
-   "awayName": "Estonia"
+   "awayName": "Estonia",
+   "fifaId": "1lcumlqmjrw0ytvmjdpnfm6ms"
   },
   {
    "kickoff": "2026-11-13T19:45:00Z",
@@ -13068,7 +13085,8 @@
     }
    },
    "homeName": "Liechtenstein",
-   "awayName": "Azerbaijan"
+   "awayName": "Azerbaijan",
+   "fifaId": "bq4ra535q42ygohiqhzr17llg"
   },
   {
    "kickoff": "2026-11-13T19:45:00Z",
@@ -13100,7 +13118,8 @@
     }
    },
    "homeName": "Andorra",
-   "awayName": "Gibraltar"
+   "awayName": "Gibraltar",
+   "fifaId": "32swn57dbwp2vv56zjp0zkaok"
   },
   {
    "kickoff": "2026-11-14T10:15:00Z",
@@ -13132,7 +13151,8 @@
     }
    },
    "homeName": "Japan",
-   "awayName": "Brazil"
+   "awayName": "Brazil",
+   "fifaId": "5nfohtanfijti0bhkq025p2j8"
   },
   {
    "kickoff": "2026-11-14T14:00:00Z",
@@ -13164,7 +13184,8 @@
     }
    },
    "homeName": "Kosovo",
-   "awayName": "Israel"
+   "awayName": "Israel",
+   "fifaId": "f1xiwulsj0cnwtavtrhm4wsus"
   },
   {
    "kickoff": "2026-11-14T17:00:00Z",
@@ -13196,7 +13217,8 @@
     }
    },
    "homeName": "Norway",
-   "awayName": "Wales"
+   "awayName": "Wales",
+   "fifaId": "7g9230i4y7kqftg0hlq8ep8no"
   },
   {
    "kickoff": "2026-11-14T17:00:00Z",
@@ -13228,7 +13250,8 @@
     }
    },
    "homeName": "Georgia",
-   "awayName": "Hungary"
+   "awayName": "Hungary",
+   "fifaId": "f2ihb8zzsuhnejbwu1t2cb2ms"
   },
   {
    "kickoff": "2026-11-14T19:45:00Z",
@@ -13260,7 +13283,8 @@
     }
    },
    "homeName": "Portugal",
-   "awayName": "Denmark"
+   "awayName": "Denmark",
+   "fifaId": "7gt276fn6v2d5h1g4q03zeivo"
   },
   {
    "kickoff": "2026-11-14T19:45:00Z",
@@ -13292,7 +13316,8 @@
     }
    },
    "homeName": "Austria",
-   "awayName": "Republic of Ireland"
+   "awayName": "Republic of Ireland",
+   "fifaId": "f3nhnmsibeoo8yexgok7ockd0"
   },
   {
    "kickoff": "2026-11-14T19:45:00Z",
@@ -13324,7 +13349,8 @@
     }
    },
    "homeName": "Northern Ireland",
-   "awayName": "Ukraine"
+   "awayName": "Ukraine",
+   "fifaId": "f33gls2ibbm4og1oimnkli044"
   },
   {
    "kickoff": "2026-11-14T19:45:00Z",
@@ -13356,7 +13382,8 @@
     }
    },
    "homeName": "Romania",
-   "awayName": "Poland"
+   "awayName": "Poland",
+   "fifaId": "f48ai9kl65y01dd7bl16amxp0"
   },
   {
    "kickoff": "2026-11-14T19:45:00Z",
@@ -13388,7 +13415,8 @@
     }
    },
    "homeName": "Sweden",
-   "awayName": "Bosnia and Herzegovina"
+   "awayName": "Bosnia and Herzegovina",
+   "fifaId": "f4tmo506z0ywyojuc1oulhp1w"
   },
   {
    "kickoff": "2026-11-15T03:00:00Z",
@@ -13420,7 +13448,8 @@
     }
    },
    "homeName": "New Zealand",
-   "awayName": "India"
+   "awayName": "India",
+   "fifaId": "7i8gty68v89luvus6e28qt5g"
   },
   {
    "date": "2026-11-15",
@@ -14220,7 +14249,8 @@
     }
    },
    "homeName": "Cyprus",
-   "awayName": "Montenegro"
+   "awayName": "Montenegro",
+   "fifaId": "1m2a6e4hnm30qrfdlaxxe4l5g"
   },
   {
    "kickoff": "2026-11-15T14:00:00Z",
@@ -14252,7 +14282,8 @@
     }
    },
    "homeName": "Latvia",
-   "awayName": "Armenia"
+   "awayName": "Armenia",
+   "fifaId": "1mme9temrb8gcbdb1l2brpt04"
   },
   {
    "kickoff": "2026-11-15T17:00:00Z",
@@ -14284,7 +14315,8 @@
     }
    },
    "homeName": "Belarus",
-   "awayName": "Albania"
+   "awayName": "Albania",
+   "fifaId": "1n59f4xi23rm80lp87boilyxg"
   },
   {
    "kickoff": "2026-11-15T17:00:00Z",
@@ -14316,7 +14348,8 @@
     }
    },
    "homeName": "Finland",
-   "awayName": "San Marino"
+   "awayName": "San Marino",
+   "fifaId": "1npnii4tn6hh1pu68iqkdx8gk"
   },
   {
    "kickoff": "2026-11-15T19:45:00Z",
@@ -14348,7 +14381,8 @@
     }
    },
    "homeName": "Spain",
-   "awayName": "England"
+   "awayName": "England",
+   "fifaId": "7j57g1z3k41oykvidhl2aym1g"
   },
   {
    "kickoff": "2026-11-15T19:45:00Z",
@@ -14380,7 +14414,8 @@
     }
    },
    "homeName": "France",
-   "awayName": "Türkiye"
+   "awayName": "Türkiye",
+   "fifaId": "7hxantwsk2rm46hv4lt2otyxg"
   },
   {
    "kickoff": "2026-11-15T19:45:00Z",
@@ -14412,7 +14447,8 @@
     }
    },
    "homeName": "Belgium",
-   "awayName": "Italy"
+   "awayName": "Italy",
+   "fifaId": "7hd6j6oayde5xn9gaaaes03kk"
   },
   {
    "kickoff": "2026-11-15T19:45:00Z",
@@ -14444,7 +14480,8 @@
     }
    },
    "homeName": "Croatia",
-   "awayName": "Czechia"
+   "awayName": "Czechia",
+   "fifaId": "7iigzv7r2sdlaepzls4qvvf9w"
   },
   {
    "kickoff": "2026-11-16T00:00:00Z",
@@ -14476,7 +14513,8 @@
     }
    },
    "homeName": "Andorra",
-   "awayName": "Azerbaijan"
+   "awayName": "Azerbaijan",
+   "fifaId": "atzve2bxbw2fkck1ifh6m37dg"
   },
   {
    "kickoff": "2026-11-16T15:00:00Z",
@@ -14508,7 +14546,8 @@
     }
    },
    "homeName": "Kazakhstan",
-   "awayName": "Slovakia"
+   "awayName": "Slovakia",
+   "fifaId": "1oxsehazg1k1iry885ms8093o"
   },
   {
    "kickoff": "2026-11-16T15:00:00Z",
@@ -14540,7 +14579,8 @@
     }
    },
    "homeName": "Faroe Islands",
-   "awayName": "Moldova"
+   "awayName": "Moldova",
+   "fifaId": "1odi989t2i46q4slqtil91t04"
   },
   {
    "kickoff": "2026-11-16T17:00:00Z",
@@ -14572,7 +14612,8 @@
     }
    },
    "homeName": "Iceland",
-   "awayName": "Luxembourg"
+   "awayName": "Luxembourg",
+   "fifaId": "1q1xtpcccpnevgsqlus6c06qc"
   },
   {
    "kickoff": "2026-11-16T17:00:00Z",
@@ -14604,7 +14645,8 @@
     }
    },
    "homeName": "Estonia",
-   "awayName": "Bulgaria"
+   "awayName": "Bulgaria",
+   "fifaId": "1pi739miivlk79n70o2dgimfo"
   },
   {
    "kickoff": "2026-11-16T17:00:00Z",
@@ -14636,7 +14678,8 @@
     }
    },
    "homeName": "Lithuania",
-   "awayName": "Liechtenstein"
+   "awayName": "Liechtenstein",
+   "fifaId": "bqh5qliu34afi3optj72ehk44"
   },
   {
    "kickoff": "2026-11-16T19:45:00Z",
@@ -14668,7 +14711,8 @@
     }
    },
    "homeName": "Germany",
-   "awayName": "Netherlands"
+   "awayName": "Netherlands",
+   "fifaId": "7jqcgxhz4lem8scd4ggo5tus4"
   },
   {
    "kickoff": "2026-11-16T19:45:00Z",
@@ -14700,7 +14744,8 @@
     }
    },
    "homeName": "Switzerland",
-   "awayName": "Scotland"
+   "awayName": "Scotland",
+   "fifaId": "ehog1wzv3dlq1l5vo94les4"
   },
   {
    "kickoff": "2026-11-16T19:45:00Z",
@@ -14732,7 +14777,8 @@
     }
    },
    "homeName": "Greece",
-   "awayName": "Serbia"
+   "awayName": "Serbia",
+   "fifaId": "7kb5uu5mt5p0lc6m38ev1k8pg"
   },
   {
    "kickoff": "2026-11-16T19:45:00Z",
@@ -14764,7 +14810,8 @@
     }
    },
    "homeName": "North Macedonia",
-   "awayName": "Slovenia"
+   "awayName": "Slovenia",
+   "fifaId": "f5dkk4h40mroe7nx9e8fw1gk4"
   },
   {
    "kickoff": "2026-11-16T19:45:00Z",
@@ -14796,7 +14843,8 @@
     }
    },
    "homeName": "Gibraltar",
-   "awayName": "Malta"
+   "awayName": "Malta",
+   "fifaId": "500av5xfaflwl7k9fidbekis4"
   },
   {
    "kickoff": "2026-11-17T00:00:00Z",
@@ -14828,7 +14876,8 @@
     }
    },
    "homeName": "Chile",
-   "awayName": "Colombia"
+   "awayName": "Colombia",
+   "fifaId": "dj5ammmwqr0w5to4cb8gjlixg"
   },
   {
    "kickoff": "2026-11-17T00:00:00Z",
@@ -14860,7 +14909,8 @@
     }
    },
    "homeName": "Japan",
-   "awayName": "Paraguay"
+   "awayName": "Paraguay",
+   "fifaId": "5o0pycy2w79g7ibqt8ucr4jdg"
   },
   {
    "kickoff": "2026-11-17T00:00:00Z",
@@ -14892,7 +14942,8 @@
     }
    },
    "homeName": "Jordan",
-   "awayName": "Australia"
+   "awayName": "Australia",
+   "fifaId": "4dit1tfqeqe25fozfl3ozjlec"
   },
   {
    "kickoff": "2026-11-17T10:00:00Z",
@@ -14924,7 +14975,8 @@
     }
    },
    "homeName": "Singapore",
-   "awayName": "Brazil"
+   "awayName": "Brazil",
+   "fifaId": "5nq6umcgi0u7c7vlxjo8wfu38"
   },
   {
    "kickoff": "2026-11-17T19:45:00Z",
@@ -14956,7 +15008,8 @@
     }
    },
    "homeName": "Wales",
-   "awayName": "Portugal"
+   "awayName": "Portugal",
+   "fifaId": "7lg3km5a54fwtntjhd5ian0us"
   },
   {
    "kickoff": "2026-11-17T19:45:00Z",
@@ -14988,7 +15041,8 @@
     }
    },
    "homeName": "Denmark",
-   "awayName": "Norway"
+   "awayName": "Norway",
+   "fifaId": "7kw3b5odk4gb2vs73gt1b7l78"
   },
   {
    "kickoff": "2026-11-17T19:45:00Z",
@@ -15020,7 +15074,8 @@
     }
    },
    "homeName": "Israel",
-   "awayName": "Austria"
+   "awayName": "Austria",
+   "fifaId": "25jxws68n6k7cshq8fffm6ms"
   },
   {
    "kickoff": "2026-11-17T19:45:00Z",
@@ -15052,7 +15107,8 @@
     }
    },
    "homeName": "Ukraine",
-   "awayName": "Georgia"
+   "awayName": "Georgia",
+   "fifaId": "1l0xgyeywk3rr3a7a63e4ges"
   },
   {
    "kickoff": "2026-11-17T19:45:00Z",
@@ -15084,7 +15140,8 @@
     }
    },
    "homeName": "Poland",
-   "awayName": "Sweden"
+   "awayName": "Sweden",
+   "fifaId": "3wkyv3vyukj6u9t0ot08usyc"
   },
   {
    "kickoff": "2026-11-17T19:45:00Z",
@@ -15116,7 +15173,8 @@
     }
    },
    "homeName": "Hungary",
-   "awayName": "Northern Ireland"
+   "awayName": "Northern Ireland",
+   "fifaId": "110emankes0ykrcwoqzq7jtg"
   },
   {
    "kickoff": "2026-11-17T19:45:00Z",
@@ -15148,7 +15206,8 @@
     }
    },
    "homeName": "Bosnia and Herzegovina",
-   "awayName": "Romania"
+   "awayName": "Romania",
+   "fifaId": "3bo6s9nf66au4aey6dwadl3o"
   },
   {
    "kickoff": "2026-11-17T19:45:00Z",
@@ -15180,7 +15239,8 @@
     }
    },
    "homeName": "Republic of Ireland",
-   "awayName": "Kosovo"
+   "awayName": "Kosovo",
+   "fifaId": "2qm9jrorrcn5gxx9wf37ajv8"
   },
   {
    "kickoff": "2027-01-07T00:00:00Z",
@@ -15212,7 +15272,8 @@
     }
    },
    "homeName": "Saudi Arabia",
-   "awayName": "Palestine"
+   "awayName": "Palestine",
+   "fifaId": "5hdboepfp2fss944v5ki4bk0k"
   },
   {
    "kickoff": "2027-01-08T00:00:00Z",
@@ -15244,7 +15305,8 @@
     }
    },
    "homeName": "Uzbekistan",
-   "awayName": "Jordan"
+   "awayName": "Jordan",
+   "fifaId": "camvqx2r4ijswuksd7r1qtzbo"
   },
   {
    "kickoff": "2027-01-08T00:00:00Z",
@@ -15276,7 +15338,8 @@
     }
    },
    "homeName": "Kuwait",
-   "awayName": "Oman"
+   "awayName": "Oman",
+   "fifaId": "5hkzqh7g4ad4dngz7273wt79w"
   },
   {
    "kickoff": "2027-01-08T00:00:00Z",
@@ -15308,7 +15371,8 @@
     }
    },
    "homeName": "Bahrain",
-   "awayName": "DPR Korea"
+   "awayName": "DPR Korea",
+   "fifaId": "caevpwpavrg591agu4u0szitw"
   },
   {
    "kickoff": "2027-01-09T00:00:00Z",
@@ -15340,7 +15404,8 @@
     }
    },
    "homeName": "IR Iran",
-   "awayName": "China PR"
+   "awayName": "China PR",
+   "fifaId": "42ofywo3qz9vdo1oqig5src44"
   },
   {
    "kickoff": "2027-01-09T00:00:00Z",
@@ -15372,7 +15437,8 @@
     }
    },
    "homeName": "Australia",
-   "awayName": "Singapore"
+   "awayName": "Singapore",
+   "fifaId": "aex49p849g5bb1z02xn4n9wyc"
   },
   {
    "kickoff": "2027-01-09T00:00:00Z",
@@ -15404,7 +15470,8 @@
     }
    },
    "homeName": "Syria",
-   "awayName": "Kyrgyz Republic"
+   "awayName": "Kyrgyz Republic",
+   "fifaId": "42x3m11dlv4hmu9crcsmcy904"
   },
   {
    "kickoff": "2027-01-10T00:00:00Z",
@@ -15436,7 +15503,8 @@
     }
    },
    "homeName": "Korea Republic",
-   "awayName": "Yemen"
+   "awayName": "Yemen",
+   "fifaId": "18wnjx00e4uh1ia3e03vodj4k"
   },
   {
    "kickoff": "2027-01-10T00:00:00Z",
@@ -15468,7 +15536,8 @@
     }
    },
    "homeName": "Tajikistan",
-   "awayName": "Iraq"
+   "awayName": "Iraq",
+   "fifaId": "af5hb6ycfxyy744fgyr1s3a50"
   },
   {
    "kickoff": "2027-01-11T00:00:00Z",
@@ -15500,7 +15569,8 @@
     }
    },
    "homeName": "Japan",
-   "awayName": "Indonesia"
+   "awayName": "Indonesia",
+   "fifaId": "d5ft8xw73onfscby9nynf58no"
   },
   {
    "kickoff": "2027-01-11T00:00:00Z",
@@ -15532,7 +15602,8 @@
     }
    },
    "homeName": "Qatar",
-   "awayName": "Thailand"
+   "awayName": "Thailand",
+   "fifaId": "d5ny0x4cj2jm55mld6qsuywb8"
   },
   {
    "kickoff": "2027-01-11T00:00:00Z",
@@ -15564,7 +15635,8 @@
     }
    },
    "homeName": "United Arab Emirates",
-   "awayName": "Vietnam"
+   "awayName": "Vietnam",
+   "fifaId": "2bql2pz01x9j5rade4ientst0"
   },
   {
    "kickoff": "2027-01-12T00:00:00Z",
@@ -15596,7 +15668,8 @@
     }
    },
    "homeName": "Oman",
-   "awayName": "Saudi Arabia"
+   "awayName": "Saudi Arabia",
+   "fifaId": "5hslu70gm4esj12tjuwyhm710"
   },
   {
    "kickoff": "2027-01-12T00:00:00Z",
@@ -15628,7 +15701,8 @@
     }
    },
    "homeName": "DPR Korea",
-   "awayName": "Uzbekistan"
+   "awayName": "Uzbekistan",
+   "fifaId": "cauqr8vux8i6vgdyo27wf9p1w"
   },
   {
    "kickoff": "2027-01-12T00:00:00Z",
@@ -15660,7 +15734,8 @@
     }
    },
    "homeName": "Palestine",
-   "awayName": "Kuwait"
+   "awayName": "Kuwait",
+   "fifaId": "5i04knx6esf7dwtk37b3k6sk4"
   },
   {
    "kickoff": "2027-01-13T00:00:00Z",
@@ -15692,7 +15767,8 @@
     }
    },
    "homeName": "Kyrgyz Republic",
-   "awayName": "IR Iran"
+   "awayName": "IR Iran",
+   "fifaId": "435hn54795441vayakqi1p9n8"
   },
   {
    "kickoff": "2027-01-13T00:00:00Z",
@@ -15724,7 +15800,8 @@
     }
    },
    "homeName": "Jordan",
-   "awayName": "Bahrain"
+   "awayName": "Bahrain",
+   "fifaId": "cb2nrvdfem4pzg5e3xxdxad5g"
   },
   {
    "kickoff": "2027-01-14T00:00:00Z",
@@ -15756,7 +15833,8 @@
     }
    },
    "homeName": "Iraq",
-   "awayName": "Australia"
+   "awayName": "Australia",
+   "fifaId": "afdwr1or60fr0c8gmtf0hyyvo"
   },
   {
    "kickoff": "2027-01-14T00:00:00Z",
@@ -15788,7 +15866,8 @@
     }
    },
    "homeName": "China PR",
-   "awayName": "Syria"
+   "awayName": "Syria",
+   "fifaId": "43dy1a6wxq2ez6r54ploh8mqc"
   },
   {
    "kickoff": "2027-01-14T00:00:00Z",
@@ -15820,7 +15899,8 @@
     }
    },
    "homeName": "Singapore",
-   "awayName": "Tajikistan"
+   "awayName": "Tajikistan",
+   "fifaId": "afm81j3401iyi504vh6sgphqs"
   },
   {
    "kickoff": "2027-01-15T00:00:00Z",
@@ -15852,7 +15932,8 @@
     }
    },
    "homeName": "Vietnam",
-   "awayName": "Korea Republic"
+   "awayName": "Korea Republic",
+   "fifaId": "44w2o64l17njllwxgv2swb09g"
   },
   {
    "kickoff": "2027-01-15T00:00:00Z",
@@ -15884,7 +15965,8 @@
     }
    },
    "homeName": "Yemen",
-   "awayName": "United Arab Emirates"
+   "awayName": "United Arab Emirates",
+   "fifaId": "564l187jkrakuyiwtqzmac844"
   },
   {
    "kickoff": "2027-01-16T00:00:00Z",
@@ -15916,7 +15998,8 @@
     }
    },
    "homeName": "Thailand",
-   "awayName": "Japan"
+   "awayName": "Japan",
+   "fifaId": "d638d5cxyy03aiua8os0tkro4"
   },
   {
    "kickoff": "2027-01-16T00:00:00Z",
@@ -15948,7 +16031,8 @@
     }
    },
    "homeName": "Indonesia",
-   "awayName": "Qatar"
+   "awayName": "Qatar",
+   "fifaId": "d5vpcwe34b04qjos9d32wz0no"
   },
   {
    "kickoff": "2027-01-17T00:00:00Z",
@@ -15980,7 +16064,8 @@
     }
    },
    "homeName": "Saudi Arabia",
-   "awayName": "Kuwait"
+   "awayName": "Kuwait",
+   "fifaId": "5i7p61cdlfcqkew09lrhaosus"
   },
   {
    "kickoff": "2027-01-17T00:00:00Z",
@@ -16012,7 +16097,8 @@
     }
    },
    "homeName": "Uzbekistan",
-   "awayName": "Bahrain"
+   "awayName": "Bahrain",
+   "fifaId": "cban1ff3z4153306unmh6e0wk"
   },
   {
    "kickoff": "2027-01-17T00:00:00Z",
@@ -16044,7 +16130,8 @@
     }
    },
    "homeName": "DPR Korea",
-   "awayName": "Jordan"
+   "awayName": "Jordan",
+   "fifaId": "cbiqbb827o4y7bgakuvhi776c"
   },
   {
    "kickoff": "2027-01-17T00:00:00Z",
@@ -16076,7 +16163,8 @@
     }
    },
    "homeName": "Oman",
-   "awayName": "Palestine"
+   "awayName": "Palestine",
+   "fifaId": "5ifbu3uys06hfvpj89smyvbis"
   },
   {
    "kickoff": "2027-01-18T00:00:00Z",
@@ -16108,7 +16196,8 @@
     }
    },
    "homeName": "IR Iran",
-   "awayName": "Syria"
+   "awayName": "Syria",
+   "fifaId": "43mcjpb4jovs6hbnyjfjpbi8k"
   },
   {
    "kickoff": "2027-01-18T00:00:00Z",
@@ -16140,7 +16229,8 @@
     }
    },
    "homeName": "Kyrgyz Republic",
-   "awayName": "China PR"
+   "awayName": "China PR",
+   "fifaId": "43uspxjb32stdxjierhda0hec"
   },
   {
    "kickoff": "2027-01-19T00:00:00Z",
@@ -16172,7 +16262,8 @@
     }
    },
    "homeName": "Australia",
-   "awayName": "Tajikistan"
+   "awayName": "Tajikistan",
+   "fifaId": "ag2vsd4i9zggcmuuc83tbmln8"
   },
   {
    "kickoff": "2027-01-19T00:00:00Z",
@@ -16204,7 +16295,8 @@
     }
    },
    "homeName": "Iraq",
-   "awayName": "Singapore"
+   "awayName": "Singapore",
+   "fifaId": "afulfiligqis21zxxzdqcjod0"
   },
   {
    "kickoff": "2027-01-20T00:00:00Z",
@@ -16236,7 +16328,8 @@
     }
    },
    "homeName": "Japan",
-   "awayName": "Qatar"
+   "awayName": "Qatar",
+   "fifaId": "d6b3z63lhn0qwpyls599ppy50"
   },
   {
    "kickoff": "2027-01-20T00:00:00Z",
@@ -16268,7 +16361,8 @@
     }
    },
    "homeName": "Korea Republic",
-   "awayName": "United Arab Emirates"
+   "awayName": "United Arab Emirates",
+   "fifaId": "5x5suw4rz583aojvu9o7nv09g"
   },
   {
    "kickoff": "2027-01-20T00:00:00Z",
@@ -16300,7 +16394,8 @@
     }
    },
    "homeName": "Thailand",
-   "awayName": "Indonesia"
+   "awayName": "Indonesia",
+   "fifaId": "d6j7kmefug85z4z1wjg381i50"
   },
   {
    "kickoff": "2027-01-20T00:00:00Z",
@@ -16332,7 +16427,8 @@
     }
    },
    "homeName": "Vietnam",
-   "awayName": "Yemen"
+   "awayName": "Yemen",
+   "fifaId": "6uw7m05n46ibn45g2zyupi784"
   },
   {
    "date": "2027-03-24",
@@ -17891,7 +17987,7 @@
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
    "results": 31,
-   "fixtures": 56
+   "fixtures": 54
   },
   {
    "name": "FIFA Series™",
@@ -17975,7 +18071,7 @@
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
    "results": 23,
-   "fixtures": 28
+   "fixtures": 25
   },
   {
    "name": "Concacaf Series",
@@ -17996,7 +18092,7 @@
    "group": "CAF",
    "weight": "I=25",
    "results": 40,
-   "fixtures": 104
+   "fixtures": 98
   },
   {
    "name": "COSAFA Cup",
@@ -18045,7 +18141,7 @@
    "group": "AFC",
    "weight": "I=10 · 5 outside windows",
    "results": 0,
-   "fixtures": 4
+   "fixtures": 2
   },
   {
    "name": "SAFF Championship",

@@ -4,9 +4,9 @@ struct RankingData: Codable, Sendable {
     let generatedAt: String
     let official: Official
     let matchesSince: String
-    let teams: [Team]
-    let results: [Match]
-    let fixtures: [Match]
+    var teams: [Team]
+    var results: [Match]
+    var fixtures: [Match]
     let competitions: [CompetitionInfo]?
 
     struct Official: Codable, Sendable {
@@ -40,10 +40,10 @@ struct Team: Codable, Sendable, Identifiable, Hashable {
     let officialPoints: Double
     let previousRank: Int
     let aliases: [String]?
-    let liveRank: Int
-    let livePoints: Double
-    let pointsChange: Double
-    let rankChange: Int
+    var liveRank: Int
+    var livePoints: Double
+    var pointsChange: Double
+    var rankChange: Int
 }
 
 struct Match: Codable, Sendable, Identifiable, Hashable {
@@ -53,22 +53,26 @@ struct Match: Codable, Sendable, Identifiable, Hashable {
     let away: String
     let homeName: String
     let awayName: String
-    let homeScore: Int?
-    let awayScore: Int?
-    let homePens: Int?
-    let awayPens: Int?
-    let status: Int
+    var homeScore: Int?
+    var awayScore: Int?
+    var homePens: Int?
+    var awayPens: Int?
+    var status: Int
     let competition: String
     let stage: String
     let city: String
-    let counted: Bool?
+    var counted: Bool?
     let importance: Int?
-    let homeDelta: Double?
-    let awayDelta: Double?
+    var homeDelta: Double?
+    var awayDelta: Double?
     let note: String?
     let knockout: Bool?
     let expectedHome: Double?
-    let prediction: Prediction?
+    var prediction: Prediction?
+    /// FIFA's match id, for fetching the live score.
+    let fifaId: String?
+    /// Set when the score came from FIFA's live feed after the last data update.
+    var liveUpdated: Bool? = nil
 
     /// Points each side would gain or lose for each result ("win", "draw",
     /// "loss", and "pensWin"/"pensLoss" for knockout ties).

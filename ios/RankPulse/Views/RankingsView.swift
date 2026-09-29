@@ -7,6 +7,8 @@ struct RankingsView: View {
     @State private var showSettings = false
     @State private var showHelp = false
     @State private var path = NavigationPath()
+    @State private var page = 0
+    private let pageSize = 50
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -60,13 +62,17 @@ struct RankingsView: View {
 
     private func list(_ data: RankingData) -> some View {
         let favs = store.favourites.codes
-        let teams = data.teams.filter { t in
+        let allTeams = data.teams.filter { t in
             confed.includes(t.code, confed: t.confed, favourites: favs) && t.matches(search)
         }
+        let pages = max(1, Int((Double(allTeams.count) / Double(pageSize)).rounded(.up)))
+        let current = min(page, pages - 1)
+        let first = current * pageSize
+        let teams = Array(allTeams.dropFirst(first).prefix(pageSize))
         return List {
             if search.isEmpty && confed == .all {
                 Section {
-                    HeroHeader(subtitle: "Updated rankings after every international match")
+                    HeroHeader(subtitle: "Updated FIFA rankings")
                         .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 12, trailing: 16))
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
@@ -94,9 +100,12 @@ struct RankingsView: View {
                 ForEach(Array(teams.enumerated()), id: \.element.id) { index, team in
                     NavigationLink(value: team) { TeamRow(team: team, isFavourite: favs.contains(team.code)) }
                         .swipeActions { favouriteButton(team) }
-                    if (index + 1) % 30 == 0 && index + 1 < teams.count {
+                    if index + 1 == 25 && teams.count > 30 {
                         InlineAdRow()
                     }
+                }
+                if pages > 1 {
+                    Pager(page: current, pages: pages, first: first + 1, last: first + teams.count, total: allTeams.count) { page = $0 }
                 }
             } header: {
                 HStack {
@@ -112,6 +121,8 @@ struct RankingsView: View {
                 }
             }
         }
+        .onChange(of: search) { page = 0 }
+        .onChange(of: confed) { page = 0 }
         .overlay {
             if teams.isEmpty {
                 if confed == .favourites && favs.isEmpty {
@@ -191,12 +202,13 @@ struct MoversView: View {
 
     var body: some View {
         let byPoints = teams.sorted { $0.pointsChange > $1.pointsChange }
-        let byRank = teams.max { $0.rankChange < $1.rankChange }  // "Most places up" (same label as the website)
-        // Three equal cards that fit the screen width — no sideways scrolling.
-        HStack(spacing: 8) {
+        let byRank = teams.sorted { $0.rankChange > $1.rankChange }
+        // Four cards in a 2×2 grid that fits the screen — no sideways scrolling.
+        LazyVGrid(columns: [GridItem(.flexible(), spacing: 8), GridItem(.flexible(), spacing: 8)], spacing: 8) {
             if let up = byPoints.first { card("Biggest gain", up, up.pointsChange.signed, 1) }
             if let down = byPoints.last { card("Biggest drop", down, down.pointsChange.signed, 2) }
-            if let mover = byRank, mover.rankChange > 0 { card("Most places up", mover, "▲\(mover.rankChange)", 3) }
+            if let mover = byRank.first, mover.rankChange > 0 { card("Most places up", mover, "▲\(mover.rankChange)", 3) }
+            if let faller = byRank.last, faller.rankChange < 0 { card("Most places down", faller, "▼\(-faller.rankChange)", 0) }
         }
         .padding(.horizontal, 16)
     }
@@ -228,5 +240,43 @@ struct MoversView: View {
             .background(Theme.cardGradients[style], in: .rect(cornerRadius: 18))
             .shadow(color: .black.opacity(0.18), radius: 10, y: 6)
         }
+    }
+}
+
+/// Previous / page numbers / next, under a page of 50 teams.
+struct Pager: View {
+    let page: Int
+    let pages: Int
+    let first: Int
+    let last: Int
+    let total: Int
+    let go: (Int) -> Void
+
+    var body: some View {
+        VStack(spacing: 8) {
+            HStack(spacing: 6) {
+                Button { go(page - 1) } label: { Image(systemName: "chevron.left").frame(width: 34, height: 34) }
+                    .disabled(page == 0)
+                    .accessibilityLabel("Previous page")
+                ForEach(0..<pages, id: \.self) { i in
+                    Button { go(i) } label: {
+                        Text("\(i + 1)")
+                            .font(.subheadline.weight(.bold).monospacedDigit())
+                            .frame(width: 34, height: 34)
+                            .foregroundStyle(i == page ? .white : .primary)
+                            .background(i == page ? AnyShapeStyle(Theme.night) : AnyShapeStyle(.quaternary.opacity(0.6)), in: .circle)
+                    }
+                    .accessibilityLabel("Page \(i + 1)")
+                }
+                Button { go(page + 1) } label: { Image(systemName: "chevron.right").frame(width: 34, height: 34) }
+                    .disabled(page == pages - 1)
+                    .accessibilityLabel("Next page")
+            }
+            .buttonStyle(.borderless)
+            .font(.headline)
+            Text("\(first)–\(last) of \(total)").font(.caption).foregroundStyle(.secondary)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 6)
     }
 }

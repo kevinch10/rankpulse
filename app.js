@@ -4,11 +4,14 @@ const REGIONS = { UEFA: 'Europe', CONMEBOL: 'South America', CONCACAF: 'North & 
 const LIVE = 3;
 
 const PAGE = 150;  // matches rendered before "Show more"
+const RANK_PAGE = 50;  // teams per page in Rankings
+const FIFA_CALENDAR = 'https://api.fifa.com/api/v3/calendar/matches';
 const saved = loadPrefs();
 const state = { data: null, history: null, historyFrom: '', historyFailed: false,
   view: ['rankings', 'results', 'fixtures'].includes(location.hash.slice(1)) ? location.hash.slice(1) : (saved.view || 'rankings'),
   period: saved.period || 7, limit: PAGE, confed: saved.confed || 'All',
-  competition: '', compQuery: '', compActiveOnly: false, date: '', query: '', open: null, favs: loadFavs() };
+  competition: '', compQuery: '', compActiveOnly: false, date: '', query: '', open: null, favs: loadFavs(),
+  rankPage: 0, base: null, live: new Map(), liveCheckedAt: null };
 const $ = id => document.getElementById(id);
 
 // ---------- preferences (this browser only) ----------
@@ -89,6 +92,7 @@ function renderMeta({ official, generatedAt, results, matchesSince }) {
     ['Matches counted since', String(counted)],
     ['Updated', ago(generatedAt), new Date(generatedAt).toLocaleString(), stale],
   ];
+  if (state.liveCheckedAt) items.push(['Live scores', `checked ${ago(state.liveCheckedAt.toISOString())}`]);
   if (official.nextPubDate) items.push(['Next official release', fmtDate(official.nextPubDate)]);
   $('meta').innerHTML = items.map(([k, v, title, warn]) =>
     `<div class="${warn ? 'stale' : ''}" ${title ? `title="${esc(title)}"` : ''}><dt>${k}</dt><dd>${esc(v)}${warn ? ' · may be out of date' : ''}</dd></div>`).join('');
@@ -101,6 +105,7 @@ function renderMovers(teams) {
     ['Biggest gain', byPts[0], signed(byPts[0].pointsChange)],
     ['Biggest drop', byPts.at(-1), signed(byPts.at(-1).pointsChange)],
     ['Most places up', byRank[0], `▲${byRank[0].rankChange}`],
+    ['Most places down', byRank.at(-1), `▼${-byRank.at(-1).rankChange}`],
   ];
   $('movers').innerHTML = cards.map(([label, t, value]) => `
     <div class="mover">
@@ -285,7 +290,12 @@ function detailRow(t) {
 }
 
 function renderRankings() {
-  const teams = state.data.teams.filter(t => confedOK(t.code) && teamMatchesFilter(t.code, t.name));
+  const all = state.data.teams.filter(t => confedOK(t.code) && teamMatchesFilter(t.code, t.name));
+  const pages = Math.max(1, Math.ceil(all.length / RANK_PAGE));
+  state.rankPage = Math.min(state.rankPage, pages - 1);
+  const start = state.rankPage * RANK_PAGE;
+  const teams = all.slice(start, start + RANK_PAGE);
+  renderPager(all.length, pages, start, teams.length);
   $('rows').innerHTML = teams.map(t => `
     <tr data-code="${t.code}" data-confed="${t.confed}" data-top="${t.liveRank <= 3 ? t.liveRank : ''}" aria-expanded="${state.open === t.code}">
       <td class="rank"><b>${t.liveRank}</b>${moveBadge(t.rankChange)}</td>
@@ -294,7 +304,28 @@ function renderRankings() {
       <td class="num">${t.livePoints.toFixed(2)}</td>
       <td class="num ${tone(t.pointsChange)}">${t.pointsChange ? signed(t.pointsChange) : '–'}</td>
     </tr>${state.open === t.code ? detailRow(t) : ''}`).join('');
-  return teams.length;
+  return all.length;
+}
+
+function renderPager(total, pages, start, count) {
+  const el = $('pager');
+  el.hidden = pages <= 1;
+  if (pages <= 1) return;
+  const p = state.rankPage;
+  const btn = (label, page, extra = '') =>
+    `<button type="button" data-page="${page}" ${extra}>${label}</button>`;
+  el.innerHTML = `
+    ${btn('‹ Previous', p - 1, p === 0 ? 'disabled' : '')}
+    <span class="pages">${Array.from({ length: pages }, (_, i) =>
+      btn(i + 1, i, i === p ? 'aria-current="page"' : '')).join('')}</span>
+    <span class="range">${start + 1}–${start + count} of ${total}</span>
+    ${btn('Next ›', p + 1, p === pages - 1 ? 'disabled' : '')}`;
+}
+
+function setRankPage(page) {
+  state.rankPage = page;
+  render();
+  document.querySelector('.views').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // ---------- results & fixtures ----------
@@ -334,6 +365,7 @@ function matchRow(m, fixture) {
     : `<span class="score">${scoreText(m)}</span>`;
   const tags = [
     m.status === LIVE ? '<span class="tag live" title="In progress — points are added at full time">Live</span>' : '',
+    m.liveUpdated && m.status !== LIVE && m.counted ? '<span class="tag" title="Scored from FIFA\'s live result; confirmed at the next update">Just finished</span>' : '',
     m.counted ? `<span class="tag" title="How much this match counts in FIFA's formula">Weight ${m.importance}</span>` : '',
     !fixture && !m.counted && m.status !== LIVE ? '<span class="tag muted" title="Played before the last official ranking, so it is already included there">In official ranking</span>' : '',
     m.note ? `<span class="tag" title="${esc(m.note)}">Corrected</span>` : '',
@@ -370,6 +402,116 @@ function renderMatchList(el, list, fixture) {
   return all.length;
 }
 
+// ---------- live scores (straight from FIFA while matches are on) ----------
+
+const FINISHED = 0;
+const expected = (p, q) => 1 / (10 ** (-(p - q) / 600) + 1);
+const round2 = n => Math.round(n * 100) / 100;
+
+// Server data plus the live scores fetched from FIFA since. Matches that have
+// finished since the last server update are scored here with FIFA's formula,
+// so the table moves at full time instead of at the next update.
+function derive(base, live) {
+  const teams = base.teams.map(t => ({ ...t }));
+  const byCode = Object.fromEntries(teams.map(t => [t.code, t]));
+  const points = Object.fromEntries(teams.map(t => [t.code, t.livePoints]));
+  const results = base.results.map(m => ({ ...m }));
+  const fixtures = [];
+  for (const f of base.fixtures) {
+    const l = f.fifaId && live.get(f.fifaId);
+    if (l && (l.status === LIVE || l.status === FINISHED)) results.push({ ...f }); else fixtures.push(f);
+  }
+  const finished = [];
+  for (const m of results) {
+    const l = m.fifaId && live.get(m.fifaId);
+    if (!l) continue;
+    Object.assign(m, l, { liveUpdated: true });
+    if (l.status === FINISHED && !m.counted && m.importance) finished.push(m);
+  }
+  finished.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
+  for (const m of finished) {
+    if (!(m.home in points) || !(m.away in points)) continue;
+    let wh, wa;
+    if (m.homeScore !== m.awayScore) { wh = m.homeScore > m.awayScore ? 1 : 0; wa = 1 - wh; }
+    else if (m.homePens != null) [wh, wa] = m.homePens > m.awayPens ? [0.75, 0.5] : [0.5, 0.75];
+    else wh = wa = 0.5;
+    const eh = expected(points[m.home], points[m.away]);
+    let dh = m.importance * (wh - eh), da = m.importance * (wa - (1 - eh));
+    if (m.knockout) { dh = Math.max(dh, 0); da = Math.max(da, 0); }
+    dh = round2(dh); da = round2(da);
+    points[m.home] += dh; points[m.away] += da;
+    Object.assign(m, { counted: true, homeDelta: dh, awayDelta: da, prediction: undefined });
+  }
+  for (const t of teams) {
+    t.livePoints = round2(points[t.code]);
+    t.pointsChange = round2(t.livePoints - t.officialPoints);
+  }
+  teams.sort((a, b) => b.livePoints - a.livePoints || a.officialRank - b.officialRank);
+  teams.forEach((t, i) => { t.liveRank = i + 1; t.rankChange = t.officialRank - t.liveRank; });
+  results.sort((a, b) => b.kickoff.localeCompare(a.kickoff));
+  return { ...base, teams, results, fixtures };
+}
+
+// Matches worth asking FIFA about: live now, or due to start or finish soon.
+function liveCandidates() {
+  const now = Date.now();
+  const soon = m => { const k = new Date(m.kickoff).getTime(); return k < now + 10 * 60e3 && k > now - 4 * 3600e3; };
+  return [...state.base.results.filter(m => m.status === LIVE), ...state.base.fixtures.filter(soon)].filter(m => m.fifaId);
+}
+
+async function fetchLive() {
+  const wanted = new Set(liveCandidates().map(m => m.fifaId));
+  if (!wanted.size) { state.liveCheckedAt = null; return false; }
+  const day = offset => { const d = new Date(); d.setUTCDate(d.getUTCDate() + offset); return d.toISOString().slice(0, 10); };
+  let url = `${FIFA_CALENDAR}?language=en&count=500&from=${day(-1)}T00:00:00Z&to=${day(1)}T23:59:59Z`;
+  for (let page = 0; page < 6 && url; page++) {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`fifa ${res.status}`);
+    const d = await res.json();
+    for (const m of d.Results || []) {
+      if (!wanted.has(m.IdMatch)) continue;
+      state.live.set(m.IdMatch, {
+        status: m.MatchStatus, homeScore: m.HomeTeamScore, awayScore: m.AwayTeamScore,
+        homePens: m.HomeTeamPenaltyScore, awayPens: m.AwayTeamPenaltyScore,
+      });
+    }
+    url = d.ContinuationToken && d.Results?.length
+      ? `${FIFA_CALENDAR}?language=en&count=500&from=${day(-1)}T00:00:00Z&to=${day(1)}T23:59:59Z&continuationToken=${encodeURIComponent(d.ContinuationToken)}`
+      : null;
+  }
+  state.liveCheckedAt = new Date();
+  return true;
+}
+
+function applyData() {
+  state.data = derive(state.base, state.live);
+  renderMeta(state.data);
+  renderMovers(state.data.teams);
+  const weekAgo = new Date(); weekAgo.setDate(weekAgo.getDate() - 7);
+  $('results-count').textContent = state.data.results.filter(m => m.date >= ymd(weekAgo)).length;
+  $('fixtures-count').textContent = state.data.fixtures.length;
+  render();
+}
+
+// Live scores every minute while a match is on; fresh server data every 10.
+function startLiveLoop() {
+  let lastServer = Date.now();
+  const tick = async () => {
+    if (document.hidden) return;
+    try {
+      if (Date.now() - lastServer > 10 * 60e3) {
+        const res = await fetch('data/rankings.json', { cache: 'no-cache' });
+        if (res.ok) { state.base = await res.json(); lastServer = Date.now(); }
+      }
+      await fetchLive();
+      applyData();
+    } catch { /* keep showing what we have; try again next minute */ }
+  };
+  tick();
+  setInterval(tick, 60e3);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) tick(); });
+}
+
 // ---------- render ----------
 
 function nearestMatchDay(day) {
@@ -403,7 +545,8 @@ function render() {
 async function init() {
   const res = await fetch('data/rankings.json', { cache: 'no-cache' });
   if (!res.ok) throw new Error(`server ${res.status}`);
-  state.data = await res.json();
+  state.base = await res.json();
+  state.data = state.base;
   state.confedOf = Object.fromEntries(state.data.teams.map(t => [t.code, t.confed]));
   state.aliasesOf = Object.fromEntries(state.data.teams.map(t => [t.code, t.aliases || []]));
   setInterval(() => renderMeta(state.data), 60000);  // keep "Updated … ago" current
@@ -415,16 +558,21 @@ async function init() {
   $('fixtures-count').textContent = state.data.fixtures.length;
   render();
   loadHistory();
-  if (state.bound) return;  // a retry after a failed load mustn't bind handlers twice
+  if (state.bound) return;
+  startLiveLoop();  // a retry after a failed load mustn't bind handlers twice
   state.bound = true;
 
   document.querySelector('.views').addEventListener('click', e => {
     const b = e.target.closest('button[data-view]');
     if (b) { state.view = b.dataset.view; state.limit = PAGE; render(); }
   });
-  $('search').addEventListener('input', e => { state.query = e.target.value; render(); });
+  $('search').addEventListener('input', e => { state.query = e.target.value; state.rankPage = 0; render(); });
+  $('pager').addEventListener('click', e => {
+    const b = e.target.closest('button[data-page]');
+    if (b && !b.disabled) setRankPage(Number(b.dataset.page));
+  });
   $('clear-filters').addEventListener('click', () => {
-    Object.assign(state, { confed: 'All', competition: '', date: '', query: '', period: 7, limit: PAGE });
+    Object.assign(state, { confed: 'All', competition: '', date: '', query: '', period: 7, limit: PAGE, rankPage: 0 });
     $('search').value = '';
     render();
   });
@@ -472,6 +620,8 @@ async function init() {
     const link = e.target.closest('.team-link');
     if (link) {
       state.view = 'rankings'; state.confed = 'All'; state.query = ''; state.open = link.dataset.team;
+      const rank = state.data.teams.find(t => t.code === link.dataset.team)?.liveRank || 1;
+      state.rankPage = Math.floor((rank - 1) / RANK_PAGE);
       $('search').value = '';
       render();
       document.querySelector(`tr[data-code="${link.dataset.team}"]`)?.scrollIntoView({ block: 'center', behavior: 'smooth' });
@@ -480,7 +630,7 @@ async function init() {
   $('date-clear').addEventListener('click', () => { state.date = ''; render(); });
   $('confeds').addEventListener('click', e => {
     const c = e.target.closest('[data-confed]')?.dataset.confed;
-    if (c) { state.confed = c; render(); }
+    if (c) { state.confed = c; state.rankPage = 0; render(); }
   });
   $('rows').addEventListener('click', e => {
     const star = e.target.closest('button[data-fav]');

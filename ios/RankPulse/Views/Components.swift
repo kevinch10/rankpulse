@@ -129,7 +129,8 @@ struct StatusBanner: View {
             } else if store.isSnapshot {
                 Label("Showing saved rankings — pull down to update", systemImage: "arrow.clockwise")
             } else if let updated = store.updatedAt {
-                TimelineView(.periodic(from: .now, by: 60)) { _ in
+                TimelineView(.periodic(from: .now, by: 30)) { _ in
+                  VStack(alignment: .leading, spacing: 2) {
                     Label {
                         Text("Updated \(updated, format: .relative(presentation: .named))") +
                         Text(store.isStale ? " · may be out of date, pull down to refresh" : "")
@@ -137,6 +138,14 @@ struct StatusBanner: View {
                         Image(systemName: store.isStale ? "exclamationmark.triangle" : "checkmark.circle")
                     }
                     .foregroundStyle(store.isStale ? Theme.orange : .secondary)
+                    if let live = store.liveCheckedAt {
+                        Label {
+                            Text("Live scores from FIFA · checked \(live, format: .relative(presentation: .named))")
+                        } icon: {
+                            Circle().fill(Theme.magenta).frame(width: 7, height: 7)
+                        }
+                    }
+                  }
                 }
             }
         }

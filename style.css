@@ -84,11 +84,23 @@ h1 {
 
 /* ---------- movers ---------- */
 
-.movers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: -22px 0 24px; position: relative; }
+.movers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: -22px 0 24px; position: relative; }
 .mover { border-radius: 18px; padding: 16px; color: #fff; box-shadow: 0 10px 30px -12px rgba(20, 10, 60, .45); }
 .mover:nth-child(1) { background: linear-gradient(135deg, #0fa85c, #008f9e); }
 .mover:nth-child(2) { background: linear-gradient(135deg, #ff3b5c, #8b2cf6); }
 .mover:nth-child(3) { background: linear-gradient(135deg, #0096e0, #6d5cff); }
+.mover:nth-child(4) { background: linear-gradient(135deg, #ff8a00, #e5283f); }
+@media (max-width: 760px) { .movers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; }
+.pager[hidden] { display: none; }
+.pager button {
+  border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer;
+  border-radius: 999px; padding: 7px 12px; font: 700 13px Inter, sans-serif; min-width: 36px;
+}
+.pager button[aria-current="page"] { background: var(--night); color: #fff; border-color: var(--night); }
+.pager button:disabled { opacity: .4; cursor: default; }
+.pager .pages { display: flex; gap: 4px; }
+.pager .range { color: var(--muted); font-size: 13px; width: 100%; text-align: center; order: 5; }
 .mover .label { font: 800 11px Inter, sans-serif; letter-spacing: .1em; text-transform: uppercase; opacity: .9; }
 .mover .team { display: flex; align-items: center; gap: 8px; font-weight: 700; margin-top: 8px; min-width: 0; }
 .mover .team span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

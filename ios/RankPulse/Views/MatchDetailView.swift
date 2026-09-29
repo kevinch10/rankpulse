@@ -31,6 +31,13 @@ struct MatchDetailView: View {
                 }
             }
 
+            if match.liveUpdated == true && match.status == LiveScores.finished && match.isCounted {
+                Section {
+                    Label("Just finished. Scored from FIFA's live result and confirmed at the next update.", systemImage: "checkmark.seal")
+                        .font(.subheadline)
+                }
+            }
+
             if isFixture {
                 Section {
                     PredictionView(match: match)

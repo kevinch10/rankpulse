@@ -1,6 +1,6 @@
 // Offline support: every request goes to the network first, so visitors always
 // get the latest page and data; the cached copy is only used when offline.
-const CACHE = 'wfr-v5';
+const CACHE = 'wfr-v6';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'icons/icon-192.png'];
 
 self.addEventListener('install', e => {
