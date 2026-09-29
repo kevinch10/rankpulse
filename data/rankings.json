@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T10:23:00+00:00",
+ "generatedAt": "2026-09-29T11:21:45+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1763,19 +1763,6 @@
    "rankChange": 9
   },
   {
-   "id": "43833",
-   "code": "PHI",
-   "name": "Philippines",
-   "confed": "AFC",
-   "officialRank": 135,
-   "officialPoints": 1100.95,
-   "previousRank": 135,
-   "liveRank": 136,
-   "livePoints": 1091.53,
-   "pointsChange": -9.42,
-   "rankChange": -1
-  },
-  {
    "id": "43827",
    "code": "MAS",
    "name": "Malaysia",
@@ -1783,10 +1770,23 @@
    "officialRank": 136,
    "officialPoints": 1086.22,
    "previousRank": 136,
-   "liveRank": 137,
+   "liveRank": 136,
    "livePoints": 1091.03,
    "pointsChange": 4.81,
-   "rankChange": -1
+   "rankChange": 0
+  },
+  {
+   "id": "43833",
+   "code": "PHI",
+   "name": "Philippines",
+   "confed": "AFC",
+   "officialRank": 135,
+   "officialPoints": 1100.95,
+   "previousRank": 135,
+   "liveRank": 137,
+   "livePoints": 1089.27,
+   "pointsChange": -11.68,
+   "rankChange": -2
   },
   {
    "id": "43815",
@@ -2577,8 +2577,8 @@
    "officialPoints": 840.28,
    "previousRank": 198,
    "liveRank": 198,
-   "livePoints": 838.57,
-   "pointsChange": -1.71,
+   "livePoints": 840.83,
+   "pointsChange": 0.55,
    "rankChange": 0
   },
   {
@@ -2757,8 +2757,8 @@
    "date": "2026-09-29",
    "home": "AUS",
    "away": "BRA",
-   "homeScore": 0,
-   "awayScore": 1,
+   "homeScore": 2,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -2775,14 +2775,18 @@
    "home": "PHI",
    "away": "PAK",
    "homeScore": 2,
-   "awayScore": 0,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "FIFA ASEAN Cup™",
    "stage": "FIFA ASEAN Cup Group Stage",
    "city": "Bandung",
    "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": -2.25,
+   "awayDelta": 2.25,
    "homeName": "Philippines",
    "awayName": "Pakistan"
   },
@@ -8405,17 +8409,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.651,
+   "expectedHome": 0.653,
    "prediction": {
     "home": {
-     "win": 3.49,
-     "draw": -1.51,
-     "loss": -6.51
+     "win": 3.47,
+     "draw": -1.53,
+     "loss": -6.53
     },
     "away": {
-     "loss": -3.49,
-     "draw": 1.51,
-     "win": 6.51
+     "loss": -3.47,
+     "draw": 1.53,
+     "win": 6.53
     }
    },
    "homeName": "Thailand",
@@ -8437,17 +8441,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.824,
+   "expectedHome": 0.823,
    "prediction": {
     "home": {
-     "win": 1.76,
-     "draw": -3.24,
-     "loss": -8.24
+     "win": 1.77,
+     "draw": -3.23,
+     "loss": -8.23
     },
     "away": {
-     "loss": -1.76,
-     "draw": 3.24,
-     "win": 8.24
+     "loss": -1.77,
+     "draw": 3.23,
+     "win": 8.23
     }
    },
    "homeName": "Vietnam",
@@ -11477,17 +11481,17 @@
    "source": "FIFA",
    "importance": 5,
    "knockout": false,
-   "expectedHome": 0.723,
+   "expectedHome": 0.721,
    "prediction": {
     "home": {
-     "win": 1.39,
-     "draw": -1.11,
-     "loss": -3.61
+     "win": 1.4,
+     "draw": -1.1,
+     "loss": -3.6
     },
     "away": {
-     "loss": -1.39,
-     "draw": 1.11,
-     "win": 3.61
+     "loss": -1.4,
+     "draw": 1.1,
+     "win": 3.6
     }
    },
    "homeName": "India",
@@ -11541,17 +11545,17 @@
    "source": "FIFA",
    "importance": 5,
    "knockout": false,
-   "expectedHome": 0.402,
+   "expectedHome": 0.405,
    "prediction": {
     "home": {
-     "win": 2.99,
-     "draw": 0.49,
-     "loss": -2.01
+     "win": 2.98,
+     "draw": 0.48,
+     "loss": -2.02
     },
     "away": {
-     "loss": -2.99,
-     "draw": -0.49,
-     "win": 2.01
+     "loss": -2.98,
+     "draw": -0.48,
+     "win": 2.02
     }
    },
    "homeName": "Pakistan",
