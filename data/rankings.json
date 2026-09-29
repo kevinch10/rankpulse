@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T09:24:03+00:00",
+ "generatedAt": "2026-09-29T10:23:00+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2753,11 +2753,28 @@
  ],
  "results": [
   {
+   "kickoff": "2026-09-29T10:00:00Z",
+   "date": "2026-09-29",
+   "home": "AUS",
+   "away": "BRA",
+   "homeScore": 0,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Brisbane",
+   "source": "FIFA",
+   "homeName": "Australia",
+   "awayName": "Brazil"
+  },
+  {
    "kickoff": "2026-09-29T09:00:00Z",
    "date": "2026-09-29",
    "home": "PHI",
    "away": "PAK",
-   "homeScore": 0,
+   "homeScore": 2,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
@@ -6068,38 +6085,6 @@
   }
  ],
  "fixtures": [
-  {
-   "kickoff": "2026-09-29T10:00:00Z",
-   "date": "2026-09-29",
-   "home": "AUS",
-   "away": "BRA",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Brisbane",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.301,
-   "prediction": {
-    "home": {
-     "win": 6.99,
-     "draw": 1.99,
-     "loss": -3.01
-    },
-    "away": {
-     "loss": -6.99,
-     "draw": -1.99,
-     "win": 3.01
-    }
-   },
-   "homeName": "Australia",
-   "awayName": "Brazil"
-  },
   {
    "kickoff": "2026-09-29T12:30:00Z",
    "date": "2026-09-29",
@@ -17928,8 +17913,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 29,
-   "fixtures": 58
+   "results": 30,
+   "fixtures": 57
   },
   {
    "name": "FIFA Series™",
