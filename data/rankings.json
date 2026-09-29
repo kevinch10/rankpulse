@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T22:20:39+00:00",
+ "generatedAt": "2026-09-29T00:28:28+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2753,10 +2753,61 @@
  ],
  "results": [
   {
+   "kickoff": "2026-09-29T00:00:00Z",
+   "date": "2026-09-28",
+   "home": "LCA",
+   "away": "BER",
+   "homeScore": 2,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League B",
+   "city": "Gros Islet",
+   "source": "FIFA",
+   "homeName": "St Lucia",
+   "awayName": "Bermuda"
+  },
+  {
+   "kickoff": "2026-09-29T00:00:00Z",
+   "date": "2026-09-28",
+   "home": "SKN",
+   "away": "GRN",
+   "homeScore": 2,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League B",
+   "city": "Monkey Hill",
+   "source": "FIFA",
+   "homeName": "St Kitts and Nevis",
+   "awayName": "Grenada"
+  },
+  {
+   "kickoff": "2026-09-29T00:00:00Z",
+   "date": "2026-09-28",
+   "home": "JAM",
+   "away": "HON",
+   "homeScore": 0,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League A",
+   "city": "Kingston",
+   "source": "FIFA",
+   "homeName": "Jamaica",
+   "awayName": "Honduras"
+  },
+  {
    "date": "2026-09-28",
    "kickoff": "2026-09-28T21:00:00Z",
-   "home": "BOT",
-   "away": "TUN",
+   "home": "TUN",
+   "away": "BOT",
    "homeScore": 2,
    "awayScore": 2,
    "homePens": null,
@@ -2768,10 +2819,10 @@
    "source": "Wikipedia",
    "counted": true,
    "importance": 25,
-   "homeDelta": 7.43,
-   "awayDelta": -7.43,
-   "homeName": "Botswana",
-   "awayName": "Tunisia"
+   "homeDelta": -7.43,
+   "awayDelta": 7.43,
+   "homeName": "Tunisia",
+   "awayName": "Botswana"
   },
   {
    "kickoff": "2026-09-28T18:45:00Z",
@@ -5967,230 +6018,6 @@
   }
  ],
  "fixtures": [
-  {
-   "kickoff": "2026-09-27T22:00:00Z",
-   "date": "2026-09-28",
-   "home": "KGZ",
-   "away": "MDV",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Bishkek",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.723,
-   "prediction": {
-    "home": {
-     "win": 2.77,
-     "draw": -2.23,
-     "loss": -7.23
-    },
-    "away": {
-     "loss": -2.77,
-     "draw": 2.23,
-     "win": 7.23
-    }
-   },
-   "homeName": "Kyrgyz Republic",
-   "awayName": "Maldives"
-  },
-  {
-   "kickoff": "2026-09-28T09:30:00Z",
-   "date": "2026-09-28",
-   "home": "TKM",
-   "away": "PLE",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 8,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "TBC",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.347,
-   "prediction": {
-    "home": {
-     "win": 6.53,
-     "draw": 1.53,
-     "loss": -3.47
-    },
-    "away": {
-     "loss": -6.53,
-     "draw": -1.53,
-     "win": 3.47
-    }
-   },
-   "homeName": "Turkmenistan",
-   "awayName": "Palestine"
-  },
-  {
-   "kickoff": "2026-09-28T12:00:00Z",
-   "date": "2026-09-28",
-   "home": "TJK",
-   "away": "PLE",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Chongqing",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.475,
-   "prediction": {
-    "home": {
-     "win": 5.25,
-     "draw": 0.25,
-     "loss": -4.75
-    },
-    "away": {
-     "loss": -5.25,
-     "draw": -0.25,
-     "win": 4.75
-    }
-   },
-   "homeName": "Tajikistan",
-   "awayName": "Palestine"
-  },
-  {
-   "kickoff": "2026-09-29T00:00:00Z",
-   "date": "2026-09-28",
-   "home": "JAM",
-   "away": "HON",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League A",
-   "city": "Kingston",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.496,
-   "prediction": {
-    "home": {
-     "win": 7.56,
-     "draw": 0.06,
-     "loss": -7.44
-    },
-    "away": {
-     "loss": -7.56,
-     "draw": -0.06,
-     "win": 7.44
-    }
-   },
-   "homeName": "Jamaica",
-   "awayName": "Honduras"
-  },
-  {
-   "kickoff": "2026-09-29T00:00:00Z",
-   "date": "2026-09-28",
-   "home": "SKN",
-   "away": "GRN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League B",
-   "city": "Monkey Hill",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.559,
-   "prediction": {
-    "home": {
-     "win": 6.61,
-     "draw": -0.89,
-     "loss": -8.39
-    },
-    "away": {
-     "loss": -6.61,
-     "draw": 0.89,
-     "win": 8.39
-    }
-   },
-   "homeName": "St Kitts and Nevis",
-   "awayName": "Grenada"
-  },
-  {
-   "kickoff": "2026-09-29T00:00:00Z",
-   "date": "2026-09-28",
-   "home": "LCA",
-   "away": "BER",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League B",
-   "city": "Gros Islet",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.493,
-   "prediction": {
-    "home": {
-     "win": 7.6,
-     "draw": 0.1,
-     "loss": -7.4
-    },
-    "away": {
-     "loss": -7.6,
-     "draw": -0.1,
-     "win": 7.4
-    }
-   },
-   "homeName": "St Lucia",
-   "awayName": "Bermuda"
-  },
-  {
-   "kickoff": "2026-09-29T02:00:00Z",
-   "date": "2026-09-28",
-   "home": "GUA",
-   "away": "SLV",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League A",
-   "city": "Guatemala City",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.507,
-   "prediction": {
-    "home": {
-     "win": 7.39,
-     "draw": -0.11,
-     "loss": -7.61
-    },
-    "away": {
-     "loss": -7.39,
-     "draw": 0.11,
-     "win": 7.61
-    }
-   },
-   "homeName": "Guatemala",
-   "awayName": "El Salvador"
-  },
   {
    "kickoff": "2026-09-29T09:00:00Z",
    "date": "2026-09-29",
@@ -17778,8 +17605,8 @@
   {
    "date": "2027-03-28",
    "kickoff": "2027-03-28T12:00:00Z",
-   "home": "TUN",
-   "away": "BOT",
+   "home": "BOT",
+   "away": "TUN",
    "homeScore": null,
    "awayScore": null,
    "homePens": null,
@@ -17791,21 +17618,21 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.788,
+   "expectedHome": 0.212,
    "prediction": {
     "home": {
-     "win": 5.31,
-     "draw": -7.19,
-     "loss": -19.69
+     "win": 19.69,
+     "draw": 7.19,
+     "loss": -5.31
     },
     "away": {
-     "loss": -5.31,
-     "draw": 7.19,
-     "win": 19.69
+     "loss": -19.69,
+     "draw": -7.19,
+     "win": 5.31
     }
    },
-   "homeName": "Tunisia",
-   "awayName": "Botswana"
+   "homeName": "Botswana",
+   "awayName": "Tunisia"
   },
   {
    "date": "2027-03-28",
@@ -18084,7 +17911,7 @@
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
    "results": 29,
-   "fixtures": 61
+   "fixtures": 58
   },
   {
    "name": "FIFA Series™",
@@ -18167,8 +17994,8 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 18,
-   "fixtures": 33
+   "results": 21,
+   "fixtures": 29
   },
   {
    "name": "Concacaf Series",
