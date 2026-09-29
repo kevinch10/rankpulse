@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T21:37:59+00:00",
+ "generatedAt": "2026-09-29T21:51:43+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -682,8 +682,8 @@
    "previousRank": 55,
    "aliases": [],
    "liveRank": 47,
-   "livePoints": 1466.83,
-   "pointsChange": 11.24,
+   "livePoints": 1471.29,
+   "pointsChange": 15.7,
    "rankChange": 6
   },
   {
@@ -2042,20 +2042,6 @@
    "rankChange": 5
   },
   {
-   "id": "43865",
-   "code": "LBR",
-   "name": "Liberia",
-   "confed": "CAF",
-   "officialRank": 140,
-   "officialPoints": 1080.44,
-   "previousRank": 140,
-   "aliases": [],
-   "liveRank": 143,
-   "livePoints": 1069.04,
-   "pointsChange": -11.4,
-   "rankChange": -3
-  },
-  {
    "id": "43842",
    "code": "YEM",
    "name": "Yemen",
@@ -2064,10 +2050,10 @@
    "officialPoints": 1065.24,
    "previousRank": 145,
    "aliases": [],
-   "liveRank": 144,
+   "liveRank": 143,
    "livePoints": 1065.24,
    "pointsChange": 0.0,
-   "rankChange": 1
+   "rankChange": 2
   },
   {
    "id": "43851",
@@ -2078,10 +2064,24 @@
    "officialPoints": 1080.82,
    "previousRank": 139,
    "aliases": [],
-   "liveRank": 145,
+   "liveRank": 144,
    "livePoints": 1065.14,
    "pointsChange": -15.68,
-   "rankChange": -6
+   "rankChange": -5
+  },
+  {
+   "id": "43865",
+   "code": "LBR",
+   "name": "Liberia",
+   "confed": "CAF",
+   "officialRank": 140,
+   "officialPoints": 1080.44,
+   "previousRank": 140,
+   "aliases": [],
+   "liveRank": 145,
+   "livePoints": 1064.58,
+   "pointsChange": -15.86,
+   "rankChange": -5
   },
   {
    "id": "43857",
@@ -3032,6 +3032,27 @@
   }
  ],
  "results": [
+  {
+   "date": "2026-09-29",
+   "kickoff": "2026-09-29T21:00:00Z",
+   "home": "LBR",
+   "away": "MLI",
+   "homeScore": 0,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "city": "Monrovia",
+   "status": 0,
+   "competition": "CAF Africa Cup of Nations Qualifiers",
+   "stage": "Group stage",
+   "source": "Wikipedia",
+   "counted": true,
+   "importance": 25,
+   "homeDelta": -4.46,
+   "awayDelta": 4.46,
+   "homeName": "Liberia",
+   "awayName": "Mali"
+  },
   {
    "date": "2026-09-29",
    "kickoff": "2026-09-29T21:00:00Z",
@@ -7226,38 +7247,6 @@
    "fifaId": "cf02mrh43t82ef8v9g2z0v7ys"
   },
   {
-   "date": "2026-09-29",
-   "kickoff": "2026-09-29T21:00:00Z",
-   "home": "LBR",
-   "away": "MLI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.178,
-   "prediction": {
-    "home": {
-     "win": 20.54,
-     "draw": 8.04,
-     "loss": -4.46
-    },
-    "away": {
-     "loss": -20.54,
-     "draw": -8.04,
-     "win": 4.46
-    }
-   },
-   "homeName": "Liberia",
-   "awayName": "Mali"
-  },
-  {
    "kickoff": "2026-09-29T23:00:00Z",
    "date": "2026-09-29",
    "home": "AIA",
@@ -9152,17 +9141,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.451,
+   "expectedHome": 0.447,
    "prediction": {
     "home": {
-     "win": 5.49,
-     "draw": 0.49,
-     "loss": -4.51
+     "win": 5.53,
+     "draw": 0.53,
+     "loss": -4.47
     },
     "away": {
-     "loss": -5.49,
-     "draw": -0.49,
-     "win": 4.51
+     "loss": -5.53,
+     "draw": -0.53,
+     "win": 4.47
     }
    },
    "homeName": "Tunisia",
@@ -12530,17 +12519,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.763,
+   "expectedHome": 0.766,
    "prediction": {
     "home": {
-     "win": 5.93,
-     "draw": -6.57,
-     "loss": -19.07
+     "win": 5.85,
+     "draw": -6.65,
+     "loss": -19.15
     },
     "away": {
-     "loss": -5.93,
-     "draw": 6.57,
-     "win": 19.07
+     "loss": -5.85,
+     "draw": 6.65,
+     "win": 19.15
     }
    },
    "homeName": "Cabo Verde",
@@ -12562,17 +12551,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.767,
+   "expectedHome": 0.77,
    "prediction": {
     "home": {
-     "win": 5.82,
-     "draw": -6.68,
-     "loss": -19.18
+     "win": 5.75,
+     "draw": -6.75,
+     "loss": -19.25
     },
     "away": {
-     "loss": -5.82,
-     "draw": 6.68,
-     "win": 19.18
+     "loss": -5.75,
+     "draw": 6.75,
+     "win": 19.25
     }
    },
    "homeName": "Mali",
@@ -14387,17 +14376,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.237,
+   "expectedHome": 0.234,
    "prediction": {
     "home": {
-     "win": 19.07,
-     "draw": 6.57,
-     "loss": -5.93
+     "win": 19.15,
+     "draw": 6.65,
+     "loss": -5.85
     },
     "away": {
-     "loss": -19.07,
-     "draw": -6.57,
-     "win": 5.93
+     "loss": -19.15,
+     "draw": -6.65,
+     "win": 5.85
     }
    },
    "homeName": "Liberia",
@@ -14419,17 +14408,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.233,
+   "expectedHome": 0.23,
    "prediction": {
     "home": {
-     "win": 19.18,
-     "draw": 6.68,
-     "loss": -5.82
+     "win": 19.25,
+     "draw": 6.75,
+     "loss": -5.75
     },
     "away": {
-     "loss": -19.18,
-     "draw": -6.68,
-     "win": 5.82
+     "loss": -19.25,
+     "draw": -6.75,
+     "win": 5.75
     }
    },
    "homeName": "Rwanda",
@@ -17366,17 +17355,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.411,
+   "expectedHome": 0.407,
    "prediction": {
     "home": {
-     "win": 14.71,
-     "draw": 2.21,
-     "loss": -10.29
+     "win": 14.82,
+     "draw": 2.32,
+     "loss": -10.18
     },
     "away": {
-     "loss": -14.71,
-     "draw": -2.21,
-     "win": 10.29
+     "loss": -14.82,
+     "draw": -2.32,
+     "win": 10.18
     }
    },
    "homeName": "Cabo Verde",
@@ -17398,17 +17387,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.417,
+   "expectedHome": 0.413,
    "prediction": {
     "home": {
-     "win": 14.57,
-     "draw": 2.07,
-     "loss": -10.43
+     "win": 14.67,
+     "draw": 2.17,
+     "loss": -10.33
     },
     "away": {
-     "loss": -14.57,
-     "draw": -2.07,
-     "win": 10.43
+     "loss": -14.67,
+     "draw": -2.17,
+     "win": 10.33
     }
    },
    "homeName": "Liberia",
@@ -18134,17 +18123,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.822,
+   "expectedHome": 0.826,
    "prediction": {
     "home": {
-     "win": 4.46,
-     "draw": -8.04,
-     "loss": -20.54
+     "win": 4.34,
+     "draw": -8.16,
+     "loss": -20.66
     },
     "away": {
-     "loss": -4.46,
-     "draw": 8.04,
-     "win": 20.54
+     "loss": -4.34,
+     "draw": 8.16,
+     "win": 20.66
     }
    },
    "homeName": "Mali",
@@ -18371,8 +18360,8 @@
    "name": "CAF Africa Cup of Nations Qualifiers",
    "group": "CAF",
    "weight": "I=25",
-   "results": 44,
-   "fixtures": 100
+   "results": 45,
+   "fixtures": 99
   },
   {
    "name": "COSAFA Cup",
