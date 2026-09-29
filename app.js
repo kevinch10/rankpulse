@@ -457,8 +457,8 @@ function renderFantasy() {
   btn.textContent = pair && pair === state.fantasyShown ? 'Showing this match' : blocked ? 'Free match used today' : 'Play fantasy match';
   const names = key => key.split('-').map(c => state.data.teams.find(t => t.code === c)?.name || c).join(' v ');
   $('fquota').innerHTML = used
-    ? `Today's free match: <b>${esc(names(used))}</b>. Change its multiplier as often as you like; a new pairing is available tomorrow. Unlimited fantasy matches come with <b>Premium in the iPhone app</b>.`
-    : '1 free fantasy match per day. Unlimited fantasy matches come with Premium in the iPhone app.';
+    ? `Today's free match: <b>${esc(names(used))}</b>. Change its multiplier as often as you like; a new pairing is available tomorrow. Unlimited fantasy matches (and no ads) come with <b>Premium in the iPhone app</b>.`
+    : '1 free fantasy match per day. Unlimited matches and no ads come with Premium in the iPhone app.';
 
   if (!pair || pair !== state.fantasyShown) { $('fresult').innerHTML = ''; return; }
   const weight = Number($('fmult').value), knockout = $('fko').checked;

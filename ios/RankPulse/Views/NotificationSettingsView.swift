@@ -4,6 +4,7 @@ import SwiftUI
 struct NotificationSettingsView: View {
     @Environment(RankingStore.self) private var store
     @Environment(AdsManager.self) private var ads
+    @Environment(PremiumStore.self) private var premium
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
 
@@ -48,7 +49,12 @@ struct NotificationSettingsView: View {
                         }
                     }
                 }
-                if ads.privacyOptionsRequired {
+                if premium.isPremium {
+                    Section("Premium") {
+                        Label("Premium is active: unlimited fantasy matches, no ads.", systemImage: "crown.fill")
+                            .foregroundStyle(Theme.orange)
+                    }
+                } else if ads.privacyOptionsRequired {
                     Section("Privacy") {
                         Button("Ad privacy choices") { Task { await ads.presentPrivacyOptions() } }
                     }

@@ -95,7 +95,7 @@ struct FantasyView: View {
                 if teamA == nil, let code = store.favourites.codes.sorted().first { teamA = store.team(code: code) }
             }
         }
-        .safeAreaInset(edge: .bottom) { if !premium.isPremium { BottomBannerAd() } }
+        .safeAreaInset(edge: .bottom) { BottomBannerAd() }
     }
 
     private var needsPremium: Bool {
@@ -121,10 +121,10 @@ struct FantasyView: View {
         } else if let used = usedToday {
             VStack(alignment: .leading, spacing: 6) {
                 Text("Today's free match: \(pairNames(used)). Change its multiplier as often as you like; a new pairing is available tomorrow.")
-                Button("Get unlimited fantasy matches with Premium") { showPaywall = true }.fontWeight(.semibold)
+                Button("Get unlimited matches and no ads with Premium") { showPaywall = true }.fontWeight(.semibold)
             }
         } else {
-            Text("1 free fantasy match per day. Premium unlocks unlimited matches.")
+            Text("1 free fantasy match per day. Premium unlocks unlimited matches and removes all ads.")
         }
     }
 
@@ -271,6 +271,7 @@ struct PaywallView: View {
                 Text("Football Rankings Premium").font(Theme.display(22)).multilineTextAlignment(.center)
                 VStack(alignment: .leading, spacing: 8) {
                     Label("Unlimited fantasy matches every day", systemImage: "wand.and.stars")
+                    Label("No ads anywhere in the app", systemImage: "nosign")
                     Label("Try any pairing, any multiplier", systemImage: "arrow.triangle.2.circlepath")
                     Label("1 week free, cancel anytime", systemImage: "checkmark.seal")
                 }

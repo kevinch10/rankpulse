@@ -87,7 +87,7 @@ Pushing that file triggers a rebuild.
 Pair any two national teams, choose a multiplier (×5 to ×60, FIFA's match weights) and optionally make it a knockout. The app shows the points each team would gain or lose for every result, and where each would rank afterwards.
 
 - **Free:** one pairing per day (its multiplier can be changed freely). The count is kept on the device or in the browser.
-- **Premium (iOS, StoreKit 2):** unlimited. Products are `app.rankpulse.premium.monthly` ($1.99) and `app.rankpulse.premium.yearly` ($9.99), each with a 1-week free trial, in subscription group `21500001`. `ios/Premium.storekit` lets you test purchases locally: run from Xcode (▶), and no real money is charged. Before release, create the same products in App Store Connect.
+- **Premium (iOS, StoreKit 2):** unlimited fantasy matches and no ads anywhere (the ads SDK, consent and tracking prompts are skipped entirely). Products are `app.rankpulse.premium.monthly` ($1.99) and `app.rankpulse.premium.yearly` ($9.99), each with a 1-week free trial, in subscription group `21500001`. `ios/Premium.storekit` lets you test purchases locally: run from Xcode (▶), and no real money is charged. Before release, create the same products in App Store Connect.
 
 ## Favourites, notifications and predictions
 

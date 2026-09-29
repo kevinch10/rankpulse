@@ -89,9 +89,10 @@ struct BannerAd: UIViewRepresentable {
 /// Bottom banner shown above the tab bar once ads are allowed.
 struct BottomBannerAd: View {
     @Environment(AdsManager.self) private var ads
+    @Environment(PremiumStore.self) private var premium
 
     var body: some View {
-        if ads.ready {
+        if ads.ready && !premium.isPremium {  // Premium removes all ads
             GeometryReader { proxy in
                 BannerAd(adUnitID: Config.bannerAdUnitID, width: proxy.size.width)
                     .frame(width: proxy.size.width, height: currentOrientationAnchoredAdaptiveBanner(width: proxy.size.width).size.height)
@@ -106,11 +107,12 @@ struct BottomBannerAd: View {
 /// An ad placed between rows of a list, labelled so it's clearly not a match.
 struct InlineAdRow: View {
     @Environment(AdsManager.self) private var ads
+    @Environment(PremiumStore.self) private var premium
     @State private var failed = false
     private let width: CGFloat = 320
 
     var body: some View {
-        if ads.ready && !failed {
+        if ads.ready && !failed && !premium.isPremium {
             // Full size while loading (a hidden banner never renders); removed if no ad arrives.
             VStack(alignment: .leading, spacing: 4) {
                 Text("SPONSORED").font(.system(size: 9, weight: .heavy)).tracking(0.8).foregroundStyle(.secondary)

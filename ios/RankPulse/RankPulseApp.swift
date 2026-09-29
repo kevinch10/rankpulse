@@ -39,7 +39,9 @@ struct RankPulseApp: App {
                 .environment(premium)
                 .task {
                     await store.load()
-                    await ads.start()
+                    // Premium members never see ads, so skip consent, tracking and the ads SDK entirely.
+                    await premium.refresh()
+                    if !premium.isPremium { await ads.start() }
                 }
                 .onChange(of: scenePhase) { _, phase in
                     // Pick up the latest hourly update whenever the app comes back to the foreground.
