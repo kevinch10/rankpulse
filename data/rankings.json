@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-29T23:04:34+00:00",
+ "generatedAt": "2026-09-30T00:06:41+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -7203,105 +7203,6 @@
  ],
  "fixtures": [
   {
-   "kickoff": "2026-09-29T17:30:00Z",
-   "date": "2026-09-29",
-   "home": "KSA",
-   "away": "IRQ",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Gulf Cup of Nations",
-   "stage": "Group Stage",
-   "city": "Jeddah",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.52,
-   "prediction": {
-    "home": {
-     "win": 4.8,
-     "draw": -0.2,
-     "loss": -5.2
-    },
-    "away": {
-     "loss": -4.8,
-     "draw": 0.2,
-     "win": 5.2
-    }
-   },
-   "homeName": "Saudi Arabia",
-   "awayName": "Iraq",
-   "fifaId": "cepv1mhlf5fy5c9gpfwwb3nro"
-  },
-  {
-   "kickoff": "2026-09-29T17:30:00Z",
-   "date": "2026-09-29",
-   "home": "OMA",
-   "away": "KUW",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Gulf Cup of Nations",
-   "stage": "Group Stage",
-   "city": "Jeddah",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.683,
-   "prediction": {
-    "home": {
-     "win": 3.17,
-     "draw": -1.83,
-     "loss": -6.83
-    },
-    "away": {
-     "loss": -3.17,
-     "draw": 1.83,
-     "win": 6.83
-    }
-   },
-   "homeName": "Oman",
-   "awayName": "Kuwait",
-   "fifaId": "cf02mrh43t82ef8v9g2z0v7ys"
-  },
-  {
-   "kickoff": "2026-09-30T00:00:00Z",
-   "date": "2026-09-29",
-   "home": "USA",
-   "away": "CHI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "St. Louis",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.714,
-   "prediction": {
-    "home": {
-     "win": 2.86,
-     "draw": -2.14,
-     "loss": -7.14
-    },
-    "away": {
-     "loss": -2.86,
-     "draw": 2.14,
-     "win": 7.14
-    }
-   },
-   "homeName": "USA",
-   "awayName": "Chile",
-   "fifaId": "3eskwfpnju5i1lsz1yg9ec844"
-  },
-  {
    "kickoff": "2026-09-30T00:00:00Z",
    "date": "2026-09-30",
    "home": "MRI",
@@ -7333,72 +7234,6 @@
    "homeName": "Mauritius",
    "awayName": "Djibouti",
    "fifaId": "axjyhxkueeefvyubngxaltmvo"
-  },
-  {
-   "kickoff": "2026-09-30T02:00:00Z",
-   "date": "2026-09-29",
-   "home": "BLZ",
-   "away": "VIN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League B",
-   "city": "Belmopan",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.441,
-   "prediction": {
-    "home": {
-     "win": 8.38,
-     "draw": 0.88,
-     "loss": -6.62
-    },
-    "away": {
-     "loss": -8.38,
-     "draw": -0.88,
-     "win": 6.62
-    }
-   },
-   "homeName": "Belize",
-   "awayName": "St Vincent and the Grenadines",
-   "fifaId": "dnn0fq1fr7e5gvlfytu4r5rmc"
-  },
-  {
-   "kickoff": "2026-09-30T02:30:00Z",
-   "date": "2026-09-29",
-   "home": "MEX",
-   "away": "PER",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Harrison",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.759,
-   "prediction": {
-    "home": {
-     "win": 2.41,
-     "draw": -2.59,
-     "loss": -7.59
-    },
-    "away": {
-     "loss": -2.41,
-     "draw": 2.59,
-     "win": 7.59
-    }
-   },
-   "homeName": "Mexico",
-   "awayName": "Peru",
-   "fifaId": "1wfio6wgxrd2vf420b2id32tw"
   },
   {
    "kickoff": "2026-09-30T04:00:00Z",
@@ -18245,7 +18080,7 @@
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
    "results": 31,
-   "fixtures": 56
+   "fixtures": 54
   },
   {
    "name": "FIFA Series™",
@@ -18329,7 +18164,7 @@
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
    "results": 25,
-   "fixtures": 26
+   "fixtures": 25
   },
   {
    "name": "Concacaf Series",
@@ -18399,7 +18234,7 @@
    "group": "AFC",
    "weight": "I=10 · 5 outside windows",
    "results": 0,
-   "fixtures": 4
+   "fixtures": 2
   },
   {
    "name": "SAFF Championship",
