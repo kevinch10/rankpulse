@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T17:52:47+00:00",
+ "generatedAt": "2026-09-30T18:06:19+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -701,6 +701,20 @@
    "rankChange": -1
   },
   {
+   "id": "43883",
+   "code": "RSA",
+   "name": "South Africa",
+   "confed": "CAF",
+   "officialRank": 54,
+   "officialPoints": 1451.24,
+   "previousRank": 60,
+   "aliases": [],
+   "liveRank": 49,
+   "livePoints": 1462.67,
+   "pointsChange": 11.43,
+   "rankChange": 5
+  },
+  {
    "id": "43995",
    "code": "CZE",
    "name": "Czechia",
@@ -711,24 +725,10 @@
    "aliases": [
     "Czech Republic"
    ],
-   "liveRank": 49,
+   "liveRank": 50,
    "livePoints": 1460.93,
    "pointsChange": -6.33,
-   "rankChange": -1
-  },
-  {
-   "id": "43883",
-   "code": "RSA",
-   "name": "South Africa",
-   "confed": "CAF",
-   "officialRank": 54,
-   "officialPoints": 1451.24,
-   "previousRank": 60,
-   "aliases": [],
-   "liveRank": 50,
-   "livePoints": 1460.11,
-   "pointsChange": 8.87,
-   "rankChange": 4
+   "rankChange": -2
   },
   {
    "id": "43929",
@@ -2639,8 +2639,8 @@
    "previousRank": 184,
    "aliases": [],
    "liveRank": 184,
-   "livePoints": 893.52,
-   "pointsChange": 6.46,
+   "livePoints": 890.97,
+   "pointsChange": 3.91,
    "rankChange": 0
   },
   {
@@ -3032,6 +3032,27 @@
   }
  ],
  "results": [
+  {
+   "date": "2026-09-30",
+   "kickoff": "2026-09-30T16:00:00Z",
+   "home": "ERI",
+   "away": "RSA",
+   "homeScore": 0,
+   "awayScore": 5,
+   "homePens": null,
+   "awayPens": null,
+   "city": "Cairo (Egypt)",
+   "status": 0,
+   "competition": "CAF Africa Cup of Nations Qualifiers",
+   "stage": "Group stage",
+   "source": "Wikipedia",
+   "counted": true,
+   "importance": 25,
+   "homeDelta": -2.55,
+   "awayDelta": 2.55,
+   "homeName": "Eritrea",
+   "awayName": "South Africa"
+  },
   {
    "kickoff": "2026-09-30T16:00:00Z",
    "date": "2026-09-30",
@@ -7500,38 +7521,6 @@
    "fifaId": "761fg0gxqkxptgemq43xwvcpg"
   },
   {
-   "date": "2026-09-30",
-   "kickoff": "2026-09-30T16:00:00Z",
-   "home": "ERI",
-   "away": "RSA",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "Cairo (Egypt)",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.102,
-   "prediction": {
-    "home": {
-     "win": 22.45,
-     "draw": 9.95,
-     "loss": -2.55
-    },
-    "away": {
-     "loss": -22.45,
-     "draw": -9.95,
-     "win": 2.55
-    }
-   },
-   "homeName": "Eritrea",
-   "awayName": "South Africa"
-  },
-  {
    "kickoff": "2026-09-30T17:30:00Z",
    "date": "2026-09-30",
    "home": "UAE",
@@ -9856,17 +9845,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.624,
+   "expectedHome": 0.622,
    "prediction": {
     "home": {
-     "win": 3.76,
-     "draw": -1.24,
-     "loss": -6.24
+     "win": 3.78,
+     "draw": -1.22,
+     "loss": -6.22
     },
     "away": {
-     "loss": -3.76,
-     "draw": 1.24,
-     "win": 6.24
+     "loss": -3.78,
+     "draw": 1.22,
+     "win": 6.22
     }
    },
    "homeName": "Egypt",
@@ -11994,17 +11983,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.819,
+   "expectedHome": 0.82,
    "prediction": {
     "home": {
-     "win": 4.53,
-     "draw": -7.97,
-     "loss": -20.47
+     "win": 4.49,
+     "draw": -8.01,
+     "loss": -20.51
     },
     "away": {
-     "loss": -4.53,
-     "draw": 7.97,
-     "win": 20.47
+     "loss": -4.49,
+     "draw": 8.01,
+     "win": 20.51
     }
    },
    "homeName": "Guinea",
@@ -12026,17 +12015,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.747,
+   "expectedHome": 0.748,
    "prediction": {
     "home": {
-     "win": 6.34,
-     "draw": -6.16,
-     "loss": -18.66
+     "win": 6.29,
+     "draw": -6.21,
+     "loss": -18.71
     },
     "away": {
-     "loss": -6.34,
-     "draw": 6.16,
-     "win": 18.66
+     "loss": -6.29,
+     "draw": 6.21,
+     "win": 18.71
     }
    },
    "homeName": "South Africa",
@@ -13851,17 +13840,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.181,
+   "expectedHome": 0.18,
    "prediction": {
     "home": {
-     "win": 20.47,
-     "draw": 7.97,
-     "loss": -4.53
+     "win": 20.51,
+     "draw": 8.01,
+     "loss": -4.49
     },
     "away": {
-     "loss": -20.47,
-     "draw": -7.97,
-     "win": 4.53
+     "loss": -20.51,
+     "draw": -8.01,
+     "win": 4.49
     }
    },
    "homeName": "Eritrea",
@@ -13883,17 +13872,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.253,
+   "expectedHome": 0.252,
    "prediction": {
     "home": {
-     "win": 18.66,
-     "draw": 6.16,
-     "loss": -6.34
+     "win": 18.71,
+     "draw": 6.21,
+     "loss": -6.29
     },
     "away": {
-     "loss": -18.66,
-     "draw": -6.16,
-     "win": 6.34
+     "loss": -18.71,
+     "draw": -6.21,
+     "win": 6.29
     }
    },
    "homeName": "Kenya",
@@ -16830,17 +16819,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.251,
+   "expectedHome": 0.249,
    "prediction": {
     "home": {
-     "win": 18.73,
-     "draw": 6.23,
-     "loss": -6.27
+     "win": 18.77,
+     "draw": 6.27,
+     "loss": -6.23
     },
     "away": {
-     "loss": -18.73,
-     "draw": -6.23,
-     "win": 6.27
+     "loss": -18.77,
+     "draw": -6.27,
+     "win": 6.23
     }
    },
    "homeName": "Eritrea",
@@ -16862,17 +16851,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.34,
+   "expectedHome": 0.337,
    "prediction": {
     "home": {
-     "win": 16.51,
-     "draw": 4.01,
-     "loss": -8.49
+     "win": 16.57,
+     "draw": 4.07,
+     "loss": -8.43
     },
     "away": {
-     "loss": -16.51,
-     "draw": -4.01,
-     "win": 8.49
+     "loss": -16.57,
+     "draw": -4.07,
+     "win": 8.43
     }
    },
    "homeName": "Guinea",
@@ -17630,17 +17619,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.898,
+   "expectedHome": 0.9,
    "prediction": {
     "home": {
-     "win": 2.55,
-     "draw": -9.95,
-     "loss": -22.45
+     "win": 2.51,
+     "draw": -9.99,
+     "loss": -22.49
     },
     "away": {
-     "loss": -2.55,
-     "draw": 9.95,
-     "win": 22.45
+     "loss": -2.51,
+     "draw": 9.99,
+     "win": 22.49
     }
    },
    "homeName": "South Africa",
@@ -18283,8 +18272,8 @@
    "name": "CAF Africa Cup of Nations Qualifiers",
    "group": "CAF",
    "weight": "I=25",
-   "results": 45,
-   "fixtures": 99
+   "results": 46,
+   "fixtures": 98
   },
   {
    "name": "COSAFA Cup",
