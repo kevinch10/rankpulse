@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T10:42:14+00:00",
+ "generatedAt": "2026-09-30T10:55:46+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2511,8 +2511,8 @@
    "previousRank": 175,
    "aliases": [],
    "liveRank": 175,
-   "livePoints": 925.81,
-   "pointsChange": 3.49,
+   "livePoints": 924.82,
+   "pointsChange": 2.5,
    "rankChange": 0
   },
   {
@@ -2872,20 +2872,6 @@
    "rankChange": -1
   },
   {
-   "id": "1941613",
-   "code": "GIB",
-   "name": "Gibraltar",
-   "confed": "UEFA",
-   "officialRank": 202,
-   "officialPoints": 820.26,
-   "previousRank": 202,
-   "aliases": [],
-   "liveRank": 201,
-   "livePoints": 822.28,
-   "pointsChange": 2.02,
-   "rankChange": 1
-  },
-  {
    "id": "1890334",
    "code": "TLS",
    "name": "Timor-Leste",
@@ -2896,10 +2882,24 @@
    "aliases": [
     "East Timor"
    ],
+   "liveRank": 201,
+   "livePoints": 823.16,
+   "pointsChange": -7.84,
+   "rankChange": 0
+  },
+  {
+   "id": "1941613",
+   "code": "GIB",
+   "name": "Gibraltar",
+   "confed": "UEFA",
+   "officialRank": 202,
+   "officialPoints": 820.26,
+   "previousRank": 202,
+   "aliases": [],
    "liveRank": 202,
-   "livePoints": 822.18,
-   "pointsChange": -8.82,
-   "rankChange": -1
+   "livePoints": 822.28,
+   "pointsChange": 2.02,
+   "rankChange": 0
   },
   {
    "id": "20007",
@@ -3041,26 +3041,15 @@
    "awayScore": 2,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "FIFA ASEAN Cup™",
    "stage": "FIFA ASEAN Challenge Cup Group Stage",
    "city": "Hong Kong",
    "source": "FIFA",
+   "counted": true,
    "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.402,
-   "prediction": {
-    "home": {
-     "win": 5.98,
-     "draw": 0.98,
-     "loss": -4.02
-    },
-    "away": {
-     "loss": -5.98,
-     "draw": -0.98,
-     "win": 4.02
-    }
-   },
+   "homeDelta": 0.98,
+   "awayDelta": -0.98,
    "homeName": "Timor-Leste",
    "awayName": "Cambodia",
    "fifaId": "400022954"
