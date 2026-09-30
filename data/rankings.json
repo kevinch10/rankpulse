@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T10:55:46+00:00",
+ "generatedAt": "2026-09-30T11:38:26+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1371,8 +1371,8 @@
    "previousRank": 95,
    "aliases": [],
    "liveRank": 95,
-   "livePoints": 1243.96,
-   "pointsChange": 0.25,
+   "livePoints": 1248.71,
+   "pointsChange": 5.0,
    "rankChange": 0
   },
   {
@@ -1446,20 +1446,6 @@
    "rankChange": -2
   },
   {
-   "id": "44003",
-   "code": "TJK",
-   "name": "Tajikistan",
-   "confed": "AFC",
-   "officialRank": 101,
-   "officialPoints": 1224.19,
-   "previousRank": 101,
-   "aliases": [],
-   "liveRank": 101,
-   "livePoints": 1218.31,
-   "pointsChange": -5.88,
-   "rankChange": 0
-  },
-  {
    "id": "43904",
    "code": "SLV",
    "name": "El Salvador",
@@ -1468,10 +1454,24 @@
    "officialPoints": 1225.34,
    "previousRank": 100,
    "aliases": [],
-   "liveRank": 102,
+   "liveRank": 101,
    "livePoints": 1217.95,
    "pointsChange": -7.39,
-   "rankChange": -2
+   "rankChange": -1
+  },
+  {
+   "id": "44003",
+   "code": "TJK",
+   "name": "Tajikistan",
+   "confed": "AFC",
+   "officialRank": 101,
+   "officialPoints": 1224.19,
+   "previousRank": 101,
+   "aliases": [],
+   "liveRank": 102,
+   "livePoints": 1213.56,
+   "pointsChange": -10.63,
+   "rankChange": -1
   },
   {
    "id": "43920",
@@ -2180,23 +2180,23 @@
    "previousRank": 153,
    "aliases": [],
    "liveRank": 152,
-   "livePoints": 1036.6,
-   "pointsChange": 4.71,
+   "livePoints": 1035.95,
+   "pointsChange": 4.06,
    "rankChange": 1
   },
   {
-   "id": "20010",
-   "code": "NCL",
-   "name": "New Caledonia",
+   "id": "43977",
+   "code": "FIJ",
+   "name": "Fiji",
    "confed": "OFC",
-   "officialRank": 151,
-   "officialPoints": 1036.95,
-   "previousRank": 151,
+   "officialRank": 155,
+   "officialPoints": 1024.17,
+   "previousRank": 155,
    "aliases": [],
    "liveRank": 153,
-   "livePoints": 1031.08,
-   "pointsChange": -5.87,
-   "rankChange": -2
+   "livePoints": 1028.61,
+   "pointsChange": 4.44,
+   "rankChange": 2
   },
   {
    "id": "43814",
@@ -2215,18 +2215,18 @@
    "rankChange": 2
   },
   {
-   "id": "43977",
-   "code": "FIJ",
-   "name": "Fiji",
+   "id": "20010",
+   "code": "NCL",
+   "name": "New Caledonia",
    "confed": "OFC",
-   "officialRank": 155,
-   "officialPoints": 1024.17,
-   "previousRank": 155,
+   "officialRank": 151,
+   "officialPoints": 1036.95,
+   "previousRank": 151,
    "aliases": [],
    "liveRank": 155,
-   "livePoints": 1023.53,
-   "pointsChange": -0.64,
-   "rankChange": 0
+   "livePoints": 1026.01,
+   "pointsChange": -10.94,
+   "rankChange": -4
   },
   {
    "id": "43915",
@@ -2399,8 +2399,8 @@
    "previousRank": 168,
    "aliases": [],
    "liveRank": 167,
-   "livePoints": 968.49,
-   "pointsChange": -6.41,
+   "livePoints": 969.14,
+   "pointsChange": -5.76,
    "rankChange": 1
   },
   {
@@ -3053,6 +3053,50 @@
    "homeName": "Timor-Leste",
    "awayName": "Cambodia",
    "fifaId": "400022954"
+  },
+  {
+   "kickoff": "2026-09-30T07:00:00Z",
+   "date": "2026-09-30",
+   "home": "FIJ",
+   "away": "NCL",
+   "homeScore": 2,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Suva",
+   "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": 5.07,
+   "awayDelta": -5.07,
+   "homeName": "Fiji",
+   "awayName": "New Caledonia",
+   "fifaId": "c4q30zq2v96eza88y96xz70no"
+  },
+  {
+   "kickoff": "2026-09-30T04:00:00Z",
+   "date": "2026-09-30",
+   "home": "PNG",
+   "away": "SOL",
+   "homeScore": 1,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Suva",
+   "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": 0.65,
+   "awayDelta": -0.65,
+   "homeName": "Papua New Guinea",
+   "awayName": "Solomon Islands",
+   "fifaId": "c4glyxpu6ga3uqihm67dg68t0"
   },
   {
    "kickoff": "2026-09-30T02:30:00Z",
@@ -4220,6 +4264,28 @@
    "homeName": "Malaysia",
    "awayName": "Indonesia",
    "fifaId": "400022941"
+  },
+  {
+   "kickoff": "2026-09-28T12:00:00Z",
+   "date": "2026-09-28",
+   "home": "TJK",
+   "away": "PLE",
+   "homeScore": 2,
+   "awayScore": 4,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Chongqing",
+   "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": -4.75,
+   "awayDelta": 4.75,
+   "homeName": "Tajikistan",
+   "awayName": "Palestine",
+   "fifaId": "bgzhiznmm1vcz87s4mqwws4k4"
   },
   {
    "kickoff": "2026-09-28T11:00:00Z",
@@ -7335,72 +7401,6 @@
    "fifaId": "axjyhxkueeefvyubngxaltmvo"
   },
   {
-   "kickoff": "2026-09-30T04:00:00Z",
-   "date": "2026-09-30",
-   "home": "PNG",
-   "away": "SOL",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Suva",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.435,
-   "prediction": {
-    "home": {
-     "win": 5.65,
-     "draw": 0.65,
-     "loss": -4.35
-    },
-    "away": {
-     "loss": -5.65,
-     "draw": -0.65,
-     "win": 4.35
-    }
-   },
-   "homeName": "Papua New Guinea",
-   "awayName": "Solomon Islands",
-   "fifaId": "c4glyxpu6ga3uqihm67dg68t0"
-  },
-  {
-   "kickoff": "2026-09-30T07:00:00Z",
-   "date": "2026-09-30",
-   "home": "FIJ",
-   "away": "NCL",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Suva",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.493,
-   "prediction": {
-    "home": {
-     "win": 5.07,
-     "draw": 0.07,
-     "loss": -4.93
-    },
-    "away": {
-     "loss": -5.07,
-     "draw": -0.07,
-     "win": 4.93
-    }
-   },
-   "homeName": "Fiji",
-   "awayName": "New Caledonia",
-   "fifaId": "c4q30zq2v96eza88y96xz70no"
-  },
-  {
    "kickoff": "2026-09-30T12:00:00Z",
    "date": "2026-09-30",
    "home": "BRU",
@@ -8536,17 +8536,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.508,
+   "expectedHome": 0.503,
    "prediction": {
     "home": {
-     "win": 4.92,
-     "draw": -0.08,
-     "loss": -5.08
+     "win": 4.97,
+     "draw": -0.03,
+     "loss": -5.03
     },
     "away": {
-     "loss": -4.92,
-     "draw": 0.08,
-     "win": 5.08
+     "loss": -4.97,
+     "draw": 0.03,
+     "win": 5.03
     }
    },
    "homeName": "China PR",
@@ -10846,17 +10846,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.533,
+   "expectedHome": 0.537,
    "prediction": {
     "home": {
-     "win": 4.67,
-     "draw": -0.33,
-     "loss": -5.33
+     "win": 4.63,
+     "draw": -0.37,
+     "loss": -5.37
     },
     "away": {
-     "loss": -4.67,
-     "draw": 0.33,
-     "win": 5.33
+     "loss": -4.63,
+     "draw": 0.37,
+     "win": 5.37
     }
    },
    "homeName": "China PR",
@@ -15417,17 +15417,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.667,
+   "expectedHome": 0.663,
    "prediction": {
     "home": {
-     "win": 11.64,
-     "draw": -5.86,
-     "loss": -23.36
+     "win": 11.78,
+     "draw": -5.72,
+     "loss": -23.22
     },
     "away": {
-     "loss": -11.64,
-     "draw": 5.86,
-     "win": 23.36
+     "loss": -11.78,
+     "draw": 5.72,
+     "win": 23.22
     }
    },
    "homeName": "Saudi Arabia",
@@ -15681,17 +15681,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.329,
+   "expectedHome": 0.325,
    "prediction": {
     "home": {
-     "win": 23.49,
-     "draw": 5.99,
-     "loss": -11.51
+     "win": 23.63,
+     "draw": 6.13,
+     "loss": -11.37
     },
     "away": {
-     "loss": -23.49,
-     "draw": -5.99,
-     "win": 11.51
+     "loss": -23.63,
+     "draw": -6.13,
+     "win": 11.37
     }
    },
    "homeName": "Tajikistan",
@@ -15879,17 +15879,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.629,
+   "expectedHome": 0.633,
    "prediction": {
     "home": {
-     "win": 12.99,
-     "draw": -4.51,
-     "loss": -22.01
+     "win": 12.84,
+     "draw": -4.66,
+     "loss": -22.16
     },
     "away": {
-     "loss": -12.99,
-     "draw": 4.51,
-     "win": 22.01
+     "loss": -12.84,
+     "draw": 4.66,
+     "win": 22.16
     }
    },
    "homeName": "Palestine",
@@ -16044,17 +16044,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.356,
+   "expectedHome": 0.36,
    "prediction": {
     "home": {
-     "win": 22.55,
-     "draw": 5.05,
-     "loss": -12.45
+     "win": 22.4,
+     "draw": 4.9,
+     "loss": -12.6
     },
     "away": {
-     "loss": -22.55,
-     "draw": -5.05,
-     "win": 12.45
+     "loss": -22.4,
+     "draw": -4.9,
+     "win": 12.6
     }
    },
    "homeName": "Singapore",
@@ -16308,17 +16308,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.56,
+   "expectedHome": 0.556,
    "prediction": {
     "home": {
-     "win": 15.4,
-     "draw": -2.1,
-     "loss": -19.6
+     "win": 15.55,
+     "draw": -1.95,
+     "loss": -19.45
     },
     "away": {
-     "loss": -15.4,
-     "draw": 2.1,
-     "win": 19.6
+     "loss": -15.55,
+     "draw": 1.95,
+     "win": 19.45
     }
    },
    "homeName": "Oman",
@@ -16407,17 +16407,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.801,
+   "expectedHome": 0.803,
    "prediction": {
     "home": {
-     "win": 6.98,
-     "draw": -10.52,
-     "loss": -28.02
+     "win": 6.88,
+     "draw": -10.62,
+     "loss": -28.12
     },
     "away": {
-     "loss": -6.98,
-     "draw": 10.52,
-     "win": 28.02
+     "loss": -6.88,
+     "draw": 10.62,
+     "win": 28.12
     }
    },
    "homeName": "Australia",
@@ -18145,8 +18145,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 34,
-   "fixtures": 54
+   "results": 37,
+   "fixtures": 52
   },
   {
    "name": "FIFA Series™",
