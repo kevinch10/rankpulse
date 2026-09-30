@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T16:29:31+00:00",
+ "generatedAt": "2026-09-30T16:44:44+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -8247,6 +8247,39 @@
   },
   {
    "kickoff": "2026-10-02T00:00:00Z",
+   "date": "2026-10-02",
+   "home": "COD",
+   "away": "UGA",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Tbc",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.706,
+   "prediction": {
+    "home": {
+     "win": 2.94,
+     "draw": -2.06,
+     "loss": -7.06
+    },
+    "away": {
+     "loss": -2.94,
+     "draw": 2.06,
+     "win": 7.06
+    }
+   },
+   "homeName": "Congo DR",
+   "awayName": "Uganda",
+   "fifaId": "dtu39w72p2eg7r0zcdb84lces"
+  },
+  {
+   "kickoff": "2026-10-02T00:00:00Z",
    "date": "2026-10-01",
    "home": "DOM",
    "away": "HAI",
@@ -8442,39 +8475,6 @@
    "homeName": "Korea Republic",
    "awayName": "Venezuela",
    "fifaId": "52zyck6fvi37zwzzeu6f2l444"
-  },
-  {
-   "kickoff": "2026-10-02T11:00:00Z",
-   "date": "2026-10-02",
-   "home": "COD",
-   "away": "UGA",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Tbc",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.706,
-   "prediction": {
-    "home": {
-     "win": 2.94,
-     "draw": -2.06,
-     "loss": -7.06
-    },
-    "away": {
-     "loss": -2.94,
-     "draw": 2.06,
-     "win": 7.06
-    }
-   },
-   "homeName": "Congo DR",
-   "awayName": "Uganda",
-   "fifaId": "dtu39w72p2eg7r0zcdb84lces"
   },
   {
    "kickoff": "2026-10-02T11:35:00Z",
@@ -9003,6 +9003,39 @@
    "homeName": "Colombia",
    "awayName": "Paraguay",
    "fifaId": "5w98q2uuvgvcsli7pdzif651w"
+  },
+  {
+   "kickoff": "2026-10-03T00:00:00Z",
+   "date": "2026-10-03",
+   "home": "TUN",
+   "away": "MLI",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.447,
+   "prediction": {
+    "home": {
+     "win": 5.53,
+     "draw": 0.53,
+     "loss": -4.47
+    },
+    "away": {
+     "loss": -5.53,
+     "draw": -0.53,
+     "win": 4.47
+    }
+   },
+   "homeName": "Tunisia",
+   "awayName": "Mali",
+   "fifaId": "ds2fbobbhchlhtnuceojk2uc4"
   },
   {
    "kickoff": "2026-10-03T00:00:00Z",
@@ -9564,39 +9597,6 @@
    "homeName": "Côte d'Ivoire",
    "awayName": "Cameroon",
    "fifaId": "e8fp7iev2y64n8u1xibm9uo0k"
-  },
-  {
-   "kickoff": "2026-10-03T19:00:00Z",
-   "date": "2026-10-03",
-   "home": "TUN",
-   "away": "MLI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Rades",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.447,
-   "prediction": {
-    "home": {
-     "win": 5.53,
-     "draw": 0.53,
-     "loss": -4.47
-    },
-    "away": {
-     "loss": -5.53,
-     "draw": -0.53,
-     "win": 4.47
-    }
-   },
-   "homeName": "Tunisia",
-   "awayName": "Mali",
-   "fifaId": "ds2fbobbhchlhtnuceojk2uc4"
   },
   {
    "kickoff": "2026-10-04T00:00:00Z",
