@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T00:06:41+00:00",
+ "generatedAt": "2026-09-30T00:57:34+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2653,8 +2653,8 @@
    "previousRank": 189,
    "aliases": [],
    "liveRank": 185,
-   "livePoints": 884.68,
-   "pointsChange": 9.07,
+   "livePoints": 890.31,
+   "pointsChange": 14.7,
    "rankChange": 4
   },
   {
@@ -3012,8 +3012,8 @@
    "previousRank": 210,
    "aliases": [],
    "liveRank": 210,
-   "livePoints": 752.04,
-   "pointsChange": -8.21,
+   "livePoints": 746.41,
+   "pointsChange": -13.84,
    "rankChange": 0
   },
   {
@@ -3033,34 +3033,56 @@
  ],
  "results": [
   {
+   "kickoff": "2026-09-30T00:00:00Z",
+   "date": "2026-09-29",
+   "home": "USA",
+   "away": "CHI",
+   "homeScore": 1,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "St. Louis",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.714,
+   "prediction": {
+    "home": {
+     "win": 2.86,
+     "draw": -2.14,
+     "loss": -7.14
+    },
+    "away": {
+     "loss": -2.86,
+     "draw": 2.14,
+     "win": 7.14
+    }
+   },
+   "homeName": "USA",
+   "awayName": "Chile",
+   "fifaId": "3eskwfpnju5i1lsz1yg9ec844"
+  },
+  {
    "kickoff": "2026-09-29T23:00:00Z",
    "date": "2026-09-29",
    "home": "AIA",
    "away": "ARU",
    "homeScore": 0,
-   "awayScore": 0,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "North Sound",
    "source": "FIFA",
+   "counted": true,
    "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.375,
-   "prediction": {
-    "home": {
-     "win": 9.37,
-     "draw": 1.87,
-     "loss": -5.63
-    },
-    "away": {
-     "loss": -9.37,
-     "draw": -1.87,
-     "win": 5.63
-    }
-   },
+   "homeDelta": -5.63,
+   "awayDelta": 5.63,
    "homeName": "Anguilla",
    "awayName": "Aruba",
    "fifaId": "dn38qvhzwo6wtfrbatjyav9xw"
@@ -8173,17 +8195,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.293,
+   "expectedHome": 0.288,
    "prediction": {
     "home": {
-     "win": 10.61,
-     "draw": 3.11,
-     "loss": -4.39
+     "win": 10.68,
+     "draw": 3.18,
+     "loss": -4.32
     },
     "away": {
-     "loss": -10.61,
-     "draw": -3.11,
-     "win": 4.39
+     "loss": -10.68,
+     "draw": -3.18,
+     "win": 4.32
     }
    },
    "homeName": "Anguilla",
@@ -10153,17 +10175,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.625,
+   "expectedHome": 0.635,
    "prediction": {
     "home": {
-     "win": 5.63,
-     "draw": -1.87,
-     "loss": -9.37
+     "win": 5.48,
+     "draw": -2.02,
+     "loss": -9.52
     },
     "away": {
-     "loss": -5.63,
-     "draw": 1.87,
-     "win": 9.37
+     "loss": -5.48,
+     "draw": 2.02,
+     "win": 9.52
     }
    },
    "homeName": "Aruba",
@@ -11373,17 +11395,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.592,
+   "expectedHome": 0.587,
    "prediction": {
     "home": {
-     "win": 6.12,
-     "draw": -1.38,
-     "loss": -8.88
+     "win": 6.19,
+     "draw": -1.31,
+     "loss": -8.81
     },
     "away": {
-     "loss": -6.12,
-     "draw": 1.38,
-     "win": 8.88
+     "loss": -6.19,
+     "draw": 1.31,
+     "win": 8.81
     }
    },
    "homeName": "Antigua and Barbuda",
@@ -18079,7 +18101,7 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 31,
+   "results": 32,
    "fixtures": 54
   },
   {
