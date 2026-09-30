@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T07:57:52+00:00",
+ "generatedAt": "2026-09-30T08:12:52+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1371,8 +1371,8 @@
    "previousRank": 95,
    "aliases": [],
    "liveRank": 95,
-   "livePoints": 1243.96,
-   "pointsChange": 0.25,
+   "livePoints": 1248.71,
+   "pointsChange": 5.0,
    "rankChange": 0
   },
   {
@@ -1446,20 +1446,6 @@
    "rankChange": -2
   },
   {
-   "id": "44003",
-   "code": "TJK",
-   "name": "Tajikistan",
-   "confed": "AFC",
-   "officialRank": 101,
-   "officialPoints": 1224.19,
-   "previousRank": 101,
-   "aliases": [],
-   "liveRank": 101,
-   "livePoints": 1218.31,
-   "pointsChange": -5.88,
-   "rankChange": 0
-  },
-  {
    "id": "43904",
    "code": "SLV",
    "name": "El Salvador",
@@ -1468,10 +1454,24 @@
    "officialPoints": 1225.34,
    "previousRank": 100,
    "aliases": [],
-   "liveRank": 102,
+   "liveRank": 101,
    "livePoints": 1217.95,
    "pointsChange": -7.39,
-   "rankChange": -2
+   "rankChange": -1
+  },
+  {
+   "id": "44003",
+   "code": "TJK",
+   "name": "Tajikistan",
+   "confed": "AFC",
+   "officialRank": 101,
+   "officialPoints": 1224.19,
+   "previousRank": 101,
+   "aliases": [],
+   "liveRank": 102,
+   "livePoints": 1213.56,
+   "pointsChange": -10.63,
+   "rankChange": -1
   },
   {
    "id": "43920",
@@ -4198,6 +4198,28 @@
    "homeName": "Malaysia",
    "awayName": "Indonesia",
    "fifaId": "400022941"
+  },
+  {
+   "kickoff": "2026-09-28T12:00:00Z",
+   "date": "2026-09-28",
+   "home": "TJK",
+   "away": "PLE",
+   "homeScore": 2,
+   "awayScore": 4,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Chongqing",
+   "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": -4.75,
+   "awayDelta": 4.75,
+   "homeName": "Tajikistan",
+   "awayName": "Palestine",
+   "fifaId": "bgzhiznmm1vcz87s4mqwws4k4"
   },
   {
    "kickoff": "2026-09-28T11:00:00Z",
@@ -8547,17 +8569,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.508,
+   "expectedHome": 0.503,
    "prediction": {
     "home": {
-     "win": 4.92,
-     "draw": -0.08,
-     "loss": -5.08
+     "win": 4.97,
+     "draw": -0.03,
+     "loss": -5.03
     },
     "away": {
-     "loss": -4.92,
-     "draw": 0.08,
-     "win": 5.08
+     "loss": -4.97,
+     "draw": 0.03,
+     "win": 5.03
     }
    },
    "homeName": "China PR",
@@ -10857,17 +10879,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.533,
+   "expectedHome": 0.537,
    "prediction": {
     "home": {
-     "win": 4.67,
-     "draw": -0.33,
-     "loss": -5.33
+     "win": 4.63,
+     "draw": -0.37,
+     "loss": -5.37
     },
     "away": {
-     "loss": -4.67,
-     "draw": 0.33,
-     "win": 5.33
+     "loss": -4.63,
+     "draw": 0.37,
+     "win": 5.37
     }
    },
    "homeName": "China PR",
@@ -15428,17 +15450,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.667,
+   "expectedHome": 0.663,
    "prediction": {
     "home": {
-     "win": 11.64,
-     "draw": -5.86,
-     "loss": -23.36
+     "win": 11.78,
+     "draw": -5.72,
+     "loss": -23.22
     },
     "away": {
-     "loss": -11.64,
-     "draw": 5.86,
-     "win": 23.36
+     "loss": -11.78,
+     "draw": 5.72,
+     "win": 23.22
     }
    },
    "homeName": "Saudi Arabia",
@@ -15692,17 +15714,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.329,
+   "expectedHome": 0.325,
    "prediction": {
     "home": {
-     "win": 23.49,
-     "draw": 5.99,
-     "loss": -11.51
+     "win": 23.63,
+     "draw": 6.13,
+     "loss": -11.37
     },
     "away": {
-     "loss": -23.49,
-     "draw": -5.99,
-     "win": 11.51
+     "loss": -23.63,
+     "draw": -6.13,
+     "win": 11.37
     }
    },
    "homeName": "Tajikistan",
@@ -15890,17 +15912,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.629,
+   "expectedHome": 0.633,
    "prediction": {
     "home": {
-     "win": 12.99,
-     "draw": -4.51,
-     "loss": -22.01
+     "win": 12.84,
+     "draw": -4.66,
+     "loss": -22.16
     },
     "away": {
-     "loss": -12.99,
-     "draw": 4.51,
-     "win": 22.01
+     "loss": -12.84,
+     "draw": 4.66,
+     "win": 22.16
     }
    },
    "homeName": "Palestine",
@@ -16055,17 +16077,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.356,
+   "expectedHome": 0.36,
    "prediction": {
     "home": {
-     "win": 22.55,
-     "draw": 5.05,
-     "loss": -12.45
+     "win": 22.4,
+     "draw": 4.9,
+     "loss": -12.6
     },
     "away": {
-     "loss": -22.55,
-     "draw": -5.05,
-     "win": 12.45
+     "loss": -22.4,
+     "draw": -4.9,
+     "win": 12.6
     }
    },
    "homeName": "Singapore",
@@ -16319,17 +16341,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.56,
+   "expectedHome": 0.556,
    "prediction": {
     "home": {
-     "win": 15.4,
-     "draw": -2.1,
-     "loss": -19.6
+     "win": 15.55,
+     "draw": -1.95,
+     "loss": -19.45
     },
     "away": {
-     "loss": -15.4,
-     "draw": 2.1,
-     "win": 19.6
+     "loss": -15.55,
+     "draw": 1.95,
+     "win": 19.45
     }
    },
    "homeName": "Oman",
@@ -16418,17 +16440,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.801,
+   "expectedHome": 0.803,
    "prediction": {
     "home": {
-     "win": 6.98,
-     "draw": -10.52,
-     "loss": -28.02
+     "win": 6.88,
+     "draw": -10.62,
+     "loss": -28.12
     },
     "away": {
-     "loss": -6.98,
-     "draw": 10.52,
-     "win": 28.02
+     "loss": -6.88,
+     "draw": 10.62,
+     "win": 28.12
     }
    },
    "homeName": "Australia",
@@ -18156,7 +18178,7 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 34,
+   "results": 35,
    "fixtures": 54
   },
   {
