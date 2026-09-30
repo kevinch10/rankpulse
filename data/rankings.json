@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T08:32:07+00:00",
+ "generatedAt": "2026-09-30T09:05:41+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3032,6 +3032,39 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-09-30T09:00:00Z",
+   "date": "2026-09-30",
+   "home": "TLS",
+   "away": "CAM",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "FIFA ASEAN Cup™",
+   "stage": "FIFA ASEAN Challenge Cup Group Stage",
+   "city": "Hong Kong",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.402,
+   "prediction": {
+    "home": {
+     "win": 5.98,
+     "draw": 0.98,
+     "loss": -4.02
+    },
+    "away": {
+     "loss": -5.98,
+     "draw": -0.98,
+     "win": 4.02
+    }
+   },
+   "homeName": "Timor-Leste",
+   "awayName": "Cambodia",
+   "fifaId": "400022954"
+  },
   {
    "kickoff": "2026-09-30T02:30:00Z",
    "date": "2026-09-29",
@@ -7377,39 +7410,6 @@
    "homeName": "Fiji",
    "awayName": "New Caledonia",
    "fifaId": "c4q30zq2v96eza88y96xz70no"
-  },
-  {
-   "kickoff": "2026-09-30T09:00:00Z",
-   "date": "2026-09-30",
-   "home": "TLS",
-   "away": "CAM",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Challenge Cup Group Stage",
-   "city": "Hong Kong",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.402,
-   "prediction": {
-    "home": {
-     "win": 5.98,
-     "draw": 0.98,
-     "loss": -4.02
-    },
-    "away": {
-     "loss": -5.98,
-     "draw": -0.98,
-     "win": 4.02
-    }
-   },
-   "homeName": "Timor-Leste",
-   "awayName": "Cambodia",
-   "fifaId": "400022954"
   },
   {
    "kickoff": "2026-09-30T12:00:00Z",
@@ -18177,8 +18177,8 @@
    "name": "FIFA ASEAN Cup™",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 12,
-   "fixtures": 6
+   "results": 13,
+   "fixtures": 5
   },
   {
    "name": "CONMEBOL/UEFA Finalissima",
