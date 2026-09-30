@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T12:07:04+00:00",
+ "generatedAt": "2026-09-30T12:35:23+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2185,18 +2185,18 @@
    "rankChange": 1
   },
   {
-   "id": "20010",
-   "code": "NCL",
-   "name": "New Caledonia",
+   "id": "43977",
+   "code": "FIJ",
+   "name": "Fiji",
    "confed": "OFC",
-   "officialRank": 151,
-   "officialPoints": 1036.95,
-   "previousRank": 151,
+   "officialRank": 155,
+   "officialPoints": 1024.17,
+   "previousRank": 155,
    "aliases": [],
    "liveRank": 153,
-   "livePoints": 1031.08,
-   "pointsChange": -5.87,
-   "rankChange": -2
+   "livePoints": 1028.61,
+   "pointsChange": 4.44,
+   "rankChange": 2
   },
   {
    "id": "43814",
@@ -2215,18 +2215,18 @@
    "rankChange": 2
   },
   {
-   "id": "43977",
-   "code": "FIJ",
-   "name": "Fiji",
+   "id": "20010",
+   "code": "NCL",
+   "name": "New Caledonia",
    "confed": "OFC",
-   "officialRank": 155,
-   "officialPoints": 1024.17,
-   "previousRank": 155,
+   "officialRank": 151,
+   "officialPoints": 1036.95,
+   "previousRank": 151,
    "aliases": [],
    "liveRank": 155,
-   "livePoints": 1023.53,
-   "pointsChange": -0.64,
-   "rankChange": 0
+   "livePoints": 1026.01,
+   "pointsChange": -10.94,
+   "rankChange": -4
   },
   {
    "id": "43915",
@@ -3086,6 +3086,28 @@
    "homeName": "Timor-Leste",
    "awayName": "Cambodia",
    "fifaId": "400022954"
+  },
+  {
+   "kickoff": "2026-09-30T07:00:00Z",
+   "date": "2026-09-30",
+   "home": "FIJ",
+   "away": "NCL",
+   "homeScore": 2,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Suva",
+   "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": 5.07,
+   "awayDelta": -5.07,
+   "homeName": "Fiji",
+   "awayName": "New Caledonia",
+   "fifaId": "c4q30zq2v96eza88y96xz70no"
   },
   {
    "kickoff": "2026-09-30T04:00:00Z",
@@ -7412,40 +7434,7 @@
    "fifaId": "axjyhxkueeefvyubngxaltmvo"
   },
   {
-   "kickoff": "2026-09-30T07:00:00Z",
-   "date": "2026-09-30",
-   "home": "FIJ",
-   "away": "NCL",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Suva",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.493,
-   "prediction": {
-    "home": {
-     "win": 5.07,
-     "draw": 0.07,
-     "loss": -4.93
-    },
-    "away": {
-     "loss": -5.07,
-     "draw": -0.07,
-     "win": 4.93
-    }
-   },
-   "homeName": "Fiji",
-   "awayName": "New Caledonia",
-   "fifaId": "c4q30zq2v96eza88y96xz70no"
-  },
-  {
-   "kickoff": "2026-09-30T13:00:00Z",
+   "kickoff": "2026-09-30T12:00:00Z",
    "date": "2026-09-30",
    "home": "SEY",
    "away": "SRI",
@@ -9157,6 +9146,39 @@
    "homeName": "El Salvador",
    "awayName": "Jamaica",
    "fifaId": "1zf4b2lwb480oukknqfosd4wk"
+  },
+  {
+   "kickoff": "2026-10-03T04:00:00Z",
+   "date": "2026-10-03",
+   "home": "VAN",
+   "away": "FIJ",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Suva",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.483,
+   "prediction": {
+    "home": {
+     "win": 5.17,
+     "draw": 0.17,
+     "loss": -4.83
+    },
+    "away": {
+     "loss": -5.17,
+     "draw": -0.17,
+     "win": 4.83
+    }
+   },
+   "homeName": "Vanuatu",
+   "awayName": "Fiji",
+   "fifaId": "5ug1gbwuzlnnksb00qv96qej8"
   },
   {
    "kickoff": "2026-10-03T13:00:00Z",
@@ -18156,7 +18178,7 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 36,
+   "results": 37,
    "fixtures": 53
   },
   {
