@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T16:44:44+00:00",
+ "generatedAt": "2026-09-30T16:57:29+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1376,6 +1376,20 @@
    "rankChange": 0
   },
   {
+   "id": "43873",
+   "code": "MOZ",
+   "name": "Mozambique",
+   "confed": "CAF",
+   "officialRank": 103,
+   "officialPoints": 1218.62,
+   "previousRank": 103,
+   "aliases": [],
+   "liveRank": 96,
+   "livePoints": 1241.71,
+   "pointsChange": 23.09,
+   "rankChange": 7
+  },
+  {
    "id": "43906",
    "code": "GUA",
    "name": "Guatemala",
@@ -1384,10 +1398,10 @@
    "officialPoints": 1238.74,
    "previousRank": 97,
    "aliases": [],
-   "liveRank": 96,
+   "liveRank": 97,
    "livePoints": 1240.32,
    "pointsChange": 1.58,
-   "rankChange": 1
+   "rankChange": 0
   },
   {
    "id": "43937",
@@ -1398,24 +1412,10 @@
    "officialPoints": 1242.88,
    "previousRank": 96,
    "aliases": [],
-   "liveRank": 97,
+   "liveRank": 98,
    "livePoints": 1238.76,
    "pointsChange": -4.12,
-   "rankChange": -1
-  },
-  {
-   "id": "43873",
-   "code": "MOZ",
-   "name": "Mozambique",
-   "confed": "CAF",
-   "officialRank": 103,
-   "officialPoints": 1218.62,
-   "previousRank": 103,
-   "aliases": [],
-   "liveRank": 98,
-   "livePoints": 1238.24,
-   "pointsChange": 19.62,
-   "rankChange": 5
+   "rankChange": -2
   },
   {
    "id": "43841",
@@ -2037,8 +2037,8 @@
    "previousRank": 147,
    "aliases": [],
    "liveRank": 142,
-   "livePoints": 1073.85,
-   "pointsChange": 10.22,
+   "livePoints": 1070.38,
+   "pointsChange": 6.75,
    "rankChange": 5
   },
   {
@@ -3064,6 +3064,28 @@
    "homeName": "Lithuania",
    "awayName": "Andorra",
    "fifaId": "8s8n4sccrbuastvgjbjxps1zo"
+  },
+  {
+   "kickoff": "2026-09-30T14:00:00Z",
+   "date": "2026-09-30",
+   "home": "BOT",
+   "away": "MOZ",
+   "homeScore": 0,
+   "awayScore": 2,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Gaborone",
+   "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": -3.47,
+   "awayDelta": 3.47,
+   "homeName": "Botswana",
+   "awayName": "Mozambique",
+   "fifaId": "adq98i7cfbioqcfk7t8bbuzh0"
   },
   {
    "kickoff": "2026-09-30T12:00:00Z",
@@ -7489,39 +7511,6 @@
    "fifaId": "761fg0gxqkxptgemq43xwvcpg"
   },
   {
-   "kickoff": "2026-09-30T14:00:00Z",
-   "date": "2026-09-30",
-   "home": "BOT",
-   "away": "MOZ",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Gaborone",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.347,
-   "prediction": {
-    "home": {
-     "win": 6.53,
-     "draw": 1.53,
-     "loss": -3.47
-    },
-    "away": {
-     "loss": -6.53,
-     "draw": -1.53,
-     "win": 3.47
-    }
-   },
-   "homeName": "Botswana",
-   "awayName": "Mozambique",
-   "fifaId": "adq98i7cfbioqcfk7t8bbuzh0"
-  },
-  {
    "date": "2026-09-30",
    "kickoff": "2026-09-30T16:00:00Z",
    "home": "ERI",
@@ -8247,39 +8236,6 @@
   },
   {
    "kickoff": "2026-10-02T00:00:00Z",
-   "date": "2026-10-02",
-   "home": "COD",
-   "away": "UGA",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Tbc",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.706,
-   "prediction": {
-    "home": {
-     "win": 2.94,
-     "draw": -2.06,
-     "loss": -7.06
-    },
-    "away": {
-     "loss": -2.94,
-     "draw": 2.06,
-     "win": 7.06
-    }
-   },
-   "homeName": "Congo DR",
-   "awayName": "Uganda",
-   "fifaId": "dtu39w72p2eg7r0zcdb84lces"
-  },
-  {
-   "kickoff": "2026-10-02T00:00:00Z",
    "date": "2026-10-01",
    "home": "DOM",
    "away": "HAI",
@@ -8475,6 +8431,39 @@
    "homeName": "Korea Republic",
    "awayName": "Venezuela",
    "fifaId": "52zyck6fvi37zwzzeu6f2l444"
+  },
+  {
+   "kickoff": "2026-10-02T11:00:00Z",
+   "date": "2026-10-02",
+   "home": "COD",
+   "away": "UGA",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Tbc",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.706,
+   "prediction": {
+    "home": {
+     "win": 2.94,
+     "draw": -2.06,
+     "loss": -7.06
+    },
+    "away": {
+     "loss": -2.94,
+     "draw": 2.06,
+     "win": 7.06
+    }
+   },
+   "homeName": "Congo DR",
+   "awayName": "Uganda",
+   "fifaId": "dtu39w72p2eg7r0zcdb84lces"
   },
   {
    "kickoff": "2026-10-02T11:35:00Z",
@@ -9003,39 +8992,6 @@
    "homeName": "Colombia",
    "awayName": "Paraguay",
    "fifaId": "5w98q2uuvgvcsli7pdzif651w"
-  },
-  {
-   "kickoff": "2026-10-03T00:00:00Z",
-   "date": "2026-10-03",
-   "home": "TUN",
-   "away": "MLI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.447,
-   "prediction": {
-    "home": {
-     "win": 5.53,
-     "draw": 0.53,
-     "loss": -4.47
-    },
-    "away": {
-     "loss": -5.53,
-     "draw": -0.53,
-     "win": 4.47
-    }
-   },
-   "homeName": "Tunisia",
-   "awayName": "Mali",
-   "fifaId": "ds2fbobbhchlhtnuceojk2uc4"
   },
   {
    "kickoff": "2026-10-03T00:00:00Z",
@@ -9599,7 +9555,40 @@
    "fifaId": "e8fp7iev2y64n8u1xibm9uo0k"
   },
   {
-   "kickoff": "2026-10-04T00:00:00Z",
+   "kickoff": "2026-10-03T19:00:00Z",
+   "date": "2026-10-03",
+   "home": "TUN",
+   "away": "MLI",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Rades",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.447,
+   "prediction": {
+    "home": {
+     "win": 5.53,
+     "draw": 0.53,
+     "loss": -4.47
+    },
+    "away": {
+     "loss": -5.53,
+     "draw": -0.53,
+     "win": 4.47
+    }
+   },
+   "homeName": "Tunisia",
+   "awayName": "Mali",
+   "fifaId": "ds2fbobbhchlhtnuceojk2uc4"
+  },
+  {
+   "kickoff": "2026-10-03T20:00:00Z",
    "date": "2026-10-03",
    "home": "ARG",
    "away": "BFA",
@@ -12272,17 +12261,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.687,
+   "expectedHome": 0.69,
    "prediction": {
     "home": {
-     "win": 7.83,
-     "draw": -4.67,
-     "loss": -17.17
+     "win": 7.76,
+     "draw": -4.74,
+     "loss": -17.24
     },
     "away": {
-     "loss": -7.83,
-     "draw": 4.67,
-     "win": 17.17
+     "loss": -7.76,
+     "draw": 4.74,
+     "win": 17.24
     }
    },
    "homeName": "Uganda",
@@ -12400,17 +12389,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.661,
+   "expectedHome": 0.664,
    "prediction": {
     "home": {
-     "win": 8.48,
-     "draw": -4.02,
-     "loss": -16.52
+     "win": 8.41,
+     "draw": -4.09,
+     "loss": -16.59
     },
     "away": {
-     "loss": -8.48,
-     "draw": 4.02,
-     "win": 16.52
+     "loss": -8.41,
+     "draw": 4.09,
+     "win": 16.59
     }
    },
    "homeName": "Mozambique",
@@ -14129,17 +14118,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.313,
+   "expectedHome": 0.31,
    "prediction": {
     "home": {
-     "win": 17.17,
-     "draw": 4.67,
-     "loss": -7.83
+     "win": 17.24,
+     "draw": 4.74,
+     "loss": -7.76
     },
     "away": {
-     "loss": -17.17,
-     "draw": -4.67,
-     "win": 7.83
+     "loss": -17.24,
+     "draw": -4.74,
+     "win": 7.76
     }
    },
    "homeName": "Botswana",
@@ -14257,17 +14246,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.339,
+   "expectedHome": 0.336,
    "prediction": {
     "home": {
-     "win": 16.52,
-     "draw": 4.02,
-     "loss": -8.48
+     "win": 16.59,
+     "draw": 4.09,
+     "loss": -8.41
     },
     "away": {
-     "loss": -16.52,
-     "draw": -4.02,
-     "win": 8.48
+     "loss": -16.59,
+     "draw": -4.09,
+     "win": 8.41
     }
    },
    "homeName": "Ethiopia",
@@ -17108,17 +17097,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.41,
+   "expectedHome": 0.407,
    "prediction": {
     "home": {
-     "win": 14.75,
-     "draw": 2.25,
-     "loss": -10.25
+     "win": 14.84,
+     "draw": 2.34,
+     "loss": -10.16
     },
     "away": {
-     "loss": -14.75,
-     "draw": -2.25,
-     "win": 10.25
+     "loss": -14.84,
+     "draw": -2.34,
+     "win": 10.16
     }
    },
    "homeName": "Botswana",
@@ -17268,17 +17257,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.828,
+   "expectedHome": 0.826,
    "prediction": {
     "home": {
-     "win": 4.31,
-     "draw": -8.19,
-     "loss": -20.69
+     "win": 4.35,
+     "draw": -8.15,
+     "loss": -20.65
     },
     "away": {
-     "loss": -4.31,
-     "draw": 8.19,
-     "win": 20.69
+     "loss": -4.35,
+     "draw": 8.15,
+     "win": 20.65
     }
    },
    "homeName": "Senegal",
@@ -17908,17 +17897,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.212,
+   "expectedHome": 0.21,
    "prediction": {
     "home": {
-     "win": 19.69,
-     "draw": 7.19,
-     "loss": -5.31
+     "win": 19.75,
+     "draw": 7.25,
+     "loss": -5.25
     },
     "away": {
-     "loss": -19.69,
-     "draw": -7.19,
-     "win": 5.31
+     "loss": -19.75,
+     "draw": -7.25,
+     "win": 5.25
     }
    },
    "homeName": "Botswana",
@@ -18036,17 +18025,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.422,
+   "expectedHome": 0.419,
    "prediction": {
     "home": {
-     "win": 14.44,
-     "draw": 1.94,
-     "loss": -10.56
+     "win": 14.52,
+     "draw": 2.02,
+     "loss": -10.48
     },
     "away": {
-     "loss": -14.44,
-     "draw": -1.94,
-     "win": 10.56
+     "loss": -14.52,
+     "draw": -2.02,
+     "win": 10.48
     }
    },
    "homeName": "Sudan",
@@ -18200,8 +18189,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 38,
-   "fixtures": 52
+   "results": 39,
+   "fixtures": 51
   },
   {
    "name": "FIFA Series™",
