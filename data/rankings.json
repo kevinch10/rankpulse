@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T02:24:33+00:00",
+ "generatedAt": "2026-09-30T03:05:10+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -145,8 +145,8 @@
    "previousRank": 14,
    "aliases": [],
    "liveRank": 10,
-   "livePoints": 1754.16,
-   "pointsChange": -0.14,
+   "livePoints": 1751.57,
+   "pointsChange": -2.73,
    "rankChange": 0
   },
   {
@@ -740,8 +740,8 @@
    "previousRank": 52,
    "aliases": [],
    "liveRank": 51,
-   "livePoints": 1454.78,
-   "pointsChange": -2.91,
+   "livePoints": 1457.38,
+   "pointsChange": -0.31,
    "rankChange": -1
   },
   {
@@ -3041,26 +3041,15 @@
    "awayScore": 1,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Harrison",
    "source": "FIFA",
+   "counted": true,
    "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.759,
-   "prediction": {
-    "home": {
-     "win": 2.41,
-     "draw": -2.59,
-     "loss": -7.59
-    },
-    "away": {
-     "loss": -2.41,
-     "draw": 2.59,
-     "win": 7.59
-    }
-   },
+   "homeDelta": -2.59,
+   "awayDelta": 2.59,
    "homeName": "Mexico",
    "awayName": "Peru",
    "fifaId": "1wfio6wgxrd2vf420b2id32tw"
@@ -9405,17 +9394,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.614,
+   "expectedHome": 0.611,
    "prediction": {
     "home": {
-     "win": 3.86,
-     "draw": -1.14,
-     "loss": -6.14
+     "win": 3.89,
+     "draw": -1.11,
+     "loss": -6.11
     },
     "away": {
-     "loss": -3.86,
-     "draw": 1.14,
-     "win": 6.14
+     "loss": -3.89,
+     "draw": 1.11,
+     "win": 6.11
     }
    },
    "homeName": "Canada",
@@ -9603,17 +9592,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.445,
+   "expectedHome": 0.447,
    "prediction": {
     "home": {
-     "win": 5.55,
-     "draw": 0.55,
-     "loss": -4.45
+     "win": 5.53,
+     "draw": 0.53,
+     "loss": -4.47
     },
     "away": {
-     "loss": -5.55,
-     "draw": -0.55,
-     "win": 4.45
+     "loss": -5.53,
+     "draw": -0.53,
+     "win": 4.47
     }
    },
    "homeName": "USA",
@@ -11516,17 +11505,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.762,
+   "expectedHome": 0.76,
    "prediction": {
     "home": {
-     "win": 2.38,
-     "draw": -2.62,
-     "loss": -7.62
+     "win": 2.4,
+     "draw": -2.6,
+     "loss": -7.6
     },
     "away": {
-     "loss": -2.38,
-     "draw": 2.62,
-     "win": 7.62
+     "loss": -2.4,
+     "draw": 2.6,
+     "win": 7.6
     }
    },
    "homeName": "Mexico",
@@ -11549,17 +11538,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.749,
+   "expectedHome": 0.747,
    "prediction": {
     "home": {
-     "win": 2.51,
-     "draw": -2.49,
-     "loss": -7.49
+     "win": 2.53,
+     "draw": -2.47,
+     "loss": -7.47
     },
     "away": {
-     "loss": -2.51,
-     "draw": 2.49,
-     "win": 7.49
+     "loss": -2.53,
+     "draw": 2.47,
+     "win": 7.47
     }
    },
    "homeName": "Colombia",
