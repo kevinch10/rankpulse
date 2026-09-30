@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T13:39:16+00:00",
+ "generatedAt": "2026-09-30T13:54:43+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2185,20 +2185,6 @@
    "rankChange": 1
   },
   {
-   "id": "43977",
-   "code": "FIJ",
-   "name": "Fiji",
-   "confed": "OFC",
-   "officialRank": 155,
-   "officialPoints": 1024.17,
-   "previousRank": 155,
-   "aliases": [],
-   "liveRank": 153,
-   "livePoints": 1028.61,
-   "pointsChange": 4.44,
-   "rankChange": 2
-  },
-  {
    "id": "43814",
    "code": "HKG",
    "name": "Hong Kong, China",
@@ -2209,10 +2195,24 @@
    "aliases": [
     "Hong Kong"
    ],
+   "liveRank": 153,
+   "livePoints": 1031.23,
+   "pointsChange": 7.07,
+   "rankChange": 3
+  },
+  {
+   "id": "43977",
+   "code": "FIJ",
+   "name": "Fiji",
+   "confed": "OFC",
+   "officialRank": 155,
+   "officialPoints": 1024.17,
+   "previousRank": 155,
+   "aliases": [],
    "liveRank": 154,
-   "livePoints": 1027.85,
-   "pointsChange": 3.69,
-   "rankChange": 2
+   "livePoints": 1028.61,
+   "pointsChange": 4.44,
+   "rankChange": 1
   },
   {
    "id": "20010",
@@ -2811,8 +2811,8 @@
     "Brunei"
    ],
    "liveRank": 196,
-   "livePoints": 852.93,
-   "pointsChange": -4.8,
+   "livePoints": 849.55,
+   "pointsChange": -8.18,
    "rankChange": -2
   },
   {
@@ -3038,29 +3038,18 @@
    "home": "BRU",
    "away": "HKG",
    "homeScore": 0,
-   "awayScore": 1,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "FIFA ASEAN Cup™",
    "stage": "FIFA ASEAN Challenge Cup Group Stage",
    "city": "Hong Kong",
    "source": "FIFA",
+   "counted": true,
    "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.338,
-   "prediction": {
-    "home": {
-     "win": 6.62,
-     "draw": 1.62,
-     "loss": -3.38
-    },
-    "away": {
-     "loss": -6.62,
-     "draw": -1.62,
-     "win": 3.38
-    }
-   },
+   "homeDelta": -3.38,
+   "awayDelta": 3.38,
    "homeName": "Brunei Darussalam",
    "awayName": "Hong Kong, China",
    "fifaId": "400022950"
@@ -8258,6 +8247,39 @@
   },
   {
    "kickoff": "2026-10-02T00:00:00Z",
+   "date": "2026-10-02",
+   "home": "COD",
+   "away": "UGA",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Tbc",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.706,
+   "prediction": {
+    "home": {
+     "win": 2.94,
+     "draw": -2.06,
+     "loss": -7.06
+    },
+    "away": {
+     "loss": -2.94,
+     "draw": 2.06,
+     "win": 7.06
+    }
+   },
+   "homeName": "Congo DR",
+   "awayName": "Uganda",
+   "fifaId": "dtu39w72p2eg7r0zcdb84lces"
+  },
+  {
+   "kickoff": "2026-10-02T00:00:00Z",
    "date": "2026-10-01",
    "home": "DOM",
    "away": "HAI",
@@ -8453,39 +8475,6 @@
    "homeName": "Korea Republic",
    "awayName": "Venezuela",
    "fifaId": "52zyck6fvi37zwzzeu6f2l444"
-  },
-  {
-   "kickoff": "2026-10-02T11:00:00Z",
-   "date": "2026-10-02",
-   "home": "COD",
-   "away": "UGA",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Tbc",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.706,
-   "prediction": {
-    "home": {
-     "win": 2.94,
-     "draw": -2.06,
-     "loss": -7.06
-    },
-    "away": {
-     "loss": -2.94,
-     "draw": 2.06,
-     "win": 7.06
-    }
-   },
-   "homeName": "Congo DR",
-   "awayName": "Uganda",
-   "fifaId": "dtu39w72p2eg7r0zcdb84lces"
   },
   {
    "kickoff": "2026-10-02T11:35:00Z",
@@ -9017,39 +9006,6 @@
   },
   {
    "kickoff": "2026-10-03T00:00:00Z",
-   "date": "2026-10-03",
-   "home": "TUN",
-   "away": "MLI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.447,
-   "prediction": {
-    "home": {
-     "win": 5.53,
-     "draw": 0.53,
-     "loss": -4.47
-    },
-    "away": {
-     "loss": -5.53,
-     "draw": -0.53,
-     "win": 4.47
-    }
-   },
-   "homeName": "Tunisia",
-   "awayName": "Mali",
-   "fifaId": "ds2fbobbhchlhtnuceojk2uc4"
-  },
-  {
-   "kickoff": "2026-10-03T00:00:00Z",
    "date": "2026-10-02",
    "home": "BRB",
    "away": "BER",
@@ -9577,7 +9533,40 @@
    "fifaId": "e8fp7iev2y64n8u1xibm9uo0k"
   },
   {
-   "kickoff": "2026-10-03T20:00:00Z",
+   "kickoff": "2026-10-03T19:00:00Z",
+   "date": "2026-10-03",
+   "home": "TUN",
+   "away": "MLI",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Rades",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.447,
+   "prediction": {
+    "home": {
+     "win": 5.53,
+     "draw": 0.53,
+     "loss": -4.47
+    },
+    "away": {
+     "loss": -5.53,
+     "draw": -0.53,
+     "win": 4.47
+    }
+   },
+   "homeName": "Tunisia",
+   "awayName": "Mali",
+   "fifaId": "ds2fbobbhchlhtnuceojk2uc4"
+  },
+  {
+   "kickoff": "2026-10-04T00:00:00Z",
    "date": "2026-10-03",
    "home": "ARG",
    "away": "BFA",
