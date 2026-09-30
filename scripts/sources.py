@@ -26,7 +26,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 EXTRA_SOURCES = ROOT / "data" / "extra_sources.json"
 
-USER_AGENT = "WorldFootballRankings/1.0 (https://github.com/kevinch10/rankpulse; hourly bot)"
+USER_AGENT = "WorldFootballRankings/1.0 (https://github.com/kevinch10/world-football-rankings; hourly bot)"
 WIKI_API = "https://en.wikipedia.org/w/api.php"
 COMMUNITY_RESULTS = "https://raw.githubusercontent.com/martj42/international_results/master/results.csv"
 COMMUNITY_SHOOTOUTS = "https://raw.githubusercontent.com/martj42/international_results/master/shootouts.csv"

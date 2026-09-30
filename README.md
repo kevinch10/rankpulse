@@ -4,7 +4,7 @@
 
 **Live projection of the FIFA men's world ranking, plus daily results and fixtures for every ranking match in every confederation.** FIFA only publishes its ranking a few times a year. World Football Rankings takes the latest official ranking and applies every international result played since, using FIFA's published formula. That way you can see where teams stand *right now*.
 
-**Live site:** https://kevinch10.github.io/rankpulse/
+**Live site:** https://kevinch10.github.io/world-football-rankings/
 
 It covers everything FIFA counts: friendlies, UEFA and Concacaf Nations League, World Cup and continental qualifiers, and continental and world finals (AFCON, Asian Cup, Gold Cup, EURO, Copa América, OFC Nations Cup, World Cup). It also covers regional tournaments like the ASEAN and Gulf Cups.
 
@@ -103,6 +103,10 @@ python3 -m http.server 8000    # open http://localhost:8000
 ```
 
 ## Deploy
+
+**Vercel (optional second host):** import this repo at vercel.com/new (Framework preset: *Other*, no build command). `vercel.json` skips redeploys when only data changed, and copies of the site outside GitHub Pages read the data straight from GitHub Pages, so the Vercel site stays current without using up deployments.
+
+**GitHub Pages:**
 
 1. Push to GitHub.
 2. **Settings → Pages →** Source: *Deploy from a branch*, Branch: `main` / root.

@@ -6,6 +6,10 @@ const LIVE = 3;
 const PAGE = 150;  // matches rendered before "Show more"
 const RANK_PAGE = 50;  // teams per page in Rankings
 const FIFA_CALENDAR = 'https://api.fifa.com/api/v3/calendar/matches';
+// Data is rebuilt every 15 minutes and published on GitHub Pages. Copies of the site on
+// other hosts (e.g. Vercel) read it from there, so they never need redeploying for new data.
+const DATA_BASE = location.hostname.endsWith('github.io') || ['localhost', '127.0.0.1'].includes(location.hostname)
+  ? 'data/' : 'https://kevinch10.github.io/world-football-rankings/data/';
 const saved = loadPrefs();
 const state = { data: null, history: null, historyFrom: '', historyFailed: false,
   view: ['rankings', 'results', 'fixtures', 'fantasy'].includes(location.hash.slice(1)) ? location.hash.slice(1) : (saved.view || 'rankings'),
@@ -123,7 +127,7 @@ const ymd = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')
 // has the year before that. It's fetched in the background after first paint.
 async function loadHistory() {
   try {
-    const res = await fetch('data/history.json', { cache: 'no-cache' });
+    const res = await fetch(`${DATA_BASE}history.json`, { cache: 'no-cache' });
     const h = await res.json();
     const seen = new Set(state.data.results.map(m => `${m.date}|${m.home}|${m.away}`));
     state.history = h.results.filter(m => !seen.has(`${m.date}|${m.home}|${m.away}`));
@@ -590,7 +594,7 @@ function startLiveLoop() {
     if (document.hidden) return;
     try {
       if (Date.now() - lastServer > 10 * 60e3) {
-        const res = await fetch('data/rankings.json', { cache: 'no-cache' });
+        const res = await fetch(`${DATA_BASE}rankings.json`, { cache: 'no-cache' });
         if (res.ok) { state.base = await res.json(); lastServer = Date.now(); }
       }
       await fetchLive();
@@ -642,7 +646,7 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch('data/rankings.json', { cache: 'no-cache' });
+  const res = await fetch(`${DATA_BASE}rankings.json`, { cache: 'no-cache' });
   if (!res.ok) throw new Error(`server ${res.status}`);
   state.base = await res.json();
   state.data = state.base;
