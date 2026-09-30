@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T18:06:19+00:00",
+ "generatedAt": "2026-09-30T18:28:49+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2667,8 +2667,8 @@
    "previousRank": 187,
    "aliases": [],
    "liveRank": 186,
-   "livePoints": 881.17,
-   "pointsChange": 4.31,
+   "livePoints": 885.39,
+   "pointsChange": 8.53,
    "rankChange": 1
   },
   {
@@ -2939,8 +2939,8 @@
    "previousRank": 204,
    "aliases": [],
    "liveRank": 205,
-   "livePoints": 799.85,
-   "pointsChange": -4.31,
+   "livePoints": 795.63,
+   "pointsChange": -8.53,
    "rankChange": -1
   },
   {
@@ -3096,6 +3096,28 @@
    "homeName": "Botswana",
    "awayName": "Mozambique",
    "fifaId": "adq98i7cfbioqcfk7t8bbuzh0"
+  },
+  {
+   "kickoff": "2026-09-30T12:00:00Z",
+   "date": "2026-09-30",
+   "home": "SEY",
+   "away": "SRI",
+   "homeScore": 0,
+   "awayScore": 2,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Victoria",
+   "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": -4.23,
+   "awayDelta": 4.23,
+   "homeName": "Seychelles",
+   "awayName": "Sri Lanka",
+   "fifaId": "761fg0gxqkxptgemq43xwvcpg"
   },
   {
    "kickoff": "2026-09-30T12:00:00Z",
@@ -7488,39 +7510,6 @@
    "fifaId": "axjyhxkueeefvyubngxaltmvo"
   },
   {
-   "kickoff": "2026-09-30T12:00:00Z",
-   "date": "2026-09-30",
-   "home": "SEY",
-   "away": "SRI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Victoria",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.423,
-   "prediction": {
-    "home": {
-     "win": 5.77,
-     "draw": 0.77,
-     "loss": -4.23
-    },
-    "away": {
-     "loss": -5.77,
-     "draw": -0.77,
-     "win": 4.23
-    }
-   },
-   "homeName": "Seychelles",
-   "awayName": "Sri Lanka",
-   "fifaId": "761fg0gxqkxptgemq43xwvcpg"
-  },
-  {
    "kickoff": "2026-09-30T17:30:00Z",
    "date": "2026-09-30",
    "home": "UAE",
@@ -8558,17 +8547,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.529,
+   "expectedHome": 0.525,
    "prediction": {
     "home": {
-     "win": 4.71,
-     "draw": -0.29,
-     "loss": -5.29
+     "win": 4.75,
+     "draw": -0.25,
+     "loss": -5.25
     },
     "away": {
-     "loss": -4.71,
-     "draw": 0.29,
-     "win": 5.29
+     "loss": -4.75,
+     "draw": 0.25,
+     "win": 5.25
     }
    },
    "homeName": "Mauritius",
@@ -9020,17 +9009,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.526,
+   "expectedHome": 0.53,
    "prediction": {
     "home": {
-     "win": 4.74,
-     "draw": -0.26,
-     "loss": -5.26
+     "win": 4.7,
+     "draw": -0.3,
+     "loss": -5.3
     },
     "away": {
-     "loss": -4.74,
-     "draw": 0.26,
-     "win": 5.26
+     "loss": -4.7,
+     "draw": 0.3,
+     "win": 5.3
     }
    },
    "homeName": "Sri Lanka",
@@ -10373,17 +10362,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.529,
+   "expectedHome": 0.525,
    "prediction": {
     "home": {
-     "win": 4.71,
-     "draw": -0.29,
-     "loss": -5.29
+     "win": 4.75,
+     "draw": -0.25,
+     "loss": -5.25
     },
     "away": {
-     "loss": -4.71,
-     "draw": 0.29,
-     "win": 5.29
+     "loss": -4.75,
+     "draw": 0.25,
+     "win": 5.25
     }
    },
    "homeName": "Mauritius",
@@ -11593,17 +11582,17 @@
    "source": "FIFA",
    "importance": 5,
    "knockout": false,
-   "expectedHome": 0.514,
+   "expectedHome": 0.51,
    "prediction": {
     "home": {
-     "win": 2.43,
-     "draw": -0.07,
-     "loss": -2.57
+     "win": 2.45,
+     "draw": -0.05,
+     "loss": -2.55
     },
     "away": {
-     "loss": -2.43,
-     "draw": 0.07,
-     "win": 2.57
+     "loss": -2.45,
+     "draw": 0.05,
+     "win": 2.55
     }
    },
    "homeName": "Bangladesh",
@@ -11659,17 +11648,17 @@
    "source": "FIFA",
    "importance": 5,
    "knockout": false,
-   "expectedHome": 0.51,
+   "expectedHome": 0.514,
    "prediction": {
     "home": {
-     "win": 2.45,
-     "draw": -0.05,
-     "loss": -2.55
+     "win": 2.43,
+     "draw": -0.07,
+     "loss": -2.57
     },
     "away": {
-     "loss": -2.45,
-     "draw": 0.05,
-     "win": 2.55
+     "loss": -2.43,
+     "draw": 0.07,
+     "win": 2.57
     }
    },
    "homeName": "Sri Lanka",
@@ -18167,8 +18156,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 39,
-   "fixtures": 51
+   "results": 40,
+   "fixtures": 50
   },
   {
    "name": "FIFA Series™",
