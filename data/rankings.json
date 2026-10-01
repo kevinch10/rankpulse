@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T14:09:37+00:00",
+ "generatedAt": "2026-10-01T14:30:05+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1930,20 +1930,6 @@
    "rankChange": -3
   },
   {
-   "id": "43903",
-   "code": "DOM",
-   "name": "Dominican Republic",
-   "confed": "CONCACAF",
-   "officialRank": 144,
-   "officialPoints": 1076.5,
-   "previousRank": 144,
-   "aliases": [],
-   "liveRank": 135,
-   "livePoints": 1093.86,
-   "pointsChange": 17.36,
-   "rankChange": 9
-  },
-  {
    "id": "43827",
    "code": "MAS",
    "name": "Malaysia",
@@ -1952,10 +1938,24 @@
    "officialPoints": 1086.22,
    "previousRank": 136,
    "aliases": [],
+   "liveRank": 135,
+   "livePoints": 1095.76,
+   "pointsChange": 9.54,
+   "rankChange": 1
+  },
+  {
+   "id": "43903",
+   "code": "DOM",
+   "name": "Dominican Republic",
+   "confed": "CONCACAF",
+   "officialRank": 144,
+   "officialPoints": 1076.5,
+   "previousRank": 144,
+   "aliases": [],
    "liveRank": 136,
-   "livePoints": 1091.03,
-   "pointsChange": 4.81,
-   "rankChange": 0
+   "livePoints": 1093.86,
+   "pointsChange": 17.36,
+   "rankChange": 8
   },
   {
    "id": "43833",
@@ -2112,20 +2112,6 @@
    "rankChange": -4
   },
   {
-   "id": "43836",
-   "code": "SGP",
-   "name": "Singapore",
-   "confed": "AFC",
-   "officialRank": 148,
-   "officialPoints": 1057.95,
-   "previousRank": 148,
-   "aliases": [],
-   "liveRank": 148,
-   "livePoints": 1063.69,
-   "pointsChange": 5.74,
-   "rankChange": 0
-  },
-  {
    "id": "43907",
    "code": "GUY",
    "name": "Guyana",
@@ -2134,10 +2120,24 @@
    "officialPoints": 1049.32,
    "previousRank": 150,
    "aliases": [],
-   "liveRank": 149,
+   "liveRank": 148,
    "livePoints": 1061.15,
    "pointsChange": 11.83,
-   "rankChange": 1
+   "rankChange": 2
+  },
+  {
+   "id": "43836",
+   "code": "SGP",
+   "name": "Singapore",
+   "confed": "AFC",
+   "officialRank": 148,
+   "officialPoints": 1057.95,
+   "previousRank": 148,
+   "aliases": [],
+   "liveRank": 149,
+   "livePoints": 1058.95,
+   "pointsChange": 1.0,
+   "rankChange": -1
   },
   {
    "id": "43864",
@@ -3037,30 +3037,19 @@
    "date": "2026-10-01",
    "home": "MAS",
    "away": "SGP",
-   "homeScore": 4,
+   "homeScore": 6,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "FIFA ASEAN Cup™",
    "stage": "FIFA ASEAN Cup Group Stage",
    "city": "Bandung",
    "source": "FIFA",
+   "counted": true,
    "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.526,
-   "prediction": {
-    "home": {
-     "win": 4.74,
-     "draw": -0.26,
-     "loss": -5.26
-    },
-    "away": {
-     "loss": -4.74,
-     "draw": 0.26,
-     "win": 5.26
-    }
-   },
+   "homeDelta": 4.74,
+   "awayDelta": -4.74,
    "homeName": "Malaysia",
    "awayName": "Singapore",
    "fifaId": "400022943"
@@ -3070,8 +3059,8 @@
    "date": "2026-10-01",
    "home": "IDN",
    "away": "BAN",
-   "homeScore": 6,
-   "awayScore": 1,
+   "homeScore": 9,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -3218,7 +3207,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Challenge Cup Group Stage",
+   "stage": "FIFA ASEAN Challenge Cup",
    "city": "Hong Kong",
    "source": "FIFA",
    "counted": true,
@@ -3240,7 +3229,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Challenge Cup Group Stage",
+   "stage": "FIFA ASEAN Challenge Cup",
    "city": "Hong Kong",
    "source": "FIFA",
    "counted": true,
@@ -4037,7 +4026,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Bandung",
    "source": "FIFA",
    "counted": true,
@@ -4081,7 +4070,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Bandung",
    "source": "FIFA",
    "counted": true,
@@ -4451,7 +4440,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Jakarta",
    "source": "FIFA",
    "counted": true,
@@ -4539,7 +4528,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Jakarta",
    "source": "FIFA",
    "counted": true,
@@ -4979,7 +4968,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Challenge Cup Group Stage",
+   "stage": "FIFA ASEAN Challenge Cup",
    "city": "Hong Kong",
    "source": "FIFA",
    "counted": true,
@@ -5001,7 +4990,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Challenge Cup Group Stage",
+   "stage": "FIFA ASEAN Challenge Cup",
    "city": "Hong Kong",
    "source": "FIFA",
    "counted": true,
@@ -5439,7 +5428,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Bandung",
    "source": "FIFA",
    "counted": true,
@@ -5483,7 +5472,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Bandung",
    "source": "FIFA",
    "counted": true,
@@ -6085,7 +6074,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Jakarta",
    "source": "FIFA",
    "counted": true,
@@ -6129,7 +6118,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Jakarta",
    "source": "FIFA",
    "counted": true,
@@ -6627,7 +6616,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Challenge Cup Group Stage",
+   "stage": "FIFA ASEAN Challenge Cup",
    "city": "Hong Kong",
    "source": "FIFA",
    "counted": true,
@@ -6737,7 +6726,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Challenge Cup Group Stage",
+   "stage": "FIFA ASEAN Challenge Cup",
    "city": "Hong Kong",
    "source": "FIFA",
    "counted": true,
@@ -8168,7 +8157,7 @@
    "awayPens": null,
    "status": 1,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Bandung",
    "source": "FIFA",
    "importance": 10,
@@ -8201,7 +8190,7 @@
    "awayPens": null,
    "status": 1,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Jakarta",
    "source": "FIFA",
    "importance": 10,
@@ -8960,7 +8949,7 @@
    "awayPens": null,
    "status": 1,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Challenge Cup Group Stage",
+   "stage": "FIFA ASEAN Challenge Cup",
    "city": "Hong Kong",
    "source": "FIFA",
    "importance": 10,
@@ -12768,17 +12757,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.136,
+   "expectedHome": 0.134,
    "prediction": {
     "home": {
-     "win": 8.64,
-     "draw": 3.64,
-     "loss": -1.36
+     "win": 8.66,
+     "draw": 3.66,
+     "loss": -1.34
     },
     "away": {
-     "loss": -8.64,
-     "draw": -3.64,
-     "win": 1.36
+     "loss": -8.66,
+     "draw": -3.66,
+     "win": 1.34
     }
    },
    "homeName": "Singapore",
@@ -14988,17 +14977,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.055,
+   "expectedHome": 0.054,
    "prediction": {
     "home": {
-     "win": 9.45,
-     "draw": 4.45,
-     "loss": -0.55
+     "win": 9.46,
+     "draw": 4.46,
+     "loss": -0.54
     },
     "away": {
-     "loss": -9.45,
-     "draw": -4.45,
-     "win": 0.55
+     "loss": -9.46,
+     "draw": -4.46,
+     "win": 0.54
     }
    },
    "homeName": "Singapore",
@@ -15450,17 +15439,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.879,
+   "expectedHome": 0.881,
    "prediction": {
     "home": {
-     "win": 4.23,
-     "draw": -13.27,
-     "loss": -30.77
+     "win": 4.17,
+     "draw": -13.33,
+     "loss": -30.83
     },
     "away": {
-     "loss": -4.23,
-     "draw": 13.27,
-     "win": 30.77
+     "loss": -4.17,
+     "draw": 13.33,
+     "win": 30.83
     }
    },
    "homeName": "Australia",
@@ -15912,17 +15901,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.36,
+   "expectedHome": 0.356,
    "prediction": {
     "home": {
-     "win": 22.4,
-     "draw": 4.9,
-     "loss": -12.6
+     "win": 22.54,
+     "draw": 5.04,
+     "loss": -12.46
     },
     "away": {
-     "loss": -22.4,
-     "draw": -4.9,
-     "win": 12.6
+     "loss": -22.54,
+     "draw": -5.04,
+     "win": 12.46
     }
    },
    "homeName": "Singapore",
@@ -16308,17 +16297,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.787,
+   "expectedHome": 0.79,
    "prediction": {
     "home": {
-     "win": 7.46,
-     "draw": -10.04,
-     "loss": -27.54
+     "win": 7.35,
+     "draw": -10.15,
+     "loss": -27.65
     },
     "away": {
-     "loss": -7.46,
-     "draw": 10.04,
-     "win": 27.54
+     "loss": -7.35,
+     "draw": 10.15,
+     "win": 27.65
     }
    },
    "homeName": "Iraq",
