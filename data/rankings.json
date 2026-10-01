@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T20:54:55+00:00",
+ "generatedAt": "2026-10-01T21:04:40+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3032,6 +3032,39 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-10-01T21:00:00Z",
+   "date": "2026-10-01",
+   "home": "DMA",
+   "away": "GUY",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League B",
+   "city": "Mayagüez",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.346,
+   "prediction": {
+    "home": {
+     "win": 9.82,
+     "draw": 2.32,
+     "loss": -5.18
+    },
+    "away": {
+     "loss": -9.82,
+     "draw": -2.32,
+     "win": 5.18
+    }
+   },
+   "homeName": "Dominica",
+   "awayName": "Guyana",
+   "fifaId": "do25o5p08f48abpaina3tpmac"
+  },
   {
    "kickoff": "2026-10-01T19:00:00Z",
    "date": "2026-10-01",
@@ -7816,39 +7849,6 @@
   }
  ],
  "fixtures": [
-  {
-   "kickoff": "2026-10-01T21:00:00Z",
-   "date": "2026-10-01",
-   "home": "DMA",
-   "away": "GUY",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League B",
-   "city": "Mayagüez",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.346,
-   "prediction": {
-    "home": {
-     "win": 9.82,
-     "draw": 2.32,
-     "loss": -5.18
-    },
-    "away": {
-     "loss": -9.82,
-     "draw": -2.32,
-     "win": 5.18
-    }
-   },
-   "homeName": "Dominica",
-   "awayName": "Guyana",
-   "fifaId": "do25o5p08f48abpaina3tpmac"
-  },
   {
    "kickoff": "2026-10-01T22:00:00Z",
    "date": "2026-10-01",
@@ -17987,8 +17987,8 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 27,
-   "fixtures": 24
+   "results": 28,
+   "fixtures": 23
   },
   {
    "name": "Concacaf Series",
