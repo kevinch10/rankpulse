@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T14:30:05+00:00",
+ "generatedAt": "2026-10-01T14:47:31+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1683,8 +1683,8 @@
    "previousRank": 118,
    "aliases": [],
    "liveRank": 117,
-   "livePoints": 1160.49,
-   "pointsChange": 3.35,
+   "livePoints": 1163.15,
+   "pointsChange": 6.01,
    "rankChange": 1
   },
   {
@@ -2602,20 +2602,6 @@
    "rankChange": 2
   },
   {
-   "id": "43809",
-   "code": "BAN",
-   "name": "Bangladesh",
-   "confed": "AFC",
-   "officialRank": 181,
-   "officialPoints": 902.93,
-   "previousRank": 181,
-   "aliases": [],
-   "liveRank": 182,
-   "livePoints": 896.12,
-   "pointsChange": -6.81,
-   "rankChange": -1
-  },
-  {
    "id": "43997",
    "code": "DMA",
    "name": "Dominica",
@@ -2624,10 +2610,24 @@
    "officialPoints": 897.69,
    "previousRank": 182,
    "aliases": [],
-   "liveRank": 183,
+   "liveRank": 182,
    "livePoints": 894.81,
    "pointsChange": -2.88,
-   "rankChange": -1
+   "rankChange": 0
+  },
+  {
+   "id": "43809",
+   "code": "BAN",
+   "name": "Bangladesh",
+   "confed": "AFC",
+   "officialRank": 181,
+   "officialPoints": 902.93,
+   "previousRank": 181,
+   "aliases": [],
+   "liveRank": 183,
+   "livePoints": 893.46,
+   "pointsChange": -9.47,
+   "rankChange": -2
   },
   {
    "id": "20006",
@@ -3063,26 +3063,15 @@
    "awayScore": 2,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "FIFA ASEAN Cup™",
    "stage": "FIFA ASEAN Cup Group Stage",
    "city": "Jakarta",
    "source": "FIFA",
+   "counted": true,
    "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.734,
-   "prediction": {
-    "home": {
-     "win": 2.66,
-     "draw": -2.34,
-     "loss": -7.34
-    },
-    "away": {
-     "loss": -2.66,
-     "draw": 2.34,
-     "win": 7.34
-    }
-   },
+   "homeDelta": 2.66,
+   "awayDelta": -2.66,
    "homeName": "Indonesia",
    "awayName": "Bangladesh",
    "fifaId": "400022939"
@@ -11428,17 +11417,17 @@
    "source": "FIFA",
    "importance": 5,
    "knockout": false,
-   "expectedHome": 0.51,
+   "expectedHome": 0.508,
    "prediction": {
     "home": {
-     "win": 2.45,
-     "draw": -0.05,
-     "loss": -2.55
+     "win": 2.46,
+     "draw": -0.04,
+     "loss": -2.54
     },
     "away": {
-     "loss": -2.45,
-     "draw": 0.05,
-     "win": 2.55
+     "loss": -2.46,
+     "draw": 0.04,
+     "win": 2.54
     }
    },
    "homeName": "Bangladesh",
@@ -11560,17 +11549,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.476,
+   "expectedHome": 0.478,
    "prediction": {
     "home": {
-     "win": 5.24,
-     "draw": 0.24,
-     "loss": -4.76
+     "win": 5.22,
+     "draw": 0.22,
+     "loss": -4.78
     },
     "away": {
-     "loss": -5.24,
-     "draw": -0.24,
-     "win": 4.76
+     "loss": -5.22,
+     "draw": -0.22,
+     "win": 4.78
     }
    },
    "homeName": "Bhutan",
@@ -12724,17 +12713,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.674,
+   "expectedHome": 0.672,
    "prediction": {
     "home": {
-     "win": 3.26,
-     "draw": -1.74,
-     "loss": -6.74
+     "win": 3.28,
+     "draw": -1.72,
+     "loss": -6.72
     },
     "away": {
-     "loss": -3.26,
-     "draw": 1.74,
-     "win": 6.74
+     "loss": -3.28,
+     "draw": 1.72,
+     "win": 6.72
     }
    },
    "homeName": "Jordan",
@@ -15571,17 +15560,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.881,
+   "expectedHome": 0.88,
    "prediction": {
     "home": {
-     "win": 4.18,
-     "draw": -13.32,
-     "loss": -30.82
+     "win": 4.21,
+     "draw": -13.29,
+     "loss": -30.79
     },
     "away": {
-     "loss": -4.18,
-     "draw": 13.32,
-     "win": 30.82
+     "loss": -4.21,
+     "draw": 13.29,
+     "win": 30.79
     }
    },
    "homeName": "Japan",
@@ -16033,17 +16022,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.277,
+   "expectedHome": 0.279,
    "prediction": {
     "home": {
-     "win": 25.32,
-     "draw": 7.82,
-     "loss": -9.68
+     "win": 25.25,
+     "draw": 7.75,
+     "loss": -9.75
     },
     "away": {
-     "loss": -25.32,
-     "draw": -7.82,
-     "win": 9.68
+     "loss": -25.25,
+     "draw": -7.75,
+     "win": 9.75
     }
    },
    "homeName": "Indonesia",
@@ -16396,17 +16385,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.593,
+   "expectedHome": 0.591,
    "prediction": {
     "home": {
-     "win": 14.24,
-     "draw": -3.26,
-     "loss": -20.76
+     "win": 14.32,
+     "draw": -3.18,
+     "loss": -20.68
     },
     "away": {
-     "loss": -14.24,
-     "draw": 3.26,
-     "win": 20.76
+     "loss": -14.32,
+     "draw": 3.18,
+     "win": 20.68
     }
    },
    "homeName": "Thailand",
