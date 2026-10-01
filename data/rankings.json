@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T16:10:52+00:00",
+ "generatedAt": "2026-10-01T16:27:11+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -832,6 +832,20 @@
    "rankChange": 1
   },
   {
+   "id": "44005",
+   "code": "UZB",
+   "name": "Uzbekistan",
+   "confed": "AFC",
+   "officialRank": 60,
+   "officialPoints": 1409.73,
+   "previousRank": 50,
+   "aliases": [],
+   "liveRank": 58,
+   "livePoints": 1420.31,
+   "pointsChange": 10.58,
+   "rankChange": 2
+  },
+  {
    "id": "44037",
    "code": "BIH",
    "name": "Bosnia and Herzegovina",
@@ -842,24 +856,10 @@
    "aliases": [
     "Bosnia"
    ],
-   "liveRank": 58,
+   "liveRank": 59,
    "livePoints": 1418.65,
    "pointsChange": 9.72,
-   "rankChange": 3
-  },
-  {
-   "id": "44005",
-   "code": "UZB",
-   "name": "Uzbekistan",
-   "confed": "AFC",
-   "officialRank": 60,
-   "officialPoints": 1409.73,
-   "previousRank": 50,
-   "aliases": [],
-   "liveRank": 59,
-   "livePoints": 1416.56,
-   "pointsChange": 6.83,
-   "rankChange": 1
+   "rankChange": 2
   },
   {
    "id": "43888",
@@ -1192,20 +1192,6 @@
    "rankChange": -1
   },
   {
-   "id": "43838",
-   "code": "SYR",
-   "name": "Syria",
-   "confed": "AFC",
-   "officialRank": 83,
-   "officialPoints": 1283.05,
-   "previousRank": 84,
-   "aliases": [],
-   "liveRank": 83,
-   "livePoints": 1283.69,
-   "pointsChange": 0.64,
-   "rankChange": 0
-  },
-  {
    "id": "43908",
    "code": "HAI",
    "name": "Haiti",
@@ -1214,10 +1200,10 @@
    "officialPoints": 1264.58,
    "previousRank": 83,
    "aliases": [],
-   "liveRank": 84,
+   "liveRank": 83,
    "livePoints": 1281.36,
    "pointsChange": 16.78,
-   "rankChange": 4
+   "rankChange": 5
   },
   {
    "id": "43858",
@@ -1228,10 +1214,24 @@
    "officialPoints": 1272.51,
    "previousRank": 86,
    "aliases": [],
-   "liveRank": 85,
+   "liveRank": 84,
    "livePoints": 1280.12,
    "pointsChange": 7.61,
-   "rankChange": -1
+   "rankChange": 0
+  },
+  {
+   "id": "43838",
+   "code": "SYR",
+   "name": "Syria",
+   "confed": "AFC",
+   "officialRank": 83,
+   "officialPoints": 1283.05,
+   "previousRank": 84,
+   "aliases": [],
+   "liveRank": 85,
+   "livePoints": 1279.94,
+   "pointsChange": -3.11,
+   "rankChange": -2
   },
   {
    "id": "43889",
@@ -3064,6 +3064,28 @@
    "homeName": "Azerbaijan",
    "awayName": "Liechtenstein",
    "fifaId": "bpfw5f74zlysp5n229yblxwyc"
+  },
+  {
+   "kickoff": "2026-10-01T14:00:00Z",
+   "date": "2026-10-01",
+   "home": "UZB",
+   "away": "SYR",
+   "homeScore": 4,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Friendlies",
+   "stage": "Friendlies 3",
+   "city": "Tashkent",
+   "source": "FIFA",
+   "counted": true,
+   "importance": 10,
+   "homeDelta": 3.75,
+   "awayDelta": -3.75,
+   "homeName": "Uzbekistan",
+   "awayName": "Syria",
+   "fifaId": "d5ncqeklen9d7w1fe33ydyy38"
   },
   {
    "kickoff": "2026-10-01T12:30:00Z",
@@ -7598,39 +7620,6 @@
  ],
  "fixtures": [
   {
-   "kickoff": "2026-10-01T14:00:00Z",
-   "date": "2026-10-01",
-   "home": "UZB",
-   "away": "SYR",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Tashkent",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.625,
-   "prediction": {
-    "home": {
-     "win": 3.75,
-     "draw": -1.25,
-     "loss": -6.25
-    },
-    "away": {
-     "loss": -3.75,
-     "draw": 1.25,
-     "win": 6.25
-    }
-   },
-   "homeName": "Uzbekistan",
-   "awayName": "Syria",
-   "fifaId": "d5ncqeklen9d7w1fe33ydyy38"
-  },
-  {
    "date": "2026-10-01",
    "kickoff": "2026-10-01T16:00:00Z",
    "home": "GUI",
@@ -10648,17 +10637,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.634,
+   "expectedHome": 0.631,
    "prediction": {
     "home": {
-     "win": 3.66,
-     "draw": -1.34,
-     "loss": -6.34
+     "win": 3.69,
+     "draw": -1.31,
+     "loss": -6.31
     },
     "away": {
-     "loss": -3.66,
-     "draw": 1.34,
-     "win": 6.34
+     "loss": -3.69,
+     "draw": 1.31,
+     "win": 6.31
     }
    },
    "homeName": "Korea Republic",
@@ -15285,17 +15274,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.564,
+   "expectedHome": 0.567,
    "prediction": {
     "home": {
-     "win": 15.27,
-     "draw": -2.23,
-     "loss": -19.73
+     "win": 15.15,
+     "draw": -2.35,
+     "loss": -19.85
     },
     "away": {
-     "loss": -15.27,
-     "draw": 2.23,
-     "win": 19.73
+     "loss": -15.15,
+     "draw": 2.35,
+     "win": 19.85
     }
    },
    "homeName": "Uzbekistan",
@@ -15450,17 +15439,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.584,
+   "expectedHome": 0.581,
    "prediction": {
     "home": {
-     "win": 14.55,
-     "draw": -2.95,
-     "loss": -20.45
+     "win": 14.67,
+     "draw": -2.83,
+     "loss": -20.33
     },
     "away": {
-     "loss": -14.55,
-     "draw": 2.95,
-     "win": 20.45
+     "loss": -14.67,
+     "draw": 2.83,
+     "win": 20.33
     }
    },
    "homeName": "Syria",
@@ -15681,17 +15670,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.265,
+   "expectedHome": 0.262,
    "prediction": {
     "home": {
-     "win": 25.72,
-     "draw": 8.22,
-     "loss": -9.28
+     "win": 25.81,
+     "draw": 8.31,
+     "loss": -9.19
     },
     "away": {
-     "loss": -25.72,
-     "draw": -8.22,
-     "win": 9.28
+     "loss": -25.81,
+     "draw": -8.31,
+     "win": 9.19
     }
    },
    "homeName": "DPR Korea",
@@ -15846,17 +15835,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.47,
+   "expectedHome": 0.473,
    "prediction": {
     "home": {
-     "win": 18.55,
-     "draw": 1.05,
-     "loss": -16.45
+     "win": 18.43,
+     "draw": 0.93,
+     "loss": -16.57
     },
     "away": {
-     "loss": -18.55,
-     "draw": -1.05,
-     "win": 16.45
+     "loss": -18.43,
+     "draw": -0.93,
+     "win": 16.57
     }
    },
    "homeName": "China PR",
@@ -16077,17 +16066,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.651,
+   "expectedHome": 0.654,
    "prediction": {
     "home": {
-     "win": 12.22,
-     "draw": -5.28,
-     "loss": -22.78
+     "win": 12.11,
+     "draw": -5.39,
+     "loss": -22.89
     },
     "away": {
-     "loss": -12.22,
-     "draw": 5.28,
-     "win": 22.78
+     "loss": -12.11,
+     "draw": 5.39,
+     "win": 22.89
     }
    },
    "homeName": "Uzbekistan",
@@ -16176,17 +16165,17 @@
    "source": "FIFA",
    "importance": 35,
    "knockout": false,
-   "expectedHome": 0.769,
+   "expectedHome": 0.772,
    "prediction": {
     "home": {
-     "win": 8.08,
-     "draw": -9.42,
-     "loss": -26.92
+     "win": 7.99,
+     "draw": -9.51,
+     "loss": -27.01
     },
     "away": {
-     "loss": -8.08,
-     "draw": 9.42,
-     "win": 26.92
+     "loss": -7.99,
+     "draw": 9.51,
+     "win": 27.01
     }
    },
    "homeName": "IR Iran",
@@ -17980,8 +17969,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 42,
-   "fixtures": 46
+   "results": 43,
+   "fixtures": 45
   },
   {
    "name": "FIFA Series™",
