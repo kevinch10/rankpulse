@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T22:52:10+00:00",
+ "generatedAt": "2026-10-01T23:03:42+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3032,6 +3032,39 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-10-01T23:00:00Z",
+   "date": "2026-10-01",
+   "home": "AIA",
+   "away": "ATG",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League C",
+   "city": "North Sound",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.288,
+   "prediction": {
+    "home": {
+     "win": 10.68,
+     "draw": 3.18,
+     "loss": -4.32
+    },
+    "away": {
+     "loss": -10.68,
+     "draw": -3.18,
+     "win": 4.32
+    }
+   },
+   "homeName": "Anguilla",
+   "awayName": "Antigua and Barbuda",
+   "fifaId": "do81z9nlq98fz6yv7xl0o76s4"
+  },
   {
    "kickoff": "2026-10-01T22:00:00Z",
    "date": "2026-10-01",
@@ -7860,39 +7893,6 @@
   }
  ],
  "fixtures": [
-  {
-   "kickoff": "2026-10-01T23:00:00Z",
-   "date": "2026-10-01",
-   "home": "AIA",
-   "away": "ATG",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League C",
-   "city": "North Sound",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.288,
-   "prediction": {
-    "home": {
-     "win": 10.68,
-     "draw": 3.18,
-     "loss": -4.32
-    },
-    "away": {
-     "loss": -10.68,
-     "draw": -3.18,
-     "win": 4.32
-    }
-   },
-   "homeName": "Anguilla",
-   "awayName": "Antigua and Barbuda",
-   "fifaId": "do81z9nlq98fz6yv7xl0o76s4"
-  },
   {
    "kickoff": "2026-10-02T00:00:00Z",
    "date": "2026-10-01",
@@ -17965,8 +17965,8 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 29,
-   "fixtures": 22
+   "results": 30,
+   "fixtures": 21
   },
   {
    "name": "Concacaf Series",
