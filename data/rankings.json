@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T18:54:58+00:00",
+ "generatedAt": "2026-10-01T19:05:43+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3103,7 +3103,7 @@
    "date": "2026-10-01",
    "home": "IRL",
    "away": "AUT",
-   "homeScore": 0,
+   "homeScore": 1,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
@@ -3137,7 +3137,7 @@
    "home": "WAL",
    "away": "NOR",
    "homeScore": 0,
-   "awayScore": 0,
+   "awayScore": 1,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -3236,7 +3236,7 @@
    "home": "DEN",
    "away": "POR",
    "homeScore": 0,
-   "awayScore": 0,
+   "awayScore": 1,
    "homePens": null,
    "awayPens": null,
    "status": 3,
