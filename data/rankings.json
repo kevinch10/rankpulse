@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T06:58:17+00:00",
+ "generatedAt": "2026-10-01T07:32:09+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -9387,7 +9387,7 @@
    "awayScore": null,
    "homePens": null,
    "awayPens": null,
-   "status": 1,
+   "status": 8,
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Rades",
@@ -9651,7 +9651,7 @@
    "awayScore": null,
    "homePens": null,
    "awayPens": null,
-   "status": 1,
+   "status": 8,
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Tangier",
