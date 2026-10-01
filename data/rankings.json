@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T17:41:50+00:00",
+ "generatedAt": "2026-10-01T17:55:27+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1788,20 +1788,6 @@
    "rankChange": 1
   },
   {
-   "id": "43994",
-   "code": "AZE",
-   "name": "Azerbaijan",
-   "confed": "UEFA",
-   "officialRank": 126,
-   "officialPoints": 1132.0,
-   "previousRank": 126,
-   "aliases": [],
-   "liveRank": 125,
-   "livePoints": 1136.78,
-   "pointsChange": 4.78,
-   "rankChange": 1
-  },
-  {
    "id": "43944",
    "code": "FRO",
    "name": "Faroe Islands",
@@ -1810,10 +1796,10 @@
    "officialPoints": 1136.59,
    "previousRank": 123,
    "aliases": [],
-   "liveRank": 126,
+   "liveRank": 125,
    "livePoints": 1135.38,
    "pointsChange": -1.21,
-   "rankChange": -3
+   "rankChange": -2
   },
   {
    "id": "43943",
@@ -1824,10 +1810,24 @@
    "officialPoints": 1130.64,
    "previousRank": 127,
    "aliases": [],
-   "liveRank": 127,
+   "liveRank": 126,
    "livePoints": 1135.37,
    "pointsChange": 4.73,
-   "rankChange": 0
+   "rankChange": 1
+  },
+  {
+   "id": "43994",
+   "code": "AZE",
+   "name": "Azerbaijan",
+   "confed": "UEFA",
+   "officialRank": 126,
+   "officialPoints": 1132.0,
+   "previousRank": 126,
+   "aliases": [],
+   "liveRank": 127,
+   "livePoints": 1132.42,
+   "pointsChange": 0.42,
+   "rankChange": -1
   },
   {
    "id": "43868",
@@ -2953,8 +2953,8 @@
    "previousRank": 206,
    "aliases": [],
    "liveRank": 206,
-   "livePoints": 790.53,
-   "pointsChange": -7.17,
+   "livePoints": 794.89,
+   "pointsChange": -2.81,
    "rankChange": 0
   },
   {
@@ -3041,26 +3041,15 @@
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "UEFA Nations League",
    "stage": "League D",
    "city": "Baku",
    "source": "FIFA",
+   "counted": true,
    "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.791,
-   "prediction": {
-    "home": {
-     "win": 3.14,
-     "draw": -4.36,
-     "loss": -11.86
-    },
-    "away": {
-     "loss": -3.14,
-     "draw": 4.36,
-     "win": 11.86
-    }
-   },
+   "homeDelta": -4.36,
+   "awayDelta": 4.36,
    "homeName": "Azerbaijan",
    "awayName": "Liechtenstein",
    "fifaId": "bpfw5f74zlysp5n229yblxwyc"
@@ -9482,17 +9471,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.568,
+   "expectedHome": 0.564,
    "prediction": {
     "home": {
-     "win": 6.49,
-     "draw": -1.01,
-     "loss": -8.51
+     "win": 6.55,
+     "draw": -0.95,
+     "loss": -8.45
     },
     "away": {
-     "loss": -6.49,
-     "draw": 1.01,
-     "win": 8.51
+     "loss": -6.55,
+     "draw": 0.95,
+     "win": 8.45
     }
    },
    "homeName": "Azerbaijan",
@@ -10505,17 +10494,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.47,
+   "expectedHome": 0.474,
    "prediction": {
     "home": {
-     "win": 5.3,
-     "draw": 0.3,
-     "loss": -4.7
+     "win": 5.26,
+     "draw": 0.26,
+     "loss": -4.74
     },
     "away": {
-     "loss": -5.3,
-     "draw": -0.3,
-     "win": 4.7
+     "loss": -5.26,
+     "draw": -0.26,
+     "win": 4.74
     }
    },
    "homeName": "Liechtenstein",
@@ -13087,17 +13076,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.209,
+   "expectedHome": 0.215,
    "prediction": {
     "home": {
-     "win": 11.86,
-     "draw": 4.36,
-     "loss": -3.14
+     "win": 11.78,
+     "draw": 4.28,
+     "loss": -3.22
     },
     "away": {
-     "loss": -11.86,
-     "draw": -4.36,
-     "win": 3.14
+     "loss": -11.78,
+     "draw": -4.28,
+     "win": 3.22
     }
    },
    "homeName": "Liechtenstein",
@@ -14515,17 +14504,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.315,
+   "expectedHome": 0.318,
    "prediction": {
     "home": {
-     "win": 6.85,
-     "draw": 1.85,
-     "loss": -3.15
+     "win": 6.82,
+     "draw": 1.82,
+     "loss": -3.18
     },
     "away": {
-     "loss": -6.85,
-     "draw": -1.85,
-     "win": 3.15
+     "loss": -6.82,
+     "draw": -1.82,
+     "win": 3.18
     }
    },
    "homeName": "Andorra",
@@ -14680,17 +14669,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.742,
+   "expectedHome": 0.739,
    "prediction": {
     "home": {
-     "win": 3.87,
-     "draw": -3.63,
-     "loss": -11.13
+     "win": 3.92,
+     "draw": -3.58,
+     "loss": -11.08
     },
     "away": {
-     "loss": -3.87,
-     "draw": 3.63,
-     "win": 11.13
+     "loss": -3.92,
+     "draw": 3.58,
+     "win": 11.08
     }
    },
    "homeName": "Lithuania",
