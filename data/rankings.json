@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T16:27:11+00:00",
+ "generatedAt": "2026-10-01T17:41:50+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3098,7 +3098,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Bandung",
    "source": "FIFA",
    "counted": true,
@@ -3120,7 +3120,7 @@
    "awayPens": null,
    "status": 0,
    "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
+   "stage": "FIFA ASEAN Cup",
    "city": "Jakarta",
    "source": "FIFA",
    "counted": true,
@@ -10158,6 +10158,39 @@
    "homeName": "Nicaragua",
    "awayName": "Dominican Republic",
    "fifaId": "22vzmv4uawrvo20ni0z64jzf8"
+  },
+  {
+   "kickoff": "2026-10-05T13:00:00Z",
+   "date": "2026-10-05",
+   "home": "IDN",
+   "away": "THA",
+   "homeScore": null,
+   "awayScore": null,
+   "homePens": null,
+   "awayPens": null,
+   "status": 1,
+   "competition": "FIFA ASEAN Cup™",
+   "stage": "FIFA ASEAN Cup",
+   "city": "Jakarta",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.409,
+   "prediction": {
+    "home": {
+     "win": 5.91,
+     "draw": 0.91,
+     "loss": -4.09
+    },
+    "away": {
+     "loss": -5.91,
+     "draw": -0.91,
+     "win": 4.09
+    }
+   },
+   "homeName": "Indonesia",
+   "awayName": "Thailand",
+   "fifaId": "400022957"
   },
   {
    "kickoff": "2026-10-05T15:00:00Z",
@@ -17991,7 +18024,7 @@
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
    "results": 16,
-   "fixtures": 3
+   "fixtures": 4
   },
   {
    "name": "CONMEBOL/UEFA Finalissima",
