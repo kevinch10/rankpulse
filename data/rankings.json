@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T12:08:42+00:00",
+ "generatedAt": "2026-10-01T12:33:25+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3032,6 +3032,39 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-10-01T12:30:00Z",
+   "date": "2026-10-01",
+   "home": "MAS",
+   "away": "SGP",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "FIFA ASEAN Cup™",
+   "stage": "FIFA ASEAN Cup Group Stage",
+   "city": "Bandung",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.526,
+   "prediction": {
+    "home": {
+     "win": 4.74,
+     "draw": -0.26,
+     "loss": -5.26
+    },
+    "away": {
+     "loss": -4.74,
+     "draw": 0.26,
+     "win": 5.26
+    }
+   },
+   "homeName": "Malaysia",
+   "awayName": "Singapore",
+   "fifaId": "400022943"
+  },
   {
    "kickoff": "2026-10-01T00:00:00Z",
    "date": "2026-09-30",
@@ -7563,39 +7596,6 @@
    "homeName": "Indonesia",
    "awayName": "Bangladesh",
    "fifaId": "400022939"
-  },
-  {
-   "kickoff": "2026-10-01T12:30:00Z",
-   "date": "2026-10-01",
-   "home": "MAS",
-   "away": "SGP",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "FIFA ASEAN Cup™",
-   "stage": "FIFA ASEAN Cup Group Stage",
-   "city": "Bandung",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.526,
-   "prediction": {
-    "home": {
-     "win": 4.74,
-     "draw": -0.26,
-     "loss": -5.26
-    },
-    "away": {
-     "loss": -4.74,
-     "draw": 0.26,
-     "win": 5.26
-    }
-   },
-   "homeName": "Malaysia",
-   "awayName": "Singapore",
-   "fifaId": "400022943"
   },
   {
    "kickoff": "2026-10-01T14:00:00Z",
@@ -18034,8 +18034,8 @@
    "name": "FIFA ASEAN Cup™",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 14,
-   "fixtures": 5
+   "results": 15,
+   "fixtures": 4
   },
   {
    "name": "CONMEBOL/UEFA Finalissima",
