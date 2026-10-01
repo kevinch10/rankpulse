@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T21:54:14+00:00",
+ "generatedAt": "2026-10-01T22:04:45+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3032,6 +3032,39 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-10-01T22:00:00Z",
+   "date": "2026-10-01",
+   "home": "CUW",
+   "away": "TRI",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League A",
+   "city": "Willemstad",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.592,
+   "prediction": {
+    "home": {
+     "win": 6.12,
+     "draw": -1.38,
+     "loss": -8.88
+    },
+    "away": {
+     "loss": -6.12,
+     "draw": 1.38,
+     "win": 8.88
+    }
+   },
+   "homeName": "Curaçao",
+   "awayName": "Trinidad and Tobago",
+   "fifaId": "206rs2iga7ytxw58gqfsx7xg4"
+  },
   {
    "kickoff": "2026-10-01T21:00:00Z",
    "date": "2026-10-01",
@@ -7838,39 +7871,6 @@
   }
  ],
  "fixtures": [
-  {
-   "kickoff": "2026-10-01T22:00:00Z",
-   "date": "2026-10-01",
-   "home": "CUW",
-   "away": "TRI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League A",
-   "city": "Willemstad",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.592,
-   "prediction": {
-    "home": {
-     "win": 6.12,
-     "draw": -1.38,
-     "loss": -8.88
-    },
-    "away": {
-     "loss": -6.12,
-     "draw": 1.38,
-     "win": 8.88
-    }
-   },
-   "homeName": "Curaçao",
-   "awayName": "Trinidad and Tobago",
-   "fifaId": "206rs2iga7ytxw58gqfsx7xg4"
-  },
   {
    "kickoff": "2026-10-01T23:00:00Z",
    "date": "2026-10-01",
@@ -17976,8 +17976,8 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 28,
-   "fixtures": 23
+   "results": 29,
+   "fixtures": 22
   },
   {
    "name": "Concacaf Series",
