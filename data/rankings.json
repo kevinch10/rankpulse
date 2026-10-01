@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T17:55:27+00:00",
+ "generatedAt": "2026-10-01T18:31:17+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1187,8 +1187,8 @@
    "previousRank": 81,
    "aliases": [],
    "liveRank": 82,
-   "livePoints": 1286.73,
-   "pointsChange": -8.87,
+   "livePoints": 1296.67,
+   "pointsChange": 1.07,
    "rankChange": -1
   },
   {
@@ -1576,20 +1576,6 @@
    "rankChange": 7
   },
   {
-   "id": "43863",
-   "code": "KEN",
-   "name": "Kenya",
-   "confed": "CAF",
-   "officialRank": 109,
-   "officialPoints": 1185.08,
-   "previousRank": 109,
-   "aliases": [],
-   "liveRank": 110,
-   "livePoints": 1178.62,
-   "pointsChange": -6.46,
-   "rankChange": -1
-  },
-  {
    "id": "44027",
    "code": "KAZ",
    "name": "Kazakhstan",
@@ -1598,10 +1584,10 @@
    "officialPoints": 1180.78,
    "previousRank": 111,
    "aliases": [],
-   "liveRank": 111,
+   "liveRank": 110,
    "livePoints": 1176.5,
    "pointsChange": -4.28,
-   "rankChange": 0
+   "rankChange": 1
   },
   {
    "id": "43870",
@@ -1612,10 +1598,10 @@
    "officialPoints": 1176.68,
    "previousRank": 113,
    "aliases": [],
-   "liveRank": 112,
+   "liveRank": 111,
    "livePoints": 1176.05,
    "pointsChange": -0.63,
-   "rankChange": 1
+   "rankChange": 2
   },
   {
    "id": "43825",
@@ -1626,10 +1612,10 @@
    "officialPoints": 1172.22,
    "previousRank": 115,
    "aliases": [],
-   "liveRank": 113,
+   "liveRank": 112,
    "livePoints": 1175.12,
    "pointsChange": 2.9,
-   "rankChange": 2
+   "rankChange": 3
   },
   {
    "id": "43875",
@@ -1640,10 +1626,10 @@
    "officialPoints": 1175.33,
    "previousRank": 114,
    "aliases": [],
-   "liveRank": 114,
+   "liveRank": 113,
    "livePoints": 1174.71,
    "pointsChange": -0.62,
-   "rankChange": 0
+   "rankChange": 1
   },
   {
    "id": "43866",
@@ -1654,10 +1640,24 @@
    "officialPoints": 1182.08,
    "previousRank": 110,
    "aliases": [],
-   "liveRank": 115,
+   "liveRank": 114,
    "livePoints": 1168.89,
    "pointsChange": -13.19,
-   "rankChange": -5
+   "rankChange": -4
+  },
+  {
+   "id": "43863",
+   "code": "KEN",
+   "name": "Kenya",
+   "confed": "CAF",
+   "officialRank": 109,
+   "officialPoints": 1185.08,
+   "previousRank": 109,
+   "aliases": [],
+   "liveRank": 115,
+   "livePoints": 1168.68,
+   "pointsChange": -16.4,
+   "rankChange": -6
   },
   {
    "id": "43886",
@@ -3032,6 +3032,27 @@
   }
  ],
  "results": [
+  {
+   "date": "2026-10-01",
+   "kickoff": "2026-10-01T16:00:00Z",
+   "home": "GUI",
+   "away": "KEN",
+   "homeScore": 1,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "city": "Conakry",
+   "status": 0,
+   "competition": "CAF Africa Cup of Nations Qualifiers",
+   "stage": "Group stage",
+   "source": "Wikipedia",
+   "counted": true,
+   "importance": 25,
+   "homeDelta": 9.94,
+   "awayDelta": -9.94,
+   "homeName": "Guinea",
+   "awayName": "Kenya"
+  },
   {
    "kickoff": "2026-10-01T16:00:00Z",
    "date": "2026-10-01",
@@ -7609,38 +7630,6 @@
  ],
  "fixtures": [
   {
-   "date": "2026-10-01",
-   "kickoff": "2026-10-01T16:00:00Z",
-   "home": "GUI",
-   "away": "KEN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "city": "Conakry",
-   "status": 1,
-   "competition": "CAF Africa Cup of Nations Qualifiers",
-   "stage": "Group stage",
-   "source": "Wikipedia",
-   "importance": 25,
-   "knockout": false,
-   "expectedHome": 0.602,
-   "prediction": {
-    "home": {
-     "win": 9.94,
-     "draw": -2.56,
-     "loss": -15.06
-    },
-    "away": {
-     "loss": -9.94,
-     "draw": 2.56,
-     "win": 15.06
-    }
-   },
-   "homeName": "Guinea",
-   "awayName": "Kenya"
-  },
-  {
    "kickoff": "2026-10-01T18:45:00Z",
    "date": "2026-10-01",
    "home": "DEN",
@@ -11807,17 +11796,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.82,
+   "expectedHome": 0.826,
    "prediction": {
     "home": {
-     "win": 4.49,
-     "draw": -8.01,
-     "loss": -20.51
+     "win": 4.35,
+     "draw": -8.15,
+     "loss": -20.65
     },
     "away": {
-     "loss": -4.49,
-     "draw": 8.01,
-     "win": 20.51
+     "loss": -4.35,
+     "draw": 8.15,
+     "win": 20.65
     }
    },
    "homeName": "Guinea",
@@ -11839,17 +11828,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.748,
+   "expectedHome": 0.756,
    "prediction": {
     "home": {
-     "win": 6.29,
-     "draw": -6.21,
-     "loss": -18.71
+     "win": 6.11,
+     "draw": -6.39,
+     "loss": -18.89
     },
     "away": {
-     "loss": -6.29,
-     "draw": 6.21,
-     "win": 18.71
+     "loss": -6.11,
+     "draw": 6.39,
+     "win": 18.89
     }
    },
    "homeName": "South Africa",
@@ -13664,17 +13653,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.18,
+   "expectedHome": 0.174,
    "prediction": {
     "home": {
-     "win": 20.51,
-     "draw": 8.01,
-     "loss": -4.49
+     "win": 20.65,
+     "draw": 8.15,
+     "loss": -4.35
     },
     "away": {
-     "loss": -20.51,
-     "draw": -8.01,
-     "win": 4.49
+     "loss": -20.65,
+     "draw": -8.15,
+     "win": 4.35
     }
    },
    "homeName": "Eritrea",
@@ -13696,17 +13685,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.252,
+   "expectedHome": 0.244,
    "prediction": {
     "home": {
-     "win": 18.71,
-     "draw": 6.21,
-     "loss": -6.29
+     "win": 18.89,
+     "draw": 6.39,
+     "loss": -6.11
     },
     "away": {
-     "loss": -18.71,
-     "draw": -6.21,
-     "win": 6.29
+     "loss": -18.89,
+     "draw": -6.39,
+     "win": 6.11
     }
    },
    "homeName": "Kenya",
@@ -16643,17 +16632,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.249,
+   "expectedHome": 0.256,
    "prediction": {
     "home": {
-     "win": 18.77,
-     "draw": 6.27,
-     "loss": -6.23
+     "win": 18.59,
+     "draw": 6.09,
+     "loss": -6.41
     },
     "away": {
-     "loss": -18.77,
-     "draw": -6.27,
-     "win": 6.23
+     "loss": -18.59,
+     "draw": -6.09,
+     "win": 6.41
     }
    },
    "homeName": "Eritrea",
@@ -16675,17 +16664,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.337,
+   "expectedHome": 0.346,
    "prediction": {
     "home": {
-     "win": 16.57,
-     "draw": 4.07,
-     "loss": -8.43
+     "win": 16.35,
+     "draw": 3.85,
+     "loss": -8.65
     },
     "away": {
-     "loss": -16.57,
-     "draw": -4.07,
-     "win": 8.43
+     "loss": -16.35,
+     "draw": -3.85,
+     "win": 8.65
     }
    },
    "homeName": "Guinea",
@@ -17411,17 +17400,17 @@
    "source": "Wikipedia",
    "importance": 25,
    "knockout": false,
-   "expectedHome": 0.398,
+   "expectedHome": 0.38,
    "prediction": {
     "home": {
-     "win": 15.06,
-     "draw": 2.56,
-     "loss": -9.94
+     "win": 15.51,
+     "draw": 3.01,
+     "loss": -9.49
     },
     "away": {
-     "loss": -15.06,
-     "draw": -2.56,
-     "win": 9.94
+     "loss": -15.51,
+     "draw": -3.01,
+     "win": 9.49
     }
    },
    "homeName": "Kenya",
@@ -18096,8 +18085,8 @@
    "name": "CAF Africa Cup of Nations Qualifiers",
    "group": "CAF",
    "weight": "I=25",
-   "results": 46,
-   "fixtures": 98
+   "results": 47,
+   "fixtures": 97
   },
   {
    "name": "COSAFA Cup",
