@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T12:58:43+00:00",
+ "generatedAt": "2026-10-01T13:16:32+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3070,8 +3070,8 @@
    "date": "2026-10-01",
    "home": "IDN",
    "away": "BAN",
-   "homeScore": 2,
-   "awayScore": 0,
+   "homeScore": 5,
+   "awayScore": 1,
    "homePens": null,
    "awayPens": null,
    "status": 3,
