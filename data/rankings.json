@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T19:51:44+00:00",
+ "generatedAt": "2026-10-01T00:07:00+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3032,6 +3032,39 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-10-01T00:00:00Z",
+   "date": "2026-09-30",
+   "home": "ARG",
+   "away": "BOL",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Córdoba",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.923,
+   "prediction": {
+    "home": {
+     "win": 0.77,
+     "draw": -4.23,
+     "loss": -9.23
+    },
+    "away": {
+     "loss": -0.77,
+     "draw": 4.23,
+     "win": 9.23
+    }
+   },
+   "homeName": "Argentina",
+   "awayName": "Bolivia",
+   "fifaId": "855g6ww4czhvs9o8jcdo1w8wk"
+  },
   {
    "date": "2026-09-30",
    "kickoff": "2026-09-30T16:00:00Z",
@@ -7477,138 +7510,6 @@
  ],
  "fixtures": [
   {
-   "kickoff": "2026-09-30T00:00:00Z",
-   "date": "2026-09-30",
-   "home": "MRI",
-   "away": "DJI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 8,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Tbc",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.555,
-   "prediction": {
-    "home": {
-     "win": 4.45,
-     "draw": -0.55,
-     "loss": -5.55
-    },
-    "away": {
-     "loss": -4.45,
-     "draw": 0.55,
-     "win": 5.55
-    }
-   },
-   "homeName": "Mauritius",
-   "awayName": "Djibouti",
-   "fifaId": "axjyhxkueeefvyubngxaltmvo"
-  },
-  {
-   "kickoff": "2026-09-30T17:30:00Z",
-   "date": "2026-09-30",
-   "home": "UAE",
-   "away": "QAT",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Gulf Cup of Nations",
-   "stage": "Group Stage",
-   "city": "Jeddah",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.461,
-   "prediction": {
-    "home": {
-     "win": 5.39,
-     "draw": 0.39,
-     "loss": -4.61
-    },
-    "away": {
-     "loss": -5.39,
-     "draw": -0.39,
-     "win": 4.61
-    }
-   },
-   "homeName": "United Arab Emirates",
-   "awayName": "Qatar",
-   "fifaId": "6aky6ityitwj9hkq87tyukges"
-  },
-  {
-   "kickoff": "2026-09-30T17:30:00Z",
-   "date": "2026-09-30",
-   "home": "BHR",
-   "away": "YEM",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Gulf Cup of Nations",
-   "stage": "Group Stage",
-   "city": "Jeddah",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.674,
-   "prediction": {
-    "home": {
-     "win": 3.26,
-     "draw": -1.74,
-     "loss": -6.74
-    },
-    "away": {
-     "loss": -3.26,
-     "draw": 1.74,
-     "win": 6.74
-    }
-   },
-   "homeName": "Bahrain",
-   "awayName": "Yemen",
-   "fifaId": "6avvm95mvovmrziq9ch5pm68k"
-  },
-  {
-   "kickoff": "2026-10-01T00:00:00Z",
-   "date": "2026-09-30",
-   "home": "ARG",
-   "away": "BOL",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Córdoba",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.923,
-   "prediction": {
-    "home": {
-     "win": 0.77,
-     "draw": -4.23,
-     "loss": -9.23
-    },
-    "away": {
-     "loss": -0.77,
-     "draw": 4.23,
-     "win": 9.23
-    }
-   },
-   "homeName": "Argentina",
-   "awayName": "Bolivia",
-   "fifaId": "855g6ww4czhvs9o8jcdo1w8wk"
-  },
-  {
    "kickoff": "2026-10-01T00:00:00Z",
    "date": "2026-10-01",
    "home": "MDV",
@@ -7640,39 +7541,6 @@
    "homeName": "Maldives",
    "awayName": "Lebanon",
    "fifaId": "73xmmdo8ph6wju9at87eagys4"
-  },
-  {
-   "kickoff": "2026-10-01T02:00:00Z",
-   "date": "2026-09-30",
-   "home": "COK",
-   "away": "TAH",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Matavera, Rarotonga",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.361,
-   "prediction": {
-    "home": {
-     "win": 6.39,
-     "draw": 1.39,
-     "loss": -3.61
-    },
-    "away": {
-     "loss": -6.39,
-     "draw": -1.39,
-     "win": 3.61
-    }
-   },
-   "homeName": "Cook Islands",
-   "awayName": "Tahiti",
-   "fifaId": "dfcv4a69655b4nnxgb8u9q6tw"
   },
   {
    "kickoff": "2026-10-01T12:30:00Z",
@@ -18156,8 +18024,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 40,
-   "fixtures": 50
+   "results": 41,
+   "fixtures": 47
   },
   {
    "name": "FIFA Series™",
@@ -18311,7 +18179,7 @@
    "group": "AFC",
    "weight": "I=10 · 5 outside windows",
    "results": 0,
-   "fixtures": 2
+   "fixtures": 0
   },
   {
    "name": "SAFF Championship",
