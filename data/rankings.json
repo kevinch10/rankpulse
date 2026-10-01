@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T19:26:30+00:00",
+ "generatedAt": "2026-10-01T19:39:42+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3103,7 +3103,7 @@
    "date": "2026-10-01",
    "home": "IRL",
    "away": "AUT",
-   "homeScore": 1,
+   "homeScore": 2,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
@@ -3202,7 +3202,7 @@
    "date": "2026-10-01",
    "home": "GRE",
    "away": "NED",
-   "homeScore": 1,
+   "homeScore": 2,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
