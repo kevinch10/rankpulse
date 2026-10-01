@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T22:38:23+00:00",
+ "generatedAt": "2026-10-01T22:52:10+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2042,6 +2042,20 @@
    "rankChange": 5
   },
   {
+   "id": "43907",
+   "code": "GUY",
+   "name": "Guyana",
+   "confed": "CONCACAF",
+   "officialRank": 150,
+   "officialPoints": 1049.32,
+   "previousRank": 150,
+   "aliases": [],
+   "liveRank": 143,
+   "livePoints": 1066.33,
+   "pointsChange": 17.01,
+   "rankChange": 7
+  },
+  {
    "id": "43957",
    "code": "LTU",
    "name": "Lithuania",
@@ -2050,10 +2064,10 @@
    "officialPoints": 1056.85,
    "previousRank": 149,
    "aliases": [],
-   "liveRank": 143,
+   "liveRank": 144,
    "livePoints": 1065.83,
    "pointsChange": 8.98,
-   "rankChange": 6
+   "rankChange": 5
   },
   {
    "id": "43842",
@@ -2064,10 +2078,10 @@
    "officialPoints": 1065.24,
    "previousRank": 145,
    "aliases": [],
-   "liveRank": 144,
+   "liveRank": 145,
    "livePoints": 1065.24,
    "pointsChange": 0.0,
-   "rankChange": 1
+   "rankChange": 0
   },
   {
    "id": "43851",
@@ -2078,10 +2092,10 @@
    "officialPoints": 1080.82,
    "previousRank": 139,
    "aliases": [],
-   "liveRank": 145,
+   "liveRank": 146,
    "livePoints": 1065.14,
    "pointsChange": -15.68,
-   "rankChange": -6
+   "rankChange": -7
   },
   {
    "id": "43865",
@@ -2092,10 +2106,10 @@
    "officialPoints": 1080.44,
    "previousRank": 140,
    "aliases": [],
-   "liveRank": 146,
+   "liveRank": 147,
    "livePoints": 1064.58,
    "pointsChange": -15.86,
-   "rankChange": -6
+   "rankChange": -7
   },
   {
    "id": "43857",
@@ -2106,24 +2120,10 @@
    "officialPoints": 1077.52,
    "previousRank": 143,
    "aliases": [],
-   "liveRank": 147,
+   "liveRank": 148,
    "livePoints": 1064.46,
    "pointsChange": -13.06,
-   "rankChange": -4
-  },
-  {
-   "id": "43907",
-   "code": "GUY",
-   "name": "Guyana",
-   "confed": "CONCACAF",
-   "officialRank": 150,
-   "officialPoints": 1049.32,
-   "previousRank": 150,
-   "aliases": [],
-   "liveRank": 148,
-   "livePoints": 1061.15,
-   "pointsChange": 11.83,
-   "rankChange": 2
+   "rankChange": -5
   },
   {
    "id": "43836",
@@ -2602,20 +2602,6 @@
    "rankChange": 2
   },
   {
-   "id": "43997",
-   "code": "DMA",
-   "name": "Dominica",
-   "confed": "CONCACAF",
-   "officialRank": 182,
-   "officialPoints": 897.69,
-   "previousRank": 182,
-   "aliases": [],
-   "liveRank": 182,
-   "livePoints": 894.81,
-   "pointsChange": -2.88,
-   "rankChange": 0
-  },
-  {
    "id": "43809",
    "code": "BAN",
    "name": "Bangladesh",
@@ -2624,10 +2610,10 @@
    "officialPoints": 902.93,
    "previousRank": 181,
    "aliases": [],
-   "liveRank": 183,
+   "liveRank": 182,
    "livePoints": 893.46,
    "pointsChange": -9.47,
-   "rankChange": -2
+   "rankChange": -1
   },
   {
    "id": "20006",
@@ -2638,10 +2624,10 @@
    "officialPoints": 887.06,
    "previousRank": 184,
    "aliases": [],
-   "liveRank": 184,
+   "liveRank": 183,
    "livePoints": 890.97,
    "pointsChange": 3.91,
-   "rankChange": 0
+   "rankChange": 1
   },
   {
    "id": "43894",
@@ -2652,10 +2638,24 @@
    "officialPoints": 875.61,
    "previousRank": 189,
    "aliases": [],
-   "liveRank": 185,
+   "liveRank": 184,
    "livePoints": 890.31,
    "pointsChange": 14.7,
-   "rankChange": 4
+   "rankChange": 5
+  },
+  {
+   "id": "43997",
+   "code": "DMA",
+   "name": "Dominica",
+   "confed": "CONCACAF",
+   "officialRank": 182,
+   "officialPoints": 897.69,
+   "previousRank": 182,
+   "aliases": [],
+   "liveRank": 185,
+   "livePoints": 889.63,
+   "pointsChange": -8.06,
+   "rankChange": -3
   },
   {
    "id": "43837",
@@ -3071,29 +3071,18 @@
    "home": "DMA",
    "away": "GUY",
    "homeScore": 1,
-   "awayScore": 4,
+   "awayScore": 5,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Mayagüez",
    "source": "FIFA",
+   "counted": true,
    "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.346,
-   "prediction": {
-    "home": {
-     "win": 9.82,
-     "draw": 2.32,
-     "loss": -5.18
-    },
-    "away": {
-     "loss": -9.82,
-     "draw": -2.32,
-     "win": 5.18
-    }
-   },
+   "homeDelta": -5.18,
+   "awayDelta": 5.18,
    "homeName": "Dominica",
    "awayName": "Guyana",
    "fifaId": "do25o5p08f48abpaina3tpmac"
@@ -9735,17 +9724,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.654,
+   "expectedHome": 0.663,
    "prediction": {
     "home": {
-     "win": 5.18,
-     "draw": -2.32,
-     "loss": -9.82
+     "win": 5.05,
+     "draw": -2.45,
+     "loss": -9.95
     },
     "away": {
-     "loss": -5.18,
-     "draw": 2.32,
-     "win": 9.82
+     "loss": -5.05,
+     "draw": 2.45,
+     "win": 9.95
     }
    },
    "homeName": "Guyana",
