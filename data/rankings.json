@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T20:43:46+00:00",
+ "generatedAt": "2026-10-01T20:54:55+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3038,7 +3038,7 @@
    "home": "VGB",
    "away": "MSR",
    "homeScore": 0,
-   "awayScore": 1,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
    "status": 3,
