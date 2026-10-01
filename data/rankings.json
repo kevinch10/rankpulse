@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T01:54:39+00:00",
+ "generatedAt": "2026-10-01T02:05:47+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -31,8 +31,8 @@
    "previousRank": 1,
    "aliases": [],
    "liveRank": 2,
-   "livePoints": 1970.37,
-   "pointsChange": 0.0,
+   "livePoints": 1971.14,
+   "pointsChange": 0.77,
    "rankChange": 0
   },
   {
@@ -1129,8 +1129,8 @@
    "previousRank": 77,
    "aliases": [],
    "liveRank": 78,
-   "livePoints": 1322.97,
-   "pointsChange": -3.03,
+   "livePoints": 1322.2,
+   "pointsChange": -3.8,
    "rankChange": -1
   },
   {
@@ -3041,26 +3041,15 @@
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Córdoba",
    "source": "FIFA",
+   "counted": true,
    "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.923,
-   "prediction": {
-    "home": {
-     "win": 0.77,
-     "draw": -4.23,
-     "loss": -9.23
-    },
-    "away": {
-     "loss": -0.77,
-     "draw": 4.23,
-     "win": 9.23
-    }
-   },
+   "homeDelta": 0.77,
+   "awayDelta": -0.77,
    "homeName": "Argentina",
    "awayName": "Bolivia",
    "fifaId": "855g6ww4czhvs9o8jcdo1w8wk"
