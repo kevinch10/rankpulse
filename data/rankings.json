@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T18:31:17+00:00",
+ "generatedAt": "2026-10-01T18:54:58+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3032,6 +3032,237 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-10-01T18:45:00Z",
+   "date": "2026-10-01",
+   "home": "MLT",
+   "away": "GIB",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League D",
+   "city": "Ta' Qali",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.667,
+   "prediction": {
+    "home": {
+     "win": 5.0,
+     "draw": -2.5,
+     "loss": -10.0
+    },
+    "away": {
+     "loss": -5.0,
+     "draw": 2.5,
+     "win": 10.0
+    }
+   },
+   "homeName": "Malta",
+   "awayName": "Gibraltar",
+   "fifaId": "g1fawoktrqaa39jcn5luvg9g"
+  },
+  {
+   "kickoff": "2026-10-01T18:45:00Z",
+   "date": "2026-10-01",
+   "home": "ISR",
+   "away": "KOS",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League B",
+   "city": "Debrecen",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.499,
+   "prediction": {
+    "home": {
+     "win": 7.51,
+     "draw": 0.01,
+     "loss": -7.49
+    },
+    "away": {
+     "loss": -7.51,
+     "draw": -0.01,
+     "win": 7.49
+    }
+   },
+   "homeName": "Israel",
+   "awayName": "Kosovo",
+   "fifaId": "er1ybb9wws6zb97811bkwry8k"
+  },
+  {
+   "kickoff": "2026-10-01T18:45:00Z",
+   "date": "2026-10-01",
+   "home": "IRL",
+   "away": "AUT",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League B",
+   "city": "Dublin",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.344,
+   "prediction": {
+    "home": {
+     "win": 9.85,
+     "draw": 2.35,
+     "loss": -5.15
+    },
+    "away": {
+     "loss": -9.85,
+     "draw": -2.35,
+     "win": 5.15
+    }
+   },
+   "homeName": "Republic of Ireland",
+   "awayName": "Austria",
+   "fifaId": "erog2nrclcimh1ezcka2drnro"
+  },
+  {
+   "kickoff": "2026-10-01T18:45:00Z",
+   "date": "2026-10-01",
+   "home": "WAL",
+   "away": "NOR",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League A",
+   "city": "Cardiff",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.364,
+   "prediction": {
+    "home": {
+     "win": 9.54,
+     "draw": 2.04,
+     "loss": -5.46
+    },
+    "away": {
+     "loss": -9.54,
+     "draw": -2.04,
+     "win": 5.46
+    }
+   },
+   "homeName": "Wales",
+   "awayName": "Norway",
+   "fifaId": "74s5v2g17opw14c1z0go2wi6s"
+  },
+  {
+   "kickoff": "2026-10-01T18:45:00Z",
+   "date": "2026-10-01",
+   "home": "GER",
+   "away": "SRB",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League A",
+   "city": "Munich",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.704,
+   "prediction": {
+    "home": {
+     "win": 4.44,
+     "draw": -3.06,
+     "loss": -10.56
+    },
+    "away": {
+     "loss": -4.44,
+     "draw": 3.06,
+     "win": 10.56
+    }
+   },
+   "homeName": "Germany",
+   "awayName": "Serbia",
+   "fifaId": "730t75w56g2inuuhdvcp4ox78"
+  },
+  {
+   "kickoff": "2026-10-01T18:45:00Z",
+   "date": "2026-10-01",
+   "home": "GRE",
+   "away": "NED",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League A",
+   "city": "Thessaloniki",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.25,
+   "prediction": {
+    "home": {
+     "win": 11.26,
+     "draw": 3.76,
+     "loss": -3.74
+    },
+    "away": {
+     "loss": -11.26,
+     "draw": -3.76,
+     "win": 3.74
+    }
+   },
+   "homeName": "Greece",
+   "awayName": "Netherlands",
+   "fifaId": "73nbo1cxcvm18bwutce9ip0r8"
+  },
+  {
+   "kickoff": "2026-10-01T18:45:00Z",
+   "date": "2026-10-01",
+   "home": "DEN",
+   "away": "POR",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "UEFA Nations League",
+   "stage": "League A",
+   "city": "Copenhagen",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.335,
+   "prediction": {
+    "home": {
+     "win": 9.98,
+     "draw": 2.48,
+     "loss": -5.02
+    },
+    "away": {
+     "loss": -9.98,
+     "draw": -2.48,
+     "win": 5.02
+    }
+   },
+   "homeName": "Denmark",
+   "awayName": "Portugal",
+   "fifaId": "74882wljw1vbbfojlbv2xjqj8"
+  },
   {
    "date": "2026-10-01",
    "kickoff": "2026-10-01T16:00:00Z",
@@ -7629,237 +7860,6 @@
   }
  ],
  "fixtures": [
-  {
-   "kickoff": "2026-10-01T18:45:00Z",
-   "date": "2026-10-01",
-   "home": "DEN",
-   "away": "POR",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League A",
-   "city": "Copenhagen",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.335,
-   "prediction": {
-    "home": {
-     "win": 9.98,
-     "draw": 2.48,
-     "loss": -5.02
-    },
-    "away": {
-     "loss": -9.98,
-     "draw": -2.48,
-     "win": 5.02
-    }
-   },
-   "homeName": "Denmark",
-   "awayName": "Portugal",
-   "fifaId": "74882wljw1vbbfojlbv2xjqj8"
-  },
-  {
-   "kickoff": "2026-10-01T18:45:00Z",
-   "date": "2026-10-01",
-   "home": "GRE",
-   "away": "NED",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League A",
-   "city": "Thessaloniki",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.25,
-   "prediction": {
-    "home": {
-     "win": 11.26,
-     "draw": 3.76,
-     "loss": -3.74
-    },
-    "away": {
-     "loss": -11.26,
-     "draw": -3.76,
-     "win": 3.74
-    }
-   },
-   "homeName": "Greece",
-   "awayName": "Netherlands",
-   "fifaId": "73nbo1cxcvm18bwutce9ip0r8"
-  },
-  {
-   "kickoff": "2026-10-01T18:45:00Z",
-   "date": "2026-10-01",
-   "home": "GER",
-   "away": "SRB",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League A",
-   "city": "Munich",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.704,
-   "prediction": {
-    "home": {
-     "win": 4.44,
-     "draw": -3.06,
-     "loss": -10.56
-    },
-    "away": {
-     "loss": -4.44,
-     "draw": 3.06,
-     "win": 10.56
-    }
-   },
-   "homeName": "Germany",
-   "awayName": "Serbia",
-   "fifaId": "730t75w56g2inuuhdvcp4ox78"
-  },
-  {
-   "kickoff": "2026-10-01T18:45:00Z",
-   "date": "2026-10-01",
-   "home": "WAL",
-   "away": "NOR",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League A",
-   "city": "Cardiff",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.364,
-   "prediction": {
-    "home": {
-     "win": 9.54,
-     "draw": 2.04,
-     "loss": -5.46
-    },
-    "away": {
-     "loss": -9.54,
-     "draw": -2.04,
-     "win": 5.46
-    }
-   },
-   "homeName": "Wales",
-   "awayName": "Norway",
-   "fifaId": "74s5v2g17opw14c1z0go2wi6s"
-  },
-  {
-   "kickoff": "2026-10-01T18:45:00Z",
-   "date": "2026-10-01",
-   "home": "IRL",
-   "away": "AUT",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League B",
-   "city": "Dublin",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.344,
-   "prediction": {
-    "home": {
-     "win": 9.85,
-     "draw": 2.35,
-     "loss": -5.15
-    },
-    "away": {
-     "loss": -9.85,
-     "draw": -2.35,
-     "win": 5.15
-    }
-   },
-   "homeName": "Republic of Ireland",
-   "awayName": "Austria",
-   "fifaId": "erog2nrclcimh1ezcka2drnro"
-  },
-  {
-   "kickoff": "2026-10-01T18:45:00Z",
-   "date": "2026-10-01",
-   "home": "ISR",
-   "away": "KOS",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League B",
-   "city": "Debrecen",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.499,
-   "prediction": {
-    "home": {
-     "win": 7.51,
-     "draw": 0.01,
-     "loss": -7.49
-    },
-    "away": {
-     "loss": -7.51,
-     "draw": -0.01,
-     "win": 7.49
-    }
-   },
-   "homeName": "Israel",
-   "awayName": "Kosovo",
-   "fifaId": "er1ybb9wws6zb97811bkwry8k"
-  },
-  {
-   "kickoff": "2026-10-01T18:45:00Z",
-   "date": "2026-10-01",
-   "home": "MLT",
-   "away": "GIB",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "UEFA Nations League",
-   "stage": "League D",
-   "city": "Ta' Qali",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.667,
-   "prediction": {
-    "home": {
-     "win": 5.0,
-     "draw": -2.5,
-     "loss": -10.0
-    },
-    "away": {
-     "loss": -5.0,
-     "draw": 2.5,
-     "win": 10.0
-    }
-   },
-   "homeName": "Malta",
-   "awayName": "Gibraltar",
-   "fifaId": "g1fawoktrqaa39jcn5luvg9g"
-  },
   {
    "kickoff": "2026-10-01T19:00:00Z",
    "date": "2026-10-01",
@@ -18029,8 +18029,8 @@
    "name": "UEFA Nations League",
    "group": "UEFA",
    "weight": "I=15 · 25 play-offs & finals",
-   "results": 53,
-   "fixtures": 103
+   "results": 60,
+   "fixtures": 96
   },
   {
    "name": "Baltic Cup",
