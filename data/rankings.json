@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T22:04:45+00:00",
+ "generatedAt": "2026-10-01T22:23:46+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3071,7 +3071,7 @@
    "home": "DMA",
    "away": "GUY",
    "homeScore": 0,
-   "awayScore": 2,
+   "awayScore": 3,
    "homePens": null,
    "awayPens": null,
    "status": 3,
