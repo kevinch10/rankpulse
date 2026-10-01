@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T23:03:42+00:00",
+ "generatedAt": "2026-10-01T23:37:18+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3038,7 +3038,7 @@
    "home": "AIA",
    "away": "ATG",
    "homeScore": 0,
-   "awayScore": 0,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -3070,7 +3070,7 @@
    "date": "2026-10-01",
    "home": "CUW",
    "away": "TRI",
-   "homeScore": 0,
+   "homeScore": 1,
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
