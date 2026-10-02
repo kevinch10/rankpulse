@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T01:53:00+00:00",
+ "generatedAt": "2026-10-02T02:06:03+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1201,8 +1201,8 @@
    "previousRank": 83,
    "aliases": [],
    "liveRank": 83,
-   "livePoints": 1281.36,
-   "pointsChange": 16.78,
+   "livePoints": 1286.27,
+   "pointsChange": 21.69,
    "rankChange": 5
   },
   {
@@ -1944,20 +1944,6 @@
    "rankChange": 1
   },
   {
-   "id": "43903",
-   "code": "DOM",
-   "name": "Dominican Republic",
-   "confed": "CONCACAF",
-   "officialRank": 144,
-   "officialPoints": 1076.5,
-   "previousRank": 144,
-   "aliases": [],
-   "liveRank": 136,
-   "livePoints": 1093.86,
-   "pointsChange": 17.36,
-   "rankChange": 8
-  },
-  {
    "id": "43833",
    "code": "PHI",
    "name": "Philippines",
@@ -1966,10 +1952,24 @@
    "officialPoints": 1100.95,
    "previousRank": 135,
    "aliases": [],
-   "liveRank": 137,
+   "liveRank": 136,
    "livePoints": 1089.27,
    "pointsChange": -11.68,
-   "rankChange": -2
+   "rankChange": -1
+  },
+  {
+   "id": "43903",
+   "code": "DOM",
+   "name": "Dominican Republic",
+   "confed": "CONCACAF",
+   "officialRank": 144,
+   "officialPoints": 1076.5,
+   "previousRank": 144,
+   "aliases": [],
+   "liveRank": 137,
+   "livePoints": 1088.94,
+   "pointsChange": 12.44,
+   "rankChange": 7
   },
   {
    "id": "43815",
@@ -3033,6 +3033,39 @@
  ],
  "results": [
   {
+   "kickoff": "2026-10-02T02:00:00Z",
+   "date": "2026-10-01",
+   "home": "NCA",
+   "away": "CRC",
+   "homeScore": 0,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Concacaf Nations League",
+   "stage": "League A",
+   "city": "Managua",
+   "source": "FIFA",
+   "importance": 15,
+   "knockout": false,
+   "expectedHome": 0.217,
+   "prediction": {
+    "home": {
+     "win": 11.75,
+     "draw": 4.25,
+     "loss": -3.25
+    },
+    "away": {
+     "loss": -11.75,
+     "draw": -4.25,
+     "win": 3.25
+    }
+   },
+   "homeName": "Nicaragua",
+   "awayName": "Costa Rica",
+   "fifaId": "1zswi5rq6gfp7skp7igvqnytw"
+  },
+  {
    "kickoff": "2026-10-02T00:00:00Z",
    "date": "2026-10-01",
    "home": "CAY",
@@ -3063,26 +3096,15 @@
    "awayScore": 4,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Santo Domingo",
    "source": "FIFA",
+   "counted": true,
    "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.327,
-   "prediction": {
-    "home": {
-     "win": 10.09,
-     "draw": 2.59,
-     "loss": -4.91
-    },
-    "away": {
-     "loss": -10.09,
-     "draw": -2.59,
-     "win": 4.91
-    }
-   },
+   "homeDelta": -4.91,
+   "awayDelta": 4.91,
    "homeName": "Dominican Republic",
    "awayName": "Haiti",
    "fifaId": "20kr0hpyvx6gczzp3w29psbh0"
@@ -9922,17 +9944,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.644,
+   "expectedHome": 0.64,
    "prediction": {
     "home": {
-     "win": 5.33,
-     "draw": -2.17,
-     "loss": -9.67
+     "win": 5.4,
+     "draw": -2.1,
+     "loss": -9.6
     },
     "away": {
-     "loss": -5.33,
-     "draw": 2.17,
-     "win": 9.67
+     "loss": -5.4,
+     "draw": 2.1,
+     "win": 9.6
     }
    },
    "homeName": "Costa Rica",
@@ -9955,17 +9977,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.508,
+   "expectedHome": 0.512,
    "prediction": {
     "home": {
-     "win": 7.39,
-     "draw": -0.11,
-     "loss": -7.61
+     "win": 7.32,
+     "draw": -0.18,
+     "loss": -7.68
     },
     "away": {
-     "loss": -7.39,
-     "draw": 0.11,
-     "win": 7.61
+     "loss": -7.32,
+     "draw": 0.18,
+     "win": 7.68
     }
    },
    "homeName": "Nicaragua",
@@ -17899,7 +17921,7 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 32,
+   "results": 33,
    "fixtures": 18
   },
   {
