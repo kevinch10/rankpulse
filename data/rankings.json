@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T03:26:26+00:00",
+ "generatedAt": "2026-10-02T03:54:55+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -813,8 +813,8 @@
    "previousRank": 53,
    "aliases": [],
    "liveRank": 56,
-   "livePoints": 1436.24,
-   "pointsChange": -19.79,
+   "livePoints": 1439.49,
+   "pointsChange": -16.54,
    "rankChange": -5
   },
   {
@@ -1925,8 +1925,8 @@
    "previousRank": 131,
    "aliases": [],
    "liveRank": 134,
-   "livePoints": 1101.69,
-   "pointsChange": -12.94,
+   "livePoints": 1098.43,
+   "pointsChange": -16.2,
    "rankChange": -3
   },
   {
@@ -3038,29 +3038,18 @@
    "home": "NCA",
    "away": "CRC",
    "homeScore": 0,
-   "awayScore": 2,
+   "awayScore": 3,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Managua",
    "source": "FIFA",
+   "counted": true,
    "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.217,
-   "prediction": {
-    "home": {
-     "win": 11.75,
-     "draw": 4.25,
-     "loss": -3.25
-    },
-    "away": {
-     "loss": -11.75,
-     "draw": -4.25,
-     "win": 3.25
-    }
-   },
+   "homeDelta": -3.25,
+   "awayDelta": 3.25,
    "homeName": "Nicaragua",
    "awayName": "Costa Rica",
    "fifaId": "1zswi5rq6gfp7skp7igvqnytw"
@@ -9944,17 +9933,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.64,
+   "expectedHome": 0.643,
    "prediction": {
     "home": {
-     "win": 5.4,
-     "draw": -2.1,
-     "loss": -9.6
+     "win": 5.36,
+     "draw": -2.14,
+     "loss": -9.64
     },
     "away": {
-     "loss": -5.4,
-     "draw": 2.1,
-     "win": 9.6
+     "loss": -5.36,
+     "draw": 2.14,
+     "win": 9.64
     }
    },
    "homeName": "Costa Rica",
@@ -9977,17 +9966,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.512,
+   "expectedHome": 0.509,
    "prediction": {
     "home": {
-     "win": 7.32,
-     "draw": -0.18,
-     "loss": -7.68
+     "win": 7.36,
+     "draw": -0.14,
+     "loss": -7.64
     },
     "away": {
-     "loss": -7.32,
-     "draw": 0.18,
-     "win": 7.68
+     "loss": -7.36,
+     "draw": 0.14,
+     "win": 7.64
     }
    },
    "homeName": "Nicaragua",
