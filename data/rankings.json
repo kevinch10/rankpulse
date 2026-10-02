@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T01:26:24+00:00",
+ "generatedAt": "2026-10-02T01:40:10+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3071,7 +3071,7 @@
    "home": "DOM",
    "away": "HAI",
    "homeScore": 1,
-   "awayScore": 2,
+   "awayScore": 3,
    "homePens": null,
    "awayPens": null,
    "status": 3,
