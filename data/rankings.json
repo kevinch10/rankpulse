@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T02:06:03+00:00",
+ "generatedAt": "2026-10-02T03:26:26+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3038,7 +3038,7 @@
    "home": "NCA",
    "away": "CRC",
    "homeScore": 0,
-   "awayScore": 0,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
    "status": 3,
