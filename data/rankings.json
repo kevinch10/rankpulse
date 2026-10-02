@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T01:40:10+00:00",
+ "generatedAt": "2026-10-02T01:53:00+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2215,20 +2215,6 @@
    "rankChange": 1
   },
   {
-   "id": "20010",
-   "code": "NCL",
-   "name": "New Caledonia",
-   "confed": "OFC",
-   "officialRank": 151,
-   "officialPoints": 1036.95,
-   "previousRank": 151,
-   "aliases": [],
-   "liveRank": 155,
-   "livePoints": 1026.01,
-   "pointsChange": -10.94,
-   "rankChange": -4
-  },
-  {
    "id": "43915",
    "code": "PUR",
    "name": "Puerto Rico",
@@ -2237,10 +2223,24 @@
    "officialPoints": 1024.3,
    "previousRank": 154,
    "aliases": [],
+   "liveRank": 155,
+   "livePoints": 1028.06,
+   "pointsChange": 3.76,
+   "rankChange": -1
+  },
+  {
+   "id": "20010",
+   "code": "NCL",
+   "name": "New Caledonia",
+   "confed": "OFC",
+   "officialRank": 151,
+   "officialPoints": 1036.95,
+   "previousRank": 151,
+   "aliases": [],
    "liveRank": 156,
-   "livePoints": 1023.01,
-   "pointsChange": -1.29,
-   "rankChange": -2
+   "livePoints": 1026.01,
+   "pointsChange": -10.94,
+   "rankChange": -5
   },
   {
    "id": "43981",
@@ -2825,8 +2825,8 @@
    "previousRank": 197,
    "aliases": [],
    "liveRank": 197,
-   "livePoints": 846.11,
-   "pointsChange": -3.95,
+   "livePoints": 841.06,
+   "pointsChange": -9.0,
    "rankChange": 0
   },
   {
@@ -3038,29 +3038,18 @@
    "home": "CAY",
    "away": "PUR",
    "homeScore": 0,
-   "awayScore": 2,
+   "awayScore": 3,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League B",
    "city": "Mayagüez",
    "source": "FIFA",
+   "counted": true,
    "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.337,
-   "prediction": {
-    "home": {
-     "win": 9.95,
-     "draw": 2.45,
-     "loss": -5.05
-    },
-    "away": {
-     "loss": -9.95,
-     "draw": -2.45,
-     "win": 5.05
-    }
-   },
+   "homeDelta": -5.05,
+   "awayDelta": 5.05,
    "homeName": "Cayman Islands",
    "awayName": "Puerto Rico",
    "fifaId": "doh1luo9r9brtvnipfxwyjrx0"
@@ -3071,7 +3060,7 @@
    "home": "DOM",
    "away": "HAI",
    "homeScore": 1,
-   "awayScore": 3,
+   "awayScore": 4,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -9801,17 +9790,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.663,
+   "expectedHome": 0.672,
    "prediction": {
     "home": {
-     "win": 5.05,
-     "draw": -2.45,
-     "loss": -9.95
+     "win": 4.92,
+     "draw": -2.58,
+     "loss": -10.08
     },
     "away": {
-     "loss": -5.05,
-     "draw": 2.45,
-     "win": 9.95
+     "loss": -4.92,
+     "draw": 2.58,
+     "win": 10.08
     }
    },
    "homeName": "Puerto Rico",
