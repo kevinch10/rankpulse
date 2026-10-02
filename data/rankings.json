@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T00:33:25+00:00",
+ "generatedAt": "2026-10-02T00:56:32+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -2336,8 +2336,8 @@
    "previousRank": 162,
    "aliases": [],
    "liveRank": 163,
-   "livePoints": 982.0,
-   "pointsChange": -4.58,
+   "livePoints": 986.33,
+   "pointsChange": -0.25,
    "rankChange": -1
   },
   {
@@ -3012,8 +3012,8 @@
    "previousRank": 210,
    "aliases": [],
    "liveRank": 210,
-   "livePoints": 746.41,
-   "pointsChange": -13.84,
+   "livePoints": 742.09,
+   "pointsChange": -18.16,
    "rankChange": 0
   },
   {
@@ -3038,7 +3038,7 @@
    "home": "CAY",
    "away": "PUR",
    "homeScore": 0,
-   "awayScore": 1,
+   "awayScore": 2,
    "homePens": null,
    "awayPens": null,
    "status": 3,
@@ -3104,29 +3104,18 @@
    "home": "AIA",
    "away": "ATG",
    "homeScore": 0,
-   "awayScore": 2,
+   "awayScore": 3,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League C",
    "city": "North Sound",
    "source": "FIFA",
+   "counted": true,
    "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.288,
-   "prediction": {
-    "home": {
-     "win": 10.68,
-     "draw": 3.18,
-     "loss": -4.32
-    },
-    "away": {
-     "loss": -10.68,
-     "draw": -3.18,
-     "win": 4.32
-    }
-   },
+   "homeDelta": -4.32,
+   "awayDelta": 4.32,
    "homeName": "Anguilla",
    "awayName": "Antigua and Barbuda",
    "fifaId": "do81z9nlq98fz6yv7xl0o76s4"
@@ -9878,17 +9867,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.635,
+   "expectedHome": 0.638,
    "prediction": {
     "home": {
-     "win": 5.48,
-     "draw": -2.02,
-     "loss": -9.52
+     "win": 5.42,
+     "draw": -2.08,
+     "loss": -9.58
     },
     "away": {
-     "loss": -5.48,
-     "draw": 2.02,
-     "win": 9.52
+     "loss": -5.42,
+     "draw": 2.08,
+     "win": 9.58
     }
    },
    "homeName": "Aruba",
@@ -11131,17 +11120,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.587,
+   "expectedHome": 0.591,
    "prediction": {
     "home": {
-     "win": 6.19,
-     "draw": -1.31,
-     "loss": -8.81
+     "win": 6.13,
+     "draw": -1.37,
+     "loss": -8.87
     },
     "away": {
-     "loss": -6.19,
-     "draw": 1.31,
-     "win": 8.81
+     "loss": -6.13,
+     "draw": 1.37,
+     "win": 8.87
     }
    },
    "homeName": "Antigua and Barbuda",
