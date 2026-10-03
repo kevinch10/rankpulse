@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T23:06:51+00:00",
+ "generatedAt": "2026-10-03T01:55:15+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -1399,8 +1399,8 @@
    "previousRank": 97,
    "aliases": [],
    "liveRank": 97,
-   "livePoints": 1240.32,
-   "pointsChange": 1.58,
+   "livePoints": 1238.93,
+   "pointsChange": 0.19,
    "rankChange": 0
   },
   {
@@ -1760,20 +1760,6 @@
    "rankChange": -1
   },
   {
-   "id": "43862",
-   "code": "GNB",
-   "name": "Guinea-Bissau",
-   "confed": "CAF",
-   "officialRank": 132,
-   "officialPoints": 1108.38,
-   "previousRank": 132,
-   "aliases": [],
-   "liveRank": 123,
-   "livePoints": 1144.02,
-   "pointsChange": 35.64,
-   "rankChange": 9
-  },
-  {
    "id": "43919",
    "code": "SUR",
    "name": "Suriname",
@@ -1782,10 +1768,24 @@
    "officialPoints": 1132.43,
    "previousRank": 125,
    "aliases": [],
+   "liveRank": 123,
+   "livePoints": 1144.62,
+   "pointsChange": 12.19,
+   "rankChange": 2
+  },
+  {
+   "id": "43862",
+   "code": "GNB",
+   "name": "Guinea-Bissau",
+   "confed": "CAF",
+   "officialRank": 132,
+   "officialPoints": 1108.38,
+   "previousRank": 132,
+   "aliases": [],
    "liveRank": 124,
-   "livePoints": 1143.24,
-   "pointsChange": 10.81,
-   "rankChange": 1
+   "livePoints": 1144.02,
+   "pointsChange": 35.64,
+   "rankChange": 8
   },
   {
    "id": "43944",
@@ -2432,20 +2432,6 @@
    "rankChange": -6
   },
   {
-   "id": "43898",
-   "code": "BER",
-   "name": "Bermuda",
-   "confed": "CONCACAF",
-   "officialRank": 167,
-   "officialPoints": 975.05,
-   "previousRank": 167,
-   "aliases": [],
-   "liveRank": 170,
-   "livePoints": 967.45,
-   "pointsChange": -7.6,
-   "rankChange": -3
-  },
-  {
    "id": "1935341",
    "code": "SSD",
    "name": "South Sudan",
@@ -2454,10 +2440,24 @@
    "officialPoints": 970.94,
    "previousRank": 169,
    "aliases": [],
-   "liveRank": 171,
+   "liveRank": 170,
    "livePoints": 959.91,
    "pointsChange": -11.03,
-   "rankChange": -2
+   "rankChange": -1
+  },
+  {
+   "id": "43898",
+   "code": "BER",
+   "name": "Bermuda",
+   "confed": "CONCACAF",
+   "officialRank": 167,
+   "officialPoints": 975.05,
+   "previousRank": 167,
+   "aliases": [],
+   "liveRank": 171,
+   "livePoints": 959.25,
+   "pointsChange": -15.8,
+   "rankChange": -4
   },
   {
    "id": "43828",
@@ -2502,6 +2502,20 @@
    "rankChange": 2
   },
   {
+   "id": "43896",
+   "code": "BRB",
+   "name": "Barbados",
+   "confed": "CONCACAF",
+   "officialRank": 179,
+   "officialPoints": 909.89,
+   "previousRank": 179,
+   "aliases": [],
+   "liveRank": 175,
+   "livePoints": 926.55,
+   "pointsChange": 16.66,
+   "rankChange": 4
+  },
+  {
    "id": "44009",
    "code": "CAM",
    "name": "Cambodia",
@@ -2510,10 +2524,10 @@
    "officialPoints": 922.32,
    "previousRank": 175,
    "aliases": [],
-   "liveRank": 175,
+   "liveRank": 176,
    "livePoints": 924.82,
    "pointsChange": 2.5,
-   "rankChange": 0
+   "rankChange": -1
   },
   {
    "id": "43813",
@@ -2526,24 +2540,10 @@
    "aliases": [
     "Taiwan"
    ],
-   "liveRank": 176,
+   "liveRank": 177,
    "livePoints": 923.78,
    "pointsChange": 0.0,
-   "rankChange": -2
-  },
-  {
-   "id": "43896",
-   "code": "BRB",
-   "name": "Barbados",
-   "confed": "CONCACAF",
-   "officialRank": 179,
-   "officialPoints": 909.89,
-   "previousRank": 179,
-   "aliases": [],
-   "liveRank": 177,
-   "livePoints": 918.35,
-   "pointsChange": 8.46,
-   "rankChange": 2
+   "rankChange": -3
   },
   {
    "id": "43871",
@@ -3033,6 +3033,61 @@
  ],
  "results": [
   {
+   "kickoff": "2026-10-03T00:00:00Z",
+   "date": "2026-10-02",
+   "home": "BRB",
+   "away": "BER",
+   "homeScore": 4,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Concacaf Nations League",
+   "stage": "League B",
+   "city": "Bridgetown",
+   "source": "FIFA",
+   "counted": true,
+   "importance": 15,
+   "homeDelta": 8.2,
+   "awayDelta": -8.2,
+   "homeName": "Barbados",
+   "awayName": "Bermuda",
+   "fifaId": "dpbab1ywwj3tn0imo09uxilg4"
+  },
+  {
+   "kickoff": "2026-10-03T00:00:00Z",
+   "date": "2026-10-02",
+   "home": "COL",
+   "away": "PAR",
+   "homeScore": 0,
+   "awayScore": 1,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Harrison",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.678,
+   "prediction": {
+    "home": {
+     "win": 3.22,
+     "draw": -1.78,
+     "loss": -6.78
+    },
+    "away": {
+     "loss": -3.22,
+     "draw": 1.78,
+     "win": 6.78
+    }
+   },
+   "homeName": "Colombia",
+   "awayName": "Paraguay",
+   "fifaId": "5w98q2uuvgvcsli7pdzif651w"
+  },
+  {
    "kickoff": "2026-10-02T22:00:00Z",
    "date": "2026-10-02",
    "home": "SUR",
@@ -3041,26 +3096,15 @@
    "awayScore": 0,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Concacaf Nations League",
    "stage": "League A",
    "city": "Paramaribo",
    "source": "FIFA",
+   "counted": true,
    "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.408,
-   "prediction": {
-    "home": {
-     "win": 8.88,
-     "draw": 1.38,
-     "loss": -6.12
-    },
-    "away": {
-     "loss": -8.88,
-     "draw": -1.38,
-     "win": 6.12
-    }
-   },
+   "homeDelta": 1.38,
+   "awayDelta": -1.38,
    "homeName": "Suriname",
    "awayName": "Guatemala",
    "fifaId": "1z158l71gj8mp41yfdyzuh0d0"
@@ -8367,105 +8411,6 @@
  ],
  "fixtures": [
   {
-   "kickoff": "2026-10-02T11:35:00Z",
-   "date": "2026-10-02",
-   "home": "CHN",
-   "away": "TKM",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 8,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Chongqing",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.656,
-   "prediction": {
-    "home": {
-     "win": 3.44,
-     "draw": -1.56,
-     "loss": -6.56
-    },
-    "away": {
-     "loss": -3.44,
-     "draw": 1.56,
-     "win": 6.56
-    }
-   },
-   "homeName": "China PR",
-   "awayName": "Turkmenistan",
-   "fifaId": "4xcr1tm4dhzuutwfscmlp4iz8"
-  },
-  {
-   "kickoff": "2026-10-03T00:00:00Z",
-   "date": "2026-10-02",
-   "home": "COL",
-   "away": "PAR",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Harrison",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.678,
-   "prediction": {
-    "home": {
-     "win": 3.22,
-     "draw": -1.78,
-     "loss": -6.78
-    },
-    "away": {
-     "loss": -3.22,
-     "draw": 1.78,
-     "win": 6.78
-    }
-   },
-   "homeName": "Colombia",
-   "awayName": "Paraguay",
-   "fifaId": "5w98q2uuvgvcsli7pdzif651w"
-  },
-  {
-   "kickoff": "2026-10-03T00:00:00Z",
-   "date": "2026-10-02",
-   "home": "BRB",
-   "away": "BER",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League B",
-   "city": "Bridgetown",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.453,
-   "prediction": {
-    "home": {
-     "win": 8.2,
-     "draw": 0.7,
-     "loss": -6.8
-    },
-    "away": {
-     "loss": -8.2,
-     "draw": -0.7,
-     "win": 6.8
-    }
-   },
-   "homeName": "Barbados",
-   "awayName": "Bermuda",
-   "fifaId": "dpbab1ywwj3tn0imo09uxilg4"
-  },
-  {
    "kickoff": "2026-10-03T00:00:00Z",
    "date": "2026-10-03",
    "home": "SRI",
@@ -8497,39 +8442,6 @@
    "homeName": "Sri Lanka",
    "awayName": "Djibouti",
    "fifaId": "axt8dtutmfftyoyayddxy5vro"
-  },
-  {
-   "kickoff": "2026-10-03T02:00:00Z",
-   "date": "2026-10-02",
-   "home": "SLV",
-   "away": "JAM",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Concacaf Nations League",
-   "stage": "League A",
-   "city": "San Salvador",
-   "source": "FIFA",
-   "importance": 15,
-   "knockout": false,
-   "expectedHome": 0.37,
-   "prediction": {
-    "home": {
-     "win": 9.44,
-     "draw": 1.94,
-     "loss": -5.56
-    },
-    "away": {
-     "loss": -9.44,
-     "draw": -1.94,
-     "win": 5.56
-    }
-   },
-   "homeName": "El Salvador",
-   "awayName": "Jamaica",
-   "fifaId": "1zf4b2lwb480oukknqfosd4wk"
   },
   {
    "kickoff": "2026-10-03T04:00:00Z",
@@ -10329,17 +10241,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.592,
+   "expectedHome": 0.59,
    "prediction": {
     "home": {
-     "win": 6.12,
-     "draw": -1.38,
-     "loss": -8.88
+     "win": 6.16,
+     "draw": -1.34,
+     "loss": -8.84
     },
     "away": {
-     "loss": -6.12,
-     "draw": 1.38,
-     "win": 8.88
+     "loss": -6.16,
+     "draw": 1.34,
+     "win": 8.84
     }
    },
    "homeName": "Guatemala",
@@ -10362,17 +10274,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.547,
+   "expectedHome": 0.531,
    "prediction": {
     "home": {
-     "win": 6.8,
-     "draw": -0.7,
-     "loss": -8.2
+     "win": 7.03,
+     "draw": -0.47,
+     "loss": -7.97
     },
     "away": {
-     "loss": -6.8,
-     "draw": 0.7,
-     "win": 8.2
+     "loss": -7.03,
+     "draw": 0.47,
+     "win": 7.97
     }
    },
    "homeName": "Bermuda",
@@ -17760,8 +17672,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 48,
-   "fixtures": 43
+   "results": 49,
+   "fixtures": 41
   },
   {
    "name": "FIFA Series™",
@@ -17844,8 +17756,8 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 35,
-   "fixtures": 16
+   "results": 36,
+   "fixtures": 14
   },
   {
    "name": "Concacaf Series",
