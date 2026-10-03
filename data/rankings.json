@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-03T01:55:15+00:00",
+ "generatedAt": "2026-10-03T07:20:22+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -159,8 +159,8 @@
    "previousRank": 13,
    "aliases": [],
    "liveRank": 11,
-   "livePoints": 1740.03,
-   "pointsChange": 0.14,
+   "livePoints": 1733.24,
+   "pointsChange": -6.65,
    "rankChange": 0
   },
   {
@@ -483,8 +483,8 @@
    "previousRank": 41,
    "aliases": [],
    "liveRank": 33,
-   "livePoints": 1545.51,
-   "pointsChange": 3.03,
+   "livePoints": 1552.3,
+   "pointsChange": 9.82,
    "rankChange": 1
   },
   {
@@ -992,6 +992,20 @@
    "rankChange": 0
   },
   {
+   "id": "43910",
+   "code": "JAM",
+   "name": "Jamaica",
+   "confed": "CONCACAF",
+   "officialRank": 71,
+   "officialPoints": 1357.84,
+   "previousRank": 71,
+   "aliases": [],
+   "liveRank": 69,
+   "livePoints": 1361.78,
+   "pointsChange": 3.94,
+   "rankChange": 2
+  },
+  {
    "id": "43860",
    "code": "GHA",
    "name": "Ghana",
@@ -1000,10 +1014,10 @@
    "officialPoints": 1387.0,
    "previousRank": 73,
    "aliases": [],
-   "liveRank": 69,
+   "liveRank": 70,
    "livePoints": 1361.27,
    "pointsChange": -25.73,
-   "rankChange": -4
+   "rankChange": -5
   },
   {
    "id": "44000",
@@ -1016,24 +1030,10 @@
    "aliases": [
     "Macedonia"
    ],
-   "liveRank": 70,
+   "liveRank": 71,
    "livePoints": 1359.56,
    "pointsChange": -9.6,
-   "rankChange": -1
-  },
-  {
-   "id": "43910",
-   "code": "JAM",
-   "name": "Jamaica",
-   "confed": "CONCACAF",
-   "officialRank": 71,
-   "officialPoints": 1357.84,
-   "previousRank": 71,
-   "aliases": [],
-   "liveRank": 71,
-   "livePoints": 1356.22,
-   "pointsChange": -1.62,
-   "rankChange": 0
+   "rankChange": -2
   },
   {
    "id": "43820",
@@ -1446,20 +1446,6 @@
    "rankChange": -2
   },
   {
-   "id": "43904",
-   "code": "SLV",
-   "name": "El Salvador",
-   "confed": "CONCACAF",
-   "officialRank": 100,
-   "officialPoints": 1225.34,
-   "previousRank": 100,
-   "aliases": [],
-   "liveRank": 101,
-   "livePoints": 1217.95,
-   "pointsChange": -7.39,
-   "rankChange": -1
-  },
-  {
    "id": "44003",
    "code": "TJK",
    "name": "Tajikistan",
@@ -1468,10 +1454,24 @@
    "officialPoints": 1224.19,
    "previousRank": 101,
    "aliases": [],
-   "liveRank": 102,
+   "liveRank": 101,
    "livePoints": 1213.56,
    "pointsChange": -10.63,
-   "rankChange": -1
+   "rankChange": 0
+  },
+  {
+   "id": "43904",
+   "code": "SLV",
+   "name": "El Salvador",
+   "confed": "CONCACAF",
+   "officialRank": 100,
+   "officialPoints": 1225.34,
+   "previousRank": 100,
+   "aliases": [],
+   "liveRank": 102,
+   "livePoints": 1212.39,
+   "pointsChange": -12.95,
+   "rankChange": -2
   },
   {
    "id": "43856",
@@ -3033,6 +3033,28 @@
  ],
  "results": [
   {
+   "kickoff": "2026-10-03T02:00:00Z",
+   "date": "2026-10-02",
+   "home": "SLV",
+   "away": "JAM",
+   "homeScore": 0,
+   "awayScore": 2,
+   "homePens": null,
+   "awayPens": null,
+   "status": 0,
+   "competition": "Concacaf Nations League",
+   "stage": "League A",
+   "city": "San Salvador",
+   "source": "FIFA",
+   "counted": true,
+   "importance": 15,
+   "homeDelta": -5.56,
+   "awayDelta": 5.56,
+   "homeName": "El Salvador",
+   "awayName": "Jamaica",
+   "fifaId": "1zf4b2lwb480oukknqfosd4wk"
+  },
+  {
    "kickoff": "2026-10-03T00:00:00Z",
    "date": "2026-10-02",
    "home": "BRB",
@@ -3063,26 +3085,15 @@
    "awayScore": 1,
    "homePens": null,
    "awayPens": null,
-   "status": 3,
+   "status": 0,
    "competition": "Friendlies",
    "stage": "Friendlies 1",
    "city": "Harrison",
    "source": "FIFA",
+   "counted": true,
    "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.678,
-   "prediction": {
-    "home": {
-     "win": 3.22,
-     "draw": -1.78,
-     "loss": -6.78
-    },
-    "away": {
-     "loss": -3.22,
-     "draw": 1.78,
-     "win": 6.78
-    }
-   },
+   "homeDelta": -6.78,
+   "awayDelta": 6.78,
    "homeName": "Colombia",
    "awayName": "Paraguay",
    "fifaId": "5w98q2uuvgvcsli7pdzif651w"
@@ -10307,17 +10318,17 @@
    "source": "FIFA",
    "importance": 15,
    "knockout": false,
-   "expectedHome": 0.519,
+   "expectedHome": 0.513,
    "prediction": {
     "home": {
-     "win": 7.22,
-     "draw": -0.28,
-     "loss": -7.78
+     "win": 7.3,
+     "draw": -0.2,
+     "loss": -7.7
     },
     "away": {
-     "loss": -7.22,
-     "draw": 0.28,
-     "win": 7.78
+     "loss": -7.3,
+     "draw": 0.2,
+     "win": 7.7
     }
    },
    "homeName": "Honduras",
@@ -11065,17 +11076,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.747,
+   "expectedHome": 0.742,
    "prediction": {
     "home": {
-     "win": 2.53,
-     "draw": -2.47,
-     "loss": -7.47
+     "win": 2.58,
+     "draw": -2.42,
+     "loss": -7.42
     },
     "away": {
-     "loss": -2.53,
-     "draw": 2.47,
-     "win": 7.47
+     "loss": -2.58,
+     "draw": 2.42,
+     "win": 7.42
     }
    },
    "homeName": "Colombia",
@@ -12361,17 +12372,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.752,
+   "expectedHome": 0.747,
    "prediction": {
     "home": {
-     "win": 2.48,
-     "draw": -2.52,
-     "loss": -7.52
+     "win": 2.53,
+     "draw": -2.47,
+     "loss": -7.47
     },
     "away": {
-     "loss": -2.48,
-     "draw": 2.52,
-     "win": 7.52
+     "loss": -2.53,
+     "draw": 2.47,
+     "win": 7.47
     }
    },
    "homeName": "Colombia",
@@ -12427,17 +12438,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.134,
+   "expectedHome": 0.131,
    "prediction": {
     "home": {
-     "win": 8.66,
-     "draw": 3.66,
-     "loss": -1.34
+     "win": 8.69,
+     "draw": 3.69,
+     "loss": -1.31
     },
     "away": {
-     "loss": -8.66,
-     "draw": -3.66,
-     "win": 1.34
+     "loss": -8.69,
+     "draw": -3.69,
+     "win": 1.31
     }
    },
    "homeName": "Singapore",
@@ -14548,17 +14559,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.248,
+   "expectedHome": 0.253,
    "prediction": {
     "home": {
-     "win": 7.52,
-     "draw": 2.52,
-     "loss": -2.48
+     "win": 7.47,
+     "draw": 2.47,
+     "loss": -2.53
     },
     "away": {
-     "loss": -7.52,
-     "draw": -2.52,
-     "win": 2.48
+     "loss": -7.47,
+     "draw": -2.47,
+     "win": 2.53
     }
    },
    "homeName": "Chile",
@@ -14581,17 +14592,17 @@
    "source": "FIFA",
    "importance": 10,
    "knockout": false,
-   "expectedHome": 0.627,
+   "expectedHome": 0.621,
    "prediction": {
     "home": {
-     "win": 3.73,
-     "draw": -1.27,
-     "loss": -6.27
+     "win": 3.79,
+     "draw": -1.21,
+     "loss": -6.21
     },
     "away": {
-     "loss": -3.73,
-     "draw": 1.27,
-     "win": 6.27
+     "loss": -3.79,
+     "draw": 1.21,
+     "win": 6.21
     }
    },
    "homeName": "Japan",
@@ -17756,7 +17767,7 @@
    "name": "Concacaf Nations League",
    "group": "CONCACAF",
    "weight": "I=15 · 25 finals",
-   "results": 36,
+   "results": 37,
    "fixtures": 14
   },
   {
