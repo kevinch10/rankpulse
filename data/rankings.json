@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-03T22:16:02+00:00",
+ "generatedAt": "2026-10-04T01:46:14+00:00",
  "official": {
   "pubDate": "2026-07-20T10:00:00+00:00",
   "nextPubDate": null,
@@ -3032,6 +3032,39 @@
   }
  ],
  "results": [
+  {
+   "kickoff": "2026-10-04T00:00:00Z",
+   "date": "2026-10-03",
+   "home": "ARG",
+   "away": "BFA",
+   "homeScore": 6,
+   "awayScore": 0,
+   "homePens": null,
+   "awayPens": null,
+   "status": 3,
+   "competition": "Friendlies",
+   "stage": "Friendlies 1",
+   "city": "Buenos Aires",
+   "source": "FIFA",
+   "importance": 10,
+   "knockout": false,
+   "expectedHome": 0.896,
+   "prediction": {
+    "home": {
+     "win": 1.04,
+     "draw": -3.96,
+     "loss": -8.96
+    },
+    "away": {
+     "loss": -1.04,
+     "draw": 3.96,
+     "win": 8.96
+    }
+   },
+   "homeName": "Argentina",
+   "awayName": "Burkina Faso",
+   "fifaId": "85odt9nfqumvxiiplfiwcgnbo"
+  },
   {
    "kickoff": "2026-10-03T19:00:00Z",
    "date": "2026-10-03",
@@ -8707,171 +8740,6 @@
   }
  ],
  "fixtures": [
-  {
-   "kickoff": "2026-10-03T00:00:00Z",
-   "date": "2026-10-03",
-   "home": "SRI",
-   "away": "DJI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 8,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Tbc",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.526,
-   "prediction": {
-    "home": {
-     "win": 4.74,
-     "draw": -0.26,
-     "loss": -5.26
-    },
-    "away": {
-     "loss": -4.74,
-     "draw": 0.26,
-     "win": 5.26
-    }
-   },
-   "homeName": "Sri Lanka",
-   "awayName": "Djibouti",
-   "fifaId": "axt8dtutmfftyoyayddxy5vro"
-  },
-  {
-   "kickoff": "2026-10-03T04:00:00Z",
-   "date": "2026-10-03",
-   "home": "FIJ",
-   "away": "VAN",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 3",
-   "city": "Suva",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.517,
-   "prediction": {
-    "home": {
-     "win": 4.83,
-     "draw": -0.17,
-     "loss": -5.17
-    },
-    "away": {
-     "loss": -4.83,
-     "draw": 0.17,
-     "win": 5.17
-    }
-   },
-   "homeName": "Fiji",
-   "awayName": "Vanuatu",
-   "fifaId": "5ug1gbwuzlnnksb00qv96qej8"
-  },
-  {
-   "kickoff": "2026-10-03T19:00:00Z",
-   "date": "2026-10-03",
-   "home": "TUN",
-   "away": "MLI",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 8,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Rades",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.447,
-   "prediction": {
-    "home": {
-     "win": 5.53,
-     "draw": 0.53,
-     "loss": -4.47
-    },
-    "away": {
-     "loss": -5.53,
-     "draw": -0.53,
-     "win": 4.47
-    }
-   },
-   "homeName": "Tunisia",
-   "awayName": "Mali",
-   "fifaId": "ds2fbobbhchlhtnuceojk2uc4"
-  },
-  {
-   "kickoff": "2026-10-04T00:00:00Z",
-   "date": "2026-10-03",
-   "home": "ARG",
-   "away": "BFA",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Buenos Aires",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.896,
-   "prediction": {
-    "home": {
-     "win": 1.04,
-     "draw": -3.96,
-     "loss": -8.96
-    },
-    "away": {
-     "loss": -1.04,
-     "draw": 3.96,
-     "win": 8.96
-    }
-   },
-   "homeName": "Argentina",
-   "awayName": "Burkina Faso",
-   "fifaId": "85odt9nfqumvxiiplfiwcgnbo"
-  },
-  {
-   "kickoff": "2026-10-04T02:00:00Z",
-   "date": "2026-10-03",
-   "home": "USA",
-   "away": "MEX",
-   "homeScore": null,
-   "awayScore": null,
-   "homePens": null,
-   "awayPens": null,
-   "status": 1,
-   "competition": "Friendlies",
-   "stage": "Friendlies 1",
-   "city": "Glendale",
-   "source": "FIFA",
-   "importance": 10,
-   "knockout": false,
-   "expectedHome": 0.447,
-   "prediction": {
-    "home": {
-     "win": 5.53,
-     "draw": 0.53,
-     "loss": -4.47
-    },
-    "away": {
-     "loss": -5.53,
-     "draw": -0.53,
-     "win": 4.47
-    }
-   },
-   "homeName": "USA",
-   "awayName": "Mexico",
-   "fifaId": "3f2wj2hnnwxn8mt4iyzg7k9w4"
-  },
   {
    "kickoff": "2026-10-04T13:00:00Z",
    "date": "2026-10-04",
@@ -17540,8 +17408,8 @@
    "name": "Friendlies",
    "group": "Global",
    "weight": "I=10 · 5 outside windows",
-   "results": 53,
-   "fixtures": 37
+   "results": 54,
+   "fixtures": 32
   },
   {
    "name": "FIFA Series™",
